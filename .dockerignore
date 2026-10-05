@@ -1,0 +1,11 @@
+# 金鑰只在執行時由 docker-compose 的 env_file 注入
+.env
+
+# 資料與字幕由 volume 掛載，前端不在這個映像檔裡
+data
+frontend
+
+__pycache__
+*.pyc
+.vscode
+.DS_Store

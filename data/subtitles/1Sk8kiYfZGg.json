@@ -1,0 +1,6009 @@
+{
+    "0": {
+        "text": "Hi Harper's BAZAAR Singapore I'm Amy.",
+        "start": 0.14,
+        "duration": 2.38,
+        "start_time": "00:00:00,140",
+        "explanation": {
+            "thai": "Hi Harper's BAZAAR Singapore I'm Amy.",
+            "rtgs": "Hi Harper's BAZAAR Singapore I'm Amy.",
+            "translation": "嗨，Harper's BAZAAR 新加坡，我是 Amy。",
+            "analysis": [
+                {
+                    "word": "Hi",
+                    "rtgs": "Hi",
+                    "meaning": "嗨，打招呼用語",
+                    "more": "英語打招呼用語，泰文中常直接使用英語詞彙。"
+                },
+                {
+                    "word": "Harper's BAZAAR",
+                    "rtgs": "Harper's BAZAAR",
+                    "meaning": "Harper's BAZAAR（時尚雜誌名稱）",
+                    "more": "專有名詞，保持原文。"
+                },
+                {
+                    "word": "Singapore",
+                    "rtgs": "Singapore",
+                    "meaning": "新加坡",
+                    "more": "地名，保持原文。"
+                },
+                {
+                    "word": "I'm",
+                    "rtgs": "I'm",
+                    "meaning": "我是",
+                    "more": "英語縮寫，表示 I am。"
+                },
+                {
+                    "word": "Amy.",
+                    "rtgs": "Amy",
+                    "meaning": "Amy（人名）",
+                    "more": "人名，保持原文。"
+                }
+            ]
+        }
+    },
+    "1": {
+        "text": "I'm Bonnie.",
+        "start": 2.68,
+        "duration": 0.5,
+        "start_time": "00:00:02,680",
+        "explanation": {
+            "thai": "I'm Bonnie.",
+            "rtgs": "I'm Bonnie.",
+            "translation": "我是 Bonnie。",
+            "analysis": [
+                {
+                    "word": "I'm",
+                    "rtgs": "I'm",
+                    "meaning": "我是",
+                    "more": "英語縮寫，表示 I am。"
+                },
+                {
+                    "word": "Bonnie.",
+                    "rtgs": "Bonnie",
+                    "meaning": "Bonnie（人名）",
+                    "more": "人名，保持原文。"
+                }
+            ]
+        }
+    },
+    "2": {
+        "text": "And we are going to test how well we know each other.",
+        "start": 3.44,
+        "duration": 2.28,
+        "start_time": "00:00:03,440",
+        "explanation": {
+            "thai": "And we are going to test how well we know each other.",
+            "rtgs": "And we are going to test how well we know each other.",
+            "translation": "我們將要測試彼此了解的程度。",
+            "analysis": [
+                {
+                    "word": "And",
+                    "rtgs": "And",
+                    "meaning": "和，並且",
+                    "more": "英語連接詞，表示連接句子。"
+                },
+                {
+                    "word": "we",
+                    "rtgs": "we",
+                    "meaning": "我們",
+                    "more": "英語代名詞。"
+                },
+                {
+                    "word": "are",
+                    "rtgs": "are",
+                    "meaning": "是（be動詞）",
+                    "more": "英語be動詞，與主詞we搭配。"
+                },
+                {
+                    "word": "going",
+                    "rtgs": "going",
+                    "meaning": "將要",
+                    "more": "英語動詞go的現在分詞，表示未來計畫。"
+                },
+                {
+                    "word": "to",
+                    "rtgs": "to",
+                    "meaning": "去，向",
+                    "more": "英語介詞，與動詞連用表示目的。"
+                },
+                {
+                    "word": "test",
+                    "rtgs": "test",
+                    "meaning": "測試",
+                    "more": "英語動詞。"
+                },
+                {
+                    "word": "how",
+                    "rtgs": "how",
+                    "meaning": "如何，怎麼樣",
+                    "more": "英語疑問副詞。"
+                },
+                {
+                    "word": "well",
+                    "rtgs": "well",
+                    "meaning": "好，程度",
+                    "more": "英語副詞，修飾know。"
+                },
+                {
+                    "word": "we",
+                    "rtgs": "we",
+                    "meaning": "我們",
+                    "more": "英語代名詞。"
+                },
+                {
+                    "word": "know",
+                    "rtgs": "know",
+                    "meaning": "知道，了解",
+                    "more": "英語動詞。"
+                },
+                {
+                    "word": "each",
+                    "rtgs": "each",
+                    "meaning": "每個",
+                    "more": "英語限定詞。"
+                },
+                {
+                    "word": "other.",
+                    "rtgs": "other",
+                    "meaning": "其他的，彼此",
+                    "more": "英語代名詞，與each連用表示彼此。"
+                }
+            ]
+        }
+    },
+    "3": {
+        "text": "อะไรที่ทำให้บอนนี่หัวเราะออกมาดังๆ",
+        "start": 12.2,
+        "duration": 1.92,
+        "start_time": "00:00:12,200",
+        "explanation": {
+            "thai": "อะไรที่ทำให้บอนนี่หัวเราะออกมาดังๆ",
+            "rtgs": "arai thi tham hai Bonnie hua roht ok ma dang dang",
+            "translation": "什麼事情讓 Bonnie 大聲地笑出來？",
+            "analysis": [
+                {
+                    "word": "อะไร",
+                    "rtgs": "arai",
+                    "meaning": "什麼",
+                    "more": "疑問代詞，用於詢問事物。"
+                },
+                {
+                    "word": "ที่",
+                    "rtgs": "thi",
+                    "meaning": "那個，關係代詞",
+                    "more": "用於連接先行詞與從句，表示「…的」。"
+                },
+                {
+                    "word": "ทำให้",
+                    "rtgs": "tham hai",
+                    "meaning": "使得，讓",
+                    "more": "動詞短語，表示造成某種結果。"
+                },
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "Bonnie",
+                    "meaning": "Bonnie（人名）",
+                    "more": "人名，音譯。"
+                },
+                {
+                    "word": "หัวเราะ",
+                    "rtgs": "hua roht",
+                    "meaning": "笑，笑出聲",
+                    "more": "動詞，表示發笑。"
+                },
+                {
+                    "word": "ออก",
+                    "rtgs": "ok",
+                    "meaning": "出，外出",
+                    "more": "動詞，表示動作的方向。"
+                },
+                {
+                    "word": "มา",
+                    "rtgs": "ma",
+                    "meaning": "來",
+                    "more": "動詞，表示動作的方向。"
+                },
+                {
+                    "word": "ดังๆ",
+                    "rtgs": "dang dang",
+                    "meaning": "大聲地",
+                    "more": "副詞，表示聲音大。"
+                }
+            ]
+        }
+    },
+    "4": {
+        "text": "มุกแปลกๆ",
+        "start": 15.28,
+        "duration": 1.0,
+        "start_time": "00:00:15,280",
+        "explanation": {
+            "thai": "มุกแปลกๆ",
+            "rtgs": "muk plaek plaek",
+            "translation": "奇怪的笑話。",
+            "analysis": [
+                {
+                    "word": "มุก",
+                    "rtgs": "muk",
+                    "meaning": "笑話，梗",
+                    "more": "名詞，指笑話或幽默的內容。"
+                },
+                {
+                    "word": "แปลกๆ",
+                    "rtgs": "plaek plaek",
+                    "meaning": "奇怪的，怪異的",
+                    "more": "形容詞，重疊表示程度或強調。"
+                }
+            ]
+        }
+    },
+    "5": {
+        "text": "มุกเสี่ยวๆ",
+        "start": 17.12,
+        "duration": 0.82,
+        "start_time": "00:00:17,120",
+        "explanation": {
+            "thai": "มุกเสี่ยวๆ",
+            "rtgs": "muk siao siao",
+            "translation": "俗氣的笑話。",
+            "analysis": [
+                {
+                    "word": "มุก",
+                    "rtgs": "muk",
+                    "meaning": "笑話，梗",
+                    "more": "名詞，指笑話或幽默的內容。"
+                },
+                {
+                    "word": "เสี่ยวๆ",
+                    "rtgs": "siao siao",
+                    "meaning": "俗氣的，老套的",
+                    "more": "形容詞，重疊表示程度或強調，常用來形容笑話或言語俗氣。"
+                }
+            ]
+        }
+    },
+    "6": {
+        "text": "อ่า",
+        "start": 18.66,
+        "duration": 0.34,
+        "start_time": "00:00:18,660",
+        "explanation": {
+            "thai": "อ่า",
+            "rtgs": "a",
+            "translation": "啊（表示思考或猶豫）",
+            "analysis": [
+                {
+                    "word": "อ่า",
+                    "rtgs": "a",
+                    "meaning": "啊，嗯",
+                    "more": "語氣詞，表示思考、猶豫或停頓。"
+                }
+            ]
+        }
+    },
+    "7": {
+        "text": "ถูกไหมคะ",
+        "start": 19.16,
+        "duration": 0.46,
+        "start_time": "00:00:19,160",
+        "explanation": {
+            "thai": "ถูกไหมคะ",
+            "rtgs": "thuk mai kha",
+            "translation": "對嗎？（女性用語）",
+            "analysis": [
+                {
+                    "word": "ถูก",
+                    "rtgs": "thuk",
+                    "meaning": "正確的",
+                    "more": "形容詞，表示正確。"
+                },
+                {
+                    "word": "ไหม",
+                    "rtgs": "mai",
+                    "meaning": "嗎（疑問助詞）",
+                    "more": "用於句尾，表示疑問。"
+                },
+                {
+                    "word": "คะ",
+                    "rtgs": "kha",
+                    "meaning": "語氣詞（女性用）",
+                    "more": "禮貌語氣詞，女性說話時使用。"
+                }
+            ]
+        }
+    },
+    "8": {
+        "text": "เช่น",
+        "start": 19.7,
+        "duration": 0.34,
+        "start_time": "00:00:19,700",
+        "explanation": {
+            "thai": "เช่น",
+            "rtgs": "chen",
+            "translation": "例如，像是",
+            "analysis": [
+                {
+                    "word": "เช่น",
+                    "rtgs": "chen",
+                    "meaning": "例如，像是",
+                    "more": "副詞，用於舉例。"
+                }
+            ]
+        }
+    },
+    "9": {
+        "text": "เช่นอะไรก็ไม่รู้อะไรที่แบบว่าเหมือนไม่ปกติ",
+        "start": 20.3,
+        "duration": 2.56,
+        "start_time": "00:00:20,300",
+        "explanation": {
+            "thai": "เช่นอะไรก็ไม่รู้อะไรที่แบบว่าเหมือนไม่ปกติ",
+            "rtgs": "chen arai ko mai ru arai thi baep wa muea mai pok ti",
+            "translation": "像是什麼也不知道的，像是不正常的東西。",
+            "analysis": [
+                {
+                    "word": "เช่น",
+                    "rtgs": "chen",
+                    "meaning": "例如，像是",
+                    "more": "副詞，用於舉例。"
+                },
+                {
+                    "word": "อะไร",
+                    "rtgs": "arai",
+                    "meaning": "什麼",
+                    "more": "疑問代詞。"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "也，則",
+                    "more": "助詞，用於強調或連接。"
+                },
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞。"
+                },
+                {
+                    "word": "รู้",
+                    "rtgs": "ru",
+                    "meaning": "知道，認識",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "อะไร",
+                    "rtgs": "arai",
+                    "meaning": "什麼",
+                    "more": "疑問代詞。"
+                },
+                {
+                    "word": "ที่",
+                    "rtgs": "thi",
+                    "meaning": "那個，關係代詞",
+                    "more": "用於連接先行詞與從句。"
+                },
+                {
+                    "word": "แบบว่า",
+                    "rtgs": "baep wa",
+                    "meaning": "像是，感覺像",
+                    "more": "口語用法，表示比喻或感覺。"
+                },
+                {
+                    "word": "เหมืิอ",
+                    "rtgs": "muea",
+                    "meaning": "像，似乎",
+                    "more": "動詞，表示相似。"
+                },
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞。"
+                },
+                {
+                    "word": "ปกติ",
+                    "rtgs": "pok ti",
+                    "meaning": "正常的",
+                    "more": "形容詞。"
+                }
+            ]
+        }
+    },
+    "10": {
+        "text": "ชื่นชม",
+        "start": 26.14,
+        "duration": 1.02,
+        "start_time": "00:00:26,140",
+        "explanation": {
+            "thai": "ชื่นชม",
+            "rtgs": "chuen chom",
+            "translation": "讚賞",
+            "analysis": [
+                {
+                    "word": "ชื่นชม",
+                    "rtgs": "chuen chom",
+                    "meaning": "讚賞、欣賞",
+                    "more": "動詞，表示對某人或某事物表示讚美或欣賞。"
+                }
+            ]
+        }
+    },
+    "11": {
+        "text": "ความความชิลของเขา",
+        "start": 28.4,
+        "duration": 2.3,
+        "start_time": "00:00:28,400",
+        "explanation": {
+            "thai": "ความความชิลของเขา",
+            "rtgs": "khwam khwam chil khong khao",
+            "translation": "他的悠閒感",
+            "analysis": [
+                {
+                    "word": "ความ",
+                    "rtgs": "khwam",
+                    "meaning": "名詞化的前綴",
+                    "more": "用於將形容詞或動詞轉成名詞。"
+                },
+                {
+                    "word": "ความ",
+                    "rtgs": "khwam",
+                    "meaning": "名詞化的前綴",
+                    "more": "此處重複使用，可能是口語或強調。"
+                },
+                {
+                    "word": "ชิล",
+                    "rtgs": "chil",
+                    "meaning": "悠閒、輕鬆",
+                    "more": "外來語，表示輕鬆自在的狀態。"
+                },
+                {
+                    "word": "ของ",
+                    "rtgs": "khong",
+                    "meaning": "的",
+                    "more": "表示所有格，連接名詞與其所有者。"
+                },
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他、他的",
+                    "more": "第三人稱代詞。"
+                }
+            ]
+        }
+    },
+    "12": {
+        "text": "อ่า",
+        "start": 30.86,
+        "duration": 0.66,
+        "start_time": "00:00:30,860",
+        "explanation": {
+            "thai": "อ่า",
+            "rtgs": "a",
+            "translation": "啊（語氣詞）",
+            "analysis": [
+                {
+                    "word": "อ่า",
+                    "rtgs": "a",
+                    "meaning": "語氣詞",
+                    "more": "用於表示思考、猶豫或語氣的停頓。"
+                }
+            ]
+        }
+    },
+    "13": {
+        "text": "เขาเป็นคนที่แบบยืดหยุ่นกับทุกสถานการณ์อะไรอย่าง",
+        "start": 31.82,
+        "duration": 3.7,
+        "start_time": "00:00:31,820",
+        "explanation": {
+            "thai": "เขาเป็นคนที่แบบยืดหยุ่นกับทุกสถานการณ์อะไรอย่าง",
+            "rtgs": "khao pen khon thi baep yued yun gap thuk sathana kan arai yang",
+            "translation": "他是那種對所有情況都很有彈性的人",
+            "analysis": [
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他",
+                    "more": "第三人稱代詞。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "連繫動詞，表示身份或狀態。"
+                },
+                {
+                    "word": "คน",
+                    "rtgs": "khon",
+                    "meaning": "人",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "ที่",
+                    "rtgs": "thi",
+                    "meaning": "那個、關係代詞",
+                    "more": "用於引導關係子句。"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式、類型",
+                    "more": "名詞，表示種類或方式。"
+                },
+                {
+                    "word": "ยืดหยุ่น",
+                    "rtgs": "yued yun",
+                    "meaning": "彈性、靈活",
+                    "more": "形容詞，表示能適應變化。"
+                },
+                {
+                    "word": "กับ",
+                    "rtgs": "gap",
+                    "meaning": "與、對於",
+                    "more": "介詞，表示關係或對象。"
+                },
+                {
+                    "word": "ทุก",
+                    "rtgs": "thuk",
+                    "meaning": "每個、所有",
+                    "more": "限定詞。"
+                },
+                {
+                    "word": "สถานการณ์",
+                    "rtgs": "sathana kan",
+                    "meaning": "情況、狀況",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "อะไร",
+                    "rtgs": "arai",
+                    "meaning": "什麼",
+                    "more": "疑問代詞。"
+                },
+                {
+                    "word": "อย่าง",
+                    "rtgs": "yang",
+                    "meaning": "樣子、方式",
+                    "more": "名詞，常用於表示方式或狀態。"
+                }
+            ]
+        }
+    },
+    "14": {
+        "text": "งี้\nอือ\nใช่รู้สึกว่าปรับตัวเก่ง",
+        "start": 35.52,
+        "duration": 2.2,
+        "start_time": "00:00:35,520",
+        "explanation": {
+            "thai": "งี้\nอือ\nใช่รู้สึกว่าปรับตัวเก่ง",
+            "rtgs": "ngi\nue\nchai ru suek wa prap tua keng",
+            "translation": "像這樣\n嗯\n覺得適應力強",
+            "analysis": [
+                {
+                    "word": "งี้",
+                    "rtgs": "ngi",
+                    "meaning": "像這樣",
+                    "more": "口語用法，表示示範或舉例。"
+                },
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯",
+                    "more": "語氣詞，表示同意或思考。"
+                },
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是、對",
+                    "more": "肯定回答。"
+                },
+                {
+                    "word": "รู้สึก",
+                    "rtgs": "ru suek",
+                    "meaning": "感覺",
+                    "more": "動詞，表示感受或感覺。"
+                },
+                {
+                    "word": "ว่า",
+                    "rtgs": "wa",
+                    "meaning": "說、表示",
+                    "more": "連接詞，引導子句。"
+                },
+                {
+                    "word": "ปรับตัว",
+                    "rtgs": "prap tua",
+                    "meaning": "適應",
+                    "more": "動詞，表示調整自己以適應環境。"
+                },
+                {
+                    "word": "เก่ง",
+                    "rtgs": "keng",
+                    "meaning": "厲害、擅長",
+                    "more": "形容詞，表示能力強。"
+                }
+            ]
+        }
+    },
+    "15": {
+        "text": "เป็นข้อดี",
+        "start": 38.18,
+        "duration": 0.6,
+        "start_time": "00:00:38,180",
+        "explanation": {
+            "thai": "เป็นข้อดี",
+            "rtgs": "pen kho di",
+            "translation": "是優點",
+            "analysis": [
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "連繫動詞。"
+                },
+                {
+                    "word": "ข้อดี",
+                    "rtgs": "kho di",
+                    "meaning": "優點",
+                    "more": "名詞，表示好的方面。"
+                }
+            ]
+        }
+    },
+    "16": {
+        "text": "เป็นข้อดี",
+        "start": 38.84,
+        "duration": 0.56,
+        "start_time": "00:00:38,840",
+        "explanation": {
+            "thai": "เป็นข้อดี",
+            "rtgs": "pen kho di",
+            "translation": "是優點",
+            "analysis": [
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "連繫動詞。"
+                },
+                {
+                    "word": "ข้อดี",
+                    "rtgs": "kho di",
+                    "meaning": "優點",
+                    "more": "名詞。"
+                }
+            ]
+        }
+    },
+    "17": {
+        "text": "โอเค",
+        "start": 39.68,
+        "duration": 0.58,
+        "start_time": "00:00:39,680",
+        "explanation": {
+            "thai": "โอเค",
+            "rtgs": "o ke",
+            "translation": "好、可以",
+            "analysis": [
+                {
+                    "word": "โอเค",
+                    "rtgs": "o ke",
+                    "meaning": "好、可以",
+                    "more": "外來語，表示同意或接受。"
+                }
+            ]
+        }
+    },
+    "18": {
+        "text": "ของว่างที่บอนนี่ชอบทานในกองถ่ายน่าจะเป็นแซ",
+        "start": 43.66,
+        "duration": 3.88,
+        "start_time": "00:00:43,660",
+        "explanation": {
+            "thai": "ของว่างที่บอนนี่ชอบทานในกองถ่ายน่าจะเป็นแซ",
+            "rtgs": "khong wang thi bon ni chop than nai kong thai na cha pen sae",
+            "translation": "邦妮在拍攝現場喜歡吃的點心應該是沙",
+            "analysis": [
+                {
+                    "word": "ของว่าง",
+                    "rtgs": "khong wang",
+                    "meaning": "點心",
+                    "more": "名詞，指餐與正餐之間的小吃。"
+                },
+                {
+                    "word": "ที่",
+                    "rtgs": "thi",
+                    "meaning": "那個、關係代詞",
+                    "more": "引導關係子句。"
+                },
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "bon ni",
+                    "meaning": "邦妮（人名）",
+                    "more": "專有名詞。"
+                },
+                {
+                    "word": "ชอบ",
+                    "rtgs": "chop",
+                    "meaning": "喜歡",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "ทาน",
+                    "rtgs": "than",
+                    "meaning": "吃（敬語）",
+                    "more": "動詞，較正式的「吃」。"
+                },
+                {
+                    "word": "ใน",
+                    "rtgs": "nai",
+                    "meaning": "在…裡面",
+                    "more": "介詞。"
+                },
+                {
+                    "word": "กองถ่าย",
+                    "rtgs": "kong thai",
+                    "meaning": "拍攝現場",
+                    "more": "名詞，指電影或電視拍攝的地方。"
+                },
+                {
+                    "word": "น่าจะ",
+                    "rtgs": "na cha",
+                    "meaning": "應該",
+                    "more": "副詞，表示推測。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "連繫動詞。"
+                },
+                {
+                    "word": "แซ",
+                    "rtgs": "sae",
+                    "meaning": "沙（可能是食物名稱的開頭）",
+                    "more": "此處可能是未完整的詞語。"
+                }
+            ]
+        }
+    },
+    "19": {
+        "text": "ลมอน",
+        "start": 47.54,
+        "duration": 0.86,
+        "start_time": "00:00:47,540",
+        "explanation": {
+            "thai": "ลมอน",
+            "rtgs": "la mon",
+            "translation": "檸檬",
+            "analysis": [
+                {
+                    "word": "ลมอน",
+                    "rtgs": "la mon",
+                    "meaning": "檸檬",
+                    "more": "外來語，指檸檬水果。"
+                }
+            ]
+        }
+    },
+    "20": {
+        "text": "ของว่าง",
+        "start": 49.18,
+        "duration": 0.44,
+        "start_time": "00:00:49,180",
+        "explanation": {
+            "thai": "ของว่าง",
+            "rtgs": "khong wang",
+            "translation": "點心",
+            "analysis": [
+                {
+                    "word": "ของ",
+                    "rtgs": "khong",
+                    "meaning": "的，所有格助詞",
+                    "more": "用來表示所有關係，相當於中文的「的」"
+                },
+                {
+                    "word": "ว่าง",
+                    "rtgs": "wang",
+                    "meaning": "空閒，空的",
+                    "more": "此處指「點心」的意思，泰語中「ของว่าง」是指小吃或點心"
+                }
+            ]
+        }
+    },
+    "21": {
+        "text": "ของว่างแบบว่างๆก็คือกินแซลมอน",
+        "start": 49.88,
+        "duration": 2.46,
+        "start_time": "00:00:49,880",
+        "explanation": {
+            "thai": "ของว่างแบบว่างๆก็คือกินแซลมอน",
+            "rtgs": "khong wang baep wang wang ko khue kin saelmon",
+            "translation": "點心是那種隨便的，就是吃鮭魚",
+            "analysis": [
+                {
+                    "word": "ของว่าง",
+                    "rtgs": "khong wang",
+                    "meaning": "點心",
+                    "more": "前面已解釋"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式，樣式",
+                    "more": "表示方式或樣式"
+                },
+                {
+                    "word": "ว่างๆ",
+                    "rtgs": "wang wang",
+                    "meaning": "空閒，隨便",
+                    "more": "重複詞，表示隨意或輕鬆的狀態"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "也，就",
+                    "more": "用來強調或連接前後語意"
+                },
+                {
+                    "word": "คือ",
+                    "rtgs": "khue",
+                    "meaning": "是",
+                    "more": "用於定義或說明"
+                },
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞"
+                },
+                {
+                    "word": "แซลมอน",
+                    "rtgs": "saelmon",
+                    "meaning": "鮭魚",
+                    "more": "外來語，指鮭魚"
+                }
+            ]
+        }
+    },
+    "22": {
+        "text": "อ๋อว่างก็กิน",
+        "start": 52.46,
+        "duration": 0.84,
+        "start_time": "00:00:52,460",
+        "explanation": {
+            "thai": "อ๋อว่างก็กิน",
+            "rtgs": "o wang ko kin",
+            "translation": "喔，空閒就吃",
+            "analysis": [
+                {
+                    "word": "อ๋อ",
+                    "rtgs": "o",
+                    "meaning": "喔，表示理解或驚訝",
+                    "more": "感嘆詞"
+                },
+                {
+                    "word": "ว่าง",
+                    "rtgs": "wang",
+                    "meaning": "空閒",
+                    "more": "形容詞，表示有空"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "就，也",
+                    "more": "連接詞，表示因果或強調"
+                },
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞"
+                }
+            ]
+        }
+    },
+    "23": {
+        "text": "ว่างๆแซลมอน",
+        "start": 53.34,
+        "duration": 1.14,
+        "start_time": "00:00:53,340",
+        "explanation": {
+            "thai": "ว่างๆแซลมอน",
+            "rtgs": "wang wang saelmon",
+            "translation": "空閒時吃鮭魚",
+            "analysis": [
+                {
+                    "word": "ว่างๆ",
+                    "rtgs": "wang wang",
+                    "meaning": "空閒，隨意",
+                    "more": "重複詞，表示輕鬆或隨意的狀態"
+                },
+                {
+                    "word": "แซลมอน",
+                    "rtgs": "saelmon",
+                    "meaning": "鮭魚",
+                    "more": "外來語，指鮭魚"
+                }
+            ]
+        }
+    },
+    "24": {
+        "text": "แล้วก็กินของหนักเลย",
+        "start": 54.52,
+        "duration": 0.62,
+        "start_time": "00:00:54,520",
+        "explanation": {
+            "thai": "แล้วก็กินของหนักเลย",
+            "rtgs": "laeo ko kin khong nak loei",
+            "translation": "然後就吃正餐了",
+            "analysis": [
+                {
+                    "word": "แล้ว",
+                    "rtgs": "laeo",
+                    "meaning": "然後",
+                    "more": "表示時間先後順序"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "就，也",
+                    "more": "連接詞，表示因果或強調"
+                },
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞"
+                },
+                {
+                    "word": "ของหนัก",
+                    "rtgs": "khong nak",
+                    "meaning": "正餐，重的食物",
+                    "more": "ของ：東西，หนัก：重，合起來指正餐或重食"
+                },
+                {
+                    "word": "เลย",
+                    "rtgs": "loei",
+                    "meaning": "直接，完全",
+                    "more": "用於強調動作的徹底或立即"
+                }
+            ]
+        }
+    },
+    "25": {
+        "text": "ใช่ผัก",
+        "start": 55.28,
+        "duration": 1.4,
+        "start_time": "00:00:55,280",
+        "explanation": {
+            "thai": "ใช่ผัก",
+            "rtgs": "chai phak",
+            "translation": "是蔬菜嗎？",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是，對",
+                    "more": "用於肯定回答或確認"
+                },
+                {
+                    "word": "ผัก",
+                    "rtgs": "phak",
+                    "meaning": "蔬菜",
+                    "more": "名詞"
+                }
+            ]
+        }
+    },
+    "26": {
+        "text": "กินผัก",
+        "start": 60.6,
+        "duration": 0.42,
+        "start_time": "00:01:00,600",
+        "explanation": {
+            "thai": "กินผัก",
+            "rtgs": "kin phak",
+            "translation": "吃蔬菜",
+            "analysis": [
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞"
+                },
+                {
+                    "word": "ผัก",
+                    "rtgs": "phak",
+                    "meaning": "蔬菜",
+                    "more": "名詞"
+                }
+            ]
+        }
+    },
+    "27": {
+        "text": "กินผักบอนนี่ชอบกินผัก",
+        "start": 61.22,
+        "duration": 1.26,
+        "start_time": "00:01:01,220",
+        "explanation": {
+            "thai": "กินผักบอนนี่ชอบกินผัก",
+            "rtgs": "kin phak bonni chop kin phak",
+            "translation": "吃蔬菜，邦妮喜歡吃蔬菜",
+            "analysis": [
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞"
+                },
+                {
+                    "word": "ผัก",
+                    "rtgs": "phak",
+                    "meaning": "蔬菜",
+                    "more": "名詞"
+                },
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "bonni",
+                    "meaning": "邦妮（人名）",
+                    "more": "外來語人名"
+                },
+                {
+                    "word": "ชอบ",
+                    "rtgs": "chop",
+                    "meaning": "喜歡",
+                    "more": "動詞"
+                },
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞"
+                }
+            ]
+        }
+    },
+    "28": {
+        "text": "เป็นของว่าง",
+        "start": 62.52,
+        "duration": 0.6,
+        "start_time": "00:01:02,520",
+        "explanation": {
+            "thai": "เป็นของว่าง",
+            "rtgs": "pen khong wang",
+            "translation": "是點心",
+            "analysis": [
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "用於說明身份或狀態"
+                },
+                {
+                    "word": "ของว่าง",
+                    "rtgs": "khong wang",
+                    "meaning": "點心",
+                    "more": "名詞"
+                }
+            ]
+        }
+    },
+    "29": {
+        "text": "ใช่เป็นของว่าง",
+        "start": 63.16,
+        "duration": 1.0,
+        "start_time": "00:01:03,160",
+        "explanation": {
+            "thai": "ใช่เป็นของว่าง",
+            "rtgs": "chai pen khong wang",
+            "translation": "是的，是點心",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是，對",
+                    "more": "肯定回答"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "說明身份或狀態"
+                },
+                {
+                    "word": "ของว่าง",
+                    "rtgs": "khong wang",
+                    "meaning": "點心",
+                    "more": "名詞"
+                }
+            ]
+        }
+    },
+    "30": {
+        "text": "อ่า",
+        "start": 64.56,
+        "duration": 0.66,
+        "start_time": "00:01:04,560",
+        "explanation": {
+            "thai": "อ่า",
+            "rtgs": "a",
+            "translation": "啊（表示思考或猶豫的語氣）",
+            "analysis": [
+                {
+                    "word": "อ่า",
+                    "rtgs": "a",
+                    "meaning": "啊",
+                    "more": "用於表示思考、猶豫或想說話前的語氣詞。"
+                }
+            ]
+        }
+    },
+    "31": {
+        "text": "ใช่ก็ได้",
+        "start": 66.94,
+        "duration": 0.7,
+        "start_time": "00:01:06,940",
+        "explanation": {
+            "thai": "ใช่ก็ได้",
+            "rtgs": "chai ko dai",
+            "translation": "也可以是對的",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是、對",
+                    "more": "用於肯定句，表示同意或確認。"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "也、就",
+                    "more": "用於連接詞，表示輕微的轉折或強調。"
+                },
+                {
+                    "word": "ได้",
+                    "rtgs": "dai",
+                    "meaning": "可以、能",
+                    "more": "表示能力或允許。"
+                }
+            ]
+        }
+    },
+    "32": {
+        "text": "บอนนี่ชอบกินหมดแหละ",
+        "start": 68.18,
+        "duration": 1.42,
+        "start_time": "00:01:08,180",
+        "explanation": {
+            "thai": "บอนนี่ชอบกินหมดแหละ",
+            "rtgs": "bon ni chop kin mot lae",
+            "translation": "邦妮喜歡全部吃掉",
+            "analysis": [
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "bon ni",
+                    "meaning": "邦妮（人名）",
+                    "more": "專有名詞，指人名。"
+                },
+                {
+                    "word": "ชอบ",
+                    "rtgs": "chop",
+                    "meaning": "喜歡",
+                    "more": "表示喜好或偏好。"
+                },
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞，表示吃的動作。"
+                },
+                {
+                    "word": "หมด",
+                    "rtgs": "mot",
+                    "meaning": "全部、完畢",
+                    "more": "表示全部或結束。"
+                },
+                {
+                    "word": "แหละ",
+                    "rtgs": "lae",
+                    "meaning": "語氣助詞",
+                    "more": "用於句尾，表示強調或肯定語氣。"
+                }
+            ]
+        }
+    },
+    "33": {
+        "text": "ทุกอย่าง",
+        "start": 69.64,
+        "duration": 0.4,
+        "start_time": "00:01:09,640",
+        "explanation": {
+            "thai": "ทุกอย่าง",
+            "rtgs": "thuk yang",
+            "translation": "所有東西",
+            "analysis": [
+                {
+                    "word": "ทุกอย่าง",
+                    "rtgs": "thuk yang",
+                    "meaning": "所有東西",
+                    "more": "由ทุก（每）和อย่าง（樣子、東西）組成，表示全部的事物。"
+                }
+            ]
+        }
+    },
+    "34": {
+        "text": "ทุกอย่างแหละใช่",
+        "start": 70.06,
+        "duration": 0.88,
+        "start_time": "00:01:10,060",
+        "explanation": {
+            "thai": "ทุกอย่างแหละใช่",
+            "rtgs": "thuk yang lae chai",
+            "translation": "就是所有東西，對吧？",
+            "analysis": [
+                {
+                    "word": "ทุกอย่าง",
+                    "rtgs": "thuk yang",
+                    "meaning": "所有東西",
+                    "more": "同上。"
+                },
+                {
+                    "word": "แหละ",
+                    "rtgs": "lae",
+                    "meaning": "語氣助詞",
+                    "more": "用於句尾，表示強調或肯定語氣。"
+                },
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是、對",
+                    "more": "用於確認或肯定。"
+                }
+            ]
+        }
+    },
+    "35": {
+        "text": "คือเรียกว่าว่างเมื่อไหร่ก็กินหมด",
+        "start": 71.38,
+        "duration": 1.46,
+        "start_time": "00:01:11,380",
+        "explanation": {
+            "thai": "คือเรียกว่าว่างเมื่อไหร่ก็กินหมด",
+            "rtgs": "kue riak wa wang muea rai ko kin mot",
+            "translation": "就是說，只要有空就全部吃掉",
+            "analysis": [
+                {
+                    "word": "คือ",
+                    "rtgs": "kue",
+                    "meaning": "是、就是",
+                    "more": "用於解釋或定義。"
+                },
+                {
+                    "word": "เรียกว่า",
+                    "rtgs": "riak wa",
+                    "meaning": "稱為、叫做",
+                    "more": "用於命名或定義。"
+                },
+                {
+                    "word": "ว่าง",
+                    "rtgs": "wang",
+                    "meaning": "空閒、有空",
+                    "more": "形容詞，表示時間上的空閒。"
+                },
+                {
+                    "word": "เมื่อไหร่",
+                    "rtgs": "muea rai",
+                    "meaning": "什麼時候",
+                    "more": "疑問詞，表示時間。"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "就、也",
+                    "more": "連接詞，表示條件或強調。"
+                },
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "หมด",
+                    "rtgs": "mot",
+                    "meaning": "全部、完畢",
+                    "more": "副詞，表示全部。"
+                }
+            ]
+        }
+    },
+    "36": {
+        "text": "ว่างเมื่อไหร่ก็กินหมดพี่มี่",
+        "start": 72.9,
+        "duration": 2.0,
+        "start_time": "00:01:12,900",
+        "explanation": {
+            "thai": "ว่างเมื่อไหร่ก็กินหมดพี่มี่",
+            "rtgs": "wang muea rai ko kin mot phi mi",
+            "translation": "只要有空，米哥就全部吃掉",
+            "analysis": [
+                {
+                    "word": "ว่าง",
+                    "rtgs": "wang",
+                    "meaning": "空閒、有空",
+                    "more": "形容詞。"
+                },
+                {
+                    "word": "เมื่อไหร่",
+                    "rtgs": "muea rai",
+                    "meaning": "什麼時候",
+                    "more": "疑問詞。"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "就、也",
+                    "more": "連接詞。"
+                },
+                {
+                    "word": "กิน",
+                    "rtgs": "kin",
+                    "meaning": "吃",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "หมด",
+                    "rtgs": "mot",
+                    "meaning": "全部、完畢",
+                    "more": "副詞。"
+                },
+                {
+                    "word": "พี่มี่",
+                    "rtgs": "phi mi",
+                    "meaning": "米哥（稱呼）",
+                    "more": "พี่表示年長者或尊稱，มี่為名字。"
+                }
+            ]
+        }
+    },
+    "37": {
+        "text": "พี่มี่",
+        "start": 75.62,
+        "duration": 0.34,
+        "start_time": "00:01:15,620",
+        "explanation": {
+            "thai": "พี่มี่",
+            "rtgs": "phi mi",
+            "translation": "米哥",
+            "analysis": [
+                {
+                    "word": "พี่มี่",
+                    "rtgs": "phi mi",
+                    "meaning": "米哥",
+                    "more": "พี่是對年長者的稱呼，มี่是名字。"
+                }
+            ]
+        }
+    },
+    "38": {
+        "text": "แซลมอน",
+        "start": 76.12,
+        "duration": 0.58,
+        "start_time": "00:01:16,120",
+        "explanation": {
+            "thai": "แซลมอน",
+            "rtgs": "sae lon",
+            "translation": "鮭魚",
+            "analysis": [
+                {
+                    "word": "แซลมอน",
+                    "rtgs": "sae lon",
+                    "meaning": "鮭魚",
+                    "more": "外來語，指鮭魚。"
+                }
+            ]
+        }
+    },
+    "39": {
+        "text": "อ่า",
+        "start": 76.98,
+        "duration": 0.3,
+        "start_time": "00:01:16,980",
+        "explanation": {
+            "thai": "อ่า",
+            "rtgs": "a",
+            "translation": "啊（表示思考或猶豫的語氣）",
+            "analysis": [
+                {
+                    "word": "อ่า",
+                    "rtgs": "a",
+                    "meaning": "啊",
+                    "more": "用於表示思考、猶豫或想說話前的語氣詞。"
+                }
+            ]
+        }
+    },
+    "40": {
+        "text": "เรายังไม่เคยไปคาราโอเกะด้วยกันเลย",
+        "start": 80.64,
+        "duration": 1.74,
+        "start_time": "00:01:20,640",
+        "explanation": {
+            "thai": "เรายังไม่เคยไปคาราโอเกะด้วยกันเลย",
+            "rtgs": "rao yang mai khoei pai kharaoke duai kan loei",
+            "translation": "我們還從未一起去過卡拉OK呢",
+            "analysis": [
+                {
+                    "word": "เรา",
+                    "rtgs": "rao",
+                    "meaning": "我們",
+                    "more": "代名詞，表示說話者和對方或其他人"
+                },
+                {
+                    "word": "ยัง",
+                    "rtgs": "yang",
+                    "meaning": "還，仍然",
+                    "more": "副詞，表示動作或狀態持續未變"
+                },
+                {
+                    "word": "ไม่เคย",
+                    "rtgs": "mai khoei",
+                    "meaning": "從未",
+                    "more": "副詞，表示過去從未發生過某事"
+                },
+                {
+                    "word": "ไป",
+                    "rtgs": "pai",
+                    "meaning": "去",
+                    "more": "動詞，表示移動方向"
+                },
+                {
+                    "word": "คาราโอเกะ",
+                    "rtgs": "kharaoke",
+                    "meaning": "卡拉OK",
+                    "more": "名詞，外來語，指唱歌的娛樂活動"
+                },
+                {
+                    "word": "ด้วยกัน",
+                    "rtgs": "duai kan",
+                    "meaning": "一起",
+                    "more": "副詞，表示共同進行某事"
+                },
+                {
+                    "word": "เลย",
+                    "rtgs": "loei",
+                    "meaning": "呢（語氣助詞）",
+                    "more": "用於句尾，強調語氣或表示肯定"
+                }
+            ]
+        }
+    },
+    "41": {
+        "text": "ใช่งั้นเอาเพลงโปรดก่อน",
+        "start": 82.4,
+        "duration": 2.1,
+        "start_time": "00:01:22,400",
+        "explanation": {
+            "thai": "ใช่งั้นเอาเพลงโปรดก่อน",
+            "rtgs": "chai ngan ao phleng prod kon",
+            "translation": "是嗎，那先放喜歡的歌吧",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是，對",
+                    "more": "肯定回答或確認"
+                },
+                {
+                    "word": "งั้น",
+                    "rtgs": "ngan",
+                    "meaning": "那麼，那樣",
+                    "more": "連接詞，表示承接前句的情況"
+                },
+                {
+                    "word": "เอา",
+                    "rtgs": "ao",
+                    "meaning": "拿，取，放",
+                    "more": "動詞，表示採取某行動"
+                },
+                {
+                    "word": "เพลง",
+                    "rtgs": "phleng",
+                    "meaning": "歌曲",
+                    "more": "名詞，指音樂作品"
+                },
+                {
+                    "word": "โปรด",
+                    "rtgs": "prod",
+                    "meaning": "喜歡，偏愛",
+                    "more": "形容詞，表示偏好的事物"
+                },
+                {
+                    "word": "ก่อน",
+                    "rtgs": "kon",
+                    "meaning": "先，之前",
+                    "more": "副詞，表示時間上的先後順序"
+                }
+            ]
+        }
+    },
+    "42": {
+        "text": "คือพี่มี่ฟังทุกอย่างเลยอ่ะ",
+        "start": 87.52,
+        "duration": 1.58,
+        "start_time": "00:01:27,520",
+        "explanation": {
+            "thai": "คือพี่มี่ฟังทุกอย่างเลยอ่ะ",
+            "rtgs": "khuue phi mii fang thuk yang loei a",
+            "translation": "就是妹妹聽所有東西呢",
+            "analysis": [
+                {
+                    "word": "คือ",
+                    "rtgs": "khuue",
+                    "meaning": "就是",
+                    "more": "連接詞，用於解釋或強調前述內容"
+                },
+                {
+                    "word": "พี่มี่",
+                    "rtgs": "phi mii",
+                    "meaning": "妹妹（名字）",
+                    "more": "名詞，指人名或稱呼，這裡指一位叫พี่มี่的人"
+                },
+                {
+                    "word": "ฟัง",
+                    "rtgs": "fang",
+                    "meaning": "聽",
+                    "more": "動詞，表示聽取聲音或音樂"
+                },
+                {
+                    "word": "ทุกอย่าง",
+                    "rtgs": "thuk yang",
+                    "meaning": "所有東西",
+                    "more": "代名詞，表示全部的事物"
+                },
+                {
+                    "word": "เลย",
+                    "rtgs": "loei",
+                    "meaning": "呢（語氣助詞）",
+                    "more": "用於句尾，強調語氣"
+                },
+                {
+                    "word": "อ่ะ",
+                    "rtgs": "a",
+                    "meaning": "語氣助詞",
+                    "more": "用於句尾，表示輕微的感嘆或親切語氣"
+                }
+            ]
+        }
+    },
+    "43": {
+        "text": "ใช่ๆ",
+        "start": 89.14,
+        "duration": 0.28,
+        "start_time": "00:01:29,140",
+        "explanation": {
+            "thai": "ใช่ๆ",
+            "rtgs": "chai chai",
+            "translation": "是是（表示同意）",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是，對",
+                    "more": "肯定回答或確認"
+                },
+                {
+                    "word": "ๆ",
+                    "rtgs": "ๆ",
+                    "meaning": "重複符號",
+                    "more": "表示前一字重複，強調語氣"
+                }
+            ]
+        }
+    },
+    "44": {
+        "text": "คือพี่มี่ฟังทุกอย่างเลยเลยไม่รู้ว่าเพลงโปรดเขาคือ",
+        "start": 89.44,
+        "duration": 3.08,
+        "start_time": "00:01:29,440",
+        "explanation": {
+            "thai": "คือพี่มี่ฟังทุกอย่างเลยเลยไม่รู้ว่าเพลงโปรดเขาคือ",
+            "rtgs": "khuue phi mii fang thuk yang loei loei mai ru wa phleng prod khao khuue",
+            "translation": "就是妹妹聽所有東西所以不知道喜歡的歌是什麼",
+            "analysis": [
+                {
+                    "word": "คือ",
+                    "rtgs": "khuue",
+                    "meaning": "就是",
+                    "more": "連接詞，用於解釋或強調前述內容"
+                },
+                {
+                    "word": "พี่มี่",
+                    "rtgs": "phi mii",
+                    "meaning": "妹妹（名字）",
+                    "more": "名詞，指人名或稱呼，這裡指一位叫พี่มี่的人"
+                },
+                {
+                    "word": "ฟัง",
+                    "rtgs": "fang",
+                    "meaning": "聽",
+                    "more": "動詞，表示聽取聲音或音樂"
+                },
+                {
+                    "word": "ทุกอย่าง",
+                    "rtgs": "thuk yang",
+                    "meaning": "所有東西",
+                    "more": "代名詞，表示全部的事物"
+                },
+                {
+                    "word": "เลยเลย",
+                    "rtgs": "loei loei",
+                    "meaning": "所以（加強語氣）",
+                    "more": "語氣助詞重複，強調因果關係"
+                },
+                {
+                    "word": "ไม่รู้",
+                    "rtgs": "mai ru",
+                    "meaning": "不知道",
+                    "more": "動詞，表示缺乏知識或信息"
+                },
+                {
+                    "word": "ว่า",
+                    "rtgs": "wa",
+                    "meaning": "（連接詞）",
+                    "more": "用於引導賓語從句"
+                },
+                {
+                    "word": "เพลงโปรด",
+                    "rtgs": "phleng prod",
+                    "meaning": "喜歡的歌",
+                    "more": "名詞短語，指偏愛的歌曲"
+                },
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他，他們",
+                    "more": "代名詞，指第三人稱"
+                },
+                {
+                    "word": "คือ",
+                    "rtgs": "khuue",
+                    "meaning": "是",
+                    "more": "連接詞，表示定義或說明"
+                }
+            ]
+        }
+    },
+    "45": {
+        "text": "อะไรคือเขาฟังหมด",
+        "start": 92.52,
+        "duration": 0.88,
+        "start_time": "00:01:32,520",
+        "explanation": {
+            "thai": "อะไรคือเขาฟังหมด",
+            "rtgs": "arai khuue khao fang mot",
+            "translation": "什麼是他聽的全部",
+            "analysis": [
+                {
+                    "word": "อะไร",
+                    "rtgs": "arai",
+                    "meaning": "什麼",
+                    "more": "疑問代詞，用於詢問事物"
+                },
+                {
+                    "word": "คือ",
+                    "rtgs": "khuue",
+                    "meaning": "是",
+                    "more": "連接詞，表示定義或說明"
+                },
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他，他們",
+                    "more": "代名詞，指第三人稱"
+                },
+                {
+                    "word": "ฟัง",
+                    "rtgs": "fang",
+                    "meaning": "聽",
+                    "more": "動詞，表示聽取聲音或音樂"
+                },
+                {
+                    "word": "หมด",
+                    "rtgs": "mot",
+                    "meaning": "全部，結束",
+                    "more": "副詞，表示全部或完全"
+                }
+            ]
+        }
+    },
+    "46": {
+        "text": "ทุกสัญชาติทุกแนวแบบไทยป๊อ",
+        "start": 94.04,
+        "duration": 3.84,
+        "start_time": "00:01:34,040",
+        "explanation": {
+            "thai": "ทุกสัญชาติทุกแนวแบบไทยป๊อ",
+            "rtgs": "thuk sanachat thuk naeo baep thai pop",
+            "translation": "每個國籍每種風格像泰國流行音樂",
+            "analysis": [
+                {
+                    "word": "ทุก",
+                    "rtgs": "thuk",
+                    "meaning": "每，每個",
+                    "more": "限定詞，表示全部成員"
+                },
+                {
+                    "word": "สัญชาติ",
+                    "rtgs": "sanachat",
+                    "meaning": "國籍",
+                    "more": "名詞，指國家身份"
+                },
+                {
+                    "word": "ทุก",
+                    "rtgs": "thuk",
+                    "meaning": "每，每個",
+                    "more": "限定詞，表示全部成員"
+                },
+                {
+                    "word": "แนว",
+                    "rtgs": "naeo",
+                    "meaning": "風格，類型",
+                    "more": "名詞，指種類或風格"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "樣式，方式",
+                    "more": "名詞，表示方式或樣式"
+                },
+                {
+                    "word": "ไทย",
+                    "rtgs": "thai",
+                    "meaning": "泰國的",
+                    "more": "形容詞，指泰國相關的事物"
+                },
+                {
+                    "word": "ป๊อ",
+                    "rtgs": "pop",
+                    "meaning": "流行音樂",
+                    "more": "名詞，指流行音樂類型"
+                }
+            ]
+        }
+    },
+    "47": {
+        "text": "ป",
+        "start": 97.88,
+        "duration": 0.16,
+        "start_time": "00:01:37,880",
+        "explanation": {
+            "thai": "ป",
+            "rtgs": "p",
+            "translation": "（單字）ป",
+            "analysis": [
+                {
+                    "word": "ป",
+                    "rtgs": "p",
+                    "meaning": "字母ป",
+                    "more": "泰文字母之一，發音類似英文的p"
+                }
+            ]
+        }
+    },
+    "48": {
+        "text": "อือ",
+        "start": 98.38,
+        "duration": 0.26,
+        "start_time": "00:01:38,380",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯，表示同意或思考",
+                    "more": "語氣詞，用於表示肯定或猶豫"
+                }
+            ]
+        }
+    },
+    "49": {
+        "text": "คลาสสิกลูกทุ่ง",
+        "start": 99.5,
+        "duration": 1.3,
+        "start_time": "00:01:39,500",
+        "explanation": {
+            "thai": "คลาสสิกลูกทุ่ง",
+            "rtgs": "khlasik luk thung",
+            "translation": "經典鄉村音樂",
+            "analysis": [
+                {
+                    "word": "คลาสสิก",
+                    "rtgs": "khlasik",
+                    "meaning": "經典的",
+                    "more": "形容詞，指經典或傳統風格"
+                },
+                {
+                    "word": "ลูกทุ่ง",
+                    "rtgs": "luk thung",
+                    "meaning": "鄉村音樂",
+                    "more": "名詞，指泰國的鄉村音樂類型"
+                }
+            ]
+        }
+    },
+    "50": {
+        "text": "อือ",
+        "start": 101.14,
+        "duration": 0.34,
+        "start_time": "00:01:41,140",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯（表示同意或思考）",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯",
+                    "more": "用於表示同意、思考或回應，類似中文的「嗯」"
+                }
+            ]
+        }
+    },
+    "51": {
+        "text": "แบบว่าสากล",
+        "start": 101.94,
+        "duration": 0.7,
+        "start_time": "00:01:41,940",
+        "explanation": {
+            "thai": "แบบว่าสากล",
+            "rtgs": "baep wa sa kon",
+            "translation": "像是國際性的",
+            "analysis": [
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "像是、方式",
+                    "more": "用來表示方式或樣式"
+                },
+                {
+                    "word": "ว่า",
+                    "rtgs": "wa",
+                    "meaning": "說、像是",
+                    "more": "用於引出說明或比喻"
+                },
+                {
+                    "word": "สากล",
+                    "rtgs": "sa kon",
+                    "meaning": "國際的、普遍的",
+                    "more": "形容詞，表示普遍或國際性"
+                }
+            ]
+        }
+    },
+    "52": {
+        "text": "อือ",
+        "start": 103.2,
+        "duration": 0.2,
+        "start_time": "00:01:43,200",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯（表示同意或思考）",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯",
+                    "more": "用於表示同意、思考或回應，類似中文的「嗯」"
+                }
+            ]
+        }
+    },
+    "53": {
+        "text": "ก็ฟัง",
+        "start": 103.42,
+        "duration": 0.48,
+        "start_time": "00:01:43,420",
+        "explanation": {
+            "thai": "ก็ฟัง",
+            "rtgs": "ko fang",
+            "translation": "就聽",
+            "analysis": [
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "就、也",
+                    "more": "用於連接詞，表示承接或強調"
+                },
+                {
+                    "word": "ฟัง",
+                    "rtgs": "fang",
+                    "meaning": "聽",
+                    "more": "動詞，表示聽的動作"
+                }
+            ]
+        }
+    },
+    "54": {
+        "text": "ใช่",
+        "start": 104.14,
+        "duration": 0.5,
+        "start_time": "00:01:44,140",
+        "explanation": {
+            "thai": "ใช่",
+            "rtgs": "chai",
+            "translation": "是的",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是、對",
+                    "more": "用於肯定回答，表示同意或確認"
+                }
+            ]
+        }
+    },
+    "55": {
+        "text": "แล้วเพลงโปรดคือ",
+        "start": 105.6,
+        "duration": 1.06,
+        "start_time": "00:01:45,600",
+        "explanation": {
+            "thai": "แล้วเพลงโปรดคือ",
+            "rtgs": "laew pleng bprot khue",
+            "translation": "然後最喜歡的歌曲是",
+            "analysis": [
+                {
+                    "word": "แล้ว",
+                    "rtgs": "laew",
+                    "meaning": "然後、已經",
+                    "more": "表示時間上的先後或完成"
+                },
+                {
+                    "word": "เพลง",
+                    "rtgs": "pleng",
+                    "meaning": "歌曲",
+                    "more": "名詞，指歌曲或音樂作品"
+                },
+                {
+                    "word": "โปรด",
+                    "rtgs": "bprot",
+                    "meaning": "喜歡、最愛",
+                    "more": "形容詞，表示喜愛的"
+                },
+                {
+                    "word": "คือ",
+                    "rtgs": "khue",
+                    "meaning": "是",
+                    "more": "用於定義或說明"
+                }
+            ]
+        }
+    },
+    "56": {
+        "text": "ติดเธอซะก่อน",
+        "start": 109.48,
+        "duration": 1.42,
+        "start_time": "00:01:49,480",
+        "explanation": {
+            "thai": "ติดเธอซะก่อน",
+            "rtgs": "tid thoe sa kon",
+            "translation": "先迷上你",
+            "analysis": [
+                {
+                    "word": "ติด",
+                    "rtgs": "tid",
+                    "meaning": "黏、迷上",
+                    "more": "動詞，表示依附或迷戀"
+                },
+                {
+                    "word": "เธอ",
+                    "rtgs": "thoe",
+                    "meaning": "你",
+                    "more": "代名詞，指對方"
+                },
+                {
+                    "word": "ซะ",
+                    "rtgs": "sa",
+                    "meaning": "就、先",
+                    "more": "語氣助詞，表示強調或先行動作"
+                },
+                {
+                    "word": "ก่อน",
+                    "rtgs": "kon",
+                    "meaning": "先、之前",
+                    "more": "副詞，表示時間上的先後"
+                }
+            ]
+        }
+    },
+    "57": {
+        "text": "เป็นเพลงโปรดช่วงนี้",
+        "start": 111.84,
+        "duration": 0.64,
+        "start_time": "00:01:51,840",
+        "explanation": {
+            "thai": "เป็นเพลงโปรดช่วงนี้",
+            "rtgs": "pen pleng bprot chuang ni",
+            "translation": "是最近最喜歡的歌曲",
+            "analysis": [
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "動詞，表示狀態或身份"
+                },
+                {
+                    "word": "เพลง",
+                    "rtgs": "pleng",
+                    "meaning": "歌曲",
+                    "more": "名詞，指歌曲或音樂作品"
+                },
+                {
+                    "word": "โปรด",
+                    "rtgs": "bprot",
+                    "meaning": "喜歡、最愛",
+                    "more": "形容詞，表示喜愛的"
+                },
+                {
+                    "word": "ช่วง",
+                    "rtgs": "chuang",
+                    "meaning": "期間、時期",
+                    "more": "名詞，表示時間段"
+                },
+                {
+                    "word": "นี้",
+                    "rtgs": "ni",
+                    "meaning": "這、現在",
+                    "more": "指示代詞，表示當前時間或事物"
+                }
+            ]
+        }
+    },
+    "58": {
+        "text": "เป็นเพลงโปรดช่วงนี้",
+        "start": 112.48,
+        "duration": 0.92,
+        "start_time": "00:01:52,480",
+        "explanation": {
+            "thai": "เป็นเพลงโปรดช่วงนี้",
+            "rtgs": "pen pleng bprot chuang ni",
+            "translation": "是最近最喜歡的歌曲",
+            "analysis": [
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "動詞，表示狀態或身份"
+                },
+                {
+                    "word": "เพลง",
+                    "rtgs": "pleng",
+                    "meaning": "歌曲",
+                    "more": "名詞，指歌曲或音樂作品"
+                },
+                {
+                    "word": "โปรด",
+                    "rtgs": "bprot",
+                    "meaning": "喜歡、最愛",
+                    "more": "形容詞，表示喜愛的"
+                },
+                {
+                    "word": "ช่วง",
+                    "rtgs": "chuang",
+                    "meaning": "期間、時期",
+                    "more": "名詞，表示時間段"
+                },
+                {
+                    "word": "นี้",
+                    "rtgs": "ni",
+                    "meaning": "這、現在",
+                    "more": "指示代詞，表示當前時間或事物"
+                }
+            ]
+        }
+    },
+    "59": {
+        "text": "อ่า",
+        "start": 113.44,
+        "duration": 0.28,
+        "start_time": "00:01:53,440",
+        "explanation": {
+            "thai": "อ่า",
+            "rtgs": "a",
+            "translation": "啊（表示感嘆）",
+            "analysis": [
+                {
+                    "word": "อ่า",
+                    "rtgs": "a",
+                    "meaning": "啊",
+                    "more": "用於表示感嘆、思考或猶豫的語氣詞"
+                }
+            ]
+        }
+    },
+    "60": {
+        "text": "ชื่ออะไรนะ",
+        "start": 114.78,
+        "duration": 0.44,
+        "start_time": "00:01:54,780",
+        "explanation": {
+            "thai": "ชื่ออะไรนะ",
+            "rtgs": "chue a-rai na",
+            "translation": "叫什麼名字呢？",
+            "analysis": [
+                {
+                    "word": "ชื่อ",
+                    "rtgs": "chue",
+                    "meaning": "名字",
+                    "more": "用來表示人的名字"
+                },
+                {
+                    "word": "อะไร",
+                    "rtgs": "a-rai",
+                    "meaning": "什麼",
+                    "more": "用於疑問句，詢問事物"
+                },
+                {
+                    "word": "นะ",
+                    "rtgs": "na",
+                    "meaning": "呢",
+                    "more": "語氣助詞，用於句尾，表示輕柔的疑問或確認"
+                }
+            ]
+        }
+    },
+    "61": {
+        "text": "ติดเธอซะก่อน",
+        "start": 115.72,
+        "duration": 0.58,
+        "start_time": "00:01:55,720",
+        "explanation": {
+            "thai": "ติดเธอซะก่อน",
+            "rtgs": "tid thoe sa kon",
+            "translation": "先愛上你",
+            "analysis": [
+                {
+                    "word": "ติด",
+                    "rtgs": "tid",
+                    "meaning": "黏著、依附",
+                    "more": "在此表示愛上、依戀"
+                },
+                {
+                    "word": "เธอ",
+                    "rtgs": "thoe",
+                    "meaning": "你",
+                    "more": "第二人稱代詞，親密用法"
+                },
+                {
+                    "word": "ซะ",
+                    "rtgs": "sa",
+                    "meaning": "就、先",
+                    "more": "語氣助詞，表示動作的決定或強調"
+                },
+                {
+                    "word": "ก่อน",
+                    "rtgs": "kon",
+                    "meaning": "先、之前",
+                    "more": "表示時間上的先後順序"
+                }
+            ]
+        }
+    },
+    "62": {
+        "text": "ติดเธอซะก่อน",
+        "start": 116.32,
+        "duration": 0.8,
+        "start_time": "00:01:56,320",
+        "explanation": {
+            "thai": "ติดเธอซะก่อน",
+            "rtgs": "tid thoe sa kon",
+            "translation": "先愛上你",
+            "analysis": [
+                {
+                    "word": "ติด",
+                    "rtgs": "tid",
+                    "meaning": "黏著、依附",
+                    "more": "在此表示愛上、依戀"
+                },
+                {
+                    "word": "เธอ",
+                    "rtgs": "thoe",
+                    "meaning": "你",
+                    "more": "第二人稱代詞，親密用法"
+                },
+                {
+                    "word": "ซะ",
+                    "rtgs": "sa",
+                    "meaning": "就、先",
+                    "more": "語氣助詞，表示動作的決定或強調"
+                },
+                {
+                    "word": "ก่อน",
+                    "rtgs": "kon",
+                    "meaning": "先、之前",
+                    "more": "表示時間上的先後順序"
+                }
+            ]
+        }
+    },
+    "63": {
+        "text": "ใช่",
+        "start": 117.14,
+        "duration": 0.34,
+        "start_time": "00:01:57,140",
+        "explanation": {
+            "thai": "ใช่",
+            "rtgs": "chai",
+            "translation": "是的",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是、對",
+                    "more": "用於肯定回答"
+                }
+            ]
+        }
+    },
+    "64": {
+        "text": "ของเจ้านาย",
+        "start": 117.52,
+        "duration": 0.74,
+        "start_time": "00:01:57,520",
+        "explanation": {
+            "thai": "ของเจ้านาย",
+            "rtgs": "khong chao nai",
+            "translation": "老闆的東西",
+            "analysis": [
+                {
+                    "word": "ของ",
+                    "rtgs": "khong",
+                    "meaning": "的、所有物",
+                    "more": "表示所有關係"
+                },
+                {
+                    "word": "เจ้า",
+                    "rtgs": "chao",
+                    "meaning": "老闆、主人",
+                    "more": "指擁有者或上司"
+                },
+                {
+                    "word": "นาย",
+                    "rtgs": "nai",
+                    "meaning": "先生、老闆",
+                    "more": "用於稱呼男性上司或主人"
+                }
+            ]
+        }
+    },
+    "65": {
+        "text": "ใ",
+        "start": 118.38,
+        "duration": 0.04,
+        "start_time": "00:01:58,380",
+        "explanation": {
+            "thai": "ใ",
+            "rtgs": "ai",
+            "translation": "（不完整字）",
+            "analysis": [
+                {
+                    "word": "ใ",
+                    "rtgs": "ai",
+                    "meaning": "（不完整字）",
+                    "more": "此字不完整，無法判斷意義"
+                }
+            ]
+        }
+    },
+    "66": {
+        "text": "ช่ลักษณะเด่นที่ชอบในบอนนี่เหรอคะหมายถึงร่างกาย",
+        "start": 121.74,
+        "duration": 3.6,
+        "start_time": "00:02:01,740",
+        "explanation": {
+            "thai": "ช่ลักษณะเด่นที่ชอบในบอนนี่เหรอคะหมายถึงร่างกาย",
+            "rtgs": "cha lak san na den thi chop nai bon ni re kha mai thueng rang kai",
+            "translation": "喜歡邦妮的特徵是什麼呢？是指身體嗎？",
+            "analysis": [
+                {
+                    "word": "ช่",
+                    "rtgs": "cha",
+                    "meaning": "（不完整字）",
+                    "more": "此字不完整，可能是「ช่า」或「ช่」的開頭"
+                },
+                {
+                    "word": "ลักษณะ",
+                    "rtgs": "lak san",
+                    "meaning": "特徵、性質",
+                    "more": "用來描述事物的特點"
+                },
+                {
+                    "word": "เด่น",
+                    "rtgs": "na den",
+                    "meaning": "突出、顯著",
+                    "more": "形容詞，表示明顯的特點"
+                },
+                {
+                    "word": "ที่",
+                    "rtgs": "thi",
+                    "meaning": "在、那個",
+                    "more": "關係代詞，連接前後詞語"
+                },
+                {
+                    "word": "ชอบ",
+                    "rtgs": "chop",
+                    "meaning": "喜歡",
+                    "more": "動詞，表示喜愛"
+                },
+                {
+                    "word": "ใน",
+                    "rtgs": "nai",
+                    "meaning": "在…裡面",
+                    "more": "介詞，表示位置"
+                },
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "bon ni",
+                    "meaning": "邦妮（人名）",
+                    "more": "專有名詞，人名"
+                },
+                {
+                    "word": "เหรอ",
+                    "rtgs": "re",
+                    "meaning": "嗎？",
+                    "more": "疑問語氣助詞，表示疑問"
+                },
+                {
+                    "word": "คะ",
+                    "rtgs": "kha",
+                    "meaning": "（女性語氣）",
+                    "more": "語氣助詞，女性用語，表示禮貌"
+                },
+                {
+                    "word": "หมายถึง",
+                    "rtgs": "mai thueng",
+                    "meaning": "指的是",
+                    "more": "動詞短語，表示解釋或指代"
+                },
+                {
+                    "word": "ร่างกาย",
+                    "rtgs": "rang kai",
+                    "meaning": "身體",
+                    "more": "名詞，指人體"
+                }
+            ]
+        }
+    },
+    "67": {
+        "text": "เหรอคะ",
+        "start": 125.34,
+        "duration": 0.36,
+        "start_time": "00:02:05,340",
+        "explanation": {
+            "thai": "เหรอคะ",
+            "rtgs": "re kha",
+            "translation": "是嗎？",
+            "analysis": [
+                {
+                    "word": "เหรอ",
+                    "rtgs": "re",
+                    "meaning": "嗎？",
+                    "more": "疑問語氣助詞，表示疑問"
+                },
+                {
+                    "word": "คะ",
+                    "rtgs": "kha",
+                    "meaning": "（女性語氣）",
+                    "more": "語氣助詞，女性用語，表示禮貌"
+                }
+            ]
+        }
+    },
+    "68": {
+        "text": "Body",
+        "start": 126.32,
+        "duration": 0.62,
+        "start_time": "00:02:06,320",
+        "explanation": {
+            "thai": "Body",
+            "rtgs": "body",
+            "translation": "身體",
+            "analysis": [
+                {
+                    "word": "Body",
+                    "rtgs": "body",
+                    "meaning": "身體",
+                    "more": "英文字，直接借用表示身體"
+                }
+            ]
+        }
+    },
+    "69": {
+        "text": "รวมๆทั้งแบบ Total",
+        "start": 127.8,
+        "duration": 2.14,
+        "start_time": "00:02:07,800",
+        "explanation": {
+            "thai": "รวมๆทั้งแบบ Total",
+            "rtgs": "ruam ruam thang baep total",
+            "translation": "總體來說，包括全部的類型",
+            "analysis": [
+                {
+                    "word": "รวมๆ",
+                    "rtgs": "ruam ruam",
+                    "meaning": "總體、大致",
+                    "more": "副詞，表示大致的概念"
+                },
+                {
+                    "word": "ทั้ง",
+                    "rtgs": "thang",
+                    "meaning": "全部、整個",
+                    "more": "副詞，表示全部範圍"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "樣式、方式",
+                    "more": "名詞，表示種類或形式"
+                },
+                {
+                    "word": "Total",
+                    "rtgs": "total",
+                    "meaning": "全部、總計",
+                    "more": "英文字，表示總計或全部"
+                }
+            ]
+        }
+    },
+    "70": {
+        "text": "อ๋อ",
+        "start": 130.139,
+        "duration": 0.301,
+        "start_time": "00:02:10,139",
+        "explanation": {
+            "thai": "อ๋อ",
+            "rtgs": "o",
+            "translation": "喔（表示明白或驚訝）",
+            "analysis": [
+                {
+                    "word": "อ๋อ",
+                    "rtgs": "o",
+                    "meaning": "喔",
+                    "more": "用於表示明白、驚訝或突然想起某事的語氣詞。"
+                }
+            ]
+        }
+    },
+    "71": {
+        "text": "ภายนอกและภายใน",
+        "start": 130.74,
+        "duration": 0.9,
+        "start_time": "00:02:10,740",
+        "explanation": {
+            "thai": "ภายนอกและภายใน",
+            "rtgs": "phaai nok lae phaai nai",
+            "translation": "外面和裡面",
+            "analysis": [
+                {
+                    "word": "ภายนอก",
+                    "rtgs": "phaai nok",
+                    "meaning": "外面",
+                    "more": "指外部、外側。"
+                },
+                {
+                    "word": "และ",
+                    "rtgs": "lae",
+                    "meaning": "和",
+                    "more": "連接詞，表示並列。"
+                },
+                {
+                    "word": "ภายใน",
+                    "rtgs": "phaai nai",
+                    "meaning": "裡面",
+                    "more": "指內部、內側。"
+                }
+            ]
+        }
+    },
+    "72": {
+        "text": "น่าจะเป็นถ้าภายนอกน่าจะเป็น",
+        "start": 133.54,
+        "duration": 1.92,
+        "start_time": "00:02:13,540",
+        "explanation": {
+            "thai": "น่าจะเป็นถ้าภายนอกน่าจะเป็น",
+            "rtgs": "naa ja bpen thaa phaai nok naa ja bpen",
+            "translation": "應該是，如果外面應該是",
+            "analysis": [
+                {
+                    "word": "น่าจะ",
+                    "rtgs": "naa ja",
+                    "meaning": "應該",
+                    "more": "表示推測或可能性。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "bpen",
+                    "meaning": "是",
+                    "more": "表示狀態或身份。"
+                },
+                {
+                    "word": "ถ้า",
+                    "rtgs": "thaa",
+                    "meaning": "如果",
+                    "more": "表示條件。"
+                },
+                {
+                    "word": "ภายนอก",
+                    "rtgs": "phaai nok",
+                    "meaning": "外面",
+                    "more": "指外部、外側。"
+                },
+                {
+                    "word": "น่าจะ",
+                    "rtgs": "naa ja",
+                    "meaning": "應該",
+                    "more": "表示推測或可能性。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "bpen",
+                    "meaning": "是",
+                    "more": "表示狀態或身份。"
+                }
+            ]
+        }
+    },
+    "73": {
+        "text": "ดวงตาดวงตา",
+        "start": 136.4,
+        "duration": 1.44,
+        "start_time": "00:02:16,400",
+        "explanation": {
+            "thai": "ดวงตาดวงตา",
+            "rtgs": "duang dtaa duang dtaa",
+            "translation": "眼睛眼睛",
+            "analysis": [
+                {
+                    "word": "ดวงตา",
+                    "rtgs": "duang dtaa",
+                    "meaning": "眼睛",
+                    "more": "指眼睛，常用於文學或正式語境。"
+                },
+                {
+                    "word": "ดวงตา",
+                    "rtgs": "duang dtaa",
+                    "meaning": "眼睛",
+                    "more": "重複用於強調。"
+                }
+            ]
+        }
+    },
+    "74": {
+        "text": "อ๋อ",
+        "start": 138.22,
+        "duration": 0.04,
+        "start_time": "00:02:18,220",
+        "explanation": {
+            "thai": "อ๋อ",
+            "rtgs": "o",
+            "translation": "喔（表示明白或驚訝）",
+            "analysis": [
+                {
+                    "word": "อ๋อ",
+                    "rtgs": "o",
+                    "meaning": "喔",
+                    "more": "用於表示明白、驚訝或突然想起某事的語氣詞。"
+                }
+            ]
+        }
+    },
+    "75": {
+        "text": "ใช่มีลักษณะดวงตาที่กลมโตเป็นพิเศษนะคะ",
+        "start": 138.38,
+        "duration": 3.9,
+        "start_time": "00:02:18,380",
+        "explanation": {
+            "thai": "ใช่มีลักษณะดวงตาที่กลมโตเป็นพิเศษนะคะ",
+            "rtgs": "chai mii laksana duang dtaa thii klom dto bpen phiset na kha",
+            "translation": "是的，有特別圓大的眼睛喔",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是的",
+                    "more": "表示肯定回答。"
+                },
+                {
+                    "word": "มี",
+                    "rtgs": "mii",
+                    "meaning": "有",
+                    "more": "表示擁有。"
+                },
+                {
+                    "word": "ลักษณะ",
+                    "rtgs": "laksana",
+                    "meaning": "特徵、樣子",
+                    "more": "指事物的特性或外觀。"
+                },
+                {
+                    "word": "ดวงตา",
+                    "rtgs": "duang dtaa",
+                    "meaning": "眼睛",
+                    "more": "指眼睛。"
+                },
+                {
+                    "word": "ที่",
+                    "rtgs": "thii",
+                    "meaning": "的",
+                    "more": "連接詞，表示關係。"
+                },
+                {
+                    "word": "กลมโต",
+                    "rtgs": "klom dto",
+                    "meaning": "圓大",
+                    "more": "形容詞，形容眼睛圓且大。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "bpen",
+                    "meaning": "是",
+                    "more": "表示狀態。"
+                },
+                {
+                    "word": "พิเศษ",
+                    "rtgs": "phiset",
+                    "meaning": "特別",
+                    "more": "形容詞，表示特殊。"
+                },
+                {
+                    "word": "นะ",
+                    "rtgs": "na",
+                    "meaning": "喔（語氣助詞）",
+                    "more": "用於句尾，增強語氣。"
+                },
+                {
+                    "word": "คะ",
+                    "rtgs": "kha",
+                    "meaning": "喔（女性語氣助詞）",
+                    "more": "女性說話時用於句尾，表示禮貌。"
+                }
+            ]
+        }
+    },
+    "76": {
+        "text": "แล้วก็สีดำเข้มมากๆ",
+        "start": 142.44,
+        "duration": 1.94,
+        "start_time": "00:02:22,440",
+        "explanation": {
+            "thai": "แล้วก็สีดำเข้มมากๆ",
+            "rtgs": "laeo ko sii dam khem maak maak",
+            "translation": "然後顏色非常深黑",
+            "analysis": [
+                {
+                    "word": "แล้วก็",
+                    "rtgs": "laeo ko",
+                    "meaning": "然後",
+                    "more": "表示接續動作或狀態。"
+                },
+                {
+                    "word": "สีดำ",
+                    "rtgs": "sii dam",
+                    "meaning": "黑色",
+                    "more": "顏色詞。"
+                },
+                {
+                    "word": "เข้ม",
+                    "rtgs": "khem",
+                    "meaning": "深、濃",
+                    "more": "形容顏色深。"
+                },
+                {
+                    "word": "มากๆ",
+                    "rtgs": "maak maak",
+                    "meaning": "非常",
+                    "more": "副詞，表示程度很高。"
+                }
+            ]
+        }
+    },
+    "77": {
+        "text": "สิ่งแรกที่พี่เอมี่จะทำหลังจากที่ทำงานหนักมาทั้งวัน",
+        "start": 149.86,
+        "duration": 2.98,
+        "start_time": "00:02:29,860",
+        "explanation": {
+            "thai": "สิ่งแรกที่พี่เอมี่จะทำหลังจากที่ทำงานหนักมาทั้งวัน",
+            "rtgs": "sing raek thii phii Amy ja tham lang jaak thii tham ngaan nak maa thang wan",
+            "translation": "艾咪姐一天辛苦工作後要做的第一件事",
+            "analysis": [
+                {
+                    "word": "สิ่งแรก",
+                    "rtgs": "sing raek",
+                    "meaning": "第一件事",
+                    "more": "指優先或最重要的事情。"
+                },
+                {
+                    "word": "ที่",
+                    "rtgs": "thii",
+                    "meaning": "的",
+                    "more": "連接詞，表示關係。"
+                },
+                {
+                    "word": "พี่",
+                    "rtgs": "phii",
+                    "meaning": "哥哥、姐姐（尊稱）",
+                    "more": "用於稱呼年長者。"
+                },
+                {
+                    "word": "เอมี่",
+                    "rtgs": "Amy",
+                    "meaning": "艾咪（人名）",
+                    "more": "人名。"
+                },
+                {
+                    "word": "จะ",
+                    "rtgs": "ja",
+                    "meaning": "將要",
+                    "more": "表示未來或意圖。"
+                },
+                {
+                    "word": "ทำ",
+                    "rtgs": "tham",
+                    "meaning": "做",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "หลังจากที่",
+                    "rtgs": "lang jaak thii",
+                    "meaning": "在…之後",
+                    "more": "表示時間先後。"
+                },
+                {
+                    "word": "ทำงาน",
+                    "rtgs": "tham ngaan",
+                    "meaning": "工作",
+                    "more": "動詞短語。"
+                },
+                {
+                    "word": "หนัก",
+                    "rtgs": "nak",
+                    "meaning": "辛苦、努力",
+                    "more": "形容工作強度。"
+                },
+                {
+                    "word": "มา",
+                    "rtgs": "maa",
+                    "meaning": "來",
+                    "more": "表示動作方向。"
+                },
+                {
+                    "word": "ทั้งวัน",
+                    "rtgs": "thang wan",
+                    "meaning": "整天",
+                    "more": "表示時間範圍。"
+                }
+            ]
+        }
+    },
+    "78": {
+        "text": "ก็คือ",
+        "start": 152.84,
+        "duration": 0.66,
+        "start_time": "00:02:32,840",
+        "explanation": {
+            "thai": "ก็คือ",
+            "rtgs": "ko khue",
+            "translation": "就是",
+            "analysis": [
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "就是、也",
+                    "more": "用於強調或承接。"
+                },
+                {
+                    "word": "คือ",
+                    "rtgs": "khue",
+                    "meaning": "是",
+                    "more": "用於定義或說明。"
+                }
+            ]
+        }
+    },
+    "79": {
+        "text": "อืม",
+        "start": 153.54,
+        "duration": 0.34,
+        "start_time": "00:02:33,540",
+        "explanation": {
+            "thai": "อืม",
+            "rtgs": "um",
+            "translation": "嗯（表示思考或猶豫）",
+            "analysis": [
+                {
+                    "word": "อืม",
+                    "rtgs": "um",
+                    "meaning": "嗯",
+                    "more": "表示思考、猶豫或同意的語氣詞。"
+                }
+            ]
+        }
+    },
+    "80": {
+        "text": "นอน",
+        "start": 154.48,
+        "duration": 0.26,
+        "start_time": "00:02:34,480",
+        "explanation": {
+            "thai": "นอน",
+            "rtgs": "non",
+            "translation": "睡覺",
+            "analysis": [
+                {
+                    "word": "นอน",
+                    "rtgs": "non",
+                    "meaning": "睡覺",
+                    "more": "動詞，表示睡覺的動作。"
+                }
+            ]
+        }
+    },
+    "81": {
+        "text": "ใช่",
+        "start": 155.6,
+        "duration": 0.4,
+        "start_time": "00:02:35,600",
+        "explanation": {
+            "thai": "ใช่",
+            "rtgs": "chai",
+            "translation": "是的",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是的",
+                    "more": "用於肯定回答，相當於中文的「是」或「對」。"
+                }
+            ]
+        }
+    },
+    "82": {
+        "text": "คือจริงๆพี่มี่นอนง่ายมาก",
+        "start": 156.6,
+        "duration": 2.7,
+        "start_time": "00:02:36,600",
+        "explanation": {
+            "thai": "คือจริงๆพี่มี่นอนง่ายมาก",
+            "rtgs": "kue jing jing phi mi non ngai mak",
+            "translation": "真的，妹妹睡得很容易",
+            "analysis": [
+                {
+                    "word": "คือ",
+                    "rtgs": "kue",
+                    "meaning": "是",
+                    "more": "連繫動詞，相當於中文的「是」"
+                },
+                {
+                    "word": "จริงๆ",
+                    "rtgs": "jing jing",
+                    "meaning": "真的",
+                    "more": "副詞，表示強調真實性"
+                },
+                {
+                    "word": "พี่มี่",
+                    "rtgs": "phi mi",
+                    "meaning": "妹妹",
+                    "more": "名詞，指稱年紀較大的妹妹或親密稱呼"
+                },
+                {
+                    "word": "นอน",
+                    "rtgs": "non",
+                    "meaning": "睡覺",
+                    "more": "動詞，表示睡覺的動作"
+                },
+                {
+                    "word": "ง่าย",
+                    "rtgs": "ngai",
+                    "meaning": "容易",
+                    "more": "形容詞，表示容易的意思"
+                },
+                {
+                    "word": "มาก",
+                    "rtgs": "mak",
+                    "meaning": "非常",
+                    "more": "副詞，表示程度很高"
+                }
+            ]
+        }
+    },
+    "83": {
+        "text": "อือ",
+        "start": 159.58,
+        "duration": 0.08,
+        "start_time": "00:02:39,580",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯",
+                    "more": "語氣詞，表示同意或思考時的聲音。"
+                }
+            ]
+        }
+    },
+    "84": {
+        "text": "พี่มี่แบบว่าหัวถึงหมอนหัวถึงโซฟาปุ๊บหลับหลับ",
+        "start": 159.66,
+        "duration": 3.74,
+        "start_time": "00:02:39,660",
+        "explanation": {
+            "thai": "พี่มี่แบบว่าหัวถึงหมอนหัวถึงโซฟาปุ๊บหลับหลับ",
+            "rtgs": "phi mi baep wa hua thueng mon hua thueng sofa pub lap lap",
+            "translation": "妹妹就是頭一碰到枕頭、頭一碰到沙發就睡著了",
+            "analysis": [
+                {
+                    "word": "พี่มี่",
+                    "rtgs": "phi mi",
+                    "meaning": "妹妹",
+                    "more": "名詞，指稱年紀較大的妹妹或親密稱呼"
+                },
+                {
+                    "word": "แบบว่า",
+                    "rtgs": "baep wa",
+                    "meaning": "就是說",
+                    "more": "口語用法，表示解釋或強調"
+                },
+                {
+                    "word": "หัว",
+                    "rtgs": "hua",
+                    "meaning": "頭",
+                    "more": "名詞，指身體的頭部"
+                },
+                {
+                    "word": "ถึง",
+                    "rtgs": "thueng",
+                    "meaning": "到、碰到",
+                    "more": "介詞，表示到達某處或接觸"
+                },
+                {
+                    "word": "หมอน",
+                    "rtgs": "mon",
+                    "meaning": "枕頭",
+                    "more": "名詞，睡覺時枕頭的意思"
+                },
+                {
+                    "word": "หัว",
+                    "rtgs": "hua",
+                    "meaning": "頭",
+                    "more": "名詞，指身體的頭部"
+                },
+                {
+                    "word": "ถึง",
+                    "rtgs": "thueng",
+                    "meaning": "到、碰到",
+                    "more": "介詞，表示到達某處或接觸"
+                },
+                {
+                    "word": "โซฟา",
+                    "rtgs": "sofa",
+                    "meaning": "沙發",
+                    "more": "名詞，家具名詞，指沙發"
+                },
+                {
+                    "word": "ปุ๊บ",
+                    "rtgs": "pub",
+                    "meaning": "一...就...",
+                    "more": "副詞，表示動作緊接發生"
+                },
+                {
+                    "word": "หลับหลับ",
+                    "rtgs": "lap lap",
+                    "meaning": "睡著",
+                    "more": "動詞重疊，表示動作的強調或持續"
+                }
+            ]
+        }
+    },
+    "85": {
+        "text": "ใช่\nหลับได้เลย",
+        "start": 163.56,
+        "duration": 0.62,
+        "start_time": "00:02:43,560",
+        "explanation": {
+            "thai": "ใช่\nหลับได้เลย",
+            "rtgs": "chai\nlap dai loei",
+            "translation": "是的\n可以馬上睡著",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是的",
+                    "more": "肯定回答詞"
+                },
+                {
+                    "word": "หลับ",
+                    "rtgs": "lap",
+                    "meaning": "睡著",
+                    "more": "動詞，表示入睡"
+                },
+                {
+                    "word": "ได้",
+                    "rtgs": "dai",
+                    "meaning": "能、可以",
+                    "more": "助動詞，表示能力或可能性"
+                },
+                {
+                    "word": "เลย",
+                    "rtgs": "loei",
+                    "meaning": "馬上、立刻",
+                    "more": "副詞，表示動作迅速發生"
+                }
+            ]
+        }
+    },
+    "86": {
+        "text": "แล้วปลุกตื่นไหม",
+        "start": 164.5,
+        "duration": 0.7,
+        "start_time": "00:02:44,500",
+        "explanation": {
+            "thai": "แล้วปลุกตื่นไหม",
+            "rtgs": "laew pluk tuen mai",
+            "translation": "然後會被叫醒嗎？",
+            "analysis": [
+                {
+                    "word": "แล้ว",
+                    "rtgs": "laew",
+                    "meaning": "然後",
+                    "more": "連接詞，表示時間上的先後"
+                },
+                {
+                    "word": "ปลุก",
+                    "rtgs": "pluk",
+                    "meaning": "叫醒",
+                    "more": "動詞，表示喚醒某人"
+                },
+                {
+                    "word": "ตื่น",
+                    "rtgs": "tuen",
+                    "meaning": "醒來",
+                    "more": "動詞，表示從睡眠中醒來"
+                },
+                {
+                    "word": "ไหม",
+                    "rtgs": "mai",
+                    "meaning": "嗎？",
+                    "more": "疑問助詞，用於句尾表示疑問"
+                }
+            ]
+        }
+    },
+    "87": {
+        "text": "ไม่ตื่น",
+        "start": 165.28,
+        "duration": 0.42,
+        "start_time": "00:02:45,280",
+        "explanation": {
+            "thai": "ไม่ตื่น",
+            "rtgs": "mai tuen",
+            "translation": "不醒來",
+            "analysis": [
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞，表示否定"
+                },
+                {
+                    "word": "ตื่น",
+                    "rtgs": "tuen",
+                    "meaning": "醒來",
+                    "more": "動詞，表示從睡眠中醒來"
+                }
+            ]
+        }
+    },
+    "88": {
+        "text": "ไม่ตื่น",
+        "start": 165.72,
+        "duration": 0.4,
+        "start_time": "00:02:45,720",
+        "explanation": {
+            "thai": "ไม่ตื่น",
+            "rtgs": "mai tuen",
+            "translation": "不醒來",
+            "analysis": [
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞，表示否定"
+                },
+                {
+                    "word": "ตื่น",
+                    "rtgs": "tuen",
+                    "meaning": "醒來",
+                    "more": "動詞，表示從睡眠中醒來"
+                }
+            ]
+        }
+    },
+    "89": {
+        "text": "ปลุกไม่ตื่นด้วย",
+        "start": 166.64,
+        "duration": 0.82,
+        "start_time": "00:02:46,640",
+        "explanation": {
+            "thai": "ปลุกไม่ตื่นด้วย",
+            "rtgs": "pluk mai tuen duai",
+            "translation": "叫醒也不醒",
+            "analysis": [
+                {
+                    "word": "ปลุก",
+                    "rtgs": "pluk",
+                    "meaning": "叫醒",
+                    "more": "動詞，表示喚醒某人"
+                },
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞，表示否定"
+                },
+                {
+                    "word": "ตื่น",
+                    "rtgs": "tuen",
+                    "meaning": "醒來",
+                    "more": "動詞，表示從睡眠中醒來"
+                },
+                {
+                    "word": "ด้วย",
+                    "rtgs": "duai",
+                    "meaning": "也",
+                    "more": "副詞，表示附加或同時發生"
+                }
+            ]
+        }
+    },
+    "90": {
+        "text": "ปลุกไม่ตื่น",
+        "start": 167.48,
+        "duration": 0.74,
+        "start_time": "00:02:47,480",
+        "explanation": {
+            "thai": "ปลุกไม่ตื่น",
+            "rtgs": "pluk mai tuen",
+            "translation": "叫醒也不起床",
+            "analysis": [
+                {
+                    "word": "ปลุก",
+                    "rtgs": "pluk",
+                    "meaning": "叫醒",
+                    "more": "動詞，表示喚醒某人"
+                },
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞，用於動詞前表示否定"
+                },
+                {
+                    "word": "ตื่น",
+                    "rtgs": "tuen",
+                    "meaning": "醒來",
+                    "more": "動詞，表示從睡眠中醒來"
+                }
+            ]
+        }
+    },
+    "91": {
+        "text": "ใช่",
+        "start": 168.3,
+        "duration": 0.38,
+        "start_time": "00:02:48,300",
+        "explanation": {
+            "thai": "ใช่",
+            "rtgs": "chai",
+            "translation": "是的",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是的",
+                    "more": "肯定回答詞，表示同意或肯定"
+                }
+            ]
+        }
+    },
+    "92": {
+        "text": "ไม่ยอมไปไหนทั้งนั้นจะนอน",
+        "start": 168.72,
+        "duration": 1.64,
+        "start_time": "00:02:48,720",
+        "explanation": {
+            "thai": "ไม่ยอมไปไหนทั้งนั้นจะนอน",
+            "rtgs": "mai yom pai nai thang nan cha non",
+            "translation": "不願意去哪裡，什麼地方都不去，只想睡覺",
+            "analysis": [
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞，否定後面的動詞"
+                },
+                {
+                    "word": "ยอม",
+                    "rtgs": "yom",
+                    "meaning": "願意",
+                    "more": "動詞，表示同意或接受"
+                },
+                {
+                    "word": "ไป",
+                    "rtgs": "pai",
+                    "meaning": "去",
+                    "more": "動詞，表示移動到某地"
+                },
+                {
+                    "word": "ไหน",
+                    "rtgs": "nai",
+                    "meaning": "哪裡",
+                    "more": "疑問代詞，表示地點"
+                },
+                {
+                    "word": "ทั้งนั้น",
+                    "rtgs": "thang nan",
+                    "meaning": "全部、都",
+                    "more": "副詞，表示全部範圍"
+                },
+                {
+                    "word": "จะ",
+                    "rtgs": "cha",
+                    "meaning": "將要、會",
+                    "more": "助動詞，表示未來或意圖"
+                },
+                {
+                    "word": "นอน",
+                    "rtgs": "non",
+                    "meaning": "睡覺",
+                    "more": "動詞，表示睡眠"
+                }
+            ]
+        }
+    },
+    "93": {
+        "text": "ใช่เรื่องนอนเรื่องใหญ่",
+        "start": 170.38,
+        "duration": 1.88,
+        "start_time": "00:02:50,380",
+        "explanation": {
+            "thai": "ใช่เรื่องนอนเรื่องใหญ่",
+            "rtgs": "chai rueang non rueang yai",
+            "translation": "是的，睡覺是大事",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是的",
+                    "more": "肯定回答詞"
+                },
+                {
+                    "word": "เรื่อง",
+                    "rtgs": "rueang",
+                    "meaning": "事情",
+                    "more": "名詞，表示事情或事件"
+                },
+                {
+                    "word": "นอน",
+                    "rtgs": "non",
+                    "meaning": "睡覺",
+                    "more": "動詞，表示睡眠"
+                },
+                {
+                    "word": "เรื่อง",
+                    "rtgs": "rueang",
+                    "meaning": "事情",
+                    "more": "名詞，重複用來強調"
+                },
+                {
+                    "word": "ใหญ่",
+                    "rtgs": "yai",
+                    "meaning": "大",
+                    "more": "形容詞，表示重要或大"
+                }
+            ]
+        }
+    },
+    "94": {
+        "text": "ไม่มีนะ",
+        "start": 175.94,
+        "duration": 0.72,
+        "start_time": "00:02:55,940",
+        "explanation": {
+            "thai": "ไม่มีนะ",
+            "rtgs": "mai mee na",
+            "translation": "沒有喔",
+            "analysis": [
+                {
+                    "word": "ไม่มี",
+                    "rtgs": "mai mee",
+                    "meaning": "沒有",
+                    "more": "動詞，表示不存在或沒有"
+                },
+                {
+                    "word": "นะ",
+                    "rtgs": "na",
+                    "meaning": "喔、呢",
+                    "more": "語氣助詞，用於句尾，增加親切感或強調"
+                }
+            ]
+        }
+    },
+    "95": {
+        "text": "ไม่มีนะ",
+        "start": 178.34,
+        "duration": 0.64,
+        "start_time": "00:02:58,340",
+        "explanation": {
+            "thai": "ไม่มีนะ",
+            "rtgs": "mai mee na",
+            "translation": "沒有喔",
+            "analysis": [
+                {
+                    "word": "ไม่มี",
+                    "rtgs": "mai mee",
+                    "meaning": "沒有",
+                    "more": "動詞，表示不存在或沒有"
+                },
+                {
+                    "word": "นะ",
+                    "rtgs": "na",
+                    "meaning": "喔、呢",
+                    "more": "語氣助詞，用於句尾，增加親切感或強調"
+                }
+            ]
+        }
+    },
+    "96": {
+        "text": "นิสัยแปลกๆหรอ",
+        "start": 179.06,
+        "duration": 1.3,
+        "start_time": "00:02:59,060",
+        "explanation": {
+            "thai": "นิสัยแปลกๆหรอ",
+            "rtgs": "nisai bplaek bplaek ror",
+            "translation": "習慣怪怪的嗎？",
+            "analysis": [
+                {
+                    "word": "นิสัย",
+                    "rtgs": "nisai",
+                    "meaning": "習慣、性格",
+                    "more": "名詞，表示個人的習慣或性格"
+                },
+                {
+                    "word": "แปลกๆ",
+                    "rtgs": "bplaek bplaek",
+                    "meaning": "怪怪的",
+                    "more": "形容詞，表示奇怪或不尋常，重複用來加強語氣"
+                },
+                {
+                    "word": "หรอ",
+                    "rtgs": "ror",
+                    "meaning": "嗎？",
+                    "more": "疑問助詞，用於句尾，表示疑問"
+                }
+            ]
+        }
+    },
+    "97": {
+        "text": "ไม่มี",
+        "start": 180.48,
+        "duration": 0.7,
+        "start_time": "00:03:00,480",
+        "explanation": {
+            "thai": "ไม่มี",
+            "rtgs": "mai mee",
+            "translation": "沒有",
+            "analysis": [
+                {
+                    "word": "ไม่มี",
+                    "rtgs": "mai mee",
+                    "meaning": "沒有",
+                    "more": "動詞，表示不存在或沒有"
+                }
+            ]
+        }
+    },
+    "98": {
+        "text": "อาจจะไม่ได้แปลกมากแต่ว่า",
+        "start": 183.38,
+        "duration": 2.24,
+        "start_time": "00:03:03,380",
+        "explanation": {
+            "thai": "อาจจะไม่ได้แปลกมากแต่ว่า",
+            "rtgs": "at ja mai dai bplaek mak dtae wa",
+            "translation": "可能不算太怪，但是",
+            "analysis": [
+                {
+                    "word": "อาจจะ",
+                    "rtgs": "at ja",
+                    "meaning": "可能",
+                    "more": "副詞，表示可能性"
+                },
+                {
+                    "word": "ไม่ได้",
+                    "rtgs": "mai dai",
+                    "meaning": "不算",
+                    "more": "動詞否定，表示否定能力或可能性"
+                },
+                {
+                    "word": "แปลก",
+                    "rtgs": "bplaek",
+                    "meaning": "怪異",
+                    "more": "形容詞，表示奇怪或不尋常"
+                },
+                {
+                    "word": "มาก",
+                    "rtgs": "mak",
+                    "meaning": "很、非常",
+                    "more": "副詞，表示程度高"
+                },
+                {
+                    "word": "แต่",
+                    "rtgs": "dtae",
+                    "meaning": "但是",
+                    "more": "連接詞，表示轉折或對比"
+                },
+                {
+                    "word": "ว่า",
+                    "rtgs": "wa",
+                    "meaning": "說",
+                    "more": "助詞，用於引出後續說明"
+                }
+            ]
+        }
+    },
+    "99": {
+        "text": "แต่แปลก",
+        "start": 185.82,
+        "duration": 0.76,
+        "start_time": "00:03:05,820",
+        "explanation": {
+            "thai": "แต่แปลก",
+            "rtgs": "dtae bplaek",
+            "translation": "但是怪怪的",
+            "analysis": [
+                {
+                    "word": "แต่",
+                    "rtgs": "dtae",
+                    "meaning": "但是",
+                    "more": "連接詞，表示轉折"
+                },
+                {
+                    "word": "แปลก",
+                    "rtgs": "bplaek",
+                    "meaning": "怪異",
+                    "more": "形容詞，表示奇怪或不尋常"
+                }
+            ]
+        }
+    },
+    "100": {
+        "text": "แต่ว่าเอาเป็นไม่ได้เอาเป็นว่าคนอื่นอาจจะตกใจถ้",
+        "start": 188.04,
+        "duration": 3.94,
+        "start_time": "00:03:08,040",
+        "explanation": {
+            "thai": "แต่ว่าเอาเป็นไม่ได้เอาเป็นว่าคนอื่นอาจจะตกใจถ้",
+            "rtgs": "tae wa ao pen mai dai ao pen wa khon uen at cha tok chai tha",
+            "translation": "但是不能說是這樣，不能說別人可能會嚇一跳如果",
+            "analysis": [
+                {
+                    "word": "แต่ว่า",
+                    "rtgs": "tae wa",
+                    "meaning": "但是",
+                    "more": "用於轉折，表示前後句的對比。"
+                },
+                {
+                    "word": "เอาเป็นไม่ได้",
+                    "rtgs": "ao pen mai dai",
+                    "meaning": "不能接受，無法成為",
+                    "more": "เอาเป็น + ไม่ได้ 表示無法成為某種狀態。"
+                },
+                {
+                    "word": "เอาเป็นว่า",
+                    "rtgs": "ao pen wa",
+                    "meaning": "就當作是，假設",
+                    "more": "用於引出假設或結論。"
+                },
+                {
+                    "word": "คนอื่น",
+                    "rtgs": "khon uen",
+                    "meaning": "別人",
+                    "more": "คน 是人，อื่น 是其他，合起來是別人。"
+                },
+                {
+                    "word": "อาจจะ",
+                    "rtgs": "at cha",
+                    "meaning": "可能",
+                    "more": "表示推測或可能性。"
+                },
+                {
+                    "word": "ตกใจ",
+                    "rtgs": "tok chai",
+                    "meaning": "嚇一跳，驚訝",
+                    "more": "動詞，表示情緒反應。"
+                },
+                {
+                    "word": "ถ้า",
+                    "rtgs": "tha",
+                    "meaning": "如果",
+                    "more": "連接詞，引導條件子句。"
+                }
+            ]
+        }
+    },
+    "101": {
+        "text": "ารู้มุมนี้ของบอนนี่",
+        "start": 191.98,
+        "duration": 1.26,
+        "start_time": "00:03:11,980",
+        "explanation": {
+            "thai": "ารู้มุมนี้ของบอนนี่",
+            "rtgs": "a ru mu ni khong bon ni",
+            "translation": "知道這個角度的邦妮",
+            "analysis": [
+                {
+                    "word": "รู้",
+                    "rtgs": "ru",
+                    "meaning": "知道",
+                    "more": "動詞，表示知道或了解。"
+                },
+                {
+                    "word": "มุมนี้",
+                    "rtgs": "mu ni",
+                    "meaning": "這個角度",
+                    "more": "มุม 是角度，นี้ 是這個。"
+                },
+                {
+                    "word": "ของ",
+                    "rtgs": "khong",
+                    "meaning": "的",
+                    "more": "表示所有關係。"
+                },
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "bon ni",
+                    "meaning": "邦妮（人名）",
+                    "more": "專有名詞，指人名。"
+                }
+            ]
+        }
+    },
+    "102": {
+        "text": "เออ",
+        "start": 193.26,
+        "duration": 0.04,
+        "start_time": "00:03:13,260",
+        "explanation": {
+            "thai": "เออ",
+            "rtgs": "oe",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "เออ",
+                    "rtgs": "oe",
+                    "meaning": "嗯，表示同意或思考",
+                    "more": "口語用語，表示肯定或思考時的語氣詞。"
+                }
+            ]
+        }
+    },
+    "103": {
+        "text": "คือคนอื่นอาจจะคิดว่าบอนนี่เป็นคนเงียบๆ",
+        "start": 193.32,
+        "duration": 2.94,
+        "start_time": "00:03:13,320",
+        "explanation": {
+            "thai": "คือคนอื่นอาจจะคิดว่าบอนนี่เป็นคนเงียบๆ",
+            "rtgs": "khuue khon uen at cha khit wa bon ni pen khon ngiap ngiap",
+            "translation": "就是別人可能會認為邦妮是個安靜的人",
+            "analysis": [
+                {
+                    "word": "คือ",
+                    "rtgs": "khuue",
+                    "meaning": "就是",
+                    "more": "用於解釋或強調。"
+                },
+                {
+                    "word": "คนอื่น",
+                    "rtgs": "khon uen",
+                    "meaning": "別人",
+                    "more": "人稱代詞，指其他人。"
+                },
+                {
+                    "word": "อาจจะ",
+                    "rtgs": "at cha",
+                    "meaning": "可能",
+                    "more": "表示推測。"
+                },
+                {
+                    "word": "คิดว่า",
+                    "rtgs": "khit wa",
+                    "meaning": "認為",
+                    "more": "動詞，表示想法或看法。"
+                },
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "bon ni",
+                    "meaning": "邦妮",
+                    "more": "專有名詞。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "連繫動詞，表示身份或狀態。"
+                },
+                {
+                    "word": "คน",
+                    "rtgs": "khon",
+                    "meaning": "人",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "เงียบๆ",
+                    "rtgs": "ngiap ngiap",
+                    "meaning": "安靜的",
+                    "more": "形容詞，重疊表示狀態持續或強調。"
+                }
+            ]
+        }
+    },
+    "104": {
+        "text": "เออ",
+        "start": 196.28,
+        "duration": 0.34,
+        "start_time": "00:03:16,280",
+        "explanation": {
+            "thai": "เออ",
+            "rtgs": "oe",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "เออ",
+                    "rtgs": "oe",
+                    "meaning": "嗯，表示同意或思考",
+                    "more": "口語語氣詞。"
+                }
+            ]
+        }
+    },
+    "105": {
+        "text": "แต่จริงๆบอนนี่พูดเยอะกว่าหนูอีกนะคะ",
+        "start": 196.82,
+        "duration": 1.7,
+        "start_time": "00:03:16,820",
+        "explanation": {
+            "thai": "แต่จริงๆบอนนี่พูดเยอะกว่าหนูอีกนะคะ",
+            "rtgs": "tae cing cing bon ni phuut yoe kwa nu iik na kha",
+            "translation": "但其實邦妮說話比我還多喔",
+            "analysis": [
+                {
+                    "word": "แต่",
+                    "rtgs": "tae",
+                    "meaning": "但是",
+                    "more": "轉折連接詞。"
+                },
+                {
+                    "word": "จริงๆ",
+                    "rtgs": "cing cing",
+                    "meaning": "真的，實際上",
+                    "more": "副詞，強調真實性。"
+                },
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "bon ni",
+                    "meaning": "邦妮",
+                    "more": "專有名詞。"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phuut",
+                    "meaning": "說話",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "เยอะกว่า",
+                    "rtgs": "yoe kwa",
+                    "meaning": "比...多",
+                    "more": "เยอะ 是多，กว่า 是比較詞。"
+                },
+                {
+                    "word": "หนู",
+                    "rtgs": "nu",
+                    "meaning": "我（女性自稱）",
+                    "more": "女性用語，表示自己。"
+                },
+                {
+                    "word": "อีก",
+                    "rtgs": "iik",
+                    "meaning": "還，更",
+                    "more": "副詞，表示程度增加。"
+                },
+                {
+                    "word": "นะคะ",
+                    "rtgs": "na kha",
+                    "meaning": "語氣詞，表示親切或強調",
+                    "more": "女性語氣詞。"
+                }
+            ]
+        }
+    },
+    "106": {
+        "text": "บอนนี่เขาพูดเก่งนะคะ",
+        "start": 199.54,
+        "duration": 1.18,
+        "start_time": "00:03:19,540",
+        "explanation": {
+            "thai": "บอนนี่เขาพูดเก่งนะคะ",
+            "rtgs": "bon ni khao phuut koeng na kha",
+            "translation": "邦妮她說話很厲害喔",
+            "analysis": [
+                {
+                    "word": "บอนนี่",
+                    "rtgs": "bon ni",
+                    "meaning": "邦妮",
+                    "more": "專有名詞。"
+                },
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他，她（第三人稱）",
+                    "more": "代詞。"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phuut",
+                    "meaning": "說話",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "เก่ง",
+                    "rtgs": "koeng",
+                    "meaning": "厲害，擅長",
+                    "more": "形容詞。"
+                },
+                {
+                    "word": "นะคะ",
+                    "rtgs": "na kha",
+                    "meaning": "語氣詞，表示親切或強調",
+                    "more": "女性語氣詞。"
+                }
+            ]
+        }
+    },
+    "107": {
+        "text": "อือ",
+        "start": 200.76,
+        "duration": 0.18,
+        "start_time": "00:03:20,760",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯，表示同意或思考",
+                    "more": "口語語氣詞。"
+                }
+            ]
+        }
+    },
+    "108": {
+        "text": "แต่ไม่ได้แปลกนะอันนี้ไม่ได้แปลกนะแต่แบบ",
+        "start": 201.04,
+        "duration": 2.1,
+        "start_time": "00:03:21,040",
+        "explanation": {
+            "thai": "แต่ไม่ได้แปลกนะอันนี้ไม่ได้แปลกนะแต่แบบ",
+            "rtgs": "tae mai dai plae na an ni mai dai plae na tae baep",
+            "translation": "但是這個不奇怪喔，這個不奇怪，但是是那種",
+            "analysis": [
+                {
+                    "word": "แต่",
+                    "rtgs": "tae",
+                    "meaning": "但是",
+                    "more": "轉折連接詞。"
+                },
+                {
+                    "word": "ไม่ได้",
+                    "rtgs": "mai dai",
+                    "meaning": "不，沒有",
+                    "more": "否定動詞。"
+                },
+                {
+                    "word": "แปลก",
+                    "rtgs": "plae",
+                    "meaning": "奇怪",
+                    "more": "形容詞。"
+                },
+                {
+                    "word": "นะ",
+                    "rtgs": "na",
+                    "meaning": "語氣詞，表示親切或強調",
+                    "more": "語氣詞。"
+                },
+                {
+                    "word": "อันนี้",
+                    "rtgs": "an ni",
+                    "meaning": "這個",
+                    "more": "指示代詞。"
+                },
+                {
+                    "word": "แต่แบบ",
+                    "rtgs": "tae baep",
+                    "meaning": "但是是那種",
+                    "more": "แบบ 表示方式或樣子，這裡用來引出說明。"
+                }
+            ]
+        }
+    },
+    "109": {
+        "text": "แปลกยังไง\nแปลกแปลกใจสำหรับคนดู",
+        "start": 203.5,
+        "duration": 1.54,
+        "start_time": "00:03:23,500",
+        "explanation": {
+            "thai": "แปลกยังไง\nแปลกแปลกใจสำหรับคนดู",
+            "rtgs": "plae yang ngai\nplae plae chai samrap khon du",
+            "translation": "奇怪怎麼樣\n奇怪，讓觀眾驚訝",
+            "analysis": [
+                {
+                    "word": "แปลก",
+                    "rtgs": "plae",
+                    "meaning": "奇怪",
+                    "more": "形容詞。"
+                },
+                {
+                    "word": "ยังไง",
+                    "rtgs": "yang ngai",
+                    "meaning": "怎麼樣",
+                    "more": "疑問詞。"
+                },
+                {
+                    "word": "แปลกแปลกใจ",
+                    "rtgs": "plae plae chai",
+                    "meaning": "感到奇怪，驚訝",
+                    "more": "แปลกใจ 是動詞，表示驚訝，重疊用來強調。"
+                },
+                {
+                    "word": "สำหรับ",
+                    "rtgs": "samrap",
+                    "meaning": "對於，給",
+                    "more": "介詞。"
+                },
+                {
+                    "word": "คนดู",
+                    "rtgs": "khon du",
+                    "meaning": "觀眾",
+                    "more": "คน 是人，ดู 是看，合起來是觀眾。"
+                }
+            ]
+        }
+    },
+    "110": {
+        "text": "อ่า",
+        "start": 205.34,
+        "duration": 0.46,
+        "start_time": "00:03:25,340",
+        "explanation": {
+            "thai": "อ่า",
+            "rtgs": "a",
+            "translation": "啊（表示思考或猶豫）",
+            "analysis": [
+                {
+                    "word": "อ่า",
+                    "rtgs": "a",
+                    "meaning": "啊",
+                    "more": "用於表示思考、猶豫或語氣的填充詞"
+                }
+            ]
+        }
+    },
+    "111": {
+        "text": "ใช่",
+        "start": 205.84,
+        "duration": 0.28,
+        "start_time": "00:03:25,840",
+        "explanation": {
+            "thai": "ใช่",
+            "rtgs": "chai",
+            "translation": "是的",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是的",
+                    "more": "用於肯定回答，相當於中文的「是」"
+                }
+            ]
+        }
+    },
+    "112": {
+        "text": "ก็ต้องลองมาสนิทใจกันก่อน",
+        "start": 206.3,
+        "duration": 1.56,
+        "start_time": "00:03:26,300",
+        "explanation": {
+            "thai": "ก็ต้องลองมาสนิทใจกันก่อน",
+            "rtgs": "ko tong long ma sa nit jai kan kon",
+            "translation": "也必須先試著熟悉彼此",
+            "analysis": [
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "也、就",
+                    "more": "用於強調或承接前文，表示「也」或「就」"
+                },
+                {
+                    "word": "ต้อง",
+                    "rtgs": "tong",
+                    "meaning": "必須",
+                    "more": "表示必要性或義務"
+                },
+                {
+                    "word": "ลอง",
+                    "rtgs": "long",
+                    "meaning": "嘗試",
+                    "more": "表示嘗試做某事"
+                },
+                {
+                    "word": "มา",
+                    "rtgs": "ma",
+                    "meaning": "來",
+                    "more": "表示動作的方向，這裡用於連接動詞"
+                },
+                {
+                    "word": "สนิทใจ",
+                    "rtgs": "sa nit jai",
+                    "meaning": "熟悉、親近",
+                    "more": "複合詞，สนิท表示親密，ใจ表示心，合起來表示熟悉彼此"
+                },
+                {
+                    "word": "กัน",
+                    "rtgs": "kan",
+                    "meaning": "彼此",
+                    "more": "用於表示雙方互動"
+                },
+                {
+                    "word": "ก่อน",
+                    "rtgs": "kon",
+                    "meaning": "先",
+                    "more": "表示時間上的先後順序"
+                }
+            ]
+        }
+    },
+    "113": {
+        "text": "ใช่เขาเป็นคนพูดเยอะ",
+        "start": 207.94,
+        "duration": 2.0,
+        "start_time": "00:03:27,940",
+        "explanation": {
+            "thai": "ใช่เขาเป็นคนพูดเยอะ",
+            "rtgs": "chai kao pen khon phut yoe",
+            "translation": "是的，他是個話多的人",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是的",
+                    "more": "肯定回答"
+                },
+                {
+                    "word": "เขา",
+                    "rtgs": "kao",
+                    "meaning": "他",
+                    "more": "第三人稱代詞"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "表示身份或狀態"
+                },
+                {
+                    "word": "คน",
+                    "rtgs": "khon",
+                    "meaning": "人",
+                    "more": "名詞，指人"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說話",
+                    "more": "動詞"
+                },
+                {
+                    "word": "เยอะ",
+                    "rtgs": "yoe",
+                    "meaning": "多",
+                    "more": "形容詞，表示數量多"
+                }
+            ]
+        }
+    },
+    "114": {
+        "text": "แล้วรำคาญหรอ",
+        "start": 210.62,
+        "duration": 0.56,
+        "start_time": "00:03:30,620",
+        "explanation": {
+            "thai": "แล้วรำคาญหรอ",
+            "rtgs": "laeo ram khan ro",
+            "translation": "然後覺得煩嗎？",
+            "analysis": [
+                {
+                    "word": "แล้ว",
+                    "rtgs": "laeo",
+                    "meaning": "然後",
+                    "more": "表示時間上的先後"
+                },
+                {
+                    "word": "รำคาญ",
+                    "rtgs": "ram khan",
+                    "meaning": "煩惱、厭煩",
+                    "more": "形容詞或動詞，表示感到煩躁"
+                },
+                {
+                    "word": "หรอ",
+                    "rtgs": "ro",
+                    "meaning": "嗎？",
+                    "more": "疑問語氣助詞，用於口語疑問句"
+                }
+            ]
+        }
+    },
+    "115": {
+        "text": "ไม่ไม่ได้รำคาญน่ารักดีไม่เคยเจอคนแบบว่าพู",
+        "start": 211.26,
+        "duration": 3.98,
+        "start_time": "00:03:31,260",
+        "explanation": {
+            "thai": "ไม่ไม่ได้รำคาญน่ารักดีไม่เคยเจอคนแบบว่าพู",
+            "rtgs": "mai mai dai ram khan na rak di mai khoei choe khon baep wa phu",
+            "translation": "不不會煩，挺可愛的，從沒遇過那種會說話的人",
+            "analysis": [
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定詞"
+                },
+                {
+                    "word": "ไม่ได้",
+                    "rtgs": "mai dai",
+                    "meaning": "不能、不會",
+                    "more": "否定助動詞，表示無法或不允許"
+                },
+                {
+                    "word": "รำคาญ",
+                    "rtgs": "ram khan",
+                    "meaning": "煩惱",
+                    "more": "動詞"
+                },
+                {
+                    "word": "น่ารัก",
+                    "rtgs": "na rak",
+                    "meaning": "可愛",
+                    "more": "形容詞"
+                },
+                {
+                    "word": "ดี",
+                    "rtgs": "di",
+                    "meaning": "好",
+                    "more": "形容詞"
+                },
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定詞"
+                },
+                {
+                    "word": "เคย",
+                    "rtgs": "khoei",
+                    "meaning": "曾經",
+                    "more": "副詞，表示過去經驗"
+                },
+                {
+                    "word": "เจอ",
+                    "rtgs": "choe",
+                    "meaning": "遇見",
+                    "more": "動詞"
+                },
+                {
+                    "word": "คน",
+                    "rtgs": "khon",
+                    "meaning": "人",
+                    "more": "名詞"
+                },
+                {
+                    "word": "แบบว่า",
+                    "rtgs": "baep wa",
+                    "meaning": "那種、像是",
+                    "more": "口語用法，表示舉例或形容"
+                },
+                {
+                    "word": "พู",
+                    "rtgs": "phu",
+                    "meaning": "說",
+                    "more": "動詞，這裡是未完成的詞，可能是「พูด」的前半部"
+                }
+            ]
+        }
+    },
+    "116": {
+        "text": "ดเก่ง",
+        "start": 215.24,
+        "duration": 0.62,
+        "start_time": "00:03:35,240",
+        "explanation": {
+            "thai": "ดเก่ง",
+            "rtgs": "d koeng",
+            "translation": "說得厲害",
+            "analysis": [
+                {
+                    "word": "ด",
+                    "rtgs": "d",
+                    "meaning": "（不完整詞）",
+                    "more": "可能是「พูด」的後半部，表示說話"
+                },
+                {
+                    "word": "เก่ง",
+                    "rtgs": "koeng",
+                    "meaning": "厲害、擅長",
+                    "more": "形容詞，表示能力強"
+                }
+            ]
+        }
+    },
+    "117": {
+        "text": "แปลว่าอะไรอ่ะ",
+        "start": 217.58,
+        "duration": 0.66,
+        "start_time": "00:03:37,580",
+        "explanation": {
+            "thai": "แปลว่าอะไรอ่ะ",
+            "rtgs": "plae wa a rai a",
+            "translation": "是什麼意思啊？",
+            "analysis": [
+                {
+                    "word": "แปลว่า",
+                    "rtgs": "plae wa",
+                    "meaning": "意思是",
+                    "more": "動詞短語，表示解釋或翻譯"
+                },
+                {
+                    "word": "อะไร",
+                    "rtgs": "a rai",
+                    "meaning": "什麼",
+                    "more": "疑問代詞"
+                },
+                {
+                    "word": "อ่ะ",
+                    "rtgs": "a",
+                    "meaning": "語氣詞",
+                    "more": "用於句尾，表示輕鬆或疑問語氣"
+                }
+            ]
+        }
+    },
+    "118": {
+        "text": "แปลว่าดี",
+        "start": 219.88,
+        "duration": 0.3,
+        "start_time": "00:03:39,880",
+        "explanation": {
+            "thai": "แปลว่าดี",
+            "rtgs": "plae wa di",
+            "translation": "意思是好的",
+            "analysis": [
+                {
+                    "word": "แปลว่า",
+                    "rtgs": "plae wa",
+                    "meaning": "意思是",
+                    "more": "動詞短語"
+                },
+                {
+                    "word": "ดี",
+                    "rtgs": "di",
+                    "meaning": "好",
+                    "more": "形容詞"
+                }
+            ]
+        }
+    },
+    "119": {
+        "text": "แปลว่าดีพูดเก่งมากแบบพูดไปพูดไปเรื่อยได้แบบไหล",
+        "start": 220.5,
+        "duration": 3.18,
+        "start_time": "00:03:40,500",
+        "explanation": {
+            "thai": "แปลว่าดีพูดเก่งมากแบบพูดไปพูดไปเรื่อยได้แบบไหล",
+            "rtgs": "plae wa di phut koeng mak baep phut pai phut pai ruey dai baep lai",
+            "translation": "意思是說得很好，說個不停，說得流暢",
+            "analysis": [
+                {
+                    "word": "แปลว่า",
+                    "rtgs": "plae wa",
+                    "meaning": "意思是",
+                    "more": "動詞短語"
+                },
+                {
+                    "word": "ดี",
+                    "rtgs": "di",
+                    "meaning": "好",
+                    "more": "形容詞"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說話",
+                    "more": "動詞"
+                },
+                {
+                    "word": "เก่ง",
+                    "rtgs": "koeng",
+                    "meaning": "厲害、擅長",
+                    "more": "形容詞"
+                },
+                {
+                    "word": "มาก",
+                    "rtgs": "mak",
+                    "meaning": "非常",
+                    "more": "副詞，表示程度高"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "像是",
+                    "more": "介詞，表示方式或樣式"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說話",
+                    "more": "動詞"
+                },
+                {
+                    "word": "ไป",
+                    "rtgs": "pai",
+                    "meaning": "去",
+                    "more": "動詞，這裡用於連續動作"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說話",
+                    "more": "動詞"
+                },
+                {
+                    "word": "ไป",
+                    "rtgs": "pai",
+                    "meaning": "去",
+                    "more": "動詞"
+                },
+                {
+                    "word": "เรื่อย",
+                    "rtgs": "ruey",
+                    "meaning": "持續、不斷",
+                    "more": "副詞，表示動作連續"
+                },
+                {
+                    "word": "ได้",
+                    "rtgs": "dai",
+                    "meaning": "能夠",
+                    "more": "助動詞，表示能力或可能性"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "像是",
+                    "more": "介詞，表示方式"
+                },
+                {
+                    "word": "ไหล",
+                    "rtgs": "lai",
+                    "meaning": "流暢",
+                    "more": "形容詞，表示順暢"
+                }
+            ]
+        }
+    },
+    "120": {
+        "text": "ลื่น",
+        "start": 223.68,
+        "duration": 0.38,
+        "start_time": "00:03:43,680",
+        "explanation": {
+            "thai": "ลื่น",
+            "rtgs": "luen",
+            "translation": "滑的",
+            "analysis": [
+                {
+                    "word": "ลื่น",
+                    "rtgs": "luen",
+                    "meaning": "滑的",
+                    "more": "形容詞，表示表面光滑或容易滑動。"
+                }
+            ]
+        }
+    },
+    "121": {
+        "text": "พูดไปเรื่อยด้วย",
+        "start": 225.04,
+        "duration": 0.86,
+        "start_time": "00:03:45,040",
+        "explanation": {
+            "thai": "พูดไปเรื่อยด้วย",
+            "rtgs": "phut pai ruey duai",
+            "translation": "一直說著",
+            "analysis": [
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說",
+                    "more": "動詞，表示說話。"
+                },
+                {
+                    "word": "ไป",
+                    "rtgs": "pai",
+                    "meaning": "去，持續",
+                    "more": "動詞，這裡用作持續動作的助詞。"
+                },
+                {
+                    "word": "เรื่อย",
+                    "rtgs": "ruey",
+                    "meaning": "持續不斷",
+                    "more": "副詞，表示動作持續不斷。"
+                },
+                {
+                    "word": "ด้วย",
+                    "rtgs": "duai",
+                    "meaning": "也，並且",
+                    "more": "副詞，表示附加或強調。"
+                }
+            ]
+        }
+    },
+    "122": {
+        "text": "ได้แบบไหลลื่น",
+        "start": 226.46,
+        "duration": 0.92,
+        "start_time": "00:03:46,460",
+        "explanation": {
+            "thai": "ได้แบบไหลลื่น",
+            "rtgs": "dai baep lai luen",
+            "translation": "能夠流暢地",
+            "analysis": [
+                {
+                    "word": "ได้",
+                    "rtgs": "dai",
+                    "meaning": "能夠",
+                    "more": "助動詞，表示能力或可能性。"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式，樣式",
+                    "more": "名詞，表示方式或樣式。"
+                },
+                {
+                    "word": "ไหลลื่น",
+                    "rtgs": "lai luen",
+                    "meaning": "流暢，順暢",
+                    "more": "形容詞，表示動作流暢順利。"
+                }
+            ]
+        }
+    },
+    "123": {
+        "text": "พูดไปเรื่อยได้แบบไหลลื่น",
+        "start": 228.04,
+        "duration": 1.54,
+        "start_time": "00:03:48,040",
+        "explanation": {
+            "thai": "พูดไปเรื่อยได้แบบไหลลื่น",
+            "rtgs": "phut pai ruey dai baep lai luen",
+            "translation": "一直說得很流暢",
+            "analysis": [
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "ไป",
+                    "rtgs": "pai",
+                    "meaning": "去，持續",
+                    "more": "助詞，表示動作持續。"
+                },
+                {
+                    "word": "เรื่อย",
+                    "rtgs": "ruey",
+                    "meaning": "持續不斷",
+                    "more": "副詞。"
+                },
+                {
+                    "word": "ได้",
+                    "rtgs": "dai",
+                    "meaning": "能夠",
+                    "more": "助動詞。"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式，樣式",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "ไหลลื่น",
+                    "rtgs": "lai luen",
+                    "meaning": "流暢，順暢",
+                    "more": "形容詞。"
+                }
+            ]
+        }
+    },
+    "124": {
+        "text": "ใช่",
+        "start": 229.64,
+        "duration": 0.52,
+        "start_time": "00:03:49,640",
+        "explanation": {
+            "thai": "ใช่",
+            "rtgs": "chai",
+            "translation": "是的",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是的",
+                    "more": "肯定回答詞，表示同意或肯定。"
+                }
+            ]
+        }
+    },
+    "125": {
+        "text": "แบบคำบวกคำลบป่ะ",
+        "start": 230.9,
+        "duration": 1.2,
+        "start_time": "00:03:50,900",
+        "explanation": {
+            "thai": "แบบคำบวกคำลบป่ะ",
+            "rtgs": "baep kham buak kham lop pa",
+            "translation": "是加法和減法的方式嗎？",
+            "analysis": [
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式，樣式",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "คำ",
+                    "rtgs": "kham",
+                    "meaning": "詞，字",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "บวก",
+                    "rtgs": "buak",
+                    "meaning": "加",
+                    "more": "動詞，表示加法。"
+                },
+                {
+                    "word": "คำ",
+                    "rtgs": "kham",
+                    "meaning": "詞，字",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "ลบ",
+                    "rtgs": "lop",
+                    "meaning": "減",
+                    "more": "動詞，表示減法。"
+                },
+                {
+                    "word": "ป่ะ",
+                    "rtgs": "pa",
+                    "meaning": "嗎？",
+                    "more": "口語助詞，用於句尾表示疑問。"
+                }
+            ]
+        }
+    },
+    "126": {
+        "text": "คำพูดในหัวเขาเยอะอ่ะแบบ",
+        "start": 232.14,
+        "duration": 2.04,
+        "start_time": "00:03:52,140",
+        "explanation": {
+            "thai": "คำพูดในหัวเขาเยอะอ่ะแบบ",
+            "rtgs": "kham phut nai hua khao yo a baep",
+            "translation": "他腦中有很多話，像是那樣",
+            "analysis": [
+                {
+                    "word": "คำพูด",
+                    "rtgs": "kham phut",
+                    "meaning": "話語，言詞",
+                    "more": "名詞，表示說出來的話。"
+                },
+                {
+                    "word": "ใน",
+                    "rtgs": "nai",
+                    "meaning": "在...裡面",
+                    "more": "介詞。"
+                },
+                {
+                    "word": "หัวเขา",
+                    "rtgs": "hua khao",
+                    "meaning": "他的腦袋",
+                    "more": "名詞，指人的頭腦。"
+                },
+                {
+                    "word": "เยอะ",
+                    "rtgs": "yo",
+                    "meaning": "多",
+                    "more": "形容詞，表示數量多。"
+                },
+                {
+                    "word": "อ่ะ",
+                    "rtgs": "a",
+                    "meaning": "語氣詞",
+                    "more": "口語語氣詞，表示輕微的感嘆或強調。"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "像是那樣",
+                    "more": "副詞，表示方式或狀態。"
+                }
+            ]
+        }
+    },
+    "127": {
+        "text": "ศัพท์ในคลังเยอะ",
+        "start": 234.66,
+        "duration": 1.4,
+        "start_time": "00:03:54,660",
+        "explanation": {
+            "thai": "ศัพท์ในคลังเยอะ",
+            "rtgs": "sap nai khlang yo",
+            "translation": "詞彙庫很多",
+            "analysis": [
+                {
+                    "word": "ศัพท์",
+                    "rtgs": "sap",
+                    "meaning": "詞彙",
+                    "more": "名詞，指詞語。"
+                },
+                {
+                    "word": "ใน",
+                    "rtgs": "nai",
+                    "meaning": "在...裡面",
+                    "more": "介詞。"
+                },
+                {
+                    "word": "คลัง",
+                    "rtgs": "khlang",
+                    "meaning": "庫，倉庫",
+                    "more": "名詞，指儲存的地方。"
+                },
+                {
+                    "word": "เยอะ",
+                    "rtgs": "yo",
+                    "meaning": "多",
+                    "more": "形容詞。"
+                }
+            ]
+        }
+    },
+    "128": {
+        "text": "คลังในหัว",
+        "start": 236.1,
+        "duration": 0.74,
+        "start_time": "00:03:56,100",
+        "explanation": {
+            "thai": "คลังในหัว",
+            "rtgs": "khlang nai hua",
+            "translation": "腦中的倉庫",
+            "analysis": [
+                {
+                    "word": "คลัง",
+                    "rtgs": "khlang",
+                    "meaning": "倉庫，庫房",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "ใน",
+                    "rtgs": "nai",
+                    "meaning": "在...裡面",
+                    "more": "介詞。"
+                },
+                {
+                    "word": "หัว",
+                    "rtgs": "hua",
+                    "meaning": "頭，腦袋",
+                    "more": "名詞。"
+                }
+            ]
+        }
+    },
+    "129": {
+        "text": "คลังศัพท์ในคลัง",
+        "start": 236.86,
+        "duration": 1.18,
+        "start_time": "00:03:56,860",
+        "explanation": {
+            "thai": "คลังศัพท์ในคลัง",
+            "rtgs": "khlang sap nai khlang",
+            "translation": "詞彙庫在倉庫裡",
+            "analysis": [
+                {
+                    "word": "คลัง",
+                    "rtgs": "khlang",
+                    "meaning": "倉庫",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "ศัพท์",
+                    "rtgs": "sap",
+                    "meaning": "詞彙",
+                    "more": "名詞。"
+                },
+                {
+                    "word": "ใน",
+                    "rtgs": "nai",
+                    "meaning": "在...裡面",
+                    "more": "介詞。"
+                },
+                {
+                    "word": "คลัง",
+                    "rtgs": "khlang",
+                    "meaning": "倉庫",
+                    "more": "名詞。"
+                }
+            ]
+        }
+    },
+    "130": {
+        "text": "คลังในหัวคลังศัพท์ในหัวเยอะ",
+        "start": 239.26,
+        "duration": 2.48,
+        "start_time": "00:03:59,260",
+        "explanation": {
+            "thai": "คลังในหัวคลังศัพท์ในหัวเยอะ",
+            "rtgs": "khlang nai hua khlang sap nai hua yo",
+            "translation": "腦中有很多詞彙庫",
+            "analysis": [
+                {
+                    "word": "คลัง",
+                    "rtgs": "khlang",
+                    "meaning": "庫、倉庫",
+                    "more": "指儲存東西的地方，這裡比喻為詞彙庫"
+                },
+                {
+                    "word": "ใน",
+                    "rtgs": "nai",
+                    "meaning": "在…裡面",
+                    "more": "介詞，表示位置"
+                },
+                {
+                    "word": "หัว",
+                    "rtgs": "hua",
+                    "meaning": "頭",
+                    "more": "身體部位，這裡指腦袋"
+                },
+                {
+                    "word": "คลังศัพท์",
+                    "rtgs": "khlang sap",
+                    "meaning": "詞彙庫",
+                    "more": "คำศัพท์是詞彙，คลัง是庫，合起來指詞彙庫"
+                },
+                {
+                    "word": "ใน",
+                    "rtgs": "nai",
+                    "meaning": "在…裡面",
+                    "more": "介詞，表示位置"
+                },
+                {
+                    "word": "หัว",
+                    "rtgs": "hua",
+                    "meaning": "頭",
+                    "more": "身體部位，這裡指腦袋"
+                },
+                {
+                    "word": "เยอะ",
+                    "rtgs": "yo",
+                    "meaning": "多、很多",
+                    "more": "形容詞，表示數量多"
+                }
+            ]
+        }
+    },
+    "131": {
+        "text": "เออ\nใช่ๆเป็นคนแบบมีคำพูดเยอะแยะมากมาย",
+        "start": 241.86,
+        "duration": 3.12,
+        "start_time": "00:04:01,860",
+        "explanation": {
+            "thai": "เออ\nใช่ๆเป็นคนแบบมีคำพูดเยอะแยะมากมาย",
+            "rtgs": "oe\nchai chai pen khon baep mi kham phut yo ya mak mai",
+            "translation": "嗯\n對對，是那種說話很多的人",
+            "analysis": [
+                {
+                    "word": "เออ",
+                    "rtgs": "oe",
+                    "meaning": "嗯、喔",
+                    "more": "語氣詞，表示同意或思考時的語氣"
+                },
+                {
+                    "word": "ใช่ๆ",
+                    "rtgs": "chai chai",
+                    "meaning": "對對",
+                    "more": "重複詞，強調肯定"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "動詞，表示身份或狀態"
+                },
+                {
+                    "word": "คน",
+                    "rtgs": "khon",
+                    "meaning": "人",
+                    "more": "名詞，指人"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "類型、方式",
+                    "more": "名詞，表示種類或方式"
+                },
+                {
+                    "word": "มี",
+                    "rtgs": "mi",
+                    "meaning": "有",
+                    "more": "動詞，表示擁有"
+                },
+                {
+                    "word": "คำพูด",
+                    "rtgs": "kham phut",
+                    "meaning": "話語、說話",
+                    "more": "名詞，指說出來的話"
+                },
+                {
+                    "word": "เยอะแยะ",
+                    "rtgs": "yo ya",
+                    "meaning": "很多、繁多",
+                    "more": "形容詞，表示數量多且雜亂"
+                },
+                {
+                    "word": "มากมาย",
+                    "rtgs": "mak mai",
+                    "meaning": "非常多",
+                    "more": "副詞，強調數量多"
+                }
+            ]
+        }
+    },
+    "132": {
+        "text": "ที่พี่มี่ไม่เก็ท",
+        "start": 245.56,
+        "duration": 0.72,
+        "start_time": "00:04:05,560",
+        "explanation": {
+            "thai": "ที่พี่มี่ไม่เก็ท",
+            "rtgs": "thi phi mi mai ket",
+            "translation": "是妹妹不懂的地方",
+            "analysis": [
+                {
+                    "word": "ที่",
+                    "rtgs": "thi",
+                    "meaning": "地方、那裡",
+                    "more": "代詞，指示地點或事情的部分"
+                },
+                {
+                    "word": "พี่มี่",
+                    "rtgs": "phi mi",
+                    "meaning": "妹妹（人名）",
+                    "more": "พี่是哥哥姐姐的稱呼，มี่是名字"
+                },
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞，表示否定"
+                },
+                {
+                    "word": "เก็ท",
+                    "rtgs": "ket",
+                    "meaning": "懂、理解",
+                    "more": "外來語get的音譯，表示理解"
+                }
+            ]
+        }
+    },
+    "133": {
+        "text": "เอาอย่างงี้ดีกว่า",
+        "start": 247.62,
+        "duration": 0.7,
+        "start_time": "00:04:07,620",
+        "explanation": {
+            "thai": "เอาอย่างงี้ดีกว่า",
+            "rtgs": "ao yang ni di kwa",
+            "translation": "這樣做比較好",
+            "analysis": [
+                {
+                    "word": "เอา",
+                    "rtgs": "ao",
+                    "meaning": "拿、做",
+                    "more": "動詞，這裡用作提議或採取行動"
+                },
+                {
+                    "word": "อย่างงี้",
+                    "rtgs": "yang ni",
+                    "meaning": "這樣",
+                    "more": "代詞，指示方式或方法"
+                },
+                {
+                    "word": "ดีกว่า",
+                    "rtgs": "di kwa",
+                    "meaning": "比較好",
+                    "more": "形容詞，表示比較優越"
+                }
+            ]
+        }
+    },
+    "134": {
+        "text": "ใช่ไม่ค่อยเก็ท",
+        "start": 248.38,
+        "duration": 0.9,
+        "start_time": "00:04:08,380",
+        "explanation": {
+            "thai": "ใช่ไม่ค่อยเก็ท",
+            "rtgs": "chai mai khoi ket",
+            "translation": "對，不太懂",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "對、是",
+                    "more": "肯定詞，表示同意"
+                },
+                {
+                    "word": "ไม่ค่อย",
+                    "rtgs": "mai khoi",
+                    "meaning": "不太",
+                    "more": "副詞，表示程度不高"
+                },
+                {
+                    "word": "เก็ท",
+                    "rtgs": "ket",
+                    "meaning": "懂、理解",
+                    "more": "外來語get的音譯，表示理解"
+                }
+            ]
+        }
+    },
+    "135": {
+        "text": "อือ",
+        "start": 249.54,
+        "duration": 0.2,
+        "start_time": "00:04:09,540",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯、唔",
+                    "more": "語氣詞，表示同意或思考"
+                }
+            ]
+        }
+    },
+    "136": {
+        "text": "แต่ฟังได้ค่ะ",
+        "start": 249.96,
+        "duration": 0.38,
+        "start_time": "00:04:09,960",
+        "explanation": {
+            "thai": "แต่ฟังได้ค่ะ",
+            "rtgs": "tae fang dai kha",
+            "translation": "但是能聽懂喔",
+            "analysis": [
+                {
+                    "word": "แต่",
+                    "rtgs": "tae",
+                    "meaning": "但是",
+                    "more": "連接詞，表示轉折"
+                },
+                {
+                    "word": "ฟัง",
+                    "rtgs": "fang",
+                    "meaning": "聽",
+                    "more": "動詞，表示聽取聲音"
+                },
+                {
+                    "word": "ได้",
+                    "rtgs": "dai",
+                    "meaning": "能、可以",
+                    "more": "助動詞，表示能力或可能性"
+                },
+                {
+                    "word": "ค่ะ",
+                    "rtgs": "kha",
+                    "meaning": "語氣詞（女性用）",
+                    "more": "禮貌語氣詞，女性說話時使用"
+                }
+            ]
+        }
+    },
+    "137": {
+        "text": "เขาก็เลยงงนิดนึงเวลาหนูพูด",
+        "start": 250.36,
+        "duration": 2.4,
+        "start_time": "00:04:10,360",
+        "explanation": {
+            "thai": "เขาก็เลยงงนิดนึงเวลาหนูพูด",
+            "rtgs": "khao ko loi ngong nit nueng wela nu phut",
+            "translation": "他就有點困惑，當妳說話的時候",
+            "analysis": [
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他",
+                    "more": "代詞，指第三人稱"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "也、就",
+                    "more": "語氣助詞，表示承接或強調"
+                },
+                {
+                    "word": "เลย",
+                    "rtgs": "loi",
+                    "meaning": "就、因此",
+                    "more": "副詞，表示結果或強調"
+                },
+                {
+                    "word": "งง",
+                    "rtgs": "ngong",
+                    "meaning": "困惑、迷惑",
+                    "more": "形容詞，表示不明白或迷糊"
+                },
+                {
+                    "word": "นิดนึง",
+                    "rtgs": "nit nueng",
+                    "meaning": "一點點",
+                    "more": "副詞，表示少量或程度輕微"
+                },
+                {
+                    "word": "เวลา",
+                    "rtgs": "wela",
+                    "meaning": "時間、當…時候",
+                    "more": "名詞，這裡用作連接詞表示時間點"
+                },
+                {
+                    "word": "หนู",
+                    "rtgs": "nu",
+                    "meaning": "妳（小輩女性）",
+                    "more": "代詞，指年輕女性或晚輩"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說話",
+                    "more": "動詞，表示說話的動作"
+                }
+            ]
+        }
+    },
+    "138": {
+        "text": "วลีเด็ดที่พี่เอมี่พูดเยอะที่สุดคือ",
+        "start": 256.04,
+        "duration": 2.44,
+        "start_time": "00:04:16,040",
+        "explanation": {
+            "thai": "วลีเด็ดที่พี่เอมี่พูดเยอะที่สุดคือ",
+            "rtgs": "wali det thi phi emi phut yo thi sut khue",
+            "translation": "艾咪姐說得最多的經典語句是",
+            "analysis": [
+                {
+                    "word": "วลีเด็ด",
+                    "rtgs": "wali det",
+                    "meaning": "經典語句、名言",
+                    "more": "วลี是詞語，เด็ด是精彩、經典，合起來指經典語句"
+                },
+                {
+                    "word": "ที่",
+                    "rtgs": "thi",
+                    "meaning": "那個、…的",
+                    "more": "連接詞，表示關係代詞"
+                },
+                {
+                    "word": "พี่เอมี่",
+                    "rtgs": "phi emi",
+                    "meaning": "艾咪姐",
+                    "more": "พี่是哥哥姐姐的稱呼，เอมี่是名字"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說",
+                    "more": "動詞，表示說話"
+                },
+                {
+                    "word": "เยอะที่สุด",
+                    "rtgs": "yo thi sut",
+                    "meaning": "最多",
+                    "more": "เยอะ是多，ที่สุด是最高級，合起來表示最多"
+                },
+                {
+                    "word": "คือ",
+                    "rtgs": "khue",
+                    "meaning": "是",
+                    "more": "動詞，表示定義或說明"
+                }
+            ]
+        }
+    },
+    "139": {
+        "text": "อืม",
+        "start": 258.519,
+        "duration": 0.201,
+        "start_time": "00:04:18,519",
+        "explanation": {
+            "thai": "อืม",
+            "rtgs": "uem",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "อืม",
+                    "rtgs": "uem",
+                    "meaning": "嗯、唔",
+                    "more": "語氣詞，表示思考或同意"
+                }
+            ]
+        }
+    },
+    "140": {
+        "text": "คือมันไม่ใช่เชิงวลีแต่ว่ามันเป็นสิ่งที่เขาเป็นคนขี้",
+        "start": 259.36,
+        "duration": 2.52,
+        "start_time": "00:04:19,360",
+        "explanation": {
+            "thai": "คือมันไม่ใช่เชิงวลีแต่ว่ามันเป็นสิ่งที่เขาเป็นคนขี้",
+            "rtgs": "kue man mai chai choeng wa li tae wa man pen sing thi khao pen khon khi",
+            "translation": "就是它不是片語，而是他是一個愛哭的人。",
+            "analysis": [
+                {
+                    "word": "คือ",
+                    "rtgs": "kue",
+                    "meaning": "是",
+                    "more": "用於說明或定義某事物。"
+                },
+                {
+                    "word": "มัน",
+                    "rtgs": "man",
+                    "meaning": "它",
+                    "more": "指代前文提到的事物或情況。"
+                },
+                {
+                    "word": "ไม่ใช่",
+                    "rtgs": "mai chai",
+                    "meaning": "不是",
+                    "more": "否定動詞，表示否定。"
+                },
+                {
+                    "word": "เชิงวลี",
+                    "rtgs": "choeng wa li",
+                    "meaning": "片語",
+                    "more": "語言學用語，指詞組。"
+                },
+                {
+                    "word": "แต่ว่า",
+                    "rtgs": "tae wa",
+                    "meaning": "但是",
+                    "more": "連接詞，表示轉折。"
+                },
+                {
+                    "word": "มัน",
+                    "rtgs": "man",
+                    "meaning": "它",
+                    "more": "同上。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "表示身份或狀態。"
+                },
+                {
+                    "word": "สิ่งที่",
+                    "rtgs": "sing thi",
+                    "meaning": "事物，東西",
+                    "more": "用於指代某個具體或抽象的事物。"
+                },
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他",
+                    "more": "第三人稱代詞。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "同上。"
+                },
+                {
+                    "word": "คน",
+                    "rtgs": "khon",
+                    "meaning": "人",
+                    "more": "指人類。"
+                },
+                {
+                    "word": "ขี้",
+                    "rtgs": "khi",
+                    "meaning": "愛...的（口語用法）",
+                    "more": "此處用於形容詞前，表示習慣性或傾向性，如“愛哭”。"
+                }
+            ]
+        }
+    },
+    "141": {
+        "text": "ลืมว่าตัวเองพูดอะไรหรือว่าทำอะ",
+        "start": 261.88,
+        "duration": 1.46,
+        "start_time": "00:04:21,880",
+        "explanation": {
+            "thai": "ลืมว่าตัวเองพูดอะไรหรือว่าทำอะ",
+            "rtgs": "luem wa tua eng phut arai rue wa tham a",
+            "translation": "忘記自己說了什麼，還是做了什麼？",
+            "analysis": [
+                {
+                    "word": "ลืม",
+                    "rtgs": "luem",
+                    "meaning": "忘記",
+                    "more": "動詞，表示記憶喪失。"
+                },
+                {
+                    "word": "ว่า",
+                    "rtgs": "wa",
+                    "meaning": "說",
+                    "more": "連接詞，引導從句。"
+                },
+                {
+                    "word": "ตัวเอง",
+                    "rtgs": "tua eng",
+                    "meaning": "自己",
+                    "more": "反身代詞。"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "อะไร",
+                    "rtgs": "arai",
+                    "meaning": "什麼",
+                    "more": "疑問代詞。"
+                },
+                {
+                    "word": "หรือว่า",
+                    "rtgs": "rue wa",
+                    "meaning": "還是",
+                    "more": "連接詞，用於選擇疑問句。"
+                },
+                {
+                    "word": "ทำ",
+                    "rtgs": "tham",
+                    "meaning": "做",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "อะ",
+                    "rtgs": "a",
+                    "meaning": "什麼（口語縮略）",
+                    "more": "口語中“อะไร”的縮略。"
+                }
+            ]
+        }
+    },
+    "142": {
+        "text": "ไร",
+        "start": 263.34,
+        "duration": 0.24,
+        "start_time": "00:04:23,340",
+        "explanation": {
+            "thai": "ไร",
+            "rtgs": "rai",
+            "translation": "什麼？",
+            "analysis": [
+                {
+                    "word": "ไร",
+                    "rtgs": "rai",
+                    "meaning": "什麼（口語）",
+                    "more": "口語用法，等同於“อะไร”。"
+                }
+            ]
+        }
+    },
+    "143": {
+        "text": "อ๋อหรอ",
+        "start": 263.64,
+        "duration": 0.2,
+        "start_time": "00:04:23,640",
+        "explanation": {
+            "thai": "อ๋อหรอ",
+            "rtgs": "o ro",
+            "translation": "喔？是嗎？",
+            "analysis": [
+                {
+                    "word": "อ๋อ",
+                    "rtgs": "o",
+                    "meaning": "喔，表示理解或驚訝",
+                    "more": "感嘆詞。"
+                },
+                {
+                    "word": "หรอ",
+                    "rtgs": "ro",
+                    "meaning": "是嗎？",
+                    "more": "疑問語氣助詞，表示確認。"
+                }
+            ]
+        }
+    },
+    "144": {
+        "text": "แล้วเขาก็จะแบบใช่หรอนี่คำนี้",
+        "start": 264.34,
+        "duration": 3.38,
+        "start_time": "00:04:24,340",
+        "explanation": {
+            "thai": "แล้วเขาก็จะแบบใช่หรอนี่คำนี้",
+            "rtgs": "laeo khao ko cha baep chai ro ni kham ni",
+            "translation": "然後他也會說“是嗎？這個詞”，",
+            "analysis": [
+                {
+                    "word": "แล้ว",
+                    "rtgs": "laeo",
+                    "meaning": "然後",
+                    "more": "表示時間上的先後。"
+                },
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他",
+                    "more": "第三人稱代詞。"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "也",
+                    "more": "副詞，表示同意或加強語氣。"
+                },
+                {
+                    "word": "จะ",
+                    "rtgs": "cha",
+                    "meaning": "將要",
+                    "more": "助動詞，表示未來。"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式，樣子",
+                    "more": "名詞或副詞，表示方式。"
+                },
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是",
+                    "more": "肯定回答。"
+                },
+                {
+                    "word": "หรอ",
+                    "rtgs": "ro",
+                    "meaning": "是嗎？",
+                    "more": "疑問語氣助詞。"
+                },
+                {
+                    "word": "นี่",
+                    "rtgs": "ni",
+                    "meaning": "這",
+                    "more": "指示代詞。"
+                },
+                {
+                    "word": "คำนี้",
+                    "rtgs": "kham ni",
+                    "meaning": "這個詞",
+                    "more": "名詞短語，指特定詞語。"
+                }
+            ]
+        }
+    },
+    "145": {
+        "text": "หรอ",
+        "start": 267.78,
+        "duration": 0.48,
+        "start_time": "00:04:27,780",
+        "explanation": {
+            "thai": "หรอ",
+            "rtgs": "ro",
+            "translation": "是嗎？",
+            "analysis": [
+                {
+                    "word": "หรอ",
+                    "rtgs": "ro",
+                    "meaning": "是嗎？",
+                    "more": "疑問語氣助詞。"
+                }
+            ]
+        }
+    },
+    "146": {
+        "text": "ใช่หรอพี่เคยทำแบบนั้นหรอ",
+        "start": 268.38,
+        "duration": 1.96,
+        "start_time": "00:04:28,380",
+        "explanation": {
+            "thai": "ใช่หรอพี่เคยทำแบบนั้นหรอ",
+            "rtgs": "chai ro phi khoei tham baep nan ro",
+            "translation": "是嗎？哥哥曾經那樣做過嗎？",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是",
+                    "more": "肯定回答。"
+                },
+                {
+                    "word": "หรอ",
+                    "rtgs": "ro",
+                    "meaning": "是嗎？",
+                    "more": "疑問語氣助詞。"
+                },
+                {
+                    "word": "พี่",
+                    "rtgs": "phi",
+                    "meaning": "哥哥",
+                    "more": "對年長男性的稱呼。"
+                },
+                {
+                    "word": "เคย",
+                    "rtgs": "khoei",
+                    "meaning": "曾經",
+                    "more": "表示過去經驗。"
+                },
+                {
+                    "word": "ทำ",
+                    "rtgs": "tham",
+                    "meaning": "做",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "แบบนั้น",
+                    "rtgs": "baep nan",
+                    "meaning": "那樣",
+                    "more": "指示代詞，表示方式。"
+                },
+                {
+                    "word": "หรอ",
+                    "rtgs": "ro",
+                    "meaning": "是嗎？",
+                    "more": "疑問語氣助詞。"
+                }
+            ]
+        }
+    },
+    "147": {
+        "text": "อือ",
+        "start": 270.48,
+        "duration": 0.58,
+        "start_time": "00:04:30,480",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯，表示同意或回應",
+                    "more": "感嘆詞。"
+                }
+            ]
+        }
+    },
+    "148": {
+        "text": "พี่เคยพูดแบบนั้นหรออย่างงี้เป็นฟีลแบบไม่เชื่อ",
+        "start": 271.12,
+        "duration": 2.64,
+        "start_time": "00:04:31,120",
+        "explanation": {
+            "thai": "พี่เคยพูดแบบนั้นหรออย่างงี้เป็นฟีลแบบไม่เชื่อ",
+            "rtgs": "phi khoei phut baep nan ro yang ni pen phil baep mai chue",
+            "translation": "哥哥曾經那樣說過嗎？像這樣感覺是不相信的。",
+            "analysis": [
+                {
+                    "word": "พี่",
+                    "rtgs": "phi",
+                    "meaning": "哥哥",
+                    "more": "同上。"
+                },
+                {
+                    "word": "เคย",
+                    "rtgs": "khoei",
+                    "meaning": "曾經",
+                    "more": "同上。"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "แบบนั้น",
+                    "rtgs": "baep nan",
+                    "meaning": "那樣",
+                    "more": "同上。"
+                },
+                {
+                    "word": "หรอ",
+                    "rtgs": "ro",
+                    "meaning": "是嗎？",
+                    "more": "疑問語氣助詞。"
+                },
+                {
+                    "word": "อย่างงี้",
+                    "rtgs": "yang ni",
+                    "meaning": "像這樣",
+                    "more": "口語用法，表示方式。"
+                },
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是",
+                    "more": "動詞。"
+                },
+                {
+                    "word": "ฟีล",
+                    "rtgs": "phil",
+                    "meaning": "感覺",
+                    "more": "外來語，意指感覺或氛圍。"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式",
+                    "more": "同上。"
+                },
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不",
+                    "more": "否定副詞。"
+                },
+                {
+                    "word": "เชื่อ",
+                    "rtgs": "chue",
+                    "meaning": "相信",
+                    "more": "動詞。"
+                }
+            ]
+        }
+    },
+    "149": {
+        "text": "อือ",
+        "start": 274.18,
+        "duration": 0.08,
+        "start_time": "00:04:34,180",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯，表示同意或回應",
+                    "more": "感嘆詞。"
+                }
+            ]
+        }
+    },
+    "150": {
+        "text": "ไม่น่าเชื่อเลย",
+        "start": 274.28,
+        "duration": 0.76,
+        "start_time": "00:04:34,280",
+        "explanation": {
+            "thai": "ไม่น่าเชื่อเลย",
+            "rtgs": "mai na cheu loei",
+            "translation": "真難以置信",
+            "analysis": [
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不，否定詞",
+                    "more": "用於否定動詞或形容詞"
+                },
+                {
+                    "word": "น่า",
+                    "rtgs": "na",
+                    "meaning": "值得，應該",
+                    "more": "用於形容詞前，表示值得做某事"
+                },
+                {
+                    "word": "เชื่อ",
+                    "rtgs": "cheu",
+                    "meaning": "相信",
+                    "more": "動詞，表示相信某事"
+                },
+                {
+                    "word": "เลย",
+                    "rtgs": "loei",
+                    "meaning": "強調語氣",
+                    "more": "用於句尾，強調語氣，表示完全或非常"
+                }
+            ]
+        }
+    },
+    "151": {
+        "text": "เป็นฟีลแบบไม่น่าเชื่อว่าตัวเองเคยทำแบบนั้นแต่ว่า",
+        "start": 275.92,
+        "duration": 2.4,
+        "start_time": "00:04:35,920",
+        "explanation": {
+            "thai": "เป็นฟีลแบบไม่น่าเชื่อว่าตัวเองเคยทำแบบนั้นแต่ว่า",
+            "rtgs": "pen feel baep mai na cheu wa tua eng khoei tham baep nan tae wa",
+            "translation": "有一種感覺，難以置信自己曾經做過那樣的事，但是",
+            "analysis": [
+                {
+                    "word": "เป็น",
+                    "rtgs": "pen",
+                    "meaning": "是，成為",
+                    "more": "動詞，表示狀態或身份"
+                },
+                {
+                    "word": "ฟีล",
+                    "rtgs": "feel",
+                    "meaning": "感覺",
+                    "more": "外來語，表示感覺或氛圍"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式，樣子",
+                    "more": "名詞，表示方式或樣式"
+                },
+                {
+                    "word": "ไม่",
+                    "rtgs": "mai",
+                    "meaning": "不，否定詞",
+                    "more": "用於否定動詞或形容詞"
+                },
+                {
+                    "word": "น่า",
+                    "rtgs": "na",
+                    "meaning": "值得，應該",
+                    "more": "用於形容詞前，表示值得做某事"
+                },
+                {
+                    "word": "เชื่อ",
+                    "rtgs": "cheu",
+                    "meaning": "相信",
+                    "more": "動詞，表示相信某事"
+                },
+                {
+                    "word": "ว่า",
+                    "rtgs": "wa",
+                    "meaning": "連接詞，表示說明",
+                    "more": "用於引導從句"
+                },
+                {
+                    "word": "ตัวเอง",
+                    "rtgs": "tua eng",
+                    "meaning": "自己",
+                    "more": "代名詞，指自己本人"
+                },
+                {
+                    "word": "เคย",
+                    "rtgs": "khoei",
+                    "meaning": "曾經",
+                    "more": "副詞，表示過去有過某經驗"
+                },
+                {
+                    "word": "ทำ",
+                    "rtgs": "tham",
+                    "meaning": "做",
+                    "more": "動詞，表示做某事"
+                },
+                {
+                    "word": "แบบ",
+                    "rtgs": "baep",
+                    "meaning": "方式，樣子",
+                    "more": "名詞，表示方式或樣式"
+                },
+                {
+                    "word": "นั้น",
+                    "rtgs": "nan",
+                    "meaning": "那個",
+                    "more": "指示代詞，指較遠的事物"
+                },
+                {
+                    "word": "แต่",
+                    "rtgs": "tae",
+                    "meaning": "但是",
+                    "more": "連接詞，表示轉折"
+                },
+                {
+                    "word": "ว่า",
+                    "rtgs": "wa",
+                    "meaning": "連接詞，表示說明",
+                    "more": "用於引導從句"
+                }
+            ]
+        }
+    },
+    "152": {
+        "text": "เคยทำ",
+        "start": 278.32,
+        "duration": 0.74,
+        "start_time": "00:04:38,320",
+        "explanation": {
+            "thai": "เคยทำ",
+            "rtgs": "khoei tham",
+            "translation": "曾經做過",
+            "analysis": [
+                {
+                    "word": "เคย",
+                    "rtgs": "khoei",
+                    "meaning": "曾經",
+                    "more": "副詞，表示過去有過某經驗"
+                },
+                {
+                    "word": "ทำ",
+                    "rtgs": "tham",
+                    "meaning": "做",
+                    "more": "動詞，表示做某事"
+                }
+            ]
+        }
+    },
+    "153": {
+        "text": "อือ",
+        "start": 279.12,
+        "duration": 0.56,
+        "start_time": "00:04:39,120",
+        "explanation": {
+            "thai": "อือ",
+            "rtgs": "ue",
+            "translation": "嗯（表示同意或思考）",
+            "analysis": [
+                {
+                    "word": "อือ",
+                    "rtgs": "ue",
+                    "meaning": "嗯",
+                    "more": "語氣詞，表示同意或思考"
+                }
+            ]
+        }
+    },
+    "154": {
+        "text": "ใช่เขาก็จะพูดคำนี้ออกมา",
+        "start": 279.76,
+        "duration": 1.52,
+        "start_time": "00:04:39,760",
+        "explanation": {
+            "thai": "ใช่เขาก็จะพูดคำนี้ออกมา",
+            "rtgs": "chai khao ko ja phut kham ni ok ma",
+            "translation": "是的，他也會說出這句話",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是，對",
+                    "more": "肯定回答"
+                },
+                {
+                    "word": "เขา",
+                    "rtgs": "khao",
+                    "meaning": "他",
+                    "more": "第三人稱代名詞"
+                },
+                {
+                    "word": "ก็",
+                    "rtgs": "ko",
+                    "meaning": "也",
+                    "more": "副詞，表示也或同樣"
+                },
+                {
+                    "word": "จะ",
+                    "rtgs": "ja",
+                    "meaning": "將要，會",
+                    "more": "助動詞，表示未來或意願"
+                },
+                {
+                    "word": "พูด",
+                    "rtgs": "phut",
+                    "meaning": "說",
+                    "more": "動詞，表示說話"
+                },
+                {
+                    "word": "คำ",
+                    "rtgs": "kham",
+                    "meaning": "詞，話",
+                    "more": "名詞，表示詞語或話語"
+                },
+                {
+                    "word": "นี้",
+                    "rtgs": "ni",
+                    "meaning": "這",
+                    "more": "指示代詞，指近的事物"
+                },
+                {
+                    "word": "ออก",
+                    "rtgs": "ok",
+                    "meaning": "出",
+                    "more": "動詞，表示向外"
+                },
+                {
+                    "word": "มา",
+                    "rtgs": "ma",
+                    "meaning": "來",
+                    "more": "動詞，表示向內或朝說話者方向"
+                }
+            ]
+        }
+    },
+    "155": {
+        "text": "อ่า",
+        "start": 281.62,
+        "duration": 0.16,
+        "start_time": "00:04:41,620",
+        "explanation": {
+            "thai": "อ่า",
+            "rtgs": "a",
+            "translation": "啊（語氣詞）",
+            "analysis": [
+                {
+                    "word": "อ่า",
+                    "rtgs": "a",
+                    "meaning": "啊",
+                    "more": "語氣詞，用於表示思考或語氣緩和"
+                }
+            ]
+        }
+    },
+    "156": {
+        "text": "บ่อยๆ",
+        "start": 281.82,
+        "duration": 0.22,
+        "start_time": "00:04:41,820",
+        "explanation": {
+            "thai": "บ่อยๆ",
+            "rtgs": "boi boi",
+            "translation": "經常，常常",
+            "analysis": [
+                {
+                    "word": "บ่อยๆ",
+                    "rtgs": "boi boi",
+                    "meaning": "經常，常常",
+                    "more": "副詞，表示頻繁發生"
+                }
+            ]
+        }
+    },
+    "157": {
+        "text": "ใช่ค่ะ",
+        "start": 283.14,
+        "duration": 0.5,
+        "start_time": "00:04:43,140",
+        "explanation": {
+            "thai": "ใช่ค่ะ",
+            "rtgs": "chai kha",
+            "translation": "是的（女性用語）",
+            "analysis": [
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是，對",
+                    "more": "肯定回答"
+                },
+                {
+                    "word": "ค่ะ",
+                    "rtgs": "kha",
+                    "meaning": "語氣詞（女性用）",
+                    "more": "用於句尾，表示禮貌和肯定"
+                }
+            ]
+        }
+    },
+    "158": {
+        "text": "อาจจะใช่ค่ะ",
+        "start": 283.86,
+        "duration": 0.72,
+        "start_time": "00:04:43,860",
+        "explanation": {
+            "thai": "อาจจะใช่ค่ะ",
+            "rtgs": "at ja chai kha",
+            "translation": "可能是的（女性用語）",
+            "analysis": [
+                {
+                    "word": "อาจจะ",
+                    "rtgs": "at ja",
+                    "meaning": "可能，也許",
+                    "more": "副詞，表示不確定的可能性"
+                },
+                {
+                    "word": "ใช่",
+                    "rtgs": "chai",
+                    "meaning": "是，對",
+                    "more": "肯定回答"
+                },
+                {
+                    "word": "ค่ะ",
+                    "rtgs": "kha",
+                    "meaning": "語氣詞（女性用）",
+                    "more": "用於句尾，表示禮貌和肯定"
+                }
+            ]
+        }
+    },
+    "159": {
+        "text": "Thank you Harper's BAZAAR Singapore",
+        "start": 287.36,
+        "duration": 1.88,
+        "start_time": "00:04:47,360",
+        "explanation": {
+            "thai": "Thank you Harper's BAZAAR Singapore",
+            "rtgs": "Thank you Harper's BAZAAR Singapore",
+            "translation": "謝謝 Harper's BAZAAR 新加坡",
+            "analysis": [
+                {
+                    "word": "Thank you",
+                    "rtgs": "Thank you",
+                    "meaning": "謝謝",
+                    "more": "英語感謝用語"
+                },
+                {
+                    "word": "Harper's BAZAAR Singapore",
+                    "rtgs": "Harper's BAZAAR Singapore",
+                    "meaning": "Harper's BAZAAR 新加坡",
+                    "more": "專有名詞，雜誌名稱及地點"
+                }
+            ]
+        }
+    },
+    "160": {
+        "text": "See you soon.",
+        "start": 289.58,
+        "duration": 0.74,
+        "start_time": "00:04:49,580",
+        "explanation": {
+            "thai": "See you soon.",
+            "rtgs": "See you soon.",
+            "translation": "待會見。",
+            "analysis": [
+                {
+                    "word": "See",
+                    "rtgs": "See",
+                    "meaning": "看見",
+                    "more": "英語單字，意為「看見」"
+                },
+                {
+                    "word": "you",
+                    "rtgs": "you",
+                    "meaning": "你",
+                    "more": "英語代名詞，指稱對方"
+                },
+                {
+                    "word": "soon",
+                    "rtgs": "soon",
+                    "meaning": "很快地",
+                    "more": "英語副詞，表示時間上的「很快」"
+                }
+            ]
+        }
+    },
+    "161": {
+        "text": "See you soon. Bye bye",
+        "start": 290.5,
+        "duration": 1.18,
+        "start_time": "00:04:50,500",
+        "explanation": {
+            "thai": "See you soon. Bye bye",
+            "rtgs": "See you soon. Bye bye",
+            "translation": "待會見。再見。",
+            "analysis": [
+                {
+                    "word": "See",
+                    "rtgs": "See",
+                    "meaning": "看見",
+                    "more": "英語單字，意為「看見」"
+                },
+                {
+                    "word": "you",
+                    "rtgs": "you",
+                    "meaning": "你",
+                    "more": "英語代名詞，指稱對方"
+                },
+                {
+                    "word": "soon",
+                    "rtgs": "soon",
+                    "meaning": "很快地",
+                    "more": "英語副詞，表示時間上的「很快」"
+                },
+                {
+                    "word": "Bye",
+                    "rtgs": "Bye",
+                    "meaning": "再見",
+                    "more": "英語口語用語，表示告別"
+                },
+                {
+                    "word": "bye",
+                    "rtgs": "bye",
+                    "meaning": "再見",
+                    "more": "重複用於強調告別語氣"
+                }
+            ]
+        }
+    },
+    "162": {
+        "text": "Bye",
+        "start": 293.58,
+        "duration": 0.12,
+        "start_time": "00:04:53,580",
+        "explanation": {
+            "thai": "Bye",
+            "rtgs": "Bye",
+            "translation": "再見。",
+            "analysis": [
+                {
+                    "word": "Bye",
+                    "rtgs": "Bye",
+                    "meaning": "再見",
+                    "more": "英語口語用語，表示告別"
+                }
+            ]
+        }
+    }
+}
