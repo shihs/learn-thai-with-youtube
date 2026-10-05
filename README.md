@@ -12,6 +12,7 @@
 
 - **同步字幕**：播放時顯示目前這句的泰文、拼音、翻譯和單字解析。
 - **逐字稿**：列出整部影片的每一句，點任一句跳到該時間；也可以用「上一句／重播／下一句」。
+- **AI 朗讀**：按「唸給我聽」，用 ElevenLabs 的語音把目前這句唸出來。
 - **影片庫**：列出所有已經有字幕的影片，可用標題搜尋，並標示解析是否完整。
 - **抓取字幕**：貼上 YouTube 網址或影片 ID 就能加入新影片，畫面會顯示進度。
 - **深色模式**。
@@ -26,7 +27,9 @@ ELEVENLABS_API_KEY=你的 ElevenLabs 金鑰
 ```
 
 - `OPENAI_API_KEY`：產生解析時使用（模型是 `gpt-4.1-mini`），帳號需要有額度。
-- `ELEVENLABS_API_KEY`：只有影片沒有手動上傳的泰文字幕時才會用到，用來把聲音轉成文字。
+- `ELEVENLABS_API_KEY`：兩個地方會用到。影片沒有手動上傳的泰文字幕時，用來把聲音轉成文字（金鑰需要 Speech to Text 權限）；按「唸給我聽」時，用來產生語音（金鑰需要 Text to Speech 權限）。
+
+朗讀用的聲音可以在 `.env` 加上 `ELEVENLABS_VOICE_ID=聲音 ID` 來更換。
 
 只看已經抓好的影片不會用到任何金鑰。
 
@@ -93,6 +96,7 @@ npm run dev
 │   ├── youtube.py           向 YouTube 抓字幕、查影片標題
 │   ├── elevenlabs_api.py    ElevenLabs 語音轉文字與 SRT 解析
 │   ├── gpt_teacher.py       把字幕分段送給 OpenAI 產生解析
+│   ├── tts.py               用 ElevenLabs 把一句字幕唸出來
 │   └── storage.py           所有資料檔的位置與讀寫
 ├── frontend/                前端（React + Vite + Tailwind）
 │   ├── src/VideoSubtitleApp.jsx   整個畫面
@@ -114,6 +118,7 @@ npm run dev
 | `transcripts/{id}.json` | 抓回來的原始字幕，不含解析 |
 | `explanations/{id}.json` | GPT 逐句解析的快取 |
 | `elevenlabs/{id}.json` | ElevenLabs 的原始轉錄回應 |
+| `tts/{hash}.mp3` | 朗讀語音的快取，同一句只會產生一次 |
 | `video_titles.json` | 影片標題的快取 |
 
 `subtitles/` 是成品，其餘都是為了避免重複連線或重複付費而保留的中間結果。
@@ -139,6 +144,7 @@ npm run dev
 | `GET` | `/subtitles/{video_id}` | 取得一部影片的字幕與解析 |
 | `POST` | `/analyze` | 開始抓取，內容為 `{"video_id": "...", "refetch_transcript": false}` |
 | `GET` | `/status/{video_id}` | 查詢抓取進度 |
+| `GET` | `/tts/{video_id}/{line_id}` | 把某一句字幕唸出來，回傳 mp3 |
 
 後端啟動後，<http://localhost:8000/docs> 有可以直接操作的 API 文件。
 

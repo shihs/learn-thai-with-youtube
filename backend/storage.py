@@ -11,6 +11,7 @@ VIDEO_ID_PATTERN = r"^[A-Za-z0-9_-]{11}$"
 #   transcripts/{id}.json    抓回來的原始字幕（不含解析）
 #   explanations/{id}.json   GPT 逐句解析的快取
 #   elevenlabs/{id}.json     ElevenLabs 的原始轉錄回應
+#   tts/{hash}.mp3           唸字幕的語音快取
 #   video_titles.json        影片標題的快取
 DATA_DIR = "./data"
 SUBTITLE_DIR = f"{DATA_DIR}/subtitles"
@@ -98,3 +99,8 @@ def list_subtitle_videos():
 def elevenlabs_file(video_id):
     """ElevenLabs 的原始轉錄回應，避免同一部影片重複付費轉錄"""
     return f"{DATA_DIR}/elevenlabs/{video_id}.json"
+
+
+def tts_file(key):
+    """唸字幕的語音快取，key 是聲音、模型與文字的雜湊"""
+    return f"{DATA_DIR}/tts/{key}.mp3"

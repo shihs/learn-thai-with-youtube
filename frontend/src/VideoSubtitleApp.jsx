@@ -5,13 +5,16 @@ import {
   ChevronRight,
   Info,
   Library,
+  Loader2,
   ListVideo,
   Moon,
   Play,
   RotateCcw,
   Search,
   Sparkles,
+  Square,
   Sun,
+  Volume2,
   X,
 } from "lucide-react";
 
@@ -64,6 +67,19 @@ function getInitialDarkMode() {
   return dark;
 }
 
+// 朗讀可選的語速，按一下按鈕就換下一個
+const SPEECH_RATES = [1, 0.75, 0.5];
+
+function getInitialSpeechRate() {
+  try {
+    const saved = Number(localStorage.getItem("speechRate"));
+    if (SPEECH_RATES.includes(saved)) return saved;
+  } catch {
+    // 讀不到 localStorage 就用正常語速
+  }
+  return 1;
+}
+
 function prefersReducedMotion() {
   return window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 }
@@ -90,7 +106,7 @@ function ThaiFlag({ className }) {
 }
 
 // 小元件：目前這句字幕與它的解析
-function SubtitlePanel({ line, hasPrev, hasNext, onPrev, onNext, onReplay }) {
+function SubtitlePanel({ line, hasPrev, hasNext, onPrev, onNext, onReplay, speechState, onSpeak, speechRate, onCycleSpeechRate }) {
   if (!line) {
     return (
       <div className="card flex min-h-40 items-center justify-center p-6 text-sm text-slate-500 dark:text-slate-400">
@@ -101,10 +117,34 @@ function SubtitlePanel({ line, hasPrev, hasNext, onPrev, onNext, onReplay }) {
   const explanation = line.explanation;
   return (
     <div className="card p-5 sm:p-6">
-      <div className="flex items-start justify-between gap-4">
-        <p className="whitespace-pre-line text-2xl font-semibold leading-relaxed text-slate-900 dark:text-white">
+      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
+        <p className="min-w-0 flex-1 basis-64 whitespace-pre-line text-2xl font-semibold leading-relaxed text-slate-900 dark:text-white">
           {line.text}
         </p>
+        <button
+          onClick={onSpeak}
+          disabled={speechState === "loading"}
+          aria-label={speechState === "playing" ? "停止朗讀" : "AI 唸這句"}
+          title={speechState === "playing" ? "停止朗讀" : "AI 唸這句"}
+          className="focus-ring flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-indigo-600 px-4 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 disabled:opacity-70"
+        >
+          {speechState === "loading" ? (
+            <Loader2 size={16} className="animate-spin motion-reduce:animate-none" />
+          ) : speechState === "playing" ? (
+            <Square size={14} fill="currentColor" />
+          ) : (
+            <Volume2 size={16} />
+          )}
+          {speechState === "loading" ? "產生中" : speechState === "playing" ? "停止" : "唸給我聽"}
+        </button>
+        <button
+          onClick={onCycleSpeechRate}
+          aria-label={`朗讀語速 ${speechRate} 倍，按一下切換`}
+          title="朗讀語速，按一下切換"
+          className="focus-ring h-10 w-14 shrink-0 rounded-full border border-slate-200 text-sm font-semibold tabular-nums text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+        >
+          {speechRate}x
+        </button>
         <div className="flex shrink-0 items-center rounded-full border border-slate-200 dark:border-slate-700">
           <button onClick={onPrev} disabled={!hasPrev} aria-label="上一句" title="上一句" className={iconButtonClass}>
             <ChevronLeft size={18} />
@@ -325,6 +365,12 @@ export default function VideoSubtitleApp() {
   const [libraryQuery, setLibraryQuery] = useState("");
   // 抓取時是否連字幕本身都重新取得（預設沿用存過的字幕，只補 GPT 解析）
   const [refetchTranscript, setRefetchTranscript] = useState(false);
+  // AI 朗讀目前這句的狀態：null（沒在唸）、"loading"（產生語音中）、"playing"
+  const [speechState, setSpeechState] = useState(null);
+  const audioRef = useRef(null);
+  const [speechRate, setSpeechRate] = useState(getInitialSpeechRate);
+  // 每次開始或停止朗讀就加一，用來丟掉已經過期的請求
+  const speechRequestRef = useRef(0);
 
   const currentLine = subtitleData[currentIndex] ?? null;
   const currentVideo = videos.find((video) => video.id === videoId);
@@ -387,7 +433,8 @@ export default function VideoSubtitleApp() {
           return res.json();
         })
         .then((data) => {
-          setSubtitleData(Object.values(data));
+          // 保留每一句在後端的編號，朗讀時要用
+          setSubtitleData(Object.entries(data).map(([id, line]) => ({ id, ...line })));
           setCurrentIndex(-1);
           setVideoId(id);
           setSideTab("transcript");
@@ -515,6 +562,77 @@ export default function VideoSubtitleApp() {
     player.seekTo(seconds, true);
     player.playVideo();
   }, []);
+
+  const stopSpeech = useCallback(() => {
+    speechRequestRef.current += 1;
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
+    setSpeechState(null);
+  }, []);
+
+  // 換句或換影片時停止朗讀
+  useEffect(() => stopSpeech, [currentIndex, videoId, stopSpeech]);
+
+  const speakCurrentLine = useCallback(() => {
+    if (speechState === "playing") {
+      stopSpeech();
+      return;
+    }
+    if (!currentLine || !videoId) return;
+    stopSpeech();
+    const requestId = speechRequestRef.current;
+    // 影片先暫停，避免和朗讀的聲音疊在一起
+    playerRef.current?.pauseVideo?.();
+
+    // play() 要在點擊的當下呼叫，瀏覽器才不會把它當成自動播放擋掉；
+    // 語音由瀏覽器自己向後端載入，第一次產生時會等幾秒
+    const url = `${API_URL}/tts/${encodeURIComponent(videoId)}/${encodeURIComponent(currentLine.id)}`;
+    const audio = new Audio(url);
+    // 放慢時維持原本的音高，只改速度
+    audio.preservesPitch = true;
+    audio.defaultPlaybackRate = speechRate;
+    audio.playbackRate = speechRate;
+    audioRef.current = audio;
+    setSpeechState("loading");
+    audio.onplaying = () => {
+      if (audioRef.current === audio) setSpeechState("playing");
+    };
+    audio.onended = () => {
+      if (audioRef.current === audio) {
+        audioRef.current = null;
+        setSpeechState(null);
+      }
+    };
+    audio.play().catch(async (err) => {
+      // 期間已經換句或按了停止，就不用回報
+      if (requestId !== speechRequestRef.current) return;
+      audioRef.current = null;
+      setSpeechState(null);
+      // 音訊元素拿不到後端的錯誤內容，再問一次後端原因
+      let message = err.message;
+      try {
+        const res = await fetch(url);
+        if (!res.ok) message = (await res.json()).detail || `${res.status}`;
+      } catch {
+        message = `無法連線到後端（${API_URL}）`;
+      }
+      showError(`朗讀失敗：${message}`);
+    });
+  }, [speechState, currentLine, videoId, stopSpeech, showError, speechRate]);
+
+  const cycleSpeechRate = useCallback(() => {
+    const next = SPEECH_RATES[(SPEECH_RATES.indexOf(speechRate) + 1) % SPEECH_RATES.length];
+    setSpeechRate(next);
+    // 正在唸的話立刻套用
+    if (audioRef.current) audioRef.current.playbackRate = next;
+    try {
+      localStorage.setItem("speechRate", String(next));
+    } catch {
+      // 存不了就只在這次瀏覽生效
+    }
+  }, [speechRate]);
 
   const seekToIndex = useCallback(
     (index) => {
@@ -701,6 +819,10 @@ export default function VideoSubtitleApp() {
                 onPrev={() => seekToIndex(currentIndex - 1)}
                 onNext={() => seekToIndex(currentIndex + 1)}
                 onReplay={() => seekToIndex(currentIndex)}
+                speechState={speechState}
+                onSpeak={speakCurrentLine}
+                speechRate={speechRate}
+                onCycleSpeechRate={cycleSpeechRate}
               />
             </div>
 

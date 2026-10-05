@@ -6,10 +6,12 @@ from typing import Annotated
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException, Path
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 from .jobs import jobs, run_job, start_job
 from .storage import VIDEO_ID_PATTERN, list_subtitle_videos, load_json_file, subtitle_file
+from .tts import synthesize
 from .youtube import get_video_titles
 
 app = FastAPI()
@@ -65,3 +67,22 @@ def get_subtitles(video_id: VideoId):
     if subtitles is None:
         raise HTTPException(status_code=404, detail="Subtitles not found")
     return subtitles
+
+
+@app.get("/tts/{video_id}/{line_id}")
+def speak_line(video_id: VideoId, line_id: Annotated[str, Path(pattern=r"^\d+$")]):
+    """把某部影片的某一句字幕唸出來（mp3）。只接受已存在的字幕，不能唸任意文字"""
+    subtitles = load_json_file(subtitle_file(video_id)) or {}
+    line = subtitles.get(line_id)
+    text = " ".join(line["text"].split()) if line else ""
+    if not text:
+        raise HTTPException(status_code=404, detail="Subtitle line not found")
+    try:
+        return FileResponse(synthesize(text), media_type="audio/mpeg")
+    except Exception as e:
+        print(f"語音產生失敗：{e}")
+        if "missing_permissions" in str(e):
+            detail = "ElevenLabs 金鑰沒有 Text to Speech 權限，請到 ElevenLabs 後台的 API Keys 頁面為這把金鑰開啟"
+        else:
+            detail = f"{type(e).__name__}: {str(e).strip()[:300]}"
+        raise HTTPException(status_code=502, detail=detail)

@@ -14,6 +14,7 @@ The interface and the generated explanations are in Traditional Chinese: the app
 
 - **Synced subtitles**: the current line's Thai text, romanization, translation and word breakdown update as the video plays.
 - **Transcript**: every line of the video in a list; click any line to jump to it, or use the previous / replay / next buttons.
+- **Read aloud**: press 「唸給我聽」 (read it to me) to hear the current line spoken by an ElevenLabs voice.
 - **Library**: all videos that already have subtitles, searchable by title, with a badge on videos whose explanations are incomplete.
 - **Fetch subtitles**: paste a YouTube URL or video ID to add a new video, with a progress bar while it runs.
 - **Dark mode**.
@@ -28,7 +29,9 @@ ELEVENLABS_API_KEY=your ElevenLabs key
 ```
 
 - `OPENAI_API_KEY`: used to generate the explanations (model: `gpt-4.1-mini`). The account needs credits.
-- `ELEVENLABS_API_KEY`: only used when a video has no manually uploaded Thai subtitles, to transcribe the audio.
+- `ELEVENLABS_API_KEY`: used in two places. When a video has no manually uploaded Thai subtitles, it transcribes the audio (the key needs the Speech to Text permission). When you press 「唸給我聽」, it generates the speech (the key needs the Text to Speech permission).
+
+To change the voice used for reading aloud, add `ELEVENLABS_VOICE_ID=<voice id>` to `.env`.
 
 Watching videos that have already been processed needs neither key.
 
@@ -97,6 +100,7 @@ A video of about 500 lines takes roughly 5 minutes. If a run fails partway (for 
 │   ├── youtube.py           Fetches subtitles and video titles from YouTube
 │   ├── elevenlabs_api.py    ElevenLabs speech-to-text and SRT parsing
 │   ├── gpt_teacher.py       Sends subtitles to OpenAI in chunks for explanations
+│   ├── tts.py               Speaks one subtitle line with ElevenLabs
 │   └── storage.py           Where every data file lives, and reading/writing them
 ├── frontend/                Frontend (React + Vite + Tailwind)
 │   ├── src/VideoSubtitleApp.jsx   The whole UI
@@ -118,6 +122,7 @@ Each video's files are named after its YouTube video ID.
 | `transcripts/{id}.json` | The raw fetched subtitles, without explanations |
 | `explanations/{id}.json` | Cache of GPT's per-line explanations |
 | `elevenlabs/{id}.json` | The raw ElevenLabs transcription response |
+| `tts/{hash}.mp3` | Cache of read-aloud audio; each line is generated once |
 | `video_titles.json` | Cache of video titles |
 
 `subtitles/` is the end product. Everything else is intermediate output kept to avoid repeating network calls or paying twice.
@@ -143,6 +148,7 @@ The cache is keyed on the line number plus the Thai text. Lines whose text has n
 | `GET` | `/subtitles/{video_id}` | Get a video's subtitles and explanations |
 | `POST` | `/analyze` | Start a fetch job; body is `{"video_id": "...", "refetch_transcript": false}` |
 | `GET` | `/status/{video_id}` | Check a fetch job's progress |
+| `GET` | `/tts/{video_id}/{line_id}` | Speak one subtitle line; returns mp3 |
 
 With the backend running, <http://localhost:8000/docs> has interactive API docs.
 
