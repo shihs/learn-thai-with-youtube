@@ -1,4 +1,4 @@
-# GPT 解析：把字幕分段送給 OpenAI，取得每一句的拼音、翻譯與單字拆解
+# GPT 解析：把字幕分段送給 OpenAI，取得每一句的拼音、翻譯與單字拆解；另外替詞庫查沒看過的字
 import json
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from openai import AuthenticationError, OpenAI, PermissionDeniedError, RateLimitError
 
 from .analysis_check import check_analysis
+from .dictionary import add_entries
 from .segmenter import tokenize
 from .storage import ANALYSIS_VERSION
 
@@ -254,3 +255,102 @@ def analyze_long_text(transcript_with_time, max_lines=10, cached=None, on_progre
     if len(all_results) < total:
         print(f"⚠️ 共有 {total - len(all_results)} 句沒有解析")
     return all_results
+
+
+# ── 查詞：替詞庫補上沒看過的字 ──
+
+# 一個請求查幾個字
+DICTIONARY_BATCH_SIZE = 40
+
+DICTIONARY_ENTRY_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "rtgs": {"type": "string", "description": "這個字的皇家轉寫系統拼音（RTGS）"},
+        "parts": {
+            "type": "array",
+            "description": "複合詞或固定說法的組成；不是的話給空陣列",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "word": {"type": "string", "description": "組成的泰文"},
+                    "rtgs": {"type": "string", "description": "組成的 RTGS 拼音"},
+                    "meaning": {"type": "string", "description": "組成的繁體中文意思"},
+                },
+                "required": ["word", "rtgs", "meaning"],
+                "additionalProperties": False,
+            },
+        },
+        "senses": {"type": "string", "description": "常見的繁體中文意思，多個用「、」隔開，最多三個"},
+        "usage": {"type": "string", "description": "一般的用法說明，一到兩句"},
+    },
+    "required": ["rtgs", "parts", "senses", "usage"],
+    "additionalProperties": False,
+}
+
+
+@lru_cache(maxsize=None)
+def dictionary_schema(count):
+    return keyed_schema("thai_dictionary", DICTIONARY_ENTRY_SCHEMA, count)
+
+
+def build_dictionary_prompt(payload):
+    return f"""下面是一個 JSON 物件，每個 key（item_1、item_2...）對應一個泰文詞條（word），以及它出現過的一句例句（example）。
+幫每個詞條寫字典資料：
+- rtgs：這個字的拼音（RTGS）。
+- parts：複合詞或固定說法才填，列出組成的每個字（泰文、RTGS、繁體中文意思）；不是的話給空陣列。
+- senses：這個字常見的意思，用繁體中文，多個意思用「、」隔開，最多三個。
+- usage：一般的用法說明，一到兩句。語氣詞說明語氣和誰會用，量詞說明配什麼名詞；人名、品牌、外文只要寫明是什麼。
+
+規則：
+- 說明這個字一般的用法。例句只是幫你判斷是哪個字，不要只解釋例句裡的意思。
+- 每個 key 都要回傳一筆結果，放在相同的 key 底下。
+
+這是要查的詞條：
+{json.dumps(payload, ensure_ascii=False)}"""
+
+
+def lookup_words(client, batch):
+    """batch：[{"word", "example"}]，回傳 {字: 詞庫資料}"""
+    payload = {f"item_{n}": item for n, item in enumerate(batch, start=1)}
+    results = ask_gpt(client, build_dictionary_prompt(payload), dictionary_schema(len(batch)))
+    return {item["word"]: results[key] for key, item in payload.items() if key in results}
+
+
+def lookup_batch(client, batch):
+    entries = lookup_words(client, batch)
+
+    # 沒查到的字只重試一次
+    missing = [item for item in batch if item["word"] not in entries]
+    if missing:
+        print(f"⚠️ 有 {len(missing)} 個字沒有查到，重試中...")
+        entries.update(lookup_words(client, missing))
+
+    return entries
+
+
+# missing：{字: 例句}。分批並行查詞，每完成一批就寫進詞庫；回傳沒查到的字數
+# on_progress(已查到的字數, 總字數)：每完成一批呼叫一次
+def lookup_missing_words(missing, on_progress=None):
+    words = [{"word": word, "example": example} for word, example in missing.items()]
+    if not words:
+        return 0
+    batches = [words[i : i + DICTIONARY_BATCH_SIZE] for i in range(0, len(words), DICTIONARY_BATCH_SIZE)]
+    print(f"⏳ 詞庫缺 {len(words)} 個字，分成 {len(batches)} 批查詢...")
+
+    done = 0
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), max_retries=5)
+    executor = ThreadPoolExecutor(max_workers=MAX_WORKERS)
+    try:
+        futures = [executor.submit(lookup_batch, client, batch) for batch in batches]
+        for future in as_completed(futures):
+            entries = future.result()
+            add_entries(entries)
+            done += len(entries)
+            if on_progress:
+                on_progress(done, len(words))
+    finally:
+        executor.shutdown(wait=False, cancel_futures=True)
+
+    if done < len(words):
+        print(f"⚠️ 共有 {len(words) - done} 個字沒有查到")
+    return len(words) - done
