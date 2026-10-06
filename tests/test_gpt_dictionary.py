@@ -6,7 +6,7 @@ from tests.conftest import FakeClient
 
 
 def entry_for(word):
-    return {"rtgs": f"rtgs-{word}", "parts": [], "senses": "意思", "usage": "用法"}
+    return {"rtgs": "rtgs", "parts": [], "senses": "意思", "usage": "用法"}
 
 
 def respond(payload):
@@ -82,3 +82,42 @@ def test_existing_dictionary_words_are_kept(data_dir, use_client):
     use_client(respond)
     gpt_teacher.lookup_missing_words({"มา": "มาแล้ว"})
     assert load_dictionary()["มา"]["rtgs"] == "ma"
+
+
+def test_non_rtgs_romanization_is_looked_up_again(data_dir, use_client):
+    attempts = []
+
+    def respond_badly_once(payload):
+        attempts.append([item["word"] for item in payload.values()])
+        results = respond(payload)
+        if len(attempts) == 1:
+            key = next(key for key, item in payload.items() if item["word"] == "กระเป๋า")
+            results[key]["rtgs"] = "grà-bpǎo"
+        return results
+
+    use_client(respond_badly_once)
+    assert gpt_teacher.lookup_missing_words({"มา": "มาแล้ว", "กระเป๋า": "กระเป๋า"}) == 0
+    assert attempts == [["มา", "กระเป๋า"], ["กระเป๋า"]]
+    assert load_dictionary()["กระเป๋า"]["rtgs"] == "rtgs"
+
+
+def test_romanization_still_marked_after_the_retry_is_stored_without_marks(data_dir, use_client):
+    def respond_badly(payload):
+        results = respond(payload)
+        for key in results:
+            results[key]["rtgs"] = "krà-jòk"
+            results[key]["parts"] = [{"word": "กระ", "rtgs": "krà", "meaning": "前綴"}]
+        return results
+
+    client = use_client(respond_badly)
+    assert gpt_teacher.lookup_missing_words({"กระจก": "กระจก"}) == 0
+    assert len(client.calls) == 2
+    saved = load_dictionary()["กระจก"]
+    assert saved["rtgs"] == "kra jok"
+    assert saved["parts"] == [{"word": "กระ", "rtgs": "kra", "meaning": "前綴"}]
+
+
+def test_dictionary_prompt_spells_out_the_romanization_rules():
+    prompt = gpt_teacher.build_dictionary_prompt({"item_1": {"word": "มา", "example": "มาแล้ว"}})
+    assert "不加聲調符號" in prompt
+    assert "krapao" in prompt

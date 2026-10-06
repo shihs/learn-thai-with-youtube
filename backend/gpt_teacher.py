@@ -9,6 +9,7 @@ from openai import AuthenticationError, OpenAI, PermissionDeniedError, RateLimit
 
 from .analysis_check import check_analysis
 from .dictionary import add_entries
+from .rtgs import plain_rtgs, rtgs_problems
 from .segmenter import tokenize
 from .storage import ANALYSIS_VERSION
 
@@ -270,7 +271,7 @@ DICTIONARY_BATCH_SIZE = 40
 DICTIONARY_ENTRY_SCHEMA = {
     "type": "object",
     "properties": {
-        "rtgs": {"type": "string", "description": "這個字的皇家轉寫系統拼音（RTGS）"},
+        "rtgs": {"type": "string", "description": "這個字的皇家轉寫系統拼音（RTGS），只用英文字母和空格"},
         "parts": {
             "type": "array",
             "description": "複合詞或固定說法的組成；不是的話給空陣列",
@@ -301,7 +302,7 @@ def dictionary_schema(count):
 def build_dictionary_prompt(payload):
     return f"""下面是一個 JSON 物件，每個 key（item_1、item_2...）對應一個泰文詞條（word），以及它出現過的一句例句（example）。
 幫每個詞條寫字典資料：
-- rtgs：這個字的拼音（RTGS）。
+- rtgs：泰國皇家轉寫系統（RTGS）的拼音。只用英文字母和空格：不加聲調符號、不用連字號、不標母音長短，也不要用其他拼音系統的寫法。例如 กระเป๋า 是 krapao、สวัสดี 是 sawatdi、อยู่ 是 yu、ครับ 是 khrap、ซื้อ 是 sue、ปาก 是 pak。人名、品牌、外文照它原本的拼法。parts 裡的拼音也一樣。
 - parts：複合詞或固定說法才填，列出組成的每個字（泰文、RTGS、繁體中文意思）；不是的話給空陣列。
 - senses：這個字常見的意思，用繁體中文，多個意思用「、」隔開，最多三個。
 - usage：一般的用法說明，一到兩句。語氣詞說明語氣和誰會用，量詞說明配什麼名詞；人名、品牌、外文只要寫明是什麼。
@@ -321,16 +322,36 @@ def lookup_words(client, batch):
     return {item["word"]: results[key] for key, item in payload.items() if key in results}
 
 
+def entry_problems(word, entry):
+    """這筆詞庫資料裡，拼音不符合 RTGS 格式的原因"""
+    problems = rtgs_problems(word, entry["rtgs"])
+    for part in entry["parts"]:
+        problems += rtgs_problems(part["word"], part["rtgs"])
+    return problems
+
+
 def lookup_batch(client, batch):
     entries = lookup_words(client, batch)
 
-    # 沒查到的字只重試一次
-    missing = [item for item in batch if item["word"] not in entries]
-    if missing:
-        print(f"⚠️ 有 {len(missing)} 個字沒有查到，重試中...")
-        entries.update(lookup_words(client, missing))
+    # 沒查到、或拼音格式不對的字只重試一次
+    again = [
+        item
+        for item in batch
+        if item["word"] not in entries or entry_problems(item["word"], entries[item["word"]])
+    ]
+    if again:
+        print(f"⚠️ 有 {len(again)} 個字沒有查到或拼音格式不對，重試中...")
+        entries.update(lookup_words(client, again))
 
-    return entries
+    # 重試後還帶著聲調符號或連字號的直接去掉，詞庫裡的拼音格式才會一致
+    return {
+        word: {
+            **entry,
+            "rtgs": plain_rtgs(entry["rtgs"]),
+            "parts": [{**part, "rtgs": plain_rtgs(part["rtgs"])} for part in entry["parts"]],
+        }
+        for word, entry in entries.items()
+    }
 
 
 # missing：{字: 例句}。分批並行查詞，每完成一批就寫進詞庫；回傳沒查到的字數

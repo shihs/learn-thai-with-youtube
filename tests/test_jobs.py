@@ -12,7 +12,7 @@ ANALYSES = {
 
 
 def entry_for(word):
-    return {"rtgs": f"rtgs-{word}", "parts": [], "senses": "意思", "usage": "用法"}
+    return {"rtgs": "rtgs", "parts": [], "senses": "意思", "usage": "用法"}
 
 
 def respond(payload, skip=()):
@@ -67,7 +67,7 @@ def test_subtitles_are_saved_with_sentence_and_dictionary_fields(video, monkeypa
         "type": "word",
         "meaning": "意思",
         "more": "",
-        "rtgs": "rtgs-มา",
+        "rtgs": "rtgs",
         "parts": [],
         "senses": "意思",
         "usage": "用法",

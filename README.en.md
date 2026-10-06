@@ -106,6 +106,7 @@ A video of about 500 lines takes roughly 5 minutes. If a run fails partway (for 
 │   ├── segmenter.py         Word tokenization with PyThaiNLP
 │   ├── analysis_check.py    Checks that the words cover the line and are split finely enough
 │   ├── dictionary.py        Reads, writes and merges the word dictionary
+│   ├── rtgs.py              Checks that dictionary romanization is in RTGS form
 │   ├── tts.py               Speaks one subtitle line with ElevenLabs
 │   └── storage.py           Where every data file lives, and reading/writing them
 ├── frontend/                Frontend (React + Vite + Tailwind)
@@ -114,7 +115,7 @@ A video of about 500 lines takes roughly 5 minutes. If a run fails partway (for 
 ├── data/                    All data (see below)
 ├── Dockerfile               Backend image
 ├── docker-compose.yml       Starts backend and frontend together
-├── scripts/                 Script for comparing segmentation variants
+├── scripts/                 Scripts for comparing segmentation variants and repairing dictionary romanization
 ├── tests/                   Backend tests (pytest)
 ├── requirements.txt         Backend Python packages
 ├── requirements-dev.txt     Development packages (tests)

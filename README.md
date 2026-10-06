@@ -102,6 +102,7 @@ npm run dev
 │   ├── segmenter.py         用 PyThaiNLP 做機器斷詞
 │   ├── analysis_check.py    檢查單字有沒有涵蓋整句、有沒有拆開
 │   ├── dictionary.py        詞庫的讀寫與合併
+│   ├── rtgs.py              檢查詞庫的拼音是不是 RTGS 的格式
 │   ├── tts.py               用 ElevenLabs 把一句字幕唸出來
 │   └── storage.py           所有資料檔的位置與讀寫
 ├── frontend/                前端（React + Vite + Tailwind）
@@ -110,7 +111,7 @@ npm run dev
 ├── data/                    所有資料（見下方）
 ├── Dockerfile               後端的映像檔
 ├── docker-compose.yml       一次啟動前後端
-├── scripts/                 對照實驗用的腳本
+├── scripts/                 對照實驗、修復詞庫拼音用的腳本
 ├── tests/                   後端的測試（pytest）
 ├── requirements.txt         後端的 Python 套件
 ├── requirements-dev.txt     開發用的套件（測試）
