@@ -756,15 +756,15 @@
         }
     },
     "13": {
-        "text": "เขาเป็นคนที่แบบยืดหยุ่นกับทุกสถานการณ์อะไรอย่าง",
+        "text": "เขาเป็นคนที่แบบยืดหยุ่นกับทุกสถานการณ์อะไรอย่างงี้",
         "start": 31.82,
         "duration": 3.7,
         "start_time": "00:00:31,820",
         "explanation": {
-            "thai": "เขาเป็นคนที่แบบยืดหยุ่นกับทุกสถานการณ์อะไรอย่าง",
+            "thai": "เขาเป็นคนที่แบบยืดหยุ่นกับทุกสถานการณ์อะไรอย่างงี้",
             "v": 2,
-            "rtgs": "khao pen khon thi baep yued yoon kap thuk sathana kan arai yang",
-            "translation": "他是個對所有情況都很有彈性的人",
+            "rtgs": "khao pen khon thi baep yued-yun kap thuk sathana-kan arai yang-nyi",
+            "translation": "他是那種對任何情況都很有彈性的人",
             "analysis": [
                 {
                     "word": "เขา",
@@ -799,7 +799,7 @@
                 {
                     "word": "ที่",
                     "type": "word",
-                    "meaning": "連接詞，指示從句",
+                    "meaning": "那個（關係代名詞）",
                     "more": "",
                     "rtgs": "thi",
                     "parts": [],
@@ -809,7 +809,7 @@
                 {
                     "word": "แบบ",
                     "type": "word",
-                    "meaning": "方式，樣子",
+                    "meaning": "類型、方式",
                     "more": "",
                     "rtgs": "baep",
                     "parts": [],
@@ -840,7 +840,7 @@
                 {
                     "word": "กับ",
                     "type": "word",
-                    "meaning": "對，和",
+                    "meaning": "和、對於",
                     "more": "",
                     "rtgs": "kap",
                     "parts": [],
@@ -889,43 +889,44 @@
                     "usage": "疑問代詞，用於詢問事物或選擇。"
                 },
                 {
-                    "word": "อย่าง",
-                    "type": "word",
-                    "meaning": "樣子",
-                    "more": "",
-                    "rtgs": "yang",
-                    "parts": [],
-                    "senses": "像、類似、方式",
-                    "usage": "用於表示方式或舉例。"
+                    "word": "อย่างงี้",
+                    "type": "expression",
+                    "meaning": "像這樣",
+                    "more": "口語用法，表示舉例或模糊指稱",
+                    "rtgs": "yang ni",
+                    "parts": [
+                        {
+                            "word": "อย่าง",
+                            "rtgs": "yang",
+                            "meaning": "方式、樣子"
+                        },
+                        {
+                            "word": "งี้",
+                            "rtgs": "ni",
+                            "meaning": "這樣"
+                        }
+                    ],
+                    "senses": "這樣、如此",
+                    "usage": "用於口語中表示示範或提議某種方式。"
                 }
             ]
         }
     },
     "14": {
-        "text": "งี้\nอือ\nใช่รู้สึกว่าปรับตัวเก่ง",
+        "text": "อือ\nใช่รู้สึกว่าปรับตัวเก่ง",
         "start": 35.52,
         "duration": 2.2,
         "start_time": "00:00:35,520",
         "explanation": {
-            "thai": "งี้\nอือ\nใช่รู้สึกว่าปรับตัวเก่ง",
+            "thai": "อือ\nใช่รู้สึกว่าปรับตัวเก่ง",
             "v": 2,
-            "rtgs": "ngi\nue\nchai ru suek wa prap tua keng",
-            "translation": "像這樣\n嗯\n是的，覺得他適應力強",
+            "rtgs": "ue\nchai ru-seuk wa prap tua keng",
+            "translation": "嗯\n是的，覺得自己適應力強",
             "analysis": [
-                {
-                    "word": "งี้",
-                    "type": "expression",
-                    "meaning": "像這樣",
-                    "more": "",
-                    "rtgs": "ni",
-                    "parts": [],
-                    "senses": "這樣、如此",
-                    "usage": "口語用語，表示方式或狀態。"
-                },
                 {
                     "word": "อือ",
                     "type": "particle",
-                    "meaning": "嗯，表示同意或思考",
+                    "meaning": "嗯（表示同意或思考）",
                     "more": "",
                     "rtgs": "ue",
                     "parts": [],
@@ -966,7 +967,7 @@
                 {
                     "word": "ว่า",
                     "type": "word",
-                    "meaning": "連接詞，表示說明",
+                    "meaning": "（連接詞）說、認為",
                     "more": "",
                     "rtgs": "wa",
                     "parts": [],
@@ -976,7 +977,7 @@
                 {
                     "word": "ปรับตัว",
                     "type": "word",
-                    "meaning": "適應",
+                    "meaning": "調整自己",
                     "more": "",
                     "rtgs": "prap tua",
                     "parts": [

@@ -61,14 +61,60 @@ def load_or_request_transcription(video_id):
 MAX_ZERO_LENGTH_DURATION = 2.0
 
 
-def merge_zero_length_segments(segments):
+def segment_speakers(segments, words):
     """
-    兩人同時講話時，ElevenLabs 會把插話壓成起訖時間相同的字幕，前端永遠顯示不到。
-    這類字幕和下一句同時開始，所以併進下一句（以換行分隔）；
+    SRT 沒有講者，講者只在原始回應的 words 裡（泰文一個字元一筆）。
+    把每句字幕對回 words，回傳 (第一個字的講者, 最後一個字的講者)；對不上的是 None。
+    """
+    owners = []
+    for word in words:
+        if word.get("type") == "word":
+            owners += [word.get("speaker_id")] * len(re.sub(r"\s+", "", word["text"]))
+    spoken = "".join(re.sub(r"\s+", "", word["text"]) for word in words if word.get("type") == "word")
+
+    speakers = []
+    position = 0
+    for seg in segments:
+        text = re.sub(r"\s+", "", seg["text"])
+        found = spoken.find(text, position) if text else -1
+        if found < 0:
+            speakers.append(None)
+            continue
+        position = found + len(text)
+        speakers.append((owners[found], owners[position - 1]))
+    return speakers
+
+
+THAI_CHAR = re.compile(r"[฀-๿]")
+
+
+def join_text(first, second):
+    """把切開的兩段接回同一句：泰文直接相連，其他情況以空格分隔"""
+    if THAI_CHAR.match(first[-1:]) and THAI_CHAR.match(second[:1]):
+        return first + second
+    return f"{first} {second}"
+
+
+def merge_zero_length_segments(segments, speakers=None):
+    """
+    換講者的地方，ElevenLabs 會給出起訖時間相同的字幕，前端永遠顯示不到。
+    有講者資訊時先看它是誰講的：
+    - 和前一句同講者、和下一句不同：是前一句被切下來的句尾，直接接回前一句
+    - 和下一句同講者、和前一句不同：是下一句被切下來的句首，直接接到下一句開頭
+    其餘（另一個人的插話，或分不出來）和下一句同時開始，所以併進下一句（以換行分隔）；
     若下一句較晚開始，則獨立成一句並延長到下一句開始為止。
     """
+    if speakers is None:
+        speakers = [None] * len(segments)
+
+    def same_speaker(earlier, later):
+        if not 0 <= earlier < later < len(segments) or not speakers[earlier] or not speakers[later]:
+            return False
+        return speakers[earlier][1] == speakers[later][0]
+
     merged = []
     pending = []
+    prefix = ""
 
     def flush(until=None):
         duration = MAX_ZERO_LENGTH_DURATION
@@ -77,7 +123,22 @@ def merge_zero_length_segments(segments):
         merged.append({**pending[0], "text": "\n".join(s["text"] for s in pending), "duration": duration})
         pending.clear()
 
-    for seg in segments:
+    for index, seg in enumerate(segments):
+        if prefix:
+            seg = {**seg, "text": join_text(prefix, seg["text"])}
+            prefix = ""
+
+        if seg["duration"] <= 0:
+            from_previous = same_speaker(index - 1, index)
+            from_next = same_speaker(index, index + 1)
+            if from_next and not from_previous:
+                prefix = seg["text"]
+                continue
+            if from_previous and not from_next:
+                target = pending if pending else merged
+                target[-1] = {**target[-1], "text": join_text(target[-1]["text"], seg["text"])}
+                continue
+
         if pending and seg["start"] != pending[0]["start"]:
             flush(until=seg["start"])
 
@@ -126,7 +187,8 @@ def generate_transcript_json(video_id):
         )
 
     # key 與 YouTube 字幕路徑一致：從 0 開始的整數
-    transcript_with_time = dict(enumerate(merge_zero_length_segments(segments)))
+    speakers = segment_speakers(segments, thai_script.get("words") or [])
+    transcript_with_time = dict(enumerate(merge_zero_length_segments(segments, speakers)))
 
     whole_script = ""
     for snippet in transcript_with_time.values():

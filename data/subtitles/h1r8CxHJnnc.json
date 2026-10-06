@@ -11386,15 +11386,15 @@
         }
     },
     "177": {
-        "text": "ตอบได้ก็ตอบก่อนเลย",
+        "text": "ตอบได้ก็ตอบก่อนเลยเร็ว",
         "start": 317.12,
         "duration": 1.36,
         "start_time": "00:05:17,120",
         "explanation": {
-            "thai": "ตอบได้ก็ตอบก่อนเลย",
+            "thai": "ตอบได้ก็ตอบก่อนเลยเร็ว",
             "v": 2,
-            "rtgs": "top dai ko top kon loei",
-            "translation": "能回答就先回答吧",
+            "rtgs": "top dai ko top kon loei reo",
+            "translation": "能回答就先快點回答",
             "analysis": [
                 {
                     "word": "ตอบ",
@@ -11449,27 +11449,13 @@
                 {
                     "word": "เลย",
                     "type": "particle",
-                    "meaning": "吧，強調語氣",
+                    "meaning": "馬上",
                     "more": "",
                     "rtgs": "loei",
                     "parts": [],
                     "senses": "立刻、馬上、直接",
                     "usage": "副詞，表示動作的立即性或強調。"
-                }
-            ]
-        }
-    },
-    "178": {
-        "text": "เร็ว",
-        "start": 321.2,
-        "duration": 0.06,
-        "start_time": "00:05:21,200",
-        "explanation": {
-            "thai": "เร็ว",
-            "v": 2,
-            "rtgs": "reo",
-            "translation": "快",
-            "analysis": [
+                },
                 {
                     "word": "เร็ว",
                     "type": "word",
@@ -11483,7 +11469,7 @@
             ]
         }
     },
-    "179": {
+    "178": {
         "text": "สี่",
         "start": 321.26,
         "duration": 0.4,
@@ -11497,7 +11483,7 @@
                 {
                     "word": "สี่",
                     "type": "word",
-                    "meaning": "數字四",
+                    "meaning": "四",
                     "more": "",
                     "rtgs": "si",
                     "parts": [],
@@ -11507,7 +11493,7 @@
             ]
         }
     },
-    "180": {
+    "179": {
         "text": "สาม",
         "start": 323.28,
         "duration": 0.42,
@@ -11531,7 +11517,7 @@
             ]
         }
     },
-    "181": {
+    "180": {
         "text": "สองหนึ่งบอนนี่ชนะเวลา",
         "start": 324.84,
         "duration": 1.58,
@@ -11540,7 +11526,7 @@
             "thai": "สองหนึ่งบอนนี่ชนะเวลา",
             "v": 2,
             "rtgs": "song nueng bon ni cha na wela",
-            "translation": "兩個一，邦妮贏了時間",
+            "translation": "二一邦妮贏了時間",
             "analysis": [
                 {
                     "word": "สอง",
@@ -11595,7 +11581,7 @@
             ]
         }
     },
-    "182": {
+    "181": {
         "text": "พรุ่งนี้",
         "start": 329.5,
         "duration": 0.46,
@@ -11625,7 +11611,7 @@
             ]
         }
     },
-    "183": {
+    "182": {
         "text": "จุ๊บ",
         "start": 332.04,
         "duration": 0.28,
@@ -11649,7 +11635,7 @@
             ]
         }
     },
-    "184": {
+    "183": {
         "text": "พะแนง",
         "start": 332.6,
         "duration": 0.54,
@@ -11658,12 +11644,12 @@
             "thai": "พะแนง",
             "v": 2,
             "rtgs": "pha naeng",
-            "translation": "咖哩菜名（帕能咖哩）",
+            "translation": "咖哩菜名",
             "analysis": [
                 {
                     "word": "พะแนง",
                     "type": "word",
-                    "meaning": "帕能咖哩（一種泰式咖哩）",
+                    "meaning": "咖哩菜名",
                     "more": "",
                     "rtgs": "phanang",
                     "parts": [],
@@ -11673,7 +11659,7 @@
             ]
         }
     },
-    "185": {
+    "184": {
         "text": "พะโน",
         "start": 333.24,
         "duration": 0.58,
@@ -11682,22 +11668,32 @@
             "thai": "พะโน",
             "v": 2,
             "rtgs": "pha no",
-            "translation": "（人名）帕諾",
+            "translation": "（無特定意義）",
             "analysis": [
                 {
-                    "word": "พะโน",
-                    "type": "name",
-                    "meaning": "帕諾（人名）",
+                    "word": "พะ",
+                    "type": "word",
+                    "meaning": "（無特定意義）",
                     "more": "",
-                    "rtgs": "phano",
+                    "rtgs": "pha",
                     "parts": [],
-                    "senses": "人名",
-                    "usage": "泰國人名。"
+                    "senses": "語氣詞、助詞",
+                    "usage": "用於句尾，表示輕微的語氣或強調，常見於口語中。"
+                },
+                {
+                    "word": "โน",
+                    "type": "word",
+                    "meaning": "（無特定意義）",
+                    "more": "",
+                    "rtgs": "no",
+                    "parts": [],
+                    "senses": "語氣詞、助詞",
+                    "usage": "用於句尾，表示輕微的語氣或確認，常用於口語。"
                 }
             ]
         }
     },
-    "186": {
+    "185": {
         "text": "พระนอน",
         "start": 334.42,
         "duration": 0.58,
@@ -11706,7 +11702,7 @@
             "thai": "พระนอน",
             "v": 2,
             "rtgs": "phra non",
-            "translation": "臥佛（佛像）",
+            "translation": "臥佛",
             "analysis": [
                 {
                     "word": "พระนอน",
@@ -11732,7 +11728,7 @@
             ]
         }
     },
-    "187": {
+    "186": {
         "text": "พี่น้อง",
         "start": 341.9,
         "duration": 0.64,
@@ -11767,7 +11763,7 @@
             ]
         }
     },
-    "188": {
+    "187": {
         "text": "พ่อนะ",
         "start": 342.84,
         "duration": 0.46,
@@ -11776,7 +11772,7 @@
             "thai": "พ่อนะ",
             "v": 2,
             "rtgs": "pho na",
-            "translation": "爸爸啊（語氣）",
+            "translation": "爸爸喔",
             "analysis": [
                 {
                     "word": "พ่อ",
@@ -11791,7 +11787,7 @@
                 {
                     "word": "นะ",
                     "type": "particle",
-                    "meaning": "語氣助詞",
+                    "meaning": "語氣助詞，表示親切或提醒",
                     "more": "",
                     "rtgs": "na",
                     "parts": [],
@@ -11801,7 +11797,7 @@
             ]
         }
     },
-    "189": {
+    "188": {
         "text": "พ่อนะ",
         "start": 343.44,
         "duration": 0.84,
@@ -11835,16 +11831,16 @@
             ]
         }
     },
-    "190": {
-        "text": "ห้า",
-        "start": 344.28,
-        "duration": 2.0,
-        "start_time": "00:05:44,280",
+    "189": {
+        "text": "ห้าสี่",
+        "start": 347.28,
+        "duration": 0.4,
+        "start_time": "00:05:47,280",
         "explanation": {
-            "thai": "ห้า",
+            "thai": "ห้าสี่",
             "v": 2,
-            "rtgs": "ha",
-            "translation": "五",
+            "rtgs": "ha si",
+            "translation": "五四",
             "analysis": [
                 {
                     "word": "ห้า",
@@ -11855,21 +11851,7 @@
                     "parts": [],
                     "senses": "數字五",
                     "usage": "用來表示數字5，常用於計數和時間等場合。"
-                }
-            ]
-        }
-    },
-    "191": {
-        "text": "สี่",
-        "start": 347.28,
-        "duration": 0.4,
-        "start_time": "00:05:47,280",
-        "explanation": {
-            "thai": "สี่",
-            "v": 2,
-            "rtgs": "si",
-            "translation": "四",
-            "analysis": [
+                },
                 {
                     "word": "สี่",
                     "type": "word",
@@ -11883,7 +11865,7 @@
             ]
         }
     },
-    "192": {
+    "190": {
         "text": "สามสองหนึ่งบอนนี่ได้อีกแล้ว",
         "start": 349.16,
         "duration": 2.74,
@@ -11891,8 +11873,8 @@
         "explanation": {
             "thai": "สามสองหนึ่งบอนนี่ได้อีกแล้ว",
             "v": 2,
-            "rtgs": "sam song nueng bon ni dai ik laeo",
-            "translation": "三二一邦妮又得到了",
+            "rtgs": "sam song nueng bonni dai ik laeo",
+            "translation": "三二一，邦妮又成功了",
             "analysis": [
                 {
                     "word": "สาม",
@@ -11937,7 +11919,7 @@
                 {
                     "word": "ได้",
                     "type": "word",
-                    "meaning": "得到",
+                    "meaning": "能、成功",
                     "more": "",
                     "rtgs": "dai",
                     "parts": [],
@@ -11947,7 +11929,7 @@
                 {
                     "word": "อีกแล้ว",
                     "type": "expression",
-                    "meaning": "又，再次",
+                    "meaning": "又、再次",
                     "more": "表示動作重複發生",
                     "rtgs": "ik laeo",
                     "parts": [
@@ -11968,7 +11950,7 @@
             ]
         }
     },
-    "193": {
+    "191": {
         "text": "คิดไม่ออกเลย",
         "start": 352.6,
         "duration": 0.6,
@@ -11983,7 +11965,7 @@
                     "word": "คิดไม่ออก",
                     "type": "expression",
                     "meaning": "想不出來",
-                    "more": "固定慣用語",
+                    "more": "固定慣用語，表示無法想出答案或主意",
                     "rtgs": "khit mai ok",
                     "parts": [
                         {
@@ -12009,7 +11991,7 @@
                     "word": "เลย",
                     "type": "particle",
                     "meaning": "完全、徹底",
-                    "more": "加強語氣",
+                    "more": "",
                     "rtgs": "loei",
                     "parts": [],
                     "senses": "立刻、馬上、直接",
@@ -12018,7 +12000,7 @@
             ]
         }
     },
-    "194": {
+    "192": {
         "text": "ไม่ไป",
         "start": 354.82,
         "duration": 0.48,
@@ -12032,7 +12014,7 @@
                 {
                     "word": "ไม่",
                     "type": "particle",
-                    "meaning": "不",
+                    "meaning": "否定",
                     "more": "",
                     "rtgs": "mai",
                     "parts": [],
@@ -12052,7 +12034,7 @@
             ]
         }
     },
-    "195": {
+    "193": {
         "text": "หมูปิ้ง",
         "start": 356.32,
         "duration": 0.66,
@@ -12067,7 +12049,7 @@
                     "word": "หมูปิ้ง",
                     "type": "word",
                     "meaning": "烤豬肉串",
-                    "more": "複合詞",
+                    "more": "",
                     "rtgs": "mu ping",
                     "parts": [
                         {
@@ -12087,7 +12069,7 @@
             ]
         }
     },
-    "196": {
+    "194": {
         "text": "มะปราง",
         "start": 357.36,
         "duration": 0.58,
@@ -12095,13 +12077,13 @@
         "explanation": {
             "thai": "มะปราง",
             "v": 2,
-            "rtgs": "ma prang",
+            "rtgs": "maprang",
             "translation": "青芒果（人名或水果名）",
             "analysis": [
                 {
                     "word": "มะปราง",
-                    "type": "word",
-                    "meaning": "青芒果",
+                    "type": "name",
+                    "meaning": "青芒果（人名或水果名）",
                     "more": "",
                     "rtgs": "maprang",
                     "parts": [],
@@ -12111,7 +12093,7 @@
             ]
         }
     },
-    "197": {
+    "195": {
         "text": "แมวป่า",
         "start": 358.04,
         "duration": 0.74,
@@ -12126,7 +12108,7 @@
                     "word": "แมวป่า",
                     "type": "word",
                     "meaning": "野貓",
-                    "more": "複合詞",
+                    "more": "",
                     "rtgs": "mao pa",
                     "parts": [
                         {
@@ -12146,7 +12128,7 @@
             ]
         }
     },
-    "198": {
+    "196": {
         "text": "มะม่วงเปรี้ยว",
         "start": 358.94,
         "duration": 0.84,
@@ -12154,7 +12136,7 @@
         "explanation": {
             "thai": "มะม่วงเปรี้ยว",
             "v": 2,
-            "rtgs": "ma muang priao",
+            "rtgs": "mamuang priao",
             "translation": "酸芒果",
             "analysis": [
                 {
@@ -12180,7 +12162,7 @@
             ]
         }
     },
-    "199": {
+    "197": {
         "text": "ไม่เป็นห้า",
         "start": 360.0,
         "duration": 1.24,
@@ -12194,7 +12176,7 @@
                 {
                     "word": "ไม่",
                     "type": "particle",
-                    "meaning": "不",
+                    "meaning": "否定",
                     "more": "",
                     "rtgs": "mai",
                     "parts": [],
@@ -12224,7 +12206,7 @@
             ]
         }
     },
-    "200": {
+    "198": {
         "text": "หมาป่า",
         "start": 361.3,
         "duration": 0.5,
@@ -12259,7 +12241,7 @@
             ]
         }
     },
-    "201": {
+    "199": {
         "text": "หมาป่าหมาป่ามุมป่าเฮ้ยเฮ้",
         "start": 364.364,
         "duration": 3.88,
@@ -12268,7 +12250,7 @@
             "thai": "หมาป่าหมาป่ามุมป่าเฮ้ยเฮ้",
             "v": 2,
             "rtgs": "ma pa ma pa mum pa hey hey",
-            "translation": "狼 狼 森林角落 嘿 嘿",
+            "translation": "狼 狼 森林角落 喂 喂",
             "analysis": [
                 {
                     "word": "หมาป่า",
@@ -12335,7 +12317,7 @@
                 {
                     "word": "เฮ้ย",
                     "type": "particle",
-                    "meaning": "嘿（驚訝語氣）",
+                    "meaning": "喂（驚訝）",
                     "more": "",
                     "rtgs": "hei",
                     "parts": [],
@@ -12345,7 +12327,7 @@
                 {
                     "word": "เฮ้",
                     "type": "particle",
-                    "meaning": "嘿（招呼語氣）",
+                    "meaning": "喂（招呼）",
                     "more": "",
                     "rtgs": "he",
                     "parts": [],
@@ -12355,7 +12337,7 @@
             ]
         }
     },
-    "202": {
+    "200": {
         "text": "ยมีป่ะหมูป่าเออ",
         "start": 368.404,
         "duration": 2.9,
@@ -12364,12 +12346,12 @@
             "thai": "ยมีป่ะหมูป่าเออ",
             "v": 2,
             "rtgs": "y mi pa mu pa er",
-            "translation": "有沒有 野豬 啊",
+            "translation": "有沒有 野豬 哎",
             "analysis": [
                 {
                     "word": "ย",
                     "type": "word",
-                    "meaning": "有（口語）",
+                    "meaning": "（此處無特定意義，可能口語助詞）",
                     "more": "",
                     "rtgs": "yo",
                     "parts": [],
@@ -12388,9 +12370,9 @@
                 },
                 {
                     "word": "ป่ะ",
-                    "type": "particle",
-                    "meaning": "嗎（口語疑問）",
-                    "more": "",
+                    "type": "expression",
+                    "meaning": "有沒有（口語）",
+                    "more": "用於疑問句，表示是否有",
                     "rtgs": "pa",
                     "parts": [],
                     "senses": "嗎（疑問語氣）",
@@ -12420,7 +12402,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "啊（語氣助詞）",
+                    "meaning": "嗯（表示同意或確認）",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -12430,7 +12412,7 @@
             ]
         }
     },
-    "203": {
+    "201": {
         "text": "มีปูแม่เป็ด",
         "start": 372.344,
         "duration": 1.6,
@@ -12464,7 +12446,7 @@
                 {
                     "word": "แม่",
                     "type": "word",
-                    "meaning": "母（母親）",
+                    "meaning": "母的",
                     "more": "",
                     "rtgs": "mae",
                     "parts": [],
@@ -12484,7 +12466,7 @@
             ]
         }
     },
-    "204": {
+    "202": {
         "text": "เฮ้ย",
         "start": 374.304,
         "duration": 0.22,
@@ -12493,12 +12475,12 @@
             "thai": "เฮ้ย",
             "v": 2,
             "rtgs": "hey",
-            "translation": "嘿（驚訝或招呼）",
+            "translation": "喂（驚訝）",
             "analysis": [
                 {
                     "word": "เฮ้ย",
                     "type": "particle",
-                    "meaning": "嘿（驚訝或招呼）",
+                    "meaning": "喂（驚訝）",
                     "more": "",
                     "rtgs": "hei",
                     "parts": [],
@@ -12508,7 +12490,7 @@
             ]
         }
     },
-    "205": {
+    "203": {
         "text": "แม่ป๋าโอ้โห",
         "start": 375.984,
         "duration": 0.86,
@@ -12517,7 +12499,7 @@
             "thai": "แม่ป๋าโอ้โห",
             "v": 2,
             "rtgs": "mae pa o ho",
-            "translation": "媽媽 爸爸 哇（驚嘆）",
+            "translation": "媽媽 爸爸 哇",
             "analysis": [
                 {
                     "word": "แม่",
@@ -12542,7 +12524,7 @@
                 {
                     "word": "โอ้โห",
                     "type": "particle",
-                    "meaning": "哇（驚嘆語氣）",
+                    "meaning": "哇（驚嘆）",
                     "more": "",
                     "rtgs": "oho",
                     "parts": [],
@@ -12552,7 +12534,7 @@
             ]
         }
     },
-    "206": {
+    "204": {
         "text": "สาม",
         "start": 378.464,
         "duration": 0.32,
@@ -12576,7 +12558,7 @@
             ]
         }
     },
-    "207": {
+    "205": {
         "text": "สอง",
         "start": 380.263,
         "duration": 0.32,
@@ -12600,16 +12582,16 @@
             ]
         }
     },
-    "208": {
-        "text": "หมาปิงหมาป่ะไปแล้",
+    "206": {
+        "text": "หมาปิงหมาป่ะไปแล้ว",
         "start": 381.604,
         "duration": 2.34,
         "start_time": "00:06:21,604",
         "explanation": {
-            "thai": "หมาปิงหมาป่ะไปแล้",
+            "thai": "หมาปิงหมาป่ะไปแล้ว",
             "v": 2,
-            "rtgs": "ma ping ma pa pai lae",
-            "translation": "狗 正在 狗 嗎 去 了",
+            "rtgs": "ma ping ma pa pai laew",
+            "translation": "狗 名字？ 狗 嗎 去了",
             "analysis": [
                 {
                     "word": "หมา",
@@ -12623,8 +12605,8 @@
                 },
                 {
                     "word": "ปิง",
-                    "type": "word",
-                    "meaning": "正在（口語）",
+                    "type": "name",
+                    "meaning": "人名（Ping）",
                     "more": "",
                     "rtgs": "ping",
                     "parts": [],
@@ -12643,7 +12625,7 @@
                 },
                 {
                     "word": "ป่ะ",
-                    "type": "particle",
+                    "type": "expression",
                     "meaning": "嗎（口語疑問）",
                     "more": "",
                     "rtgs": "pa",
@@ -12662,43 +12644,19 @@
                     "usage": "動詞，表示移動到某地。"
                 },
                 {
-                    "word": "แล้",
+                    "word": "แล้ว",
                     "type": "word",
-                    "meaning": "了（口語）",
+                    "meaning": "了（完成）",
                     "more": "",
-                    "rtgs": "lae",
+                    "rtgs": "laeo",
                     "parts": [],
-                    "senses": "然後、接著",
-                    "usage": "連詞，表示動作或事件的先後順序。"
+                    "senses": "然後、已經、接著",
+                    "usage": "表示動作的連續或完成。"
                 }
             ]
         }
     },
-    "209": {
-        "text": "ว",
-        "start": 384.764,
-        "duration": 0.38,
-        "start_time": "00:06:24,764",
-        "explanation": {
-            "thai": "ว",
-            "v": 2,
-            "rtgs": "w",
-            "translation": "語氣助詞（加強語氣）",
-            "analysis": [
-                {
-                    "word": "ว",
-                    "type": "particle",
-                    "meaning": "語氣助詞（加強語氣）",
-                    "more": "",
-                    "rtgs": "w",
-                    "parts": [],
-                    "senses": "（無獨立意義，可能為語氣詞或片語一部分）",
-                    "usage": "單獨使用時無明確意義，可能是語氣詞或片語中的一部分。"
-                }
-            ]
-        }
-    },
-    "210": {
+    "207": {
         "text": "เออ",
         "start": 385.144,
         "duration": 0.34,
@@ -12706,13 +12664,13 @@
         "explanation": {
             "thai": "เออ",
             "v": 2,
-            "rtgs": "oe",
-            "translation": "嗯（語氣詞）",
+            "rtgs": "er",
+            "translation": "嗯（表示同意或確認）",
             "analysis": [
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "嗯，表示同意或思考時的語氣",
+                    "meaning": "嗯（表示同意或確認）",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -12722,7 +12680,7 @@
             ]
         }
     },
-    "211": {
+    "208": {
         "text": "สอง",
         "start": 386.344,
         "duration": 0.22,
@@ -12746,7 +12704,7 @@
             ]
         }
     },
-    "212": {
+    "209": {
         "text": "หนึ่ง",
         "start": 387.784,
         "duration": 0.3,
@@ -12770,7 +12728,7 @@
             ]
         }
     },
-    "213": {
+    "210": {
         "text": "ไปแล้ว",
         "start": 389.884,
         "duration": 0.24,
@@ -12779,12 +12737,12 @@
             "thai": "ไปแล้ว",
             "v": 2,
             "rtgs": "pai laeo",
-            "translation": "已經走了",
+            "translation": "去了",
             "analysis": [
                 {
                     "word": "ไป",
                     "type": "word",
-                    "meaning": "去，走",
+                    "meaning": "去",
                     "more": "",
                     "rtgs": "pai",
                     "parts": [],
@@ -12794,7 +12752,7 @@
                 {
                     "word": "แล้ว",
                     "type": "particle",
-                    "meaning": "已經",
+                    "meaning": "了（表示完成）",
                     "more": "",
                     "rtgs": "laeo",
                     "parts": [],
@@ -12804,7 +12762,7 @@
             ]
         }
     },
-    "214": {
+    "211": {
         "text": "จบเออให้บ้างให้",
         "start": 390.124,
         "duration": 1.56,
@@ -12812,7 +12770,7 @@
         "explanation": {
             "thai": "จบเออให้บ้างให้",
             "v": 2,
-            "rtgs": "chop oe hai bang hai",
+            "rtgs": "jop er hai bang hai",
             "translation": "結束了，給一點吧",
             "analysis": [
                 {
@@ -12828,7 +12786,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示思考或同意",
+                    "meaning": "語氣詞，表示肯定或思考",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -12847,8 +12805,8 @@
                 },
                 {
                     "word": "บ้าง",
-                    "type": "expression",
-                    "meaning": "一些，表示請求或建議",
+                    "type": "particle",
+                    "meaning": "一些，表示部分",
                     "more": "",
                     "rtgs": "bang",
                     "parts": [],
@@ -12868,7 +12826,7 @@
             ]
         }
     },
-    "215": {
+    "212": {
         "text": "บ้าง",
         "start": 392.964,
         "duration": 0.22,
@@ -12881,8 +12839,8 @@
             "analysis": [
                 {
                     "word": "บ้าง",
-                    "type": "expression",
-                    "meaning": "一些，表示請求或建議",
+                    "type": "particle",
+                    "meaning": "一些，表示部分",
                     "more": "",
                     "rtgs": "bang",
                     "parts": [],
@@ -12892,7 +12850,7 @@
             ]
         }
     },
-    "216": {
+    "213": {
         "text": "ได้มา",
         "start": 393.324,
         "duration": 0.02,
@@ -12901,12 +12859,12 @@
             "thai": "ได้มา",
             "v": 2,
             "rtgs": "dai ma",
-            "translation": "得到，拿到",
+            "translation": "得到",
             "analysis": [
                 {
                     "word": "ได้มา",
                     "type": "word",
-                    "meaning": "得到，拿到",
+                    "meaning": "得到",
                     "more": "",
                     "rtgs": "daima",
                     "parts": [
@@ -12927,7 +12885,7 @@
             ]
         }
     },
-    "217": {
+    "214": {
         "text": "ยังอีกสิบข้อ",
         "start": 393.344,
         "duration": 0.74,
@@ -12936,28 +12894,27 @@
             "thai": "ยังอีกสิบข้อ",
             "v": 2,
             "rtgs": "yang ik sip kho",
-            "translation": "還有十條（項）",
+            "translation": "還有十條",
             "analysis": [
                 {
-                    "word": "ยังอีก",
-                    "type": "expression",
-                    "meaning": "還有",
+                    "word": "ยัง",
+                    "type": "particle",
+                    "meaning": "還",
                     "more": "",
-                    "rtgs": "yang ik",
-                    "parts": [
-                        {
-                            "word": "ยัง",
-                            "rtgs": "yang",
-                            "meaning": "ยัง"
-                        },
-                        {
-                            "word": "อีก",
-                            "rtgs": "ik",
-                            "meaning": "อีก"
-                        }
-                    ],
-                    "senses": "ยังอีก หมายถึง ยังมีอีก, เพิ่มเติม",
-                    "usage": "ใช้บอกว่ายังมีสิ่งใดสิ่งหนึ่งเพิ่มเติมหรือเหลืออยู่"
+                    "rtgs": "yang",
+                    "parts": [],
+                    "senses": "還、仍然",
+                    "usage": "表示動作或狀態尚未完成。"
+                },
+                {
+                    "word": "อีก",
+                    "type": "word",
+                    "meaning": "再、還有",
+                    "more": "",
+                    "rtgs": "ik",
+                    "parts": [],
+                    "senses": "另外、再、更多",
+                    "usage": "表示額外或附加的事物。"
                 },
                 {
                     "word": "สิบ",
@@ -12972,7 +12929,7 @@
                 {
                     "word": "ข้อ",
                     "type": "classifier",
-                    "meaning": "條（用於條目、問題等）",
+                    "meaning": "條（用於條目、問題）",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -12982,7 +12939,7 @@
             ]
         }
     },
-    "218": {
+    "215": {
         "text": "ข้อที่สี่ค่ะข้อที่สี่ค่ะหนึ่งสองสาม",
         "start": 394.544,
         "duration": 2.52,
@@ -12996,7 +12953,7 @@
                 {
                     "word": "ข้อ",
                     "type": "classifier",
-                    "meaning": "條（用於條目、問題等）",
+                    "meaning": "條（用於條目、問題）",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -13037,7 +12994,7 @@
                 {
                     "word": "ข้อ",
                     "type": "classifier",
-                    "meaning": "條（用於條目、問題等）",
+                    "meaning": "條（用於條目、問題）",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -13108,7 +13065,7 @@
             ]
         }
     },
-    "219": {
+    "216": {
         "text": "คิดถึงคำถามคนถึกคนถ้ำคาถ",
         "start": 398.184,
         "duration": 3.8,
@@ -13116,7 +13073,7 @@
         "explanation": {
             "thai": "คิดถึงคำถามคนถึกคนถ้ำคาถ",
             "v": 2,
-            "rtgs": "khit thueng kham tham khon theuk khon tham kha",
+            "rtgs": "khit thueng kham tham khon thuek khon tham kha",
             "translation": "想念問題，堅強的人，洞穴的人，咒語",
             "analysis": [
                 {
@@ -13214,7 +13171,7 @@
             ]
         }
     },
-    "220": {
+    "217": {
         "text": "าความถูกต้องความถูกต้องอ๋อ",
         "start": 401.984,
         "duration": 3.56,
@@ -13280,7 +13237,7 @@
             ]
         }
     },
-    "221": {
+    "218": {
         "text": "ความถูกต้องครึ่งถ้วย",
         "start": 407.004,
         "duration": 0.68,
@@ -13288,13 +13245,13 @@
         "explanation": {
             "thai": "ความถูกต้องครึ่งถ้วย",
             "v": 2,
-            "rtgs": "khwam thuk thong khrueng thuai",
-            "translation": "正確性半杯",
+            "rtgs": "khwam thuk tong khrueng thuai",
+            "translation": "正確度半杯",
             "analysis": [
                 {
                     "word": "ความถูกต้อง",
                     "type": "word",
-                    "meaning": "正確性",
+                    "meaning": "正確度",
                     "more": "",
                     "rtgs": "khwam thuk tong",
                     "parts": [
@@ -13335,7 +13292,7 @@
             ]
         }
     },
-    "222": {
+    "219": {
         "text": "ห้า",
         "start": 408.084,
         "duration": 0.36,
@@ -13359,7 +13316,7 @@
             ]
         }
     },
-    "223": {
+    "220": {
         "text": "สี่ส",
         "start": 410.264,
         "duration": 1.1,
@@ -13367,8 +13324,8 @@
         "explanation": {
             "thai": "สี่ส",
             "v": 2,
-            "rtgs": "si s",
-            "translation": "四s",
+            "rtgs": "si so",
+            "translation": "四ส",
             "analysis": [
                 {
                     "word": "สี่",
@@ -13383,7 +13340,7 @@
                 {
                     "word": "ส",
                     "type": "word",
-                    "meaning": "字母s",
+                    "meaning": "ส（字母）",
                     "more": "",
                     "rtgs": "so",
                     "parts": [],
@@ -13393,7 +13350,7 @@
             ]
         }
     },
-    "224": {
+    "221": {
         "text": "าม",
         "start": 412.664,
         "duration": 0.18,
@@ -13402,12 +13359,12 @@
             "thai": "าม",
             "v": 2,
             "rtgs": "am",
-            "translation": "am",
+            "translation": "าม",
             "analysis": [
                 {
                     "word": "าม",
                     "type": "word",
-                    "meaning": "am（不完整詞）",
+                    "meaning": "าม（無意義片段）",
                     "more": "",
                     "rtgs": "am",
                     "parts": [],
@@ -13417,7 +13374,7 @@
             ]
         }
     },
-    "225": {
+    "222": {
         "text": "สอง",
         "start": 413.824,
         "duration": 0.42,
@@ -13441,7 +13398,7 @@
             ]
         }
     },
-    "226": {
+    "223": {
         "text": "หนึ่งเอมมี่ได้ค่ะ",
         "start": 415.244,
         "duration": 0.98,
@@ -13449,8 +13406,8 @@
         "explanation": {
             "thai": "หนึ่งเอมมี่ได้ค่ะ",
             "v": 2,
-            "rtgs": "neung emmi dai kha",
-            "translation": "一艾咪可以喔",
+            "rtgs": "nueng emmi dai kha",
+            "translation": "一個艾咪可以（禮貌語）",
             "analysis": [
                 {
                     "word": "หนึ่ง",
@@ -13485,7 +13442,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞（女性用）",
+                    "meaning": "禮貌語氣詞",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -13495,7 +13452,7 @@
             ]
         }
     },
-    "227": {
+    "224": {
         "text": "คิดไม่ออกแล้วเหมือนกัน",
         "start": 417.704,
         "duration": 0.88,
@@ -13504,7 +13461,7 @@
             "thai": "คิดไม่ออกแล้วเหมือนกัน",
             "v": 2,
             "rtgs": "khit mai ok laeo muean kan",
-            "translation": "想不出來了也是",
+            "translation": "想不出來了也是一樣",
             "analysis": [
                 {
                     "word": "คิดไม่ออก",
@@ -13555,7 +13512,7 @@
             ]
         }
     },
-    "228": {
+    "225": {
         "text": "เข้าไปแล้วนะข้อห้าข้อห้า",
         "start": 421.324,
         "duration": 0.46,
@@ -13564,7 +13521,7 @@
             "thai": "เข้าไปแล้วนะข้อห้าข้อห้า",
             "v": 2,
             "rtgs": "khao pai laeo na kho ha kho ha",
-            "translation": "進去了喔第五條第五條",
+            "translation": "進去了喔第五題第五題",
             "analysis": [
                 {
                     "word": "เข้าไป",
@@ -13590,7 +13547,7 @@
                 {
                     "word": "แล้ว",
                     "type": "particle",
-                    "meaning": "了",
+                    "meaning": "了（完成）",
                     "more": "",
                     "rtgs": "laeo",
                     "parts": [],
@@ -13600,7 +13557,7 @@
                 {
                     "word": "นะ",
                     "type": "particle",
-                    "meaning": "語氣詞",
+                    "meaning": "語氣詞，表示提醒或確認",
                     "more": "",
                     "rtgs": "na",
                     "parts": [],
@@ -13610,7 +13567,7 @@
                 {
                     "word": "ข้อ",
                     "type": "word",
-                    "meaning": "條（條款）",
+                    "meaning": "題目",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -13630,7 +13587,7 @@
                 {
                     "word": "ข้อ",
                     "type": "word",
-                    "meaning": "條（條款）",
+                    "meaning": "題目",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -13650,7 +13607,7 @@
             ]
         }
     },
-    "229": {
+    "226": {
         "text": "ครับข้อห้าแล้ว",
         "start": 421.984,
         "duration": 0.74,
@@ -13659,12 +13616,12 @@
             "thai": "ครับข้อห้าแล้ว",
             "v": 2,
             "rtgs": "khrap kho ha laeo",
-            "translation": "是第五條了",
+            "translation": "是的第五題了",
             "analysis": [
                 {
                     "word": "ครับ",
                     "type": "particle",
-                    "meaning": "語氣詞（男性用）",
+                    "meaning": "是的（男性禮貌語氣詞）",
                     "more": "",
                     "rtgs": "khrap",
                     "parts": [],
@@ -13674,7 +13631,7 @@
                 {
                     "word": "ข้อ",
                     "type": "word",
-                    "meaning": "條（條款）",
+                    "meaning": "題目",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -13694,7 +13651,7 @@
                 {
                     "word": "แล้ว",
                     "type": "particle",
-                    "meaning": "了",
+                    "meaning": "了（完成）",
                     "more": "",
                     "rtgs": "laeo",
                     "parts": [],
@@ -13704,7 +13661,7 @@
             ]
         }
     },
-    "230": {
+    "227": {
         "text": "สองเข้าเลย",
         "start": 422.904,
         "duration": 1.92,
@@ -13713,12 +13670,12 @@
             "thai": "สองเข้าเลย",
             "v": 2,
             "rtgs": "song khao loei",
-            "translation": "兩點鐘直接進去",
+            "translation": "二直接進去",
             "analysis": [
                 {
                     "word": "สอง",
                     "type": "word",
-                    "meaning": "兩",
+                    "meaning": "二",
                     "more": "",
                     "rtgs": "song",
                     "parts": [],
@@ -13738,7 +13695,7 @@
                 {
                     "word": "เลย",
                     "type": "particle",
-                    "meaning": "直接、就",
+                    "meaning": "直接、馬上",
                     "more": "",
                     "rtgs": "loei",
                     "parts": [],
@@ -13748,7 +13705,7 @@
             ]
         }
     },
-    "231": {
+    "228": {
         "text": "ที่รักโทรศัพท์ได้เหรอ",
         "start": 424.864,
         "duration": 2.64,
@@ -13756,8 +13713,8 @@
         "explanation": {
             "thai": "ที่รักโทรศัพท์ได้เหรอ",
             "v": 2,
-            "rtgs": "thi rak thorasap dai reo",
-            "translation": "親愛的，可以打電話嗎？",
+            "rtgs": "thi rak thorasap dai rue",
+            "translation": "親愛的，你能接電話嗎？",
             "analysis": [
                 {
                     "word": "ที่รัก",
@@ -13793,7 +13750,7 @@
                 {
                     "word": "ได้",
                     "type": "word",
-                    "meaning": "能、可以",
+                    "meaning": "能",
                     "more": "",
                     "rtgs": "dai",
                     "parts": [],
@@ -13803,7 +13760,7 @@
                 {
                     "word": "เหรอ",
                     "type": "particle",
-                    "meaning": "疑問語氣",
+                    "meaning": "嗎？（疑問語氣）",
                     "more": "",
                     "rtgs": "rue",
                     "parts": [],
@@ -13813,7 +13770,7 @@
             ]
         }
     },
-    "232": {
+    "229": {
         "text": "ฮัลโหลทำไรอ่ะเออ",
         "start": 428.443,
         "duration": 1.701,
@@ -13821,13 +13778,13 @@
         "explanation": {
             "thai": "ฮัลโหลทำไรอ่ะเออ",
             "v": 2,
-            "rtgs": "hanlo tham rai a er",
-            "translation": "哈囉，你在做什麼啊？",
+            "rtgs": "hal lo tham rai a er",
+            "translation": "哈囉，你在做什麼？",
             "analysis": [
                 {
                     "word": "ฮัลโหล",
                     "type": "name",
-                    "meaning": "哈囉（打招呼）",
+                    "meaning": "哈囉",
                     "more": "",
                     "rtgs": "hallo",
                     "parts": [],
@@ -13857,7 +13814,7 @@
                 {
                     "word": "อ่ะ",
                     "type": "particle",
-                    "meaning": "語氣助詞，表示輕鬆或疑問",
+                    "meaning": "語氣助詞",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -13867,7 +13824,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示肯定或應答",
+                    "meaning": "語氣助詞",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -13877,7 +13834,7 @@
             ]
         }
     },
-    "233": {
+    "230": {
         "text": "ห้า",
         "start": 431.404,
         "duration": 0.28,
@@ -13901,7 +13858,7 @@
             ]
         }
     },
-    "234": {
+    "231": {
         "text": "พุเราทารุณ",
         "start": 431.724,
         "duration": 1.46,
@@ -13910,12 +13867,12 @@
             "thai": "พุเราทารุณ",
             "v": 2,
             "rtgs": "phu rao thaarun",
-            "translation": "我們虐待",
+            "translation": "我們殘忍",
             "analysis": [
                 {
                     "word": "พุ",
                     "type": "word",
-                    "meaning": "佛（此處可能是名字或錯字）",
+                    "meaning": "（此處無特定意義，可能是錯誤或人名縮寫）",
                     "more": "",
                     "rtgs": "phu",
                     "parts": [],
@@ -13935,7 +13892,7 @@
                 {
                     "word": "ทารุณ",
                     "type": "word",
-                    "meaning": "虐待",
+                    "meaning": "殘忍",
                     "more": "",
                     "rtgs": "tharun",
                     "parts": [],
@@ -13945,7 +13902,7 @@
             ]
         }
     },
-    "235": {
+    "232": {
         "text": "สาม",
         "start": 433.504,
         "duration": 0.48,
@@ -13969,7 +13926,7 @@
             ]
         }
     },
-    "236": {
+    "233": {
         "text": "สอง",
         "start": 435.984,
         "duration": 0.3,
@@ -13993,7 +13950,7 @@
             ]
         }
     },
-    "237": {
+    "234": {
         "text": "หนึ่งเอมมี่ได้ค่ะสองสาม",
         "start": 437.724,
         "duration": 1.26,
@@ -14001,8 +13958,8 @@
         "explanation": {
             "thai": "หนึ่งเอมมี่ได้ค่ะสองสาม",
             "v": 2,
-            "rtgs": "nueng emmi dai kha song sam",
-            "translation": "一號艾咪可以，二三",
+            "rtgs": "neung em mi dai kha song sam",
+            "translation": "一，艾咪可以，二三",
             "analysis": [
                 {
                     "word": "หนึ่ง",
@@ -14037,7 +13994,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "禮貌語氣詞",
+                    "meaning": "語氣助詞（女性用）",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -14067,7 +14024,7 @@
             ]
         }
     },
-    "238": {
+    "235": {
         "text": "ไม่เป็นไร",
         "start": 439.024,
         "duration": 0.06,
@@ -14102,7 +14059,7 @@
             ]
         }
     },
-    "239": {
+    "236": {
         "text": "ใครได้คะไม่ได้จด",
         "start": 443.464,
         "duration": 0.74,
@@ -14111,7 +14068,7 @@
             "thai": "ใครได้คะไม่ได้จด",
             "v": 2,
             "rtgs": "khrai dai kha mai dai jot",
-            "translation": "誰能？不行，記錄",
+            "translation": "誰能？不會記錄嗎？",
             "analysis": [
                 {
                     "word": "ใคร",
@@ -14136,7 +14093,7 @@
                 {
                     "word": "คะ",
                     "type": "particle",
-                    "meaning": "疑問禮貌語氣詞",
+                    "meaning": "疑問語氣（女性用）",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -14176,7 +14133,7 @@
             ]
         }
     },
-    "240": {
+    "237": {
         "text": "น้องพูดก่อนน้องพูดก่อน",
         "start": 444.404,
         "duration": 0.44,
@@ -14250,7 +14207,7 @@
             ]
         }
     },
-    "241": {
+    "238": {
         "text": "ได้ค่ะ",
         "start": 444.844,
         "duration": 0.44,
@@ -14259,12 +14216,12 @@
             "thai": "ได้ค่ะ",
             "v": 2,
             "rtgs": "dai kha",
-            "translation": "可以（女性用語氣）",
+            "translation": "好的（女性用語氣）",
             "analysis": [
                 {
                     "word": "ได้",
                     "type": "word",
-                    "meaning": "可以",
+                    "meaning": "可以、好",
                     "more": "",
                     "rtgs": "dai",
                     "parts": [],
@@ -14284,7 +14241,7 @@
             ]
         }
     },
-    "242": {
+    "239": {
         "text": "หมูกระทะเออ",
         "start": 446.064,
         "duration": 1.04,
@@ -14293,7 +14250,7 @@
             "thai": "หมูกระทะเออ",
             "v": 2,
             "rtgs": "mu kratha er",
-            "translation": "烤肉耶",
+            "translation": "烤肉鍋，嗯",
             "analysis": [
                 {
                     "word": "หมู",
@@ -14318,7 +14275,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示肯定或驚訝",
+                    "meaning": "嗯（表示同意或確認）",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -14328,7 +14285,7 @@
             ]
         }
     },
-    "243": {
+    "240": {
         "text": "ไม่ปรุงรสเออ",
         "start": 448.484,
         "duration": 1.2,
@@ -14337,7 +14294,7 @@
             "thai": "ไม่ปรุงรสเออ",
             "v": 2,
             "rtgs": "mai prung rot er",
-            "translation": "不調味耶",
+            "translation": "不調味，嗯",
             "analysis": [
                 {
                     "word": "ไม่",
@@ -14373,7 +14330,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示肯定或驚訝",
+                    "meaning": "嗯（表示同意或確認）",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -14383,7 +14340,7 @@
             ]
         }
     },
-    "244": {
+    "241": {
         "text": "ไม่ไปละ",
         "start": 451.304,
         "duration": 0.58,
@@ -14417,7 +14374,7 @@
                 {
                     "word": "ละ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示變化或決定",
+                    "meaning": "語氣詞，表示決定或變化",
                     "more": "",
                     "rtgs": "la",
                     "parts": [],
@@ -14427,7 +14384,7 @@
             ]
         }
     },
-    "245": {
+    "242": {
         "text": "โอ้โหไม่ไปแล้วไม่ได้ละ",
         "start": 452.324,
         "duration": 2.1,
@@ -14435,8 +14392,8 @@
         "explanation": {
             "thai": "โอ้โหไม่ไปแล้วไม่ได้ละ",
             "v": 2,
-            "rtgs": "oho mai pai laeo mai dai la",
-            "translation": "哇，不去了，不能了喔",
+            "rtgs": "o ho mai pai laeo mai dai la",
+            "translation": "哇，不去了，真的不行了",
             "analysis": [
                 {
                     "word": "โอ้โห",
@@ -14471,7 +14428,7 @@
                 {
                     "word": "แล้ว",
                     "type": "word",
-                    "meaning": "了",
+                    "meaning": "已經",
                     "more": "",
                     "rtgs": "laeo",
                     "parts": [],
@@ -14491,7 +14448,7 @@
                 {
                     "word": "ได้",
                     "type": "word",
-                    "meaning": "能",
+                    "meaning": "能、可以",
                     "more": "",
                     "rtgs": "dai",
                     "parts": [],
@@ -14501,7 +14458,7 @@
                 {
                     "word": "ละ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示變化或決定",
+                    "meaning": "語氣詞，表示決定或變化",
                     "more": "",
                     "rtgs": "la",
                     "parts": [],
@@ -14511,7 +14468,7 @@
             ]
         }
     },
-    "246": {
+    "243": {
         "text": "ไม่ไปละ",
         "start": 454.464,
         "duration": 0.58,
@@ -14545,7 +14502,7 @@
                 {
                     "word": "ละ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示變化或決定",
+                    "meaning": "語氣詞，表示決定或變化",
                     "more": "",
                     "rtgs": "la",
                     "parts": [],
@@ -14555,7 +14512,7 @@
             ]
         }
     },
-    "247": {
+    "244": {
         "text": "สาม",
         "start": 457.364,
         "duration": 0.32,
@@ -14579,7 +14536,7 @@
             ]
         }
     },
-    "248": {
+    "245": {
         "text": "นึกไม่ออกแล้วอ่ะเดี๋ยว",
         "start": 458.104,
         "duration": 1.42,
@@ -14619,7 +14576,7 @@
                 {
                     "word": "แล้ว",
                     "type": "word",
-                    "meaning": "了",
+                    "meaning": "已經",
                     "more": "",
                     "rtgs": "laeo",
                     "parts": [],
@@ -14629,7 +14586,7 @@
                 {
                     "word": "อ่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示輕微感嘆",
+                    "meaning": "語氣詞，表示輕微的感嘆或強調",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -14649,7 +14606,7 @@
             ]
         }
     },
-    "249": {
+    "246": {
         "text": "สองหนึ่งเอมมี่ได้ไหมคะ",
         "start": 460.004,
         "duration": 3.16,
@@ -14658,7 +14615,7 @@
             "thai": "สองหนึ่งเอมมี่ได้ไหมคะ",
             "v": 2,
             "rtgs": "song nueng emmi dai mai kha",
-            "translation": "二一艾咪可以嗎？",
+            "translation": "兩一，艾咪，可以嗎？",
             "analysis": [
                 {
                     "word": "สอง",
@@ -14723,7 +14680,7 @@
             ]
         }
     },
-    "250": {
+    "247": {
         "text": "ข้อที่เจ็ดหนึ่งสองสาม",
         "start": 466.364,
         "duration": 2.28,
@@ -14732,28 +14689,27 @@
             "thai": "ข้อที่เจ็ดหนึ่งสองสาม",
             "v": 2,
             "rtgs": "kho thi chet nueng song sam",
-            "translation": "第七條一二三",
+            "translation": "第七條，一，二，三",
             "analysis": [
                 {
-                    "word": "ข้อที่",
-                    "type": "expression",
-                    "meaning": "第...條",
+                    "word": "ข้อ",
+                    "type": "word",
+                    "meaning": "條、項（條文）",
                     "more": "",
-                    "rtgs": "kho thi",
-                    "parts": [
-                        {
-                            "word": "ข้อ",
-                            "rtgs": "kho",
-                            "meaning": "ข้อ"
-                        },
-                        {
-                            "word": "ที่",
-                            "rtgs": "thi",
-                            "meaning": "ที่"
-                        }
-                    ],
-                    "senses": "ข้อที่ หมายถึง ลำดับข้อ, หมายเลขข้อ",
-                    "usage": "ใช้บอกลำดับข้อในรายการหรือแบบทดสอบ"
+                    "rtgs": "kho",
+                    "parts": [],
+                    "senses": "ข้อ หมายถึง ข้อ, ประเด็น, ส่วน",
+                    "usage": "ใช้เรียกส่วนหรือประเด็นของเรื่อง เช่น ข้อสอบ ข้อความ"
+                },
+                {
+                    "word": "ที่",
+                    "type": "word",
+                    "meaning": "第（序數詞標記）",
+                    "more": "",
+                    "rtgs": "thi",
+                    "parts": [],
+                    "senses": "地方、位置、時間、關係代詞",
+                    "usage": "用於表示地點、時間或引導從句。"
                 },
                 {
                     "word": "เจ็ด",
@@ -14798,7 +14754,7 @@
             ]
         }
     },
-    "251": {
+    "248": {
         "text": "ข้อสอบพี่สาว",
         "start": 469.524,
         "duration": 0.94,
@@ -14807,12 +14763,12 @@
             "thai": "ข้อสอบพี่สาว",
             "v": 2,
             "rtgs": "kho sop phi sao",
-            "translation": "姐姐的考題",
+            "translation": "姐姐的考卷",
             "analysis": [
                 {
                     "word": "ข้อสอบ",
                     "type": "word",
-                    "meaning": "考題",
+                    "meaning": "考卷",
                     "more": "",
                     "rtgs": "kho sop",
                     "parts": [
@@ -14854,7 +14810,7 @@
             ]
         }
     },
-    "252": {
+    "249": {
         "text": "เพื่อนสวย",
         "start": 471.644,
         "duration": 0.62,
@@ -14888,7 +14844,7 @@
             ]
         }
     },
-    "253": {
+    "250": {
         "text": "เพื่อนสาวพระสงฆ์",
         "start": 473.884,
         "duration": 1.96,
@@ -14900,24 +14856,25 @@
             "translation": "女朋友和尚",
             "analysis": [
                 {
-                    "word": "เพื่อน",
+                    "word": "เพื่อนสาว",
                     "type": "word",
-                    "meaning": "朋友",
+                    "meaning": "女朋友",
                     "more": "",
-                    "rtgs": "phuen",
-                    "parts": [],
-                    "senses": "朋友、同伴",
-                    "usage": "指朋友或熟人。"
-                },
-                {
-                    "word": "สาว",
-                    "type": "word",
-                    "meaning": "女性",
-                    "more": "",
-                    "rtgs": "sao",
-                    "parts": [],
-                    "senses": "女孩、年輕女性",
-                    "usage": "指年輕女性或女孩。"
+                    "rtgs": "phuean sao",
+                    "parts": [
+                        {
+                            "word": "เพื่อน",
+                            "rtgs": "phuean",
+                            "meaning": "朋友"
+                        },
+                        {
+                            "word": "สาว",
+                            "rtgs": "sao",
+                            "meaning": "女孩"
+                        }
+                    ],
+                    "senses": "女性朋友、閨蜜",
+                    "usage": "指女性朋友，常用於口語或書面語中。"
                 },
                 {
                     "word": "พระสงฆ์",
@@ -14943,7 +14900,7 @@
             ]
         }
     },
-    "254": {
+    "251": {
         "text": "เออ",
         "start": 476.104,
         "duration": 0.66,
@@ -14967,7 +14924,7 @@
             ]
         }
     },
-    "255": {
+    "252": {
         "text": "พระสงฆ์",
         "start": 481.164,
         "duration": 0.12,
@@ -15002,7 +14959,7 @@
             ]
         }
     },
-    "256": {
+    "253": {
         "text": "พ่อสวยเพื่อนสังคมแพ้สิ",
         "start": 481.284,
         "duration": 2.5,
@@ -15011,7 +14968,7 @@
             "thai": "พ่อสวยเพื่อนสังคมแพ้สิ",
             "v": 2,
             "rtgs": "pho suai phuean sangkhom phae si",
-            "translation": "爸爸漂亮朋友社會輸了吧",
+            "translation": "爸爸漂亮，朋友社會輸了啦",
             "analysis": [
                 {
                     "word": "พ่อ",
@@ -15066,7 +15023,7 @@
                 {
                     "word": "สิ",
                     "type": "particle",
-                    "meaning": "吧（語氣助詞）",
+                    "meaning": "啦（語氣助詞）",
                     "more": "",
                     "rtgs": "si",
                     "parts": [],
@@ -15076,7 +15033,7 @@
             ]
         }
     },
-    "257": {
+    "254": {
         "text": "สี่",
         "start": 485.424,
         "duration": 0.42,
@@ -15100,7 +15057,7 @@
             ]
         }
     },
-    "258": {
+    "255": {
         "text": "สาม",
         "start": 486.924,
         "duration": 0.48,
@@ -15124,7 +15081,7 @@
             ]
         }
     },
-    "259": {
+    "256": {
         "text": "พร",
         "start": 488.644,
         "duration": 0.08,
@@ -15148,7 +15105,7 @@
             ]
         }
     },
-    "260": {
+    "257": {
         "text": "ะสังข์",
         "start": 489.684,
         "duration": 0.3,
@@ -15156,23 +15113,33 @@
         "explanation": {
             "thai": "ะสังข์",
             "v": 2,
-            "rtgs": "sa ng",
-            "translation": "สังข์（貝殼號角）",
+            "rtgs": "sa sang",
+            "translation": "（無意義片段）",
             "analysis": [
                 {
-                    "word": "ะสังข์",
+                    "word": "ะ",
                     "type": "word",
-                    "meaning": "貝殼號角",
+                    "meaning": "（無意義）",
                     "more": "",
-                    "rtgs": "sangk",
+                    "rtgs": "a",
                     "parts": [],
-                    "senses": "（此詞不常見，可能為錯誤或特殊用法）",
-                    "usage": "此詞不常見，無一般用法說明。"
+                    "senses": "無意義字串",
+                    "usage": "這個字母在泰語中獨立使用時沒有意義，可能是打字錯誤或非正式用語。"
+                },
+                {
+                    "word": "สังข์",
+                    "type": "word",
+                    "meaning": "貝殼",
+                    "more": "",
+                    "rtgs": "sang",
+                    "parts": [],
+                    "senses": "海螺、法螺",
+                    "usage": "指一種海螺，常用於宗教儀式或傳統文化中。"
                 }
             ]
         }
     },
-    "261": {
+    "258": {
         "text": "พระสังข์ทอง",
         "start": 490.184,
         "duration": 0.8,
@@ -15181,13 +15148,13 @@
             "thai": "พระสังข์ทอง",
             "v": 2,
             "rtgs": "phra sang thong",
-            "translation": "พระสังข์ทอง（黃金貝殼號角，泰國神話人物）",
+            "translation": "พระสังข์ทอง（人名）",
             "analysis": [
                 {
                     "word": "พระสังข์ทอง",
                     "type": "name",
-                    "meaning": "黃金貝殼號角",
-                    "more": "泰國神話人物名稱",
+                    "meaning": "人名",
+                    "more": "",
                     "rtgs": "phra sang thong",
                     "parts": [
                         {
@@ -15212,7 +15179,7 @@
             ]
         }
     },
-    "262": {
+    "259": {
         "text": "พระสั่นทำจั๋งพระสั่นทำจั๋ง",
         "start": 491.104,
         "duration": 1.12,
@@ -15221,12 +15188,12 @@
             "thai": "พระสั่นทำจั๋งพระสั่นทำจั๋ง",
             "v": 2,
             "rtgs": "phra san tham jang phra san tham jang",
-            "translation": "พระสั่นทำจั๋ง พระสั่นทำจั๋ง（神聖的震動做這樣 神聖的震動做這樣）",
+            "translation": "พระสั่นทำจั๋ง พระสั่นทำจั๋ง",
             "analysis": [
                 {
                     "word": "พระ",
                     "type": "word",
-                    "meaning": "神聖的",
+                    "meaning": "王子",
                     "more": "",
                     "rtgs": "phra",
                     "parts": [],
@@ -15236,7 +15203,7 @@
                 {
                     "word": "สั่น",
                     "type": "word",
-                    "meaning": "震動",
+                    "meaning": "搖動",
                     "more": "",
                     "rtgs": "san",
                     "parts": [],
@@ -15266,7 +15233,7 @@
                 {
                     "word": "พระ",
                     "type": "word",
-                    "meaning": "神聖的",
+                    "meaning": "王子",
                     "more": "",
                     "rtgs": "phra",
                     "parts": [],
@@ -15276,7 +15243,7 @@
                 {
                     "word": "สั่น",
                     "type": "word",
-                    "meaning": "震動",
+                    "meaning": "搖動",
                     "more": "",
                     "rtgs": "san",
                     "parts": [],
@@ -15306,7 +15273,7 @@
             ]
         }
     },
-    "263": {
+    "260": {
         "text": "พระสั่นทำจั๋ง",
         "start": 493.144,
         "duration": 0.58,
@@ -15315,12 +15282,12 @@
             "thai": "พระสั่นทำจั๋ง",
             "v": 2,
             "rtgs": "phra san tham jang",
-            "translation": "พระสั่นทำจั๋ง（神聖的震動做這樣）",
+            "translation": "พระสั่นทำจั๋ง",
             "analysis": [
                 {
                     "word": "พระ",
                     "type": "word",
-                    "meaning": "神聖的",
+                    "meaning": "王子",
                     "more": "",
                     "rtgs": "phra",
                     "parts": [],
@@ -15330,7 +15297,7 @@
                 {
                     "word": "สั่น",
                     "type": "word",
-                    "meaning": "震動",
+                    "meaning": "搖動",
                     "more": "",
                     "rtgs": "san",
                     "parts": [],
@@ -15360,7 +15327,7 @@
             ]
         }
     },
-    "264": {
+    "261": {
         "text": "ความรู้สึก",
         "start": 496.404,
         "duration": 1.7,
@@ -15369,7 +15336,7 @@
             "thai": "ความรู้สึก",
             "v": 2,
             "rtgs": "khwam ru seuk",
-            "translation": "ความรู้สึก（感覺）",
+            "translation": "感覺",
             "analysis": [
                 {
                     "word": "ความรู้สึก",
@@ -15395,7 +15362,7 @@
             ]
         }
     },
-    "265": {
+    "262": {
         "text": "สาม",
         "start": 498.524,
         "duration": 0.18,
@@ -15404,7 +15371,7 @@
             "thai": "สาม",
             "v": 2,
             "rtgs": "sam",
-            "translation": "สาม（三）",
+            "translation": "三",
             "analysis": [
                 {
                     "word": "สาม",
@@ -15419,7 +15386,7 @@
             ]
         }
     },
-    "266": {
+    "263": {
         "text": "สี่",
         "start": 499.684,
         "duration": 0.2,
@@ -15428,7 +15395,7 @@
             "thai": "สี่",
             "v": 2,
             "rtgs": "si",
-            "translation": "สี่（四）",
+            "translation": "四",
             "analysis": [
                 {
                     "word": "สี่",
@@ -15443,7 +15410,7 @@
             ]
         }
     },
-    "267": {
+    "264": {
         "text": "สามสองหนึ่ง",
         "start": 500.684,
         "duration": 1.62,
@@ -15452,7 +15419,7 @@
             "thai": "สามสองหนึ่ง",
             "v": 2,
             "rtgs": "sam song nueng",
-            "translation": "สามสองหนึ่ง（三 二 一）",
+            "translation": "三二一",
             "analysis": [
                 {
                     "word": "สาม",
@@ -15487,7 +15454,7 @@
             ]
         }
     },
-    "268": {
+    "265": {
         "text": "ข้อต่อไปข้อแปด",
         "start": 504.884,
         "duration": 0.9,
@@ -15496,12 +15463,12 @@
             "thai": "ข้อต่อไปข้อแปด",
             "v": 2,
             "rtgs": "kho to pai kho paet",
-            "translation": "ข้อต่อไปข้อแปด（下一項第八項）",
+            "translation": "下一題第八題",
             "analysis": [
                 {
                     "word": "ข้อ",
                     "type": "word",
-                    "meaning": "項目",
+                    "meaning": "題目",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -15532,7 +15499,7 @@
                 {
                     "word": "ข้อ",
                     "type": "word",
-                    "meaning": "項目",
+                    "meaning": "題目",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -15552,7 +15519,7 @@
             ]
         }
     },
-    "269": {
+    "266": {
         "text": "หนึ่งสองสาม",
         "start": 506.584,
         "duration": 0.9,
@@ -15561,7 +15528,7 @@
             "thai": "หนึ่งสองสาม",
             "v": 2,
             "rtgs": "nueng song sam",
-            "translation": "หนึ่งสองสาม（一 二 三）",
+            "translation": "一二三",
             "analysis": [
                 {
                     "word": "หนึ่ง",
@@ -15596,7 +15563,7 @@
             ]
         }
     },
-    "270": {
+    "267": {
         "text": "ไม่มีปัญหาไม่เหมือน",
         "start": 508.024,
         "duration": 2.0,
@@ -15605,19 +15572,29 @@
             "thai": "ไม่มีปัญหาไม่เหมือน",
             "v": 2,
             "rtgs": "mai mi panha mai muean",
-            "translation": "沒問題，不一樣",
+            "translation": "沒問題 不一樣",
             "analysis": [
                 {
-                    "word": "ไม่มีปัญหา",
-                    "type": "expression",
-                    "meaning": "沒問題",
+                    "word": "ไม่",
+                    "type": "particle",
+                    "meaning": "不",
                     "more": "",
-                    "rtgs": "mai mi panha",
+                    "rtgs": "mai",
+                    "parts": [],
+                    "senses": "不、沒有、否定",
+                    "usage": "用於否定句，表示否定或反面。"
+                },
+                {
+                    "word": "มีปัญหา",
+                    "type": "expression",
+                    "meaning": "有問題",
+                    "more": "",
+                    "rtgs": "mi panha",
                     "parts": [
                         {
-                            "word": "ไม่มี",
-                            "rtgs": "mai mi",
-                            "meaning": "沒有"
+                            "word": "มี",
+                            "rtgs": "mi",
+                            "meaning": "有"
                         },
                         {
                             "word": "ปัญหา",
@@ -15625,34 +15602,33 @@
                             "meaning": "問題"
                         }
                     ],
-                    "senses": "沒有問題",
-                    "usage": "用於表示事情順利或無困難。"
+                    "senses": "有問題",
+                    "usage": "用來表示存在問題或困難，常用於口語和書面語。"
                 },
                 {
-                    "word": "ไม่เหมือน",
-                    "type": "expression",
-                    "meaning": "不一樣",
+                    "word": "ไม่",
+                    "type": "particle",
+                    "meaning": "不",
                     "more": "",
-                    "rtgs": "mai muean",
-                    "parts": [
-                        {
-                            "word": "ไม่",
-                            "rtgs": "mai",
-                            "meaning": "不"
-                        },
-                        {
-                            "word": "เหมือน",
-                            "rtgs": "muean",
-                            "meaning": "相同"
-                        }
-                    ],
-                    "senses": "不一樣、不相同",
-                    "usage": "用於比較兩者不同。"
+                    "rtgs": "mai",
+                    "parts": [],
+                    "senses": "不、沒有、否定",
+                    "usage": "用於否定句，表示否定或反面。"
+                },
+                {
+                    "word": "เหมือน",
+                    "type": "word",
+                    "meaning": "一樣",
+                    "more": "",
+                    "rtgs": "muean",
+                    "parts": [],
+                    "senses": "像、似乎、好像",
+                    "usage": "用於比較或表示相似性。"
                 }
             ]
         }
     },
-    "271": {
+    "268": {
         "text": "ห้า",
         "start": 510.664,
         "duration": 0.28,
@@ -15676,7 +15652,7 @@
             ]
         }
     },
-    "272": {
+    "269": {
         "text": "สี่",
         "start": 512.924,
         "duration": 0.22,
@@ -15700,7 +15676,7 @@
             ]
         }
     },
-    "273": {
+    "270": {
         "text": "ไม่เหมือนป่ะฮะ",
         "start": 513.284,
         "duration": 0.78,
@@ -15709,11 +15685,11 @@
             "thai": "ไม่เหมือนป่ะฮะ",
             "v": 2,
             "rtgs": "mai muean pa ha",
-            "translation": "不一樣嗎？",
+            "translation": "不一樣吧？",
             "analysis": [
                 {
                     "word": "ไม่",
-                    "type": "particle",
+                    "type": "word",
                     "meaning": "不",
                     "more": "",
                     "rtgs": "mai",
@@ -15724,7 +15700,7 @@
                 {
                     "word": "เหมือน",
                     "type": "word",
-                    "meaning": "一樣",
+                    "meaning": "像",
                     "more": "",
                     "rtgs": "muean",
                     "parts": [],
@@ -15733,9 +15709,9 @@
                 },
                 {
                     "word": "ป่ะ",
-                    "type": "particle",
-                    "meaning": "嗎（口語）",
-                    "more": "",
+                    "type": "expression",
+                    "meaning": "吧（口語疑問）",
+                    "more": "口語用法，表示疑問語氣",
                     "rtgs": "pa",
                     "parts": [],
                     "senses": "嗎（疑問語氣）",
@@ -15744,7 +15720,7 @@
                 {
                     "word": "ฮะ",
                     "type": "particle",
-                    "meaning": "語氣詞（男性用）",
+                    "meaning": "語氣助詞（男性用）",
                     "more": "",
                     "rtgs": "ha",
                     "parts": [],
@@ -15754,7 +15730,7 @@
             ]
         }
     },
-    "274": {
+    "271": {
         "text": "ไม่เหมือนป่ะฮะเรียกฮะจนผม",
         "start": 516.924,
         "duration": 2.24,
@@ -15763,11 +15739,11 @@
             "thai": "ไม่เหมือนป่ะฮะเรียกฮะจนผม",
             "v": 2,
             "rtgs": "mai muean pa ha riak ha jon phom",
-            "translation": "不一樣嗎？叫我直到我（聽懂）",
+            "translation": "不一樣吧？叫我直到我（？）",
             "analysis": [
                 {
                     "word": "ไม่",
-                    "type": "particle",
+                    "type": "word",
                     "meaning": "不",
                     "more": "",
                     "rtgs": "mai",
@@ -15778,7 +15754,7 @@
                 {
                     "word": "เหมือน",
                     "type": "word",
-                    "meaning": "一樣",
+                    "meaning": "像",
                     "more": "",
                     "rtgs": "muean",
                     "parts": [],
@@ -15787,9 +15763,9 @@
                 },
                 {
                     "word": "ป่ะ",
-                    "type": "particle",
-                    "meaning": "嗎（口語）",
-                    "more": "",
+                    "type": "expression",
+                    "meaning": "吧（口語疑問）",
+                    "more": "口語用法，表示疑問語氣",
                     "rtgs": "pa",
                     "parts": [],
                     "senses": "嗎（疑問語氣）",
@@ -15798,7 +15774,7 @@
                 {
                     "word": "ฮะ",
                     "type": "particle",
-                    "meaning": "語氣詞（男性用）",
+                    "meaning": "語氣助詞（男性用）",
                     "more": "",
                     "rtgs": "ha",
                     "parts": [],
@@ -15818,7 +15794,7 @@
                 {
                     "word": "ฮะ",
                     "type": "particle",
-                    "meaning": "語氣詞（男性用）",
+                    "meaning": "語氣助詞（男性用）",
                     "more": "",
                     "rtgs": "ha",
                     "parts": [],
@@ -15838,7 +15814,7 @@
                 {
                     "word": "ผม",
                     "type": "word",
-                    "meaning": "我（男性用）",
+                    "meaning": "我（男性自稱）",
                     "more": "",
                     "rtgs": "phom",
                     "parts": [],
@@ -15848,7 +15824,7 @@
             ]
         }
     },
-    "275": {
+    "272": {
         "text": "ขอ repeat เราถามไปคร่าวๆเนี่ย",
         "start": 519.204,
         "duration": 2.54,
@@ -15902,7 +15878,7 @@
                 {
                     "word": "ไป",
                     "type": "word",
-                    "meaning": "去（此處作完成助詞）",
+                    "meaning": "去（此處用作完成助詞）",
                     "more": "",
                     "rtgs": "pai",
                     "parts": [],
@@ -15922,7 +15898,7 @@
                 {
                     "word": "เนี่ย",
                     "type": "particle",
-                    "meaning": "這個（語氣詞）",
+                    "meaning": "語氣助詞，表示強調",
                     "more": "",
                     "rtgs": "nia",
                     "parts": [],
@@ -15932,7 +15908,7 @@
             ]
         }
     },
-    "276": {
+    "273": {
         "text": "เออไม่เหมือนป่ะฮะเออ",
         "start": 521.784,
         "duration": 1.38,
@@ -15941,12 +15917,12 @@
             "thai": "เออไม่เหมือนป่ะฮะเออ",
             "v": 2,
             "rtgs": "er mai muean pa ha er",
-            "translation": "嗯，不一樣嗎？嗯",
+            "translation": "嗯，不一樣吧，嗯",
             "analysis": [
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "嗯（語氣詞）",
+                    "meaning": "嗯（表示同意或思考）",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -15955,7 +15931,7 @@
                 },
                 {
                     "word": "ไม่",
-                    "type": "particle",
+                    "type": "word",
                     "meaning": "不",
                     "more": "",
                     "rtgs": "mai",
@@ -15966,7 +15942,7 @@
                 {
                     "word": "เหมือน",
                     "type": "word",
-                    "meaning": "一樣",
+                    "meaning": "像",
                     "more": "",
                     "rtgs": "muean",
                     "parts": [],
@@ -15975,9 +15951,9 @@
                 },
                 {
                     "word": "ป่ะ",
-                    "type": "particle",
-                    "meaning": "嗎（口語）",
-                    "more": "",
+                    "type": "expression",
+                    "meaning": "吧（口語疑問）",
+                    "more": "口語用法，表示疑問語氣",
                     "rtgs": "pa",
                     "parts": [],
                     "senses": "嗎（疑問語氣）",
@@ -15986,7 +15962,7 @@
                 {
                     "word": "ฮะ",
                     "type": "particle",
-                    "meaning": "語氣詞（男性用）",
+                    "meaning": "語氣助詞（男性用）",
                     "more": "",
                     "rtgs": "ha",
                     "parts": [],
@@ -15996,7 +15972,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "嗯（語氣詞）",
+                    "meaning": "嗯（表示同意或思考）",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -16006,7 +15982,7 @@
             ]
         }
     },
-    "277": {
+    "274": {
         "text": "แมงมุมหืมแมงมุมปีนหัว",
         "start": 525.084,
         "duration": 2.98,
@@ -16014,8 +15990,8 @@
         "explanation": {
             "thai": "แมงมุมหืมแมงมุมปีนหัว",
             "v": 2,
-            "rtgs": "maeng mum him maeng mum pin hua",
-            "translation": "蜘蛛，嗯，蜘蛛爬頭",
+            "rtgs": "maeng mum hum maeng mum pin hua",
+            "translation": "蜘蛛？蜘蛛爬頭上",
             "analysis": [
                 {
                     "word": "แมงมุม",
@@ -16041,7 +16017,7 @@
                 {
                     "word": "หืม",
                     "type": "particle",
-                    "meaning": "嗯（表示思考或疑問）",
+                    "meaning": "疑問語氣",
                     "more": "",
                     "rtgs": "hum",
                     "parts": [],
@@ -16092,7 +16068,7 @@
             ]
         }
     },
-    "278": {
+    "275": {
         "text": "มะม่วงเปรี้ยวหรอ",
         "start": 530.164,
         "duration": 1.12,
@@ -16100,7 +16076,7 @@
         "explanation": {
             "thai": "มะม่วงเปรี้ยวหรอ",
             "v": 2,
-            "rtgs": "ma muang priao ro",
+            "rtgs": "ma muang priao ror",
             "translation": "芒果酸嗎？",
             "analysis": [
                 {
@@ -16116,7 +16092,7 @@
                 {
                     "word": "เปรี้ยว",
                     "type": "word",
-                    "meaning": "酸的",
+                    "meaning": "酸",
                     "more": "",
                     "rtgs": "priao",
                     "parts": [],
@@ -16126,7 +16102,7 @@
                 {
                     "word": "หรอ",
                     "type": "particle",
-                    "meaning": "嗎？（疑問語氣）",
+                    "meaning": "疑問語氣",
                     "more": "",
                     "rtgs": "ro",
                     "parts": [],
@@ -16136,7 +16112,7 @@
             ]
         }
     },
-    "279": {
+    "276": {
         "text": "เออแมวหมาไปไหนหม่ำหมี",
         "start": 532.544,
         "duration": 2.42,
@@ -16144,13 +16120,13 @@
         "explanation": {
             "thai": "เออแมวหมาไปไหนหม่ำหมี",
             "v": 2,
-            "rtgs": "er maeo ma pai nai mam mi",
+            "rtgs": "er maeo ma pao nai mam mi",
             "translation": "嗯，貓狗去哪裡，吃熊",
             "analysis": [
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "嗯（語氣詞）",
+                    "meaning": "嗯（表示同意或思考）",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -16220,7 +16196,7 @@
             ]
         }
     },
-    "280": {
+    "277": {
         "text": "หม่ำหมีไปไหน",
         "start": 536.704,
         "duration": 1.44,
@@ -16229,12 +16205,12 @@
             "thai": "หม่ำหมีไปไหน",
             "v": 2,
             "rtgs": "mam mi pai nai",
-            "translation": "小熊去哪裡？",
+            "translation": "吃熊去哪裡？",
             "analysis": [
                 {
                     "word": "หม่ำ",
                     "type": "word",
-                    "meaning": "吃",
+                    "meaning": "吃（口語）",
                     "more": "",
                     "rtgs": "ham",
                     "parts": [],
@@ -16274,7 +16250,7 @@
             ]
         }
     },
-    "281": {
+    "278": {
         "text": "เออ",
         "start": 538.804,
         "duration": 0.36,
@@ -16288,7 +16264,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "嗯",
+                    "meaning": "表示同意或思考的語氣詞",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -16298,7 +16274,7 @@
             ]
         }
     },
-    "282": {
+    "279": {
         "text": "หม่าม้าหม่าม้าหม่าม้าปวดหัวโอ้",
         "start": 540.124,
         "duration": 3.84,
@@ -16306,7 +16282,7 @@
         "explanation": {
             "thai": "หม่าม้าหม่าม้าหม่าม้าปวดหัวโอ้",
             "v": 2,
-            "rtgs": "mama mama mama puat hua oh",
+            "rtgs": "ma ma ma puat hua o",
             "translation": "媽媽媽媽媽媽頭痛喔",
             "analysis": [
                 {
@@ -16363,7 +16339,7 @@
                 {
                     "word": "โอ้",
                     "type": "particle",
-                    "meaning": "喔（感嘆）",
+                    "meaning": "感嘆詞",
                     "more": "",
                     "rtgs": "o",
                     "parts": [],
@@ -16373,7 +16349,7 @@
             ]
         }
     },
-    "283": {
+    "280": {
         "text": "สอง",
         "start": 546.544,
         "duration": 0.24,
@@ -16397,7 +16373,7 @@
             ]
         }
     },
-    "284": {
+    "281": {
         "text": "หนึ่งโอเค",
         "start": 548.624,
         "duration": 0.58,
@@ -16431,7 +16407,7 @@
             ]
         }
     },
-    "285": {
+    "282": {
         "text": "ยอมให้หม่าม้ากับม้าหมี",
         "start": 550.964,
         "duration": 1.48,
@@ -16439,8 +16415,8 @@
         "explanation": {
             "thai": "ยอมให้หม่าม้ากับม้าหมี",
             "v": 2,
-            "rtgs": "yom hai mama kap ma mi",
-            "translation": "讓媽媽和馬熊",
+            "rtgs": "yom hai ma ma kap ma mee",
+            "translation": "讓媽媽和馬米",
             "analysis": [
                 {
                     "word": "ยอมให้",
@@ -16506,7 +16482,7 @@
             ]
         }
     },
-    "286": {
+    "283": {
         "text": "หม่าม้าปวดหัว",
         "start": 554.664,
         "duration": 0.48,
@@ -16514,7 +16490,7 @@
         "explanation": {
             "thai": "หม่าม้าปวดหัว",
             "v": 2,
-            "rtgs": "mama puat hua",
+            "rtgs": "ma ma puat hua",
             "translation": "媽媽頭痛",
             "analysis": [
                 {
@@ -16551,7 +16527,7 @@
             ]
         }
     },
-    "287": {
+    "284": {
         "text": "หม่าม้าปวดหัวอืมหม่าม้าปวดหัวอืม",
         "start": 555.144,
         "duration": 2.5,
@@ -16559,7 +16535,7 @@
         "explanation": {
             "thai": "หม่าม้าปวดหัวอืมหม่าม้าปวดหัวอืม",
             "v": 2,
-            "rtgs": "mama puat hua um mama puat hua um",
+            "rtgs": "ma ma puat hua um ma ma puat hua um",
             "translation": "媽媽頭痛嗯 媽媽頭痛嗯",
             "analysis": [
                 {
@@ -16596,7 +16572,7 @@
                 {
                     "word": "อืม",
                     "type": "particle",
-                    "meaning": "嗯",
+                    "meaning": "嗯（語氣詞）",
                     "more": "",
                     "rtgs": "um",
                     "parts": [],
@@ -16637,7 +16613,7 @@
                 {
                     "word": "อืม",
                     "type": "particle",
-                    "meaning": "嗯",
+                    "meaning": "嗯（語氣詞）",
                     "more": "",
                     "rtgs": "um",
                     "parts": [],
@@ -16647,7 +16623,7 @@
             ]
         }
     },
-    "288": {
+    "285": {
         "text": "สอง",
         "start": 558.344,
         "duration": 0.18,
@@ -16671,7 +16647,7 @@
             ]
         }
     },
-    "289": {
+    "286": {
         "text": "Oh My God!",
         "start": 559.784,
         "duration": 0.72,
@@ -16679,13 +16655,13 @@
         "explanation": {
             "thai": "Oh My God!",
             "v": 2,
-            "rtgs": "Oh My God!",
+            "rtgs": "oh my god",
             "translation": "天啊！",
             "analysis": [
                 {
                     "word": "Oh My God!",
                     "type": "name",
-                    "meaning": "天啊！",
+                    "meaning": "感嘆詞",
                     "more": "",
                     "rtgs": "Oh My God!",
                     "parts": [],
@@ -16695,7 +16671,7 @@
             ]
         }
     },
-    "290": {
+    "287": {
         "text": "โอ่งมังกร",
         "start": 562.884,
         "duration": 0.88,
@@ -16703,13 +16679,13 @@
         "explanation": {
             "thai": "โอ่งมังกร",
             "v": 2,
-            "rtgs": "Ong Mangkon",
-            "translation": "โอ่งมังกร（龍形陶罐）",
+            "rtgs": "oeng mangkon",
+            "translation": "龍罐",
             "analysis": [
                 {
                     "word": "โอ่งมังกร",
                     "type": "word",
-                    "meaning": "龍形陶罐",
+                    "meaning": "龍罐（裝飾用陶罐）",
                     "more": "",
                     "rtgs": "ong mangkon",
                     "parts": [
@@ -16730,7 +16706,7 @@
             ]
         }
     },
-    "291": {
+    "288": {
         "text": "เออ",
         "start": 563.764,
         "duration": 0.56,
@@ -16738,7 +16714,7 @@
         "explanation": {
             "thai": "เออ",
             "v": 2,
-            "rtgs": "Oe",
+            "rtgs": "oe",
             "translation": "嗯（語氣詞）",
             "analysis": [
                 {
@@ -16754,7 +16730,7 @@
             ]
         }
     },
-    "292": {
+    "289": {
         "text": "โอมรึกกึกกึ๋ย",
         "start": 566.064,
         "duration": 1.14,
@@ -16762,13 +16738,13 @@
         "explanation": {
             "thai": "โอมรึกกึกกึ๋ย",
             "v": 2,
-            "rtgs": "Om Ruek Kuek Kuey",
-            "translation": "（無特定意義，擬聲詞）",
+            "rtgs": "om ruk keuk khui",
+            "translation": "喔，嗯嗯嗯（模仿聲音）",
             "analysis": [
                 {
                     "word": "โอม",
-                    "type": "word",
-                    "meaning": "喚聲或咒語開頭",
+                    "type": "expression",
+                    "meaning": "喔，表示呼喚或驚訝",
                     "more": "",
                     "rtgs": "om",
                     "parts": [],
@@ -16776,29 +16752,19 @@
                     "usage": "常用於宗教儀式中的咒語聲。"
                 },
                 {
-                    "word": "รึ",
-                    "type": "particle",
-                    "meaning": "或，表示疑問",
-                    "more": "",
-                    "rtgs": "ru",
-                    "parts": [],
-                    "senses": "疑問助詞",
-                    "usage": "用於句尾表示疑問，相當於「嗎？」。"
-                },
-                {
-                    "word": "ก",
+                    "word": "รึก",
                     "type": "word",
-                    "meaning": "字母或音節",
+                    "meaning": "（模仿聲音）",
                     "more": "",
-                    "rtgs": "k",
+                    "rtgs": "ruek",
                     "parts": [],
-                    "senses": "字母、符號",
-                    "usage": "泰文字母或符號，無特定詞義。"
+                    "senses": "疑問詞、表示不確定",
+                    "usage": "用於疑問句中，表示不確定或詢問。"
                 },
                 {
                     "word": "กึก",
                     "type": "word",
-                    "meaning": "響聲",
+                    "meaning": "（模仿聲音）",
                     "more": "",
                     "rtgs": "kuek",
                     "parts": [],
@@ -16808,7 +16774,7 @@
                 {
                     "word": "กึ๋ย",
                     "type": "word",
-                    "meaning": "擬聲詞，表示嘆息或不悅",
+                    "meaning": "（模仿聲音）",
                     "more": "",
                     "rtgs": "kui",
                     "parts": [],
@@ -16818,7 +16784,7 @@
             ]
         }
     },
-    "293": {
+    "290": {
         "text": "เอามาก่อนเอมมี่กินข้าว",
         "start": 569.784,
         "duration": 2.54,
@@ -16826,8 +16792,8 @@
         "explanation": {
             "thai": "เอามาก่อนเอมมี่กินข้าว",
             "v": 2,
-            "rtgs": "Ao Ma Kon Emmi Kin Khao",
-            "translation": "先拿給艾咪吃飯",
+            "rtgs": "ao ma kon em mi kin khao",
+            "translation": "先拿來，艾咪吃飯",
             "analysis": [
                 {
                     "word": "เอา",
@@ -16893,7 +16859,7 @@
             ]
         }
     },
-    "294": {
+    "291": {
         "text": "ออมมุกเจี๊ยวอาหมวยกอด",
         "start": 573.304,
         "duration": 2.16,
@@ -16901,33 +16867,23 @@
         "explanation": {
             "thai": "ออมมุกเจี๊ยวอาหมวยกอด",
             "v": 2,
-            "rtgs": "Om Muk Chiao A Muay Kot",
-            "translation": "阿姆、木克、焦、阿妹擁抱",
+            "rtgs": "om muk jiao a muay kot",
+            "translation": "奧美、珠、阿妹擁抱",
             "analysis": [
                 {
-                    "word": "ออม",
+                    "word": "ออมมุก",
                     "type": "name",
-                    "meaning": "阿姆（人名）",
+                    "meaning": "奧美（人名）",
                     "more": "",
-                    "rtgs": "om",
+                    "rtgs": "ommuk",
                     "parts": [],
                     "senses": "人名",
-                    "usage": "泰國常見人名。"
-                },
-                {
-                    "word": "มุก",
-                    "type": "name",
-                    "meaning": "木克（人名）",
-                    "more": "",
-                    "rtgs": "muk",
-                    "parts": [],
-                    "senses": "笑話、梗",
-                    "usage": "名詞，指用來逗笑的話語或段子。"
+                    "usage": "泰國人名，專有名詞。"
                 },
                 {
                     "word": "เจี๊ยว",
                     "type": "name",
-                    "meaning": "焦（人名）",
+                    "meaning": "珠（人名）",
                     "more": "",
                     "rtgs": "chiao",
                     "parts": [],
@@ -16957,7 +16913,7 @@
             ]
         }
     },
-    "295": {
+    "292": {
         "text": "อ่ะ",
         "start": 575.824,
         "duration": 0.14,
@@ -16965,13 +16921,13 @@
         "explanation": {
             "thai": "อ่ะ",
             "v": 2,
-            "rtgs": "A",
+            "rtgs": "a",
             "translation": "啊（語氣詞）",
             "analysis": [
                 {
                     "word": "อ่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示輕微的感嘆或提醒",
+                    "meaning": "啊，語氣詞",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -16981,7 +16937,7 @@
             ]
         }
     },
-    "296": {
+    "293": {
         "text": "ออกมาก่อน",
         "start": 577.044,
         "duration": 0.82,
@@ -16989,7 +16945,7 @@
         "explanation": {
             "thai": "ออกมาก่อน",
             "v": 2,
-            "rtgs": "Ok Ma Kon",
+            "rtgs": "ok ma kon",
             "translation": "先出來",
             "analysis": [
                 {
@@ -17026,7 +16982,7 @@
             ]
         }
     },
-    "297": {
+    "294": {
         "text": "อย่ามากอดเอาหมูกรอบ",
         "start": 579.544,
         "duration": 1.1,
@@ -17034,13 +16990,13 @@
         "explanation": {
             "thai": "อย่ามากอดเอาหมูกรอบ",
             "v": 2,
-            "rtgs": "Ya Ma Kot Ao Mu Krob",
-            "translation": "不要過來抱拿脆豬肉",
+            "rtgs": "ya ma kot ao mu krop",
+            "translation": "不要過來抱我脆皮豬肉",
             "analysis": [
                 {
                     "word": "อย่า",
-                    "type": "expression",
-                    "meaning": "不要（命令）",
+                    "type": "particle",
+                    "meaning": "不要",
                     "more": "",
                     "rtgs": "ya",
                     "parts": [],
@@ -17070,7 +17026,7 @@
                 {
                     "word": "เอา",
                     "type": "word",
-                    "meaning": "拿",
+                    "meaning": "拿，這裡用作動詞助詞",
                     "more": "",
                     "rtgs": "ao",
                     "parts": [],
@@ -17080,7 +17036,7 @@
                 {
                     "word": "หมูกรอบ",
                     "type": "word",
-                    "meaning": "脆豬肉",
+                    "meaning": "脆皮豬肉",
                     "more": "",
                     "rtgs": "mu krop",
                     "parts": [
@@ -17101,7 +17057,7 @@
             ]
         }
     },
-    "298": {
+    "295": {
         "text": "เอาหมูกรอบ",
         "start": 580.644,
         "duration": 0.78,
@@ -17109,8 +17065,8 @@
         "explanation": {
             "thai": "เอาหมูกรอบ",
             "v": 2,
-            "rtgs": "Ao Mu Krob",
-            "translation": "拿脆豬肉",
+            "rtgs": "ao mu krop",
+            "translation": "拿脆皮豬肉",
             "analysis": [
                 {
                     "word": "เอา",
@@ -17125,7 +17081,7 @@
                 {
                     "word": "หมูกรอบ",
                     "type": "word",
-                    "meaning": "脆豬肉",
+                    "meaning": "脆皮豬肉",
                     "more": "",
                     "rtgs": "mu krop",
                     "parts": [
@@ -17146,7 +17102,7 @@
             ]
         }
     },
-    "299": {
+    "296": {
         "text": "อยากมี",
         "start": 584.444,
         "duration": 1.04,
@@ -17154,7 +17110,7 @@
         "explanation": {
             "thai": "อยากมี",
             "v": 2,
-            "rtgs": "Yak Mi",
+            "rtgs": "yak mi",
             "translation": "想要有",
             "analysis": [
                 {
@@ -17180,7 +17136,7 @@
             ]
         }
     },
-    "300": {
+    "297": {
         "text": "อยากมีกิ๊กอยากมีกิ๊กอยากมีกิ๊ก",
         "start": 587.584,
         "duration": 1.9,
@@ -17189,7 +17145,7 @@
             "thai": "อยากมีกิ๊กอยากมีกิ๊กอยากมีกิ๊ก",
             "v": 2,
             "rtgs": "yak mi kik yak mi kik yak mi kik",
-            "translation": "想要有小三 想要有小三 想要有小三",
+            "translation": "想要有情人，想要有情人，想要有情人",
             "analysis": [
                 {
                     "word": "อยาก",
@@ -17214,7 +17170,7 @@
                 {
                     "word": "กิ๊ก",
                     "type": "word",
-                    "meaning": "小三",
+                    "meaning": "情人，小三",
                     "more": "",
                     "rtgs": "kik",
                     "parts": [],
@@ -17244,7 +17200,7 @@
                 {
                     "word": "กิ๊ก",
                     "type": "word",
-                    "meaning": "小三",
+                    "meaning": "情人，小三",
                     "more": "",
                     "rtgs": "kik",
                     "parts": [],
@@ -17274,7 +17230,7 @@
                 {
                     "word": "กิ๊ก",
                     "type": "word",
-                    "meaning": "小三",
+                    "meaning": "情人，小三",
                     "more": "",
                     "rtgs": "kik",
                     "parts": [],
@@ -17284,7 +17240,7 @@
             ]
         }
     },
-    "301": {
+    "298": {
         "text": "สองห",
         "start": 591.564,
         "duration": 0.4,
@@ -17308,7 +17264,7 @@
                 {
                     "word": "ห",
                     "type": "word",
-                    "meaning": "ห（字母）",
+                    "meaning": "ห字母",
                     "more": "",
                     "rtgs": "h",
                     "parts": [],
@@ -17318,7 +17274,7 @@
             ]
         }
     },
-    "302": {
+    "299": {
         "text": "นึ่",
         "start": 591.964,
         "duration": 5.52,
@@ -17326,13 +17282,13 @@
         "explanation": {
             "thai": "นึ่",
             "v": 2,
-            "rtgs": "nueng",
-            "translation": "一",
+            "rtgs": "nue",
+            "translation": "หนึ่ง",
             "analysis": [
                 {
                     "word": "นึ่",
                     "type": "word",
-                    "meaning": "一（口語）",
+                    "meaning": "一（不完整）",
                     "more": "",
                     "rtgs": "ni",
                     "parts": [],
@@ -17342,7 +17298,7 @@
             ]
         }
     },
-    "303": {
+    "300": {
         "text": "ง",
         "start": 597.484,
         "duration": 0.12,
@@ -17351,12 +17307,12 @@
             "thai": "ง",
             "v": 2,
             "rtgs": "ng",
-            "translation": "嗯",
+            "translation": "ง（字母）",
             "analysis": [
                 {
                     "word": "ง",
-                    "type": "particle",
-                    "meaning": "語氣詞，表示肯定或思考",
+                    "type": "word",
+                    "meaning": "ง字母",
                     "more": "",
                     "rtgs": "ng",
                     "parts": [],
@@ -17366,7 +17322,7 @@
             ]
         }
     },
-    "304": {
+    "301": {
         "text": "จริงๆอ่างมันเยอะเนาะอิ่มอิ่มอีกไม่ไกลอิ่มอะไรอย่า",
         "start": 599.604,
         "duration": 3.34,
@@ -17375,12 +17331,12 @@
             "thai": "จริงๆอ่างมันเยอะเนาะอิ่มอิ่มอีกไม่ไกลอิ่มอะไรอย่า",
             "v": 2,
             "rtgs": "ching ching ang man yoe no im im ik mai klai im arai ya",
-            "translation": "真的真的，水槽很多呢，飽飽的，再不遠，飽什麼不要",
+            "translation": "真的啊，東西很多呢，飽飽的，再不遠，飽了什麼不要",
             "analysis": [
                 {
                     "word": "จริงๆ",
                     "type": "expression",
-                    "meaning": "真的真的",
+                    "meaning": "真的",
                     "more": "",
                     "rtgs": "ching ching",
                     "parts": [],
@@ -17390,7 +17346,7 @@
                 {
                     "word": "อ่าง",
                     "type": "word",
-                    "meaning": "水槽",
+                    "meaning": "盆子，這裡指東西多",
                     "more": "",
                     "rtgs": "ang",
                     "parts": [],
@@ -17420,7 +17376,7 @@
                 {
                     "word": "เนาะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示確認或感嘆",
+                    "meaning": "語氣助詞，表示同意或確認",
                     "more": "",
                     "rtgs": "no",
                     "parts": [],
@@ -17510,7 +17466,7 @@
             ]
         }
     },
-    "305": {
+    "302": {
         "text": "งเงี้ยเออไ",
         "start": 602.944,
         "duration": 0.64,
@@ -17518,13 +17474,13 @@
         "explanation": {
             "thai": "งเงี้ยเออไ",
             "v": 2,
-            "rtgs": "ng ngia er ai",
-            "translation": "嗯嗯這樣欸欸",
+            "rtgs": "ng ngia oer ai",
+            "translation": "啊啊就是這樣啊",
             "analysis": [
                 {
                     "word": "ง",
                     "type": "particle",
-                    "meaning": "語氣詞，表示肯定或思考",
+                    "meaning": "語氣詞，表示語氣",
                     "more": "",
                     "rtgs": "ng",
                     "parts": [],
@@ -17533,8 +17489,8 @@
                 },
                 {
                     "word": "เงี้ย",
-                    "type": "word",
-                    "meaning": "這樣",
+                    "type": "expression",
+                    "meaning": "就是這樣",
                     "more": "",
                     "rtgs": "ngia",
                     "parts": [],
@@ -17544,7 +17500,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示同意或思考",
+                    "meaning": "語氣詞，表示同意",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -17554,7 +17510,7 @@
                 {
                     "word": "ไ",
                     "type": "word",
-                    "meaning": "欸（口語感嘆）",
+                    "meaning": "不完整字",
                     "more": "",
                     "rtgs": "ai",
                     "parts": [],
@@ -17564,7 +17520,7 @@
             ]
         }
     },
-    "306": {
+    "303": {
         "text": "ม่พูดเออนึกไม่ออกอยากมีอยากมีกิ๊กอยากมีกิ๊กอย่างเ",
         "start": 603.584,
         "duration": 3.26,
@@ -17572,13 +17528,13 @@
         "explanation": {
             "thai": "ม่พูดเออนึกไม่ออกอยากมีอยากมีกิ๊กอยากมีกิ๊กอย่างเ",
             "v": 2,
-            "rtgs": "ma phut er nuk mai ok yak mi yak mi kik yak mi kik yang",
-            "translation": "不說了欸想不起來想要有想要有小三想要有小三像",
+            "rtgs": "ma phut oer neuk mai ok yak mi yak mi kik yak mi kik yang",
+            "translation": "不說了，嗯，想不起來，想要有，想要有情人，想要有情人這樣",
             "analysis": [
                 {
                     "word": "ม่",
                     "type": "word",
-                    "meaning": "不",
+                    "meaning": "不（口語）",
                     "more": "",
                     "rtgs": "ma",
                     "parts": [],
@@ -17598,7 +17554,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示同意或思考",
+                    "meaning": "語氣詞，表示思考或同意",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -17674,7 +17630,7 @@
                 {
                     "word": "กิ๊ก",
                     "type": "word",
-                    "meaning": "小三",
+                    "meaning": "情人",
                     "more": "",
                     "rtgs": "kik",
                     "parts": [],
@@ -17704,7 +17660,7 @@
                 {
                     "word": "กิ๊ก",
                     "type": "word",
-                    "meaning": "小三",
+                    "meaning": "情人",
                     "more": "",
                     "rtgs": "kik",
                     "parts": [],
@@ -17714,7 +17670,7 @@
                 {
                     "word": "อย่าง",
                     "type": "word",
-                    "meaning": "像",
+                    "meaning": "這樣",
                     "more": "",
                     "rtgs": "yang",
                     "parts": [],
@@ -17724,7 +17680,7 @@
                 {
                     "word": "เ",
                     "type": "word",
-                    "meaning": "（不完整詞）",
+                    "meaning": "不完整字",
                     "more": "",
                     "rtgs": "e",
                     "parts": [],
@@ -17734,7 +17690,7 @@
             ]
         }
     },
-    "307": {
+    "304": {
         "text": "ดียวเมื่อกี้",
         "start": 606.844,
         "duration": 0.38,
@@ -17742,8 +17698,8 @@
         "explanation": {
             "thai": "ดียวเมื่อกี้",
             "v": 2,
-            "rtgs": "di yua muea ki",
-            "translation": "好 一下 剛才",
+            "rtgs": "diao muea ki",
+            "translation": "剛剛",
             "analysis": [
                 {
                     "word": "ดี",
@@ -17758,7 +17714,7 @@
                 {
                     "word": "ยว",
                     "type": "word",
-                    "meaning": "一下（口語縮寫）",
+                    "meaning": "不完整字",
                     "more": "",
                     "rtgs": "yo",
                     "parts": [],
@@ -17768,7 +17724,7 @@
                 {
                     "word": "เมื่อกี้",
                     "type": "word",
-                    "meaning": "剛才",
+                    "meaning": "剛剛",
                     "more": "",
                     "rtgs": "muea ki",
                     "parts": [
@@ -17789,7 +17745,7 @@
             ]
         }
     },
-    "308": {
+    "305": {
         "text": "สุดท้ายแล้วสองหนึ่ง",
         "start": 607.284,
         "duration": 1.36,
@@ -17798,7 +17754,7 @@
             "thai": "สุดท้ายแล้วสองหนึ่ง",
             "v": 2,
             "rtgs": "sut thai laeo song nueng",
-            "translation": "最後了 兩 一",
+            "translation": "最後兩個一",
             "analysis": [
                 {
                     "word": "สุดท้าย",
@@ -17823,8 +17779,8 @@
                 },
                 {
                     "word": "แล้ว",
-                    "type": "particle",
-                    "meaning": "了（完成）",
+                    "type": "word",
+                    "meaning": "已經",
                     "more": "",
                     "rtgs": "laeo",
                     "parts": [],
@@ -17834,7 +17790,7 @@
                 {
                     "word": "สอง",
                     "type": "word",
-                    "meaning": "兩",
+                    "meaning": "兩個",
                     "more": "",
                     "rtgs": "song",
                     "parts": [],
@@ -17854,7 +17810,7 @@
             ]
         }
     },
-    "309": {
+    "306": {
         "text": "เครื่องสำอาง",
         "start": 609.504,
         "duration": 0.74,
@@ -17889,7 +17845,7 @@
             ]
         }
     },
-    "310": {
+    "307": {
         "text": "จุกคนสวยอ่ะความสะอาด",
         "start": 611.684,
         "duration": 2.84,
@@ -17897,13 +17853,13 @@
         "explanation": {
             "thai": "จุกคนสวยอ่ะความสะอาด",
             "v": 2,
-            "rtgs": "chuk khon suai a khwam sa-at",
-            "translation": "漂亮的人很注重清潔",
+            "rtgs": "chuk khon suay a khwam sa at",
+            "translation": "堵住漂亮的人啊，乾淨",
             "analysis": [
                 {
                     "word": "จุก",
                     "type": "word",
-                    "meaning": "堵塞",
+                    "meaning": "堵住",
                     "more": "",
                     "rtgs": "chuk",
                     "parts": [],
@@ -17934,7 +17890,7 @@
                 {
                     "word": "อ่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示輕微感嘆",
+                    "meaning": "語氣詞，表示感嘆",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -17944,7 +17900,7 @@
                 {
                     "word": "ความสะอาด",
                     "type": "word",
-                    "meaning": "清潔",
+                    "meaning": "乾淨",
                     "more": "",
                     "rtgs": "khwam sakat",
                     "parts": [
@@ -17965,7 +17921,7 @@
             ]
         }
     },
-    "311": {
+    "308": {
         "text": "ห้า",
         "start": 615.364,
         "duration": 0.2,
@@ -17989,7 +17945,7 @@
             ]
         }
     },
-    "312": {
+    "309": {
         "text": "แค่สองอัน",
         "start": 615.604,
         "duration": 0.54,
@@ -18033,7 +17989,7 @@
             ]
         }
     },
-    "313": {
+    "310": {
         "text": "โอ้โห",
         "start": 617.444,
         "duration": 0.56,
@@ -18047,7 +18003,7 @@
                 {
                     "word": "โอ้โห",
                     "type": "expression",
-                    "meaning": "驚嘆聲",
+                    "meaning": "表示驚訝",
                     "more": "",
                     "rtgs": "oho",
                     "parts": [],
@@ -18057,7 +18013,7 @@
             ]
         }
     },
-    "314": {
+    "311": {
         "text": "คำสั่ง",
         "start": 619.824,
         "duration": 1.0,
@@ -18092,7 +18048,7 @@
             ]
         }
     },
-    "315": {
+    "312": {
         "text": "อ่า",
         "start": 621.483,
         "duration": 0.341,
@@ -18101,7 +18057,7 @@
             "thai": "อ่า",
             "v": 2,
             "rtgs": "a",
-            "translation": "嗯（思考聲）",
+            "translation": "嗯（語氣詞）",
             "analysis": [
                 {
                     "word": "อ่า",
@@ -18116,7 +18072,7 @@
             ]
         }
     },
-    "316": {
+    "313": {
         "text": "สอง",
         "start": 622.103,
         "duration": 0.18,
@@ -18140,7 +18096,7 @@
             ]
         }
     },
-    "317": {
+    "314": {
         "text": "หนึ่งโอเค",
         "start": 624.704,
         "duration": 0.68,
@@ -18163,8 +18119,8 @@
                 },
                 {
                     "word": "โอเค",
-                    "type": "name",
-                    "meaning": "可以，OK",
+                    "type": "word",
+                    "meaning": "可以",
                     "more": "",
                     "rtgs": "okay",
                     "parts": [],
@@ -18174,7 +18130,7 @@
             ]
         }
     },
-    "318": {
+    "315": {
         "text": "เราให้เท่าไหร่",
         "start": 627.344,
         "duration": 0.76,
@@ -18229,7 +18185,7 @@
             ]
         }
     },
-    "319": {
+    "316": {
         "text": "เฮ้อยาก",
         "start": 628.104,
         "duration": 0.24,
@@ -18237,7 +18193,7 @@
         "explanation": {
             "thai": "เฮ้อยาก",
             "v": 2,
-            "rtgs": "heo yak",
+            "rtgs": "ho yak",
             "translation": "唉，好想要",
             "analysis": [
                 {
@@ -18263,7 +18219,7 @@
             ]
         }
     },
-    "320": {
+    "317": {
         "text": "สิบข้ออ่ะ",
         "start": 628.464,
         "duration": 0.4,
@@ -18272,7 +18228,7 @@
             "thai": "สิบข้ออ่ะ",
             "v": 2,
             "rtgs": "sip kho a",
-            "translation": "十條啊",
+            "translation": "十個項目啊",
             "analysis": [
                 {
                     "word": "สิบ",
@@ -18287,7 +18243,7 @@
                 {
                     "word": "ข้อ",
                     "type": "classifier",
-                    "meaning": "條（量詞）",
+                    "meaning": "項目（量詞）",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -18307,7 +18263,7 @@
             ]
         }
     },
-    "321": {
+    "318": {
         "text": "อืม",
         "start": 628.884,
         "duration": 0.28,
@@ -18321,7 +18277,7 @@
                 {
                     "word": "อืม",
                     "type": "particle",
-                    "meaning": "表示思考或同意的語氣詞",
+                    "meaning": "表示思考或猶豫的語氣詞",
                     "more": "",
                     "rtgs": "um",
                     "parts": [],
@@ -18331,7 +18287,7 @@
             ]
         }
     },
-    "322": {
+    "319": {
         "text": "ได้เท่ากัน",
         "start": 629.284,
         "duration": 0.56,
@@ -18340,12 +18296,12 @@
             "thai": "ได้เท่ากัน",
             "v": 2,
             "rtgs": "dai thao kan",
-            "translation": "一樣多",
+            "translation": "一樣的",
             "analysis": [
                 {
                     "word": "ได้",
                     "type": "word",
-                    "meaning": "得到",
+                    "meaning": "能、可以",
                     "more": "",
                     "rtgs": "dai",
                     "parts": [],
@@ -18355,7 +18311,7 @@
                 {
                     "word": "เท่ากัน",
                     "type": "word",
-                    "meaning": "相等、一樣",
+                    "meaning": "一樣、相等",
                     "more": "",
                     "rtgs": "thao kan",
                     "parts": [
@@ -18376,7 +18332,7 @@
             ]
         }
     },
-    "323": {
+    "320": {
         "text": "สิบสิบเหรอเอ้ยห้าห้า",
         "start": 630.324,
         "duration": 1.66,
@@ -18384,8 +18340,8 @@
         "explanation": {
             "thai": "สิบสิบเหรอเอ้ยห้าห้า",
             "v": 2,
-            "rtgs": "sip sip ror oi ha ha",
-            "translation": "十十嗎喂五五",
+            "rtgs": "sip sip reo oi ha ha",
+            "translation": "十十嗎？欸，五五",
             "analysis": [
                 {
                     "word": "สิบ",
@@ -18450,7 +18406,7 @@
             ]
         }
     },
-    "324": {
+    "321": {
         "text": "คำนี้คำตัดสินชี้เป็นชี้ตาย",
         "start": 632.924,
         "duration": 2.16,
@@ -18462,24 +18418,25 @@
             "translation": "這句話是生死判決",
             "analysis": [
                 {
-                    "word": "คำ",
+                    "word": "คำนี้",
                     "type": "word",
-                    "meaning": "詞、句",
+                    "meaning": "這句話",
                     "more": "",
-                    "rtgs": "kham",
-                    "parts": [],
-                    "senses": "詞、字、話語",
-                    "usage": "指單詞或語言單位，書面及口語皆用。"
-                },
-                {
-                    "word": "นี้",
-                    "type": "word",
-                    "meaning": "這",
-                    "more": "",
-                    "rtgs": "ni",
-                    "parts": [],
-                    "senses": "這個、這裡、這時候",
-                    "usage": "用作指示代詞，指示較近的事物、地方或時間。"
+                    "rtgs": "kham ni",
+                    "parts": [
+                        {
+                            "word": "คำ",
+                            "rtgs": "kham",
+                            "meaning": "詞、話"
+                        },
+                        {
+                            "word": "นี้",
+                            "rtgs": "ni",
+                            "meaning": "這"
+                        }
+                    ],
+                    "senses": "這個詞、這句話",
+                    "usage": "用來指示特定的詞語或句子，常用於口語和書面語。"
                 },
                 {
                     "word": "คำตัดสิน",
@@ -18505,7 +18462,7 @@
                 {
                     "word": "ชี้",
                     "type": "word",
-                    "meaning": "指示",
+                    "meaning": "指向",
                     "more": "",
                     "rtgs": "chi",
                     "parts": [],
@@ -18525,7 +18482,7 @@
                 {
                     "word": "ชี้",
                     "type": "word",
-                    "meaning": "指示",
+                    "meaning": "指向",
                     "more": "",
                     "rtgs": "chi",
                     "parts": [],
@@ -18535,7 +18492,7 @@
                 {
                     "word": "ตาย",
                     "type": "word",
-                    "meaning": "死",
+                    "meaning": "死亡",
                     "more": "",
                     "rtgs": "tai",
                     "parts": [],
@@ -18545,7 +18502,7 @@
             ]
         }
     },
-    "325": {
+    "322": {
         "text": "อืม",
         "start": 635.124,
         "duration": 0.02,
@@ -18559,7 +18516,7 @@
                 {
                     "word": "อืม",
                     "type": "particle",
-                    "meaning": "表示思考或同意的語氣詞",
+                    "meaning": "表示思考或猶豫的語氣詞",
                     "more": "",
                     "rtgs": "um",
                     "parts": [],
@@ -18569,7 +18526,7 @@
             ]
         }
     },
-    "326": {
+    "323": {
         "text": "เล่นกันมาตั้งนาน",
         "start": 635.144,
         "duration": 0.82,
@@ -18613,7 +18570,7 @@
                 {
                     "word": "ตั้ง",
                     "type": "word",
-                    "meaning": "相當、很",
+                    "meaning": "很、相當",
                     "more": "",
                     "rtgs": "tang",
                     "parts": [],
@@ -18633,7 +18590,7 @@
             ]
         }
     },
-    "327": {
+    "324": {
         "text": "อืม",
         "start": 636.104,
         "duration": 0.4,
@@ -18647,7 +18604,7 @@
                 {
                     "word": "อืม",
                     "type": "particle",
-                    "meaning": "表示思考或同意的語氣詞",
+                    "meaning": "表示思考或猶豫的語氣詞",
                     "more": "",
                     "rtgs": "um",
                     "parts": [],
@@ -18657,7 +18614,7 @@
             ]
         }
     },
-    "328": {
+    "325": {
         "text": "ใครแพ้อันนี้แหละ",
         "start": 636.644,
         "duration": 0.5,
@@ -18722,7 +18679,7 @@
             ]
         }
     },
-    "329": {
+    "326": {
         "text": "อืม",
         "start": 637.184,
         "duration": 0.3,
@@ -18736,7 +18693,7 @@
                 {
                     "word": "อืม",
                     "type": "particle",
-                    "meaning": "表示思考或同意的語氣詞",
+                    "meaning": "表示思考或猶豫的語氣詞",
                     "more": "",
                     "rtgs": "um",
                     "parts": [],
@@ -18746,7 +18703,7 @@
             ]
         }
     },
-    "330": {
+    "327": {
         "text": "ห้าสี่สามไป",
         "start": 637.704,
         "duration": 1.08,
@@ -18755,7 +18712,7 @@
             "thai": "ห้าสี่สามไป",
             "v": 2,
             "rtgs": "ha si sam pai",
-            "translation": "五四三走了",
+            "translation": "五四三走",
             "analysis": [
                 {
                     "word": "ห้า",
@@ -18790,7 +18747,7 @@
                 {
                     "word": "ไป",
                     "type": "word",
-                    "meaning": "去、走",
+                    "meaning": "走",
                     "more": "",
                     "rtgs": "pai",
                     "parts": [],
@@ -18800,7 +18757,7 @@
             ]
         }
     },
-    "331": {
+    "328": {
         "text": "ต่างประเทศ",
         "start": 638.884,
         "duration": 0.48,
@@ -18809,7 +18766,7 @@
             "thai": "ต่างประเทศ",
             "v": 2,
             "rtgs": "tang pratheht",
-            "translation": "國外、外國",
+            "translation": "國外",
             "analysis": [
                 {
                     "word": "ต่างประเทศ",
@@ -18835,7 +18792,7 @@
             ]
         }
     },
-    "332": {
+    "329": {
         "text": "ตัวปะทะเต่าปีนเท้าติดปะทัด",
         "start": 640.424,
         "duration": 3.72,
@@ -18843,8 +18800,8 @@
         "explanation": {
             "thai": "ตัวปะทะเต่าปีนเท้าติดปะทัด",
             "v": 2,
-            "rtgs": "tua pratao piin thao tid prataht",
-            "translation": "身體碰撞烏龜爬腳上貼鞭炮",
+            "rtgs": "tua pa tha tao peen thao tid pa that",
+            "translation": "身體碰撞烏龜爬腳上帶鞭炮",
             "analysis": [
                 {
                     "word": "ตัว",
@@ -18899,7 +18856,7 @@
                 {
                     "word": "ติด",
                     "type": "word",
-                    "meaning": "貼、黏",
+                    "meaning": "帶著",
                     "more": "",
                     "rtgs": "tid",
                     "parts": [],
@@ -18919,7 +18876,7 @@
             ]
         }
     },
-    "333": {
+    "330": {
         "text": "ตะปูทิ่มอ่า",
         "start": 644.804,
         "duration": 1.28,
@@ -18927,8 +18884,8 @@
         "explanation": {
             "thai": "ตะปูทิ่มอ่า",
             "v": 2,
-            "rtgs": "tapu tim a",
-            "translation": "釘子刺了啊",
+            "rtgs": "ta poo tim a",
+            "translation": "釘子刺入啊",
             "analysis": [
                 {
                     "word": "ตะปู",
@@ -18943,7 +18900,7 @@
                 {
                     "word": "ทิ่ม",
                     "type": "word",
-                    "meaning": "刺",
+                    "meaning": "刺入",
                     "more": "",
                     "rtgs": "thim",
                     "parts": [],
@@ -18953,7 +18910,7 @@
                 {
                     "word": "อ่า",
                     "type": "particle",
-                    "meaning": "語氣詞，表示感嘆",
+                    "meaning": "語氣詞，表示思考或猶豫",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -18963,7 +18920,7 @@
             ]
         }
     },
-    "334": {
+    "331": {
         "text": "เก่งว่ะ",
         "start": 647.664,
         "duration": 0.58,
@@ -18987,7 +18944,7 @@
                 {
                     "word": "ว่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示親暱或強調",
+                    "meaning": "語氣詞，表示驚訝或強調",
                     "more": "",
                     "rtgs": "wa",
                     "parts": [],
@@ -18997,7 +18954,7 @@
             ]
         }
     },
-    "335": {
+    "332": {
         "text": "มีพูดไปด้วยนะ",
         "start": 648.284,
         "duration": 0.54,
@@ -19005,8 +18962,8 @@
         "explanation": {
             "thai": "มีพูดไปด้วยนะ",
             "v": 2,
-            "rtgs": "mii phuut pai duai na",
-            "translation": "有說話一起喔",
+            "rtgs": "mee poot pai duay na",
+            "translation": "有說話喔",
             "analysis": [
                 {
                     "word": "มี",
@@ -19031,7 +18988,7 @@
                 {
                     "word": "ไป",
                     "type": "word",
-                    "meaning": "去（此處用於動作延續）",
+                    "meaning": "去",
                     "more": "",
                     "rtgs": "pai",
                     "parts": [],
@@ -19041,7 +18998,7 @@
                 {
                     "word": "ด้วย",
                     "type": "word",
-                    "meaning": "一起",
+                    "meaning": "也",
                     "more": "",
                     "rtgs": "duai",
                     "parts": [],
@@ -19051,7 +19008,7 @@
                 {
                     "word": "นะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示提醒或親切",
+                    "meaning": "語氣詞，表示提醒或加強語氣",
                     "more": "",
                     "rtgs": "na",
                     "parts": [],
@@ -19061,7 +19018,7 @@
             ]
         }
     },
-    "336": {
+    "333": {
         "text": "เออเก่งอ่ะ",
         "start": 648.844,
         "duration": 1.06,
@@ -19105,7 +19062,7 @@
             ]
         }
     },
-    "337": {
+    "334": {
         "text": "สู้ประทอง",
         "start": 651.804,
         "duration": 0.68,
@@ -19113,13 +19070,13 @@
         "explanation": {
             "thai": "สู้ประทอง",
             "v": 2,
-            "rtgs": "suu pra thong",
+            "rtgs": "su pra thong",
             "translation": "奮鬥黃金",
             "analysis": [
                 {
                     "word": "สู้",
                     "type": "word",
-                    "meaning": "奮鬥、努力",
+                    "meaning": "奮鬥",
                     "more": "",
                     "rtgs": "su",
                     "parts": [],
@@ -19129,7 +19086,7 @@
                 {
                     "word": "ประ",
                     "type": "word",
-                    "meaning": "（此處無特定意義，可能是口語或錯誤拼寫）",
+                    "meaning": "冠詞或前綴，無特定意思",
                     "more": "",
                     "rtgs": "pra",
                     "parts": [],
@@ -19149,7 +19106,7 @@
             ]
         }
     },
-    "338": {
+    "335": {
         "text": "แหมเต่าปีนเท้าได้ไม่ต้องงงค่ะไม่ต้องงง",
         "start": 657.484,
         "duration": 2.72,
@@ -19157,8 +19114,8 @@
         "explanation": {
             "thai": "แหมเต่าปีนเท้าได้ไม่ต้องงงค่ะไม่ต้องงง",
             "v": 2,
-            "rtgs": "mae tao piin thao dai mai tong ngong kha mai tong ngong",
-            "translation": "哎呀，烏龜爬腳上可以不用困惑喔不用困惑",
+            "rtgs": "mae tao peen thao dai mai tong ngong kha mai tong ngong",
+            "translation": "哎呀，烏龜爬腳可以不用困惑喔不用困惑",
             "analysis": [
                 {
                     "word": "แหม",
@@ -19203,7 +19160,7 @@
                 {
                     "word": "ได้",
                     "type": "word",
-                    "meaning": "能、可以",
+                    "meaning": "可以",
                     "more": "",
                     "rtgs": "dai",
                     "parts": [],
@@ -19213,7 +19170,7 @@
                 {
                     "word": "ไม่ต้อง",
                     "type": "expression",
-                    "meaning": "不必、不用",
+                    "meaning": "不必",
                     "more": "",
                     "rtgs": "mai tong",
                     "parts": [
@@ -19244,7 +19201,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示禮貌",
+                    "meaning": "語氣詞，女性用語，表示禮貌",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -19254,7 +19211,7 @@
                 {
                     "word": "ไม่ต้อง",
                     "type": "expression",
-                    "meaning": "不必、不用",
+                    "meaning": "不必",
                     "more": "",
                     "rtgs": "mai tong",
                     "parts": [
@@ -19285,7 +19242,7 @@
             ]
         }
     },
-    "339": {
+    "336": {
         "text": "ตำปูทะเลอื",
         "start": 661.184,
         "duration": 1.46,
@@ -19293,13 +19250,13 @@
         "explanation": {
             "thai": "ตำปูทะเลอื",
             "v": 2,
-            "rtgs": "tam pu thale ue",
-            "translation": "拌海蟹唔",
+            "rtgs": "tam poo thale eu",
+            "translation": "拌海蟹嗯",
             "analysis": [
                 {
                     "word": "ตำ",
                     "type": "word",
-                    "meaning": "拌、搗碎",
+                    "meaning": "拌",
                     "more": "",
                     "rtgs": "tam",
                     "parts": [],
@@ -19340,7 +19297,7 @@
             ]
         }
     },
-    "340": {
+    "337": {
         "text": "มตัวประท้วง",
         "start": 663.744,
         "duration": 0.72,
@@ -19348,39 +19305,43 @@
         "explanation": {
             "thai": "มตัวประท้วง",
             "v": 2,
-            "rtgs": "mot tua prathuang",
-            "translation": "หนึ่งตัวประท้วง",
+            "rtgs": "m tua pra thuang",
+            "translation": "來抗議",
             "analysis": [
                 {
-                    "word": "มตัวประท้วง",
+                    "word": "ม",
                     "type": "word",
-                    "meaning": "หนึ่งตัวประท้วง",
+                    "meaning": "來",
                     "more": "",
-                    "rtgs": "m tua prathuang",
-                    "parts": [
-                        {
-                            "word": "ม",
-                            "rtgs": "m",
-                            "meaning": "來"
-                        },
-                        {
-                            "word": "ตัว",
-                            "rtgs": "tua",
-                            "meaning": "個體"
-                        },
-                        {
-                            "word": "ประท้วง",
-                            "rtgs": "prathuang",
-                            "meaning": "抗議"
-                        }
-                    ],
-                    "senses": "抗議者、示威者",
-                    "usage": "指參與抗議或示威的人。"
+                    "rtgs": "mo",
+                    "parts": [],
+                    "senses": "字母、縮寫",
+                    "usage": "泰文字母之一，也可作為縮寫使用。"
+                },
+                {
+                    "word": "ตัว",
+                    "type": "word",
+                    "meaning": "身體",
+                    "more": "",
+                    "rtgs": "tua",
+                    "parts": [],
+                    "senses": "個、隻（量詞）",
+                    "usage": "用於計算動物或物品的量詞。"
+                },
+                {
+                    "word": "ประท้วง",
+                    "type": "word",
+                    "meaning": "抗議",
+                    "more": "",
+                    "rtgs": "prathuang",
+                    "parts": [],
+                    "senses": "抗議、示威",
+                    "usage": "指公開表達不滿或反對，常用於政治或社會活動中。"
                 }
             ]
         }
     },
-    "341": {
+    "338": {
         "text": "ห้าสี่สาม",
         "start": 671.504,
         "duration": 0.4,
@@ -19389,12 +19350,12 @@
             "thai": "ห้าสี่สาม",
             "v": 2,
             "rtgs": "ha si sam",
-            "translation": "ห้า สี่ สาม",
+            "translation": "五 四 三",
             "analysis": [
                 {
                     "word": "ห้า",
                     "type": "word",
-                    "meaning": "ห้า",
+                    "meaning": "五",
                     "more": "",
                     "rtgs": "ha",
                     "parts": [],
@@ -19404,7 +19365,7 @@
                 {
                     "word": "สี่",
                     "type": "word",
-                    "meaning": "สี่",
+                    "meaning": "四",
                     "more": "",
                     "rtgs": "si",
                     "parts": [],
@@ -19414,7 +19375,7 @@
                 {
                     "word": "สาม",
                     "type": "word",
-                    "meaning": "สาม",
+                    "meaning": "三",
                     "more": "",
                     "rtgs": "sam",
                     "parts": [],
@@ -19424,7 +19385,7 @@
             ]
         }
     },
-    "342": {
+    "339": {
         "text": "สอง",
         "start": 673.324,
         "duration": 0.32,
@@ -19433,12 +19394,12 @@
             "thai": "สอง",
             "v": 2,
             "rtgs": "song",
-            "translation": "สอง",
+            "translation": "二",
             "analysis": [
                 {
                     "word": "สอง",
                     "type": "word",
-                    "meaning": "สอง",
+                    "meaning": "二",
                     "more": "",
                     "rtgs": "song",
                     "parts": [],
@@ -19448,7 +19409,7 @@
             ]
         }
     },
-    "343": {
+    "340": {
         "text": "แพ้เถอะ",
         "start": 673.784,
         "duration": 0.32,
@@ -19457,12 +19418,12 @@
             "thai": "แพ้เถอะ",
             "v": 2,
             "rtgs": "phae thoe",
-            "translation": "แพ้เถอะ",
+            "translation": "輸吧",
             "analysis": [
                 {
                     "word": "แพ้",
                     "type": "word",
-                    "meaning": "แพ้",
+                    "meaning": "輸",
                     "more": "",
                     "rtgs": "phae",
                     "parts": [],
@@ -19472,7 +19433,7 @@
                 {
                     "word": "เถอะ",
                     "type": "particle",
-                    "meaning": "เถอะ (คำเสริมแสดงการขอร้อง)",
+                    "meaning": "吧（語氣）",
                     "more": "",
                     "rtgs": "thoe",
                     "parts": [],
@@ -19482,7 +19443,7 @@
             ]
         }
     },
-    "344": {
+    "341": {
         "text": "ก่อนที่เราจะไปดูคะแนนเดี๋ยวให้ฝากผลงานซีรีส์เ",
         "start": 676.384,
         "duration": 2.54,
@@ -19490,13 +19451,13 @@
         "explanation": {
             "thai": "ก่อนที่เราจะไปดูคะแนนเดี๋ยวให้ฝากผลงานซีรีส์เ",
             "v": 2,
-            "rtgs": "kon thi rao cha pai du khanaen diao hai fak phonngan series e",
-            "translation": "ก่อนที่เราจะไปดูคะแนน เดี๋ยวให้ฝากผลงานซีรีส์เ",
+            "rtgs": "kon thi rao cha pai du khanaen diao hai fak pholngngan series e",
+            "translation": "在我們去看分數之前，先請大家幫忙支持這部影集",
             "analysis": [
                 {
                     "word": "ก่อนที่",
-                    "type": "word",
-                    "meaning": "ก่อนที่",
+                    "type": "expression",
+                    "meaning": "在…之前",
                     "more": "",
                     "rtgs": "kon thi",
                     "parts": [
@@ -19517,7 +19478,7 @@
                 {
                     "word": "เรา",
                     "type": "word",
-                    "meaning": "เรา",
+                    "meaning": "我們",
                     "more": "",
                     "rtgs": "rao",
                     "parts": [],
@@ -19527,7 +19488,7 @@
                 {
                     "word": "จะ",
                     "type": "word",
-                    "meaning": "จะ (อนาคต)",
+                    "meaning": "將要",
                     "more": "",
                     "rtgs": "cha",
                     "parts": [],
@@ -19537,7 +19498,7 @@
                 {
                     "word": "ไปดู",
                     "type": "word",
-                    "meaning": "ไปดู",
+                    "meaning": "去看",
                     "more": "",
                     "rtgs": "pai du",
                     "parts": [
@@ -19558,7 +19519,7 @@
                 {
                     "word": "คะแนน",
                     "type": "word",
-                    "meaning": "คะแนน",
+                    "meaning": "分數",
                     "more": "",
                     "rtgs": "kha nen",
                     "parts": [],
@@ -19568,7 +19529,7 @@
                 {
                     "word": "เดี๋ยว",
                     "type": "word",
-                    "meaning": "เดี๋ยว",
+                    "meaning": "等一下",
                     "more": "",
                     "rtgs": "diao",
                     "parts": [],
@@ -19578,7 +19539,7 @@
                 {
                     "word": "ให้",
                     "type": "word",
-                    "meaning": "ให้",
+                    "meaning": "讓",
                     "more": "",
                     "rtgs": "hai",
                     "parts": [],
@@ -19588,7 +19549,7 @@
                 {
                     "word": "ฝาก",
                     "type": "word",
-                    "meaning": "ฝาก",
+                    "meaning": "拜託",
                     "more": "",
                     "rtgs": "fak",
                     "parts": [],
@@ -19598,7 +19559,7 @@
                 {
                     "word": "ผลงาน",
                     "type": "word",
-                    "meaning": "ผลงาน",
+                    "meaning": "作品",
                     "more": "",
                     "rtgs": "pholng ngan",
                     "parts": [
@@ -19614,7 +19575,7 @@
                 {
                     "word": "ซีรีส์",
                     "type": "word",
-                    "meaning": "ซีรีส์",
+                    "meaning": "影集",
                     "more": "",
                     "rtgs": "siri",
                     "parts": [],
@@ -19624,7 +19585,7 @@
                 {
                     "word": "เ",
                     "type": "word",
-                    "meaning": "เ (ไม่สมบูรณ์)",
+                    "meaning": "（疑似未完成詞）",
                     "more": "",
                     "rtgs": "e",
                     "parts": [],
@@ -19634,7 +19595,7 @@
             ]
         }
     },
-    "345": {
+    "342": {
         "text": "รื่องนี้กับแฟนๆหน่อย",
         "start": 678.924,
         "duration": 1.08,
@@ -19643,12 +19604,12 @@
             "thai": "รื่องนี้กับแฟนๆหน่อย",
             "v": 2,
             "rtgs": "rueang ni kap faen fan noi",
-            "translation": "เรื่องนี้กับแฟนๆหน่อย",
+            "translation": "請多多支持這部作品和粉絲們",
             "analysis": [
                 {
                     "word": "รื่อง",
                     "type": "word",
-                    "meaning": "เรื่อง (สะกดผิด)",
+                    "meaning": "事情、作品",
                     "more": "",
                     "rtgs": "ruang",
                     "parts": [],
@@ -19658,7 +19619,7 @@
                 {
                     "word": "นี้",
                     "type": "word",
-                    "meaning": "นี้",
+                    "meaning": "這",
                     "more": "",
                     "rtgs": "ni",
                     "parts": [],
@@ -19668,7 +19629,7 @@
                 {
                     "word": "กับ",
                     "type": "word",
-                    "meaning": "กับ",
+                    "meaning": "和",
                     "more": "",
                     "rtgs": "kap",
                     "parts": [],
@@ -19678,7 +19639,7 @@
                 {
                     "word": "แฟน",
                     "type": "word",
-                    "meaning": "แฟน",
+                    "meaning": "粉絲",
                     "more": "",
                     "rtgs": "faen",
                     "parts": [],
@@ -19688,7 +19649,7 @@
                 {
                     "word": "ๆ",
                     "type": "word",
-                    "meaning": "ๆ (ย้ำคำ)",
+                    "meaning": "（重疊符號，表示複數）",
                     "more": "",
                     "rtgs": "mai mai",
                     "parts": [],
@@ -19698,7 +19659,7 @@
                 {
                     "word": "หน่อย",
                     "type": "particle",
-                    "meaning": "หน่อย (ขอร้อง)",
+                    "meaning": "請（語氣）",
                     "more": "",
                     "rtgs": "noi",
                     "parts": [],
@@ -19708,7 +19669,7 @@
             ]
         }
     },
-    "346": {
+    "343": {
         "text": "โอเคค่ะอย่าลืมติดตามซีรีส์ของพวกเราด้วยนะค",
         "start": 680.024,
         "duration": 3.86,
@@ -19717,12 +19678,12 @@
             "thai": "โอเคค่ะอย่าลืมติดตามซีรีส์ของพวกเราด้วยนะค",
             "v": 2,
             "rtgs": "ok kha ya lum tidtam series khong phuak rao duai na kha",
-            "translation": "โอเคค่ะ อย่าลืมติดตามซีรีส์ของพวกเราด้วยนะคะ",
+            "translation": "好的，請不要忘記關注我們的影集喔",
             "analysis": [
                 {
                     "word": "โอเค",
                     "type": "name",
-                    "meaning": "โอเค",
+                    "meaning": "好的",
                     "more": "",
                     "rtgs": "okay",
                     "parts": [],
@@ -19732,7 +19693,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "ค่ะ (สุภาพ)",
+                    "meaning": "女性語氣詞",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -19742,7 +19703,7 @@
                 {
                     "word": "อย่า",
                     "type": "word",
-                    "meaning": "อย่า (ห้าม)",
+                    "meaning": "不要",
                     "more": "",
                     "rtgs": "ya",
                     "parts": [],
@@ -19752,7 +19713,7 @@
                 {
                     "word": "ลืม",
                     "type": "word",
-                    "meaning": "ลืม",
+                    "meaning": "忘記",
                     "more": "",
                     "rtgs": "luem",
                     "parts": [],
@@ -19762,7 +19723,7 @@
                 {
                     "word": "ติดตาม",
                     "type": "word",
-                    "meaning": "ติดตาม",
+                    "meaning": "關注",
                     "more": "",
                     "rtgs": "tid tam",
                     "parts": [
@@ -19783,7 +19744,7 @@
                 {
                     "word": "ซีรีส์",
                     "type": "word",
-                    "meaning": "ซีรีส์",
+                    "meaning": "影集",
                     "more": "",
                     "rtgs": "siri",
                     "parts": [],
@@ -19793,7 +19754,7 @@
                 {
                     "word": "ของ",
                     "type": "word",
-                    "meaning": "ของ",
+                    "meaning": "的",
                     "more": "",
                     "rtgs": "khong",
                     "parts": [],
@@ -19803,7 +19764,7 @@
                 {
                     "word": "พวกเรา",
                     "type": "word",
-                    "meaning": "พวกเรา",
+                    "meaning": "我們（複數）",
                     "more": "",
                     "rtgs": "phuak rao",
                     "parts": [
@@ -19824,7 +19785,7 @@
                 {
                     "word": "ด้วย",
                     "type": "word",
-                    "meaning": "ด้วย",
+                    "meaning": "也",
                     "more": "",
                     "rtgs": "duai",
                     "parts": [],
@@ -19834,7 +19795,7 @@
                 {
                     "word": "นะ",
                     "type": "particle",
-                    "meaning": "นะ (เน้น)",
+                    "meaning": "語氣詞",
                     "more": "",
                     "rtgs": "na",
                     "parts": [],
@@ -19844,7 +19805,7 @@
                 {
                     "word": "ค",
                     "type": "particle",
-                    "meaning": "ค (ตัดจบ)",
+                    "meaning": "語氣詞（未完）",
                     "more": "",
                     "rtgs": "k",
                     "parts": [],
@@ -19854,7 +19815,7 @@
             ]
         }
     },
-    "347": {
+    "344": {
         "text": "ะอาร์ตรักของเราเนาะค่ะทุกวันเสาร์สองทุ่มครึ่งทา",
         "start": 683.884,
         "duration": 3.24,
@@ -19863,12 +19824,12 @@
             "thai": "ะอาร์ตรักของเราเนาะค่ะทุกวันเสาร์สองทุ่มครึ่งทา",
             "v": 2,
             "rtgs": "aart rak khong rao no kha thuk wan sao song thum khrung tha",
-            "translation": "อาร์ตรักของเราเนาะค่ะ ทุกวันเสาร์สองทุ่มครึ่งทา",
+            "translation": "我們的Art愛，每週六晚上八點半播出",
             "analysis": [
                 {
                     "word": "ะ",
                     "type": "particle",
-                    "meaning": "ะ (สะกดผิด)",
+                    "meaning": "語氣詞（疑似錯誤）",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -19878,7 +19839,7 @@
                 {
                     "word": "อาร์ต",
                     "type": "name",
-                    "meaning": "อาร์ต (ชื่อ)",
+                    "meaning": "Art（人名或品牌）",
                     "more": "",
                     "rtgs": "art",
                     "parts": [],
@@ -19888,7 +19849,7 @@
                 {
                     "word": "รัก",
                     "type": "word",
-                    "meaning": "รัก",
+                    "meaning": "愛",
                     "more": "",
                     "rtgs": "rak",
                     "parts": [],
@@ -19898,7 +19859,7 @@
                 {
                     "word": "ของ",
                     "type": "word",
-                    "meaning": "ของ",
+                    "meaning": "的",
                     "more": "",
                     "rtgs": "khong",
                     "parts": [],
@@ -19908,7 +19869,7 @@
                 {
                     "word": "เรา",
                     "type": "word",
-                    "meaning": "เรา",
+                    "meaning": "我們",
                     "more": "",
                     "rtgs": "rao",
                     "parts": [],
@@ -19918,7 +19879,7 @@
                 {
                     "word": "เนาะ",
                     "type": "particle",
-                    "meaning": "เนาะ (เน้น)",
+                    "meaning": "語氣詞，表示確認",
                     "more": "",
                     "rtgs": "no",
                     "parts": [],
@@ -19928,7 +19889,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "ค่ะ (สุภาพ)",
+                    "meaning": "女性語氣詞",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -19938,7 +19899,7 @@
                 {
                     "word": "ทุกวัน",
                     "type": "word",
-                    "meaning": "ทุกวัน",
+                    "meaning": "每一天",
                     "more": "",
                     "rtgs": "thuk wan",
                     "parts": [
@@ -19959,7 +19920,7 @@
                 {
                     "word": "เสาร์",
                     "type": "word",
-                    "meaning": "วันเสาร์",
+                    "meaning": "星期六",
                     "more": "",
                     "rtgs": "sao",
                     "parts": [],
@@ -19969,7 +19930,7 @@
                 {
                     "word": "สอง",
                     "type": "word",
-                    "meaning": "สอง",
+                    "meaning": "二",
                     "more": "",
                     "rtgs": "song",
                     "parts": [],
@@ -19978,8 +19939,8 @@
                 },
                 {
                     "word": "ทุ่ม",
-                    "type": "word",
-                    "meaning": "ทุ่ม (เวลา)",
+                    "type": "classifier",
+                    "meaning": "點（晚上）",
                     "more": "",
                     "rtgs": "thum",
                     "parts": [],
@@ -19989,7 +19950,7 @@
                 {
                     "word": "ครึ่ง",
                     "type": "word",
-                    "meaning": "ครึ่ง",
+                    "meaning": "半",
                     "more": "",
                     "rtgs": "khrung",
                     "parts": [],
@@ -19999,7 +19960,7 @@
                 {
                     "word": "ทา",
                     "type": "word",
-                    "meaning": "ทา (ไม่สมบูรณ์)",
+                    "meaning": "（疑似未完成詞）",
                     "more": "",
                     "rtgs": "tha",
                     "parts": [],
@@ -20009,7 +19970,7 @@
             ]
         }
     },
-    "348": {
+    "345": {
         "text": "งช่องไหนคะ",
         "start": 687.124,
         "duration": 0.56,
@@ -20017,13 +19978,13 @@
         "explanation": {
             "thai": "งช่องไหนคะ",
             "v": 2,
-            "rtgs": "chong nai kha",
-            "translation": "ช่องไหนคะ",
+            "rtgs": "ng chong nai kha",
+            "translation": "哪個頻道呢？",
             "analysis": [
                 {
                     "word": "ง",
                     "type": "word",
-                    "meaning": "ง (สะกดผิด)",
+                    "meaning": "（疑似錯誤或未完成詞）",
                     "more": "",
                     "rtgs": "ng",
                     "parts": [],
@@ -20033,7 +19994,7 @@
                 {
                     "word": "ช่อง",
                     "type": "word",
-                    "meaning": "ช่อง",
+                    "meaning": "頻道",
                     "more": "",
                     "rtgs": "chong",
                     "parts": [],
@@ -20041,29 +20002,29 @@
                     "usage": "指空隙、孔洞或通道，也用於電視或廣播頻道名稱。"
                 },
                 {
-                    "word": "ไห",
+                    "word": "ไหน",
                     "type": "word",
-                    "meaning": "ไห (สะกดผิด)",
+                    "meaning": "哪個",
                     "more": "",
-                    "rtgs": "hai",
+                    "rtgs": "nai",
                     "parts": [],
-                    "senses": "甕、罐",
-                    "usage": "指一種陶製或塑膠製的容器，用來盛水或其他液體。"
+                    "senses": "哪裡、哪個",
+                    "usage": "用於疑問句中詢問地點或選擇。"
                 },
                 {
-                    "word": "นคะ",
+                    "word": "คะ",
                     "type": "particle",
-                    "meaning": "นะคะ (สะกดผิด)",
+                    "meaning": "女性語氣詞",
                     "more": "",
-                    "rtgs": "n kha",
+                    "rtgs": "kha",
                     "parts": [],
-                    "senses": "語氣助詞（女性用）",
-                    "usage": "用於句尾，表示禮貌或柔和語氣，女性常用。"
+                    "senses": "語氣詞（女性用）",
+                    "usage": "語氣詞，女性說話時用於句尾，表示禮貌或柔和語氣。"
                 }
             ]
         }
     },
-    "349": {
+    "346": {
         "text": "GMM25 ค่ะค่ะพวกเราตั้งใจกันมากๆใ",
         "start": 688.104,
         "duration": 3.98,
@@ -20071,13 +20032,13 @@
         "explanation": {
             "thai": "GMM25 ค่ะค่ะพวกเราตั้งใจกันมากๆใ",
             "v": 2,
-            "rtgs": "GMM 25 kha kha phuak rao tang chai kan mak mak",
-            "translation": "GMM25 ค่ะค่ะ พวกเราตั้งใจกันมากๆ",
+            "rtgs": "gmm 25 kha kha phuak rao tang chai kan mak mak",
+            "translation": "GMM25，我們非常用心",
             "analysis": [
                 {
                     "word": "GMM25",
                     "type": "name",
-                    "meaning": "GMM25 (ช่องทีวี)",
+                    "meaning": "GMM25（頻道名）",
                     "more": "",
                     "rtgs": "GMM25",
                     "parts": [],
@@ -20087,7 +20048,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "ค่ะ (สุภาพ)",
+                    "meaning": "女性語氣詞",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -20097,7 +20058,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "ค่ะ (สุภาพ)",
+                    "meaning": "女性語氣詞",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -20107,7 +20068,7 @@
                 {
                     "word": "พวกเรา",
                     "type": "word",
-                    "meaning": "พวกเรา",
+                    "meaning": "我們（複數）",
                     "more": "",
                     "rtgs": "phuak rao",
                     "parts": [
@@ -20128,7 +20089,7 @@
                 {
                     "word": "ตั้งใจ",
                     "type": "word",
-                    "meaning": "ตั้งใจ",
+                    "meaning": "用心",
                     "more": "",
                     "rtgs": "tang chai",
                     "parts": [
@@ -20149,7 +20110,7 @@
                 {
                     "word": "กัน",
                     "type": "word",
-                    "meaning": "กัน (ด้วยกัน)",
+                    "meaning": "彼此",
                     "more": "",
                     "rtgs": "kan",
                     "parts": [],
@@ -20159,7 +20120,7 @@
                 {
                     "word": "มาก",
                     "type": "word",
-                    "meaning": "มาก",
+                    "meaning": "非常",
                     "more": "",
                     "rtgs": "mak",
                     "parts": [],
@@ -20167,19 +20128,20 @@
                     "usage": "副詞，用於加強形容詞或動詞的程度。"
                 },
                 {
-                    "word": "ๆใ",
-                    "type": "particle",
-                    "meaning": "ๆ (ย้ำคำ)",
+                    "word": "ๆ",
+                    "type": "word",
+                    "meaning": "（重疊符號，表示加強）",
                     "more": "",
-                    "rtgs": "kai",
+                    "rtgs": "mai mai",
                     "parts": [],
-                    "senses": "語氣詞、加強語氣",
-                    "usage": "用於句尾加強語氣，常見於口語和非正式場合，表示強調或感嘆。"
+                    "senses": "重複、加強語氣",
+                    "usage": "用於重複前一詞以加強語氣或表示多次，常見於口語和書寫中。"
                 }
-            ]
+            ],
+            "resent": true
         }
     },
-    "350": {
+    "347": {
         "text": "ช่ค่ะทุกคนตั้งใจกันมากๆเลยค่ะงานนี้",
         "start": 692.084,
         "duration": 2.28,
@@ -20188,33 +20150,32 @@
             "thai": "ช่ค่ะทุกคนตั้งใจกันมากๆเลยค่ะงานนี้",
             "v": 2,
             "rtgs": "cha kha thuk khon tang chai kan mak mak loei kha ngan ni",
-            "translation": "大家都非常用心呢，這次的活動",
+            "translation": "是的，大家都非常用心，這次的工作",
             "analysis": [
                 {
-                    "word": "ช่ค่ะ",
-                    "type": "expression",
-                    "meaning": "表示同意或應答",
+                    "word": "ช่",
+                    "type": "word",
+                    "meaning": "（疑似未完成詞）",
                     "more": "",
-                    "rtgs": "cha kha",
-                    "parts": [
-                        {
-                            "word": "ช่",
-                            "rtgs": "cha",
-                            "meaning": "助詞，表示肯定或同意"
-                        },
-                        {
-                            "word": "ค่ะ",
-                            "rtgs": "kha",
-                            "meaning": "語氣詞，女性用於句尾表示禮貌"
-                        }
-                    ],
-                    "senses": "肯定、同意、禮貌語氣",
-                    "usage": "用於句尾表示肯定或同意，'ค่ะ'為女性禮貌語氣詞，常用於正式或禮貌場合。"
+                    "rtgs": "cha",
+                    "parts": [],
+                    "senses": "（單字）",
+                    "usage": "單字，需依上下文判斷。"
+                },
+                {
+                    "word": "ค่ะ",
+                    "type": "particle",
+                    "meaning": "女性語氣詞",
+                    "more": "",
+                    "rtgs": "kha",
+                    "parts": [],
+                    "senses": "語氣詞（女性用）、禮貌用語",
+                    "usage": "女性用語氣詞，表示禮貌和尊敬，常用於句尾。"
                 },
                 {
                     "word": "ทุกคน",
                     "type": "word",
-                    "meaning": "每個人",
+                    "meaning": "大家",
                     "more": "",
                     "rtgs": "thuk khon",
                     "parts": [
@@ -20235,7 +20196,7 @@
                 {
                     "word": "ตั้งใจ",
                     "type": "word",
-                    "meaning": "用心、專心",
+                    "meaning": "用心",
                     "more": "",
                     "rtgs": "tang chai",
                     "parts": [
@@ -20256,7 +20217,7 @@
                 {
                     "word": "กัน",
                     "type": "word",
-                    "meaning": "彼此、一起",
+                    "meaning": "彼此",
                     "more": "",
                     "rtgs": "kan",
                     "parts": [],
@@ -20264,50 +20225,69 @@
                     "usage": "用於表示雙方或多方共同動作或狀態，常用於口語。"
                 },
                 {
-                    "word": "มากๆ",
+                    "word": "มาก",
                     "type": "word",
                     "meaning": "非常",
                     "more": "",
-                    "rtgs": "mak mak",
+                    "rtgs": "mak",
                     "parts": [],
-                    "senses": "非常、很",
-                    "usage": "用於形容詞或動詞後，表示程度很高。"
+                    "senses": "多、非常、很",
+                    "usage": "副詞，用於加強形容詞或動詞的程度。"
                 },
                 {
-                    "word": "เลยค่ะ",
-                    "type": "expression",
-                    "meaning": "強調語氣",
-                    "more": "",
-                    "rtgs": "loei kha",
-                    "parts": [],
-                    "senses": "強調語氣（女性用）",
-                    "usage": "用於句尾，女性用來加強語氣，表示肯定或強調。"
-                },
-                {
-                    "word": "งานนี้",
+                    "word": "ๆ",
                     "type": "word",
-                    "meaning": "這次活動",
+                    "meaning": "（重疊符號，表示加強）",
                     "more": "",
-                    "rtgs": "ngan ni",
-                    "parts": [
-                        {
-                            "word": "งาน",
-                            "rtgs": "ngan",
-                            "meaning": "工作、活動"
-                        },
-                        {
-                            "word": "นี้",
-                            "rtgs": "ni",
-                            "meaning": "這、此"
-                        }
-                    ],
-                    "senses": "這個活動、這份工作",
-                    "usage": "指特定的工作或活動。"
+                    "rtgs": "mai mai",
+                    "parts": [],
+                    "senses": "重複、加強語氣",
+                    "usage": "用於重複前一詞以加強語氣或表示多次，常見於口語和書寫中。"
+                },
+                {
+                    "word": "เลย",
+                    "type": "word",
+                    "meaning": "非常",
+                    "more": "",
+                    "rtgs": "loei",
+                    "parts": [],
+                    "senses": "立刻、馬上、直接",
+                    "usage": "副詞，表示動作的立即性或強調。"
+                },
+                {
+                    "word": "ค่ะ",
+                    "type": "particle",
+                    "meaning": "女性語氣詞",
+                    "more": "",
+                    "rtgs": "kha",
+                    "parts": [],
+                    "senses": "語氣詞（女性用）、禮貌用語",
+                    "usage": "女性用語氣詞，表示禮貌和尊敬，常用於句尾。"
+                },
+                {
+                    "word": "งาน",
+                    "type": "word",
+                    "meaning": "工作",
+                    "more": "",
+                    "rtgs": "ngan",
+                    "parts": [],
+                    "senses": "工作、活動、事情",
+                    "usage": "名詞，指工作、任務或活動。"
+                },
+                {
+                    "word": "นี้",
+                    "type": "word",
+                    "meaning": "這",
+                    "more": "",
+                    "rtgs": "ni",
+                    "parts": [],
+                    "senses": "這個、這裡、這時候",
+                    "usage": "用作指示代詞，指示較近的事物、地方或時間。"
                 }
             ]
         }
     },
-    "351": {
+    "348": {
         "text": "อ่ะพูดใช่ไหมว่าเก่ง",
         "start": 694.924,
         "duration": 1.2,
@@ -20316,12 +20296,12 @@
             "thai": "อ่ะพูดใช่ไหมว่าเก่ง",
             "v": 2,
             "rtgs": "a phut chai mai wa keng",
-            "translation": "欸，是說很厲害嗎？",
+            "translation": "啊，你是說很厲害嗎？",
             "analysis": [
                 {
                     "word": "อ่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示引起注意",
+                    "meaning": "語氣詞，表示輕微的感嘆或引起注意",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -20331,7 +20311,7 @@
                 {
                     "word": "พูด",
                     "type": "word",
-                    "meaning": "說",
+                    "meaning": "說話",
                     "more": "",
                     "rtgs": "phut",
                     "parts": [],
@@ -20341,8 +20321,8 @@
                 {
                     "word": "ใช่ไหม",
                     "type": "expression",
-                    "meaning": "是不是？",
-                    "more": "",
+                    "meaning": "是嗎？",
+                    "more": "用於確認對方說法的疑問語氣",
                     "rtgs": "chai mai",
                     "parts": [
                         {
@@ -20372,7 +20352,7 @@
                 {
                     "word": "เก่ง",
                     "type": "word",
-                    "meaning": "厲害",
+                    "meaning": "厲害、擅長",
                     "more": "",
                     "rtgs": "keng",
                     "parts": [],
@@ -20382,7 +20362,7 @@
             ]
         }
     },
-    "352": {
+    "349": {
         "text": "อืม",
         "start": 696.164,
         "duration": 0.36,
@@ -20396,7 +20376,7 @@
                 {
                     "word": "อืม",
                     "type": "particle",
-                    "meaning": "表示思考或同意的語氣",
+                    "meaning": "表示思考或同意的語氣詞",
                     "more": "",
                     "rtgs": "um",
                     "parts": [],
@@ -20406,7 +20386,7 @@
             ]
         }
     },
-    "353": {
+    "350": {
         "text": "พี่เอมมี่ค่ะ",
         "start": 698.544,
         "duration": 0.76,
@@ -20415,12 +20395,12 @@
             "thai": "พี่เอมมี่ค่ะ",
             "v": 2,
             "rtgs": "phi emmi kha",
-            "translation": "艾咪姊姊，您好",
+            "translation": "艾咪姊姊（女性用語氣詞）",
             "analysis": [
                 {
                     "word": "พี่",
                     "type": "word",
-                    "meaning": "哥哥/姊姊",
+                    "meaning": "哥哥/姊姊（稱呼）",
                     "more": "",
                     "rtgs": "phi",
                     "parts": [],
@@ -20440,7 +20420,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "禮貌語氣詞",
+                    "meaning": "女性語氣詞，表示禮貌",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -20450,7 +20430,7 @@
             ]
         }
     },
-    "354": {
+    "351": {
         "text": "อ้าวหนูชนะเหรอ",
         "start": 699.424,
         "duration": 0.74,
@@ -20458,7 +20438,7 @@
         "explanation": {
             "thai": "อ้าวหนูชนะเหรอ",
             "v": 2,
-            "rtgs": "ao nu cha na rue",
+            "rtgs": "ao nu cha na reu",
             "translation": "哎呀，你贏了嗎？",
             "analysis": [
                 {
@@ -20474,7 +20454,7 @@
                 {
                     "word": "หนู",
                     "type": "word",
-                    "meaning": "你（對晚輩或小孩稱呼）",
+                    "meaning": "你（對晚輩或小孩的稱呼）",
                     "more": "",
                     "rtgs": "nu",
                     "parts": [],
@@ -20494,7 +20474,7 @@
                 {
                     "word": "เหรอ",
                     "type": "particle",
-                    "meaning": "疑問語氣",
+                    "meaning": "疑問語氣詞",
                     "more": "",
                     "rtgs": "rue",
                     "parts": [],
@@ -20504,7 +20484,7 @@
             ]
         }
     },
-    "355": {
+    "352": {
         "text": "อ้าวจริงเหรอ",
         "start": 702.304,
         "duration": 0.14,
@@ -20512,7 +20492,7 @@
         "explanation": {
             "thai": "อ้าวจริงเหรอ",
             "v": 2,
-            "rtgs": "ao ching rue",
+            "rtgs": "ao jing reu",
             "translation": "哎呀，真的嗎？",
             "analysis": [
                 {
@@ -20538,7 +20518,7 @@
                 {
                     "word": "เหรอ",
                     "type": "particle",
-                    "meaning": "疑問語氣",
+                    "meaning": "疑問語氣詞",
                     "more": "",
                     "rtgs": "rue",
                     "parts": [],
@@ -20548,7 +20528,7 @@
             ]
         }
     },
-    "356": {
+    "353": {
         "text": "อ่ะคนแพ้ต้องมารับบทลงโทษ",
         "start": 702.444,
         "duration": 2.08,
@@ -20557,12 +20537,12 @@
             "thai": "อ่ะคนแพ้ต้องมารับบทลงโทษ",
             "v": 2,
             "rtgs": "a khon phae tong ma rap bot long thot",
-            "translation": "欸，輸的人必須接受懲罰",
+            "translation": "啊，輸的人必須接受懲罰",
             "analysis": [
                 {
                     "word": "อ่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，表示引起注意",
+                    "meaning": "語氣詞，表示輕微的感嘆或引起注意",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -20643,7 +20623,7 @@
             ]
         }
     },
-    "357": {
+    "354": {
         "text": "อ้าวอะไรมีบทลงโทษ",
         "start": 704.744,
         "duration": 2.9,
@@ -20652,7 +20632,7 @@
             "thai": "อ้าวอะไรมีบทลงโทษ",
             "v": 2,
             "rtgs": "ao arai mi bot long thot",
-            "translation": "哎呀，什麼？有懲罰？",
+            "translation": "哎呀，有懲罰嗎？",
             "analysis": [
                 {
                     "word": "อ้าว",
@@ -20708,7 +20688,7 @@
             ]
         }
     },
-    "358": {
+    "355": {
         "text": "มาฟังบทลงโทษกันดีกว่าว่าคนแพ้จะโดนอะไร",
         "start": 707.884,
         "duration": 3.34,
@@ -20717,7 +20697,7 @@
             "thai": "มาฟังบทลงโทษกันดีกว่าว่าคนแพ้จะโดนอะไร",
             "v": 2,
             "rtgs": "ma fang bot long thot kan di kwa wa khon phae cha don arai",
-            "translation": "來聽聽懲罰吧，看看輸的人會被怎麼處罰",
+            "translation": "來聽聽懲罰吧，比較看看輸的人會被怎麼處罰",
             "analysis": [
                 {
                     "word": "มา",
@@ -20762,7 +20742,7 @@
                 },
                 {
                     "word": "กัน",
-                    "type": "word",
+                    "type": "particle",
                     "meaning": "一起",
                     "more": "",
                     "rtgs": "kan",
@@ -20834,7 +20814,7 @@
                 {
                     "word": "โดน",
                     "type": "word",
-                    "meaning": "被",
+                    "meaning": "被（遭受）",
                     "more": "",
                     "rtgs": "don",
                     "parts": [],
@@ -20854,7 +20834,7 @@
             ]
         }
     },
-    "359": {
+    "356": {
         "text": "อ่า",
         "start": 711.324,
         "duration": 0.14,
@@ -20863,12 +20843,12 @@
             "thai": "อ่า",
             "v": 2,
             "rtgs": "a",
-            "translation": "啊",
+            "translation": "啊（語氣詞）",
             "analysis": [
                 {
                     "word": "อ่า",
                     "type": "particle",
-                    "meaning": "表示思考或猶豫的語氣",
+                    "meaning": "語氣詞，表示思考或感嘆",
                     "more": "",
                     "rtgs": "a",
                     "parts": [],
@@ -20878,7 +20858,7 @@
             ]
         }
     },
-    "360": {
+    "357": {
         "text": "คนแพ้ง่ายๆเลยพี่จะมีสถานการณ์มาให้บทละครแมวน้อย",
         "start": 714.744,
         "duration": 3.88,
@@ -20886,8 +20866,8 @@
         "explanation": {
             "thai": "คนแพ้ง่ายๆเลยพี่จะมีสถานการณ์มาให้บทละครแมวน้อย",
             "v": 2,
-            "rtgs": "khon phae ngai ngai loei phi cha mi sathankan ma hai bot lakhon maeo noi",
-            "translation": "人很容易過敏，哥哥會帶來劇本情境給小貓。",
+            "rtgs": "khon phae ngai ngai loi phi cha mi sathanan kan ma hai bot lakhon maeo noi",
+            "translation": "輸的人很容易，姊姊會有情境給小貓的劇本",
             "analysis": [
                 {
                     "word": "คน",
@@ -20900,30 +20880,29 @@
                     "usage": "指人或人群。"
                 },
                 {
-                    "word": "แพ้ง่ายๆ",
+                    "word": "แพ้",
                     "type": "word",
-                    "meaning": "容易過敏",
-                    "more": "這裡用疊字表示強調",
-                    "rtgs": "phaeng ngai ngai",
-                    "parts": [
-                        {
-                            "word": "แพ้",
-                            "rtgs": "phaeng",
-                            "meaning": "輸、敗"
-                        },
-                        {
-                            "word": "ง่ายๆ",
-                            "rtgs": "ngai ngai",
-                            "meaning": "容易"
-                        }
-                    ],
-                    "senses": "容易輸、脆弱",
-                    "usage": "形容容易失敗或受傷害。"
+                    "meaning": "輸",
+                    "more": "",
+                    "rtgs": "phae",
+                    "parts": [],
+                    "senses": "過敏、反應",
+                    "usage": "指身體對某物產生過敏反應。"
+                },
+                {
+                    "word": "ง่ายๆ",
+                    "type": "word",
+                    "meaning": "很容易",
+                    "more": "",
+                    "rtgs": "ngai ngai",
+                    "parts": [],
+                    "senses": "簡單、容易",
+                    "usage": "形容事情不複雜，容易理解或完成。"
                 },
                 {
                     "word": "เลย",
                     "type": "particle",
-                    "meaning": "就、所以",
+                    "meaning": "強調語氣",
                     "more": "",
                     "rtgs": "loei",
                     "parts": [],
@@ -20933,7 +20912,7 @@
                 {
                     "word": "พี่",
                     "type": "word",
-                    "meaning": "哥哥",
+                    "meaning": "哥哥/姊姊（稱呼）",
                     "more": "",
                     "rtgs": "phi",
                     "parts": [],
@@ -20942,7 +20921,7 @@
                 },
                 {
                     "word": "จะ",
-                    "type": "particle",
+                    "type": "word",
                     "meaning": "將要",
                     "more": "",
                     "rtgs": "cha",
@@ -20963,7 +20942,7 @@
                 {
                     "word": "สถานการณ์",
                     "type": "word",
-                    "meaning": "情況、情境",
+                    "meaning": "情境",
                     "more": "",
                     "rtgs": "sathana kan",
                     "parts": [
@@ -21046,7 +21025,7 @@
             ]
         }
     },
-    "361": {
+    "358": {
         "text": "ข",
         "start": 718.624,
         "duration": 0.04,
@@ -21055,12 +21034,12 @@
             "thai": "ข",
             "v": 2,
             "rtgs": "kh",
-            "translation": "（無意義字）",
+            "translation": "ของ",
             "analysis": [
                 {
                     "word": "ข",
                     "type": "word",
-                    "meaning": "（無意義字）",
+                    "meaning": "ของ (縮寫)",
                     "more": "",
                     "rtgs": "kho",
                     "parts": [],
@@ -21070,7 +21049,7 @@
             ]
         }
     },
-    "362": {
+    "359": {
         "text": "องฉัน",
         "start": 718.664,
         "duration": 0.44,
@@ -21079,12 +21058,12 @@
             "thai": "องฉัน",
             "v": 2,
             "rtgs": "ong chan",
-            "translation": "我的",
+            "translation": "ของฉัน",
             "analysis": [
                 {
                     "word": "อง",
                     "type": "word",
-                    "meaning": "的（口語縮寫）",
+                    "meaning": "ของ (縮寫)",
                     "more": "",
                     "rtgs": "ngong",
                     "parts": [],
@@ -21104,7 +21083,7 @@
             ]
         }
     },
-    "363": {
+    "360": {
         "text": "แมวน้อยตัวนี้เหรอ",
         "start": 719.264,
         "duration": 1.12,
@@ -21112,7 +21091,7 @@
         "explanation": {
             "thai": "แมวน้อยตัวนี้เหรอ",
             "v": 2,
-            "rtgs": "maeo noi tua ni ror",
+            "rtgs": "maeo noi tua ni reo",
             "translation": "這隻小貓嗎？",
             "analysis": [
                 {
@@ -21168,7 +21147,7 @@
             ]
         }
     },
-    "364": {
+    "361": {
         "text": "วันนี้เรารับบทเป็นแมวน้อย",
         "start": 720.804,
         "duration": 1.44,
@@ -21177,7 +21156,7 @@
             "thai": "วันนี้เรารับบทเป็นแมวน้อย",
             "v": 2,
             "rtgs": "wan ni rao rap bot pen maeo noi",
-            "translation": "今天我們扮演小貓。",
+            "translation": "今天我們扮演小貓",
             "analysis": [
                 {
                     "word": "วันนี้",
@@ -21242,30 +21221,29 @@
                     "usage": "用作連繫動詞，表示狀態或身份的變化。"
                 },
                 {
-                    "word": "แมวน้อย",
+                    "word": "แมว",
                     "type": "word",
-                    "meaning": "小貓",
+                    "meaning": "貓",
                     "more": "",
-                    "rtgs": "maeo noi",
-                    "parts": [
-                        {
-                            "word": "แมว",
-                            "rtgs": "maeo",
-                            "meaning": "貓"
-                        },
-                        {
-                            "word": "น้อย",
-                            "rtgs": "noi",
-                            "meaning": "小、少"
-                        }
-                    ],
-                    "senses": "小貓、幼貓",
-                    "usage": "指年幼的貓。"
+                    "rtgs": "maeo",
+                    "parts": [],
+                    "senses": "貓",
+                    "usage": "指家貓或貓科動物。"
+                },
+                {
+                    "word": "น้อย",
+                    "type": "word",
+                    "meaning": "小的",
+                    "more": "",
+                    "rtgs": "noi",
+                    "parts": [],
+                    "senses": "小、少",
+                    "usage": "用於形容詞，表示尺寸小或數量少。"
                 }
             ]
         }
     },
-    "365": {
+    "362": {
         "text": "อ๊าย",
         "start": 722.304,
         "duration": 0.52,
@@ -21279,7 +21257,7 @@
                 {
                     "word": "อ๊าย",
                     "type": "particle",
-                    "meaning": "哎呀",
+                    "meaning": "哎呀（驚嘆）",
                     "more": "",
                     "rtgs": "ai",
                     "parts": [],
@@ -21289,7 +21267,7 @@
             ]
         }
     },
-    "366": {
+    "363": {
         "text": "ส่วนพี่เอมมี่เป็นมนุษย์",
         "start": 723.404,
         "duration": 1.2,
@@ -21297,8 +21275,8 @@
         "explanation": {
             "thai": "ส่วนพี่เอมมี่เป็นมนุษย์",
             "v": 2,
-            "rtgs": "suan phi emmi pen manut",
-            "translation": "至於艾咪哥哥是人類。",
+            "rtgs": "suan phi em mi pen manut",
+            "translation": "至於艾咪哥哥是人類",
             "analysis": [
                 {
                     "word": "ส่วน",
@@ -21313,7 +21291,7 @@
                 {
                     "word": "พี่",
                     "type": "word",
-                    "meaning": "哥哥",
+                    "meaning": "哥哥／姊姊",
                     "more": "",
                     "rtgs": "phi",
                     "parts": [],
@@ -21353,7 +21331,7 @@
             ]
         }
     },
-    "367": {
+    "364": {
         "text": "ทาสเออ",
         "start": 726.104,
         "duration": 0.26,
@@ -21362,7 +21340,7 @@
             "thai": "ทาสเออ",
             "v": 2,
             "rtgs": "that er",
-            "translation": "奴隸啊（語氣詞）",
+            "translation": "奴隸啊",
             "analysis": [
                 {
                     "word": "ทาส",
@@ -21377,7 +21355,7 @@
                 {
                     "word": "เออ",
                     "type": "particle",
-                    "meaning": "啊（語氣詞）",
+                    "meaning": "啊（語氣助詞）",
                     "more": "",
                     "rtgs": "oe",
                     "parts": [],
@@ -21387,7 +21365,7 @@
             ]
         }
     },
-    "368": {
+    "365": {
         "text": "มนุษย์คร้านแมวเหรอมนุษย์ทาสสรุปใครแพ้",
         "start": 726.444,
         "duration": 3.9,
@@ -21395,8 +21373,8 @@
         "explanation": {
             "thai": "มนุษย์คร้านแมวเหรอมนุษย์ทาสสรุปใครแพ้",
             "v": 2,
-            "rtgs": "manut khan maeo ror manut that sarup khrai phae",
-            "translation": "是懶惰的貓嗎？人類奴隸，總之誰輸了？",
+            "rtgs": "manut khan maeo reo manut that sarup khrai phae",
+            "translation": "人類懶惰貓嗎？人類奴隸總結誰輸？",
             "analysis": [
                 {
                     "word": "มนุษย์",
@@ -21461,7 +21439,7 @@
                 {
                     "word": "สรุป",
                     "type": "word",
-                    "meaning": "總之",
+                    "meaning": "總結",
                     "more": "",
                     "rtgs": "sarup",
                     "parts": [],
@@ -21491,7 +21469,7 @@
             ]
         }
     },
-    "369": {
+    "366": {
         "text": "นะ",
         "start": 730.364,
         "duration": 0.12,
@@ -21505,7 +21483,7 @@
                 {
                     "word": "นะ",
                     "type": "particle",
-                    "meaning": "呢",
+                    "meaning": "呢（語氣助詞）",
                     "more": "",
                     "rtgs": "na",
                     "parts": [],
@@ -21515,7 +21493,7 @@
             ]
         }
     },
-    "370": {
+    "367": {
         "text": "หัวเราะกันก่อน",
         "start": 733.464,
         "duration": 0.84,
@@ -21524,7 +21502,7 @@
             "thai": "หัวเราะกันก่อน",
             "v": 2,
             "rtgs": "hua ro kan kon",
-            "translation": "先一起笑一下",
+            "translation": "先笑一笑",
             "analysis": [
                 {
                     "word": "หัวเราะ",
@@ -21549,7 +21527,7 @@
                 },
                 {
                     "word": "กัน",
-                    "type": "particle",
+                    "type": "word",
                     "meaning": "一起",
                     "more": "",
                     "rtgs": "kan",
@@ -21570,7 +21548,7 @@
             ]
         }
     },
-    "371": {
+    "368": {
         "text": "ว่าแมวตัวนี้อ้อนไม่ผันไม่ให้ข้าว",
         "start": 735.264,
         "duration": 1.6,
@@ -21579,11 +21557,11 @@
             "thai": "ว่าแมวตัวนี้อ้อนไม่ผันไม่ให้ข้าว",
             "v": 2,
             "rtgs": "wa maeo tua ni on mai phan mai hai khao",
-            "translation": "說這隻貓不撒嬌不給飯",
+            "translation": "說這隻貓很撒嬌，不給飯吃",
             "analysis": [
                 {
                     "word": "ว่า",
-                    "type": "word",
+                    "type": "particle",
                     "meaning": "說",
                     "more": "",
                     "rtgs": "wa",
@@ -21604,7 +21582,7 @@
                 {
                     "word": "ตัว",
                     "type": "classifier",
-                    "meaning": "隻（量詞）",
+                    "meaning": "隻（動物量詞）",
                     "more": "",
                     "rtgs": "tua",
                     "parts": [],
@@ -21684,7 +21662,7 @@
             ]
         }
     },
-    "372": {
+    "369": {
         "text": "โอเค",
         "start": 736.904,
         "duration": 0.4,
@@ -21692,13 +21670,13 @@
         "explanation": {
             "thai": "โอเค",
             "v": 2,
-            "rtgs": "o ke",
-            "translation": "好（OK）",
+            "rtgs": "o-kay",
+            "translation": "好，ＯＫ",
             "analysis": [
                 {
                     "word": "โอเค",
                     "type": "name",
-                    "meaning": "好",
+                    "meaning": "ＯＫ",
                     "more": "",
                     "rtgs": "okay",
                     "parts": [],
@@ -21708,7 +21686,7 @@
             ]
         }
     },
-    "373": {
+    "370": {
         "text": "ขอเบียดกินอะไรอย่างเงี้ย",
         "start": 737.404,
         "duration": 1.54,
@@ -21717,7 +21695,7 @@
             "thai": "ขอเบียดกินอะไรอย่างเงี้ย",
             "v": 2,
             "rtgs": "kho biet kin arai yang ngia",
-            "translation": "請擠一下吃什麼之類的",
+            "translation": "想擠一擠吃點什麼之類的",
             "analysis": [
                 {
                     "word": "ขอ",
@@ -21782,7 +21760,7 @@
             ]
         }
     },
-    "374": {
+    "371": {
         "text": "เอาข้าวไปเลย",
         "start": 741.404,
         "duration": 0.54,
@@ -21791,7 +21769,7 @@
             "thai": "เอาข้าวไปเลย",
             "v": 2,
             "rtgs": "ao khao pai loei",
-            "translation": "直接拿飯去吧",
+            "translation": "把飯拿去吧",
             "analysis": [
                 {
                     "word": "เอา",
@@ -21826,7 +21804,7 @@
                 {
                     "word": "เลย",
                     "type": "particle",
-                    "meaning": "直接、馬上",
+                    "meaning": "馬上、直接",
                     "more": "",
                     "rtgs": "loei",
                     "parts": [],
@@ -21836,7 +21814,7 @@
             ]
         }
     },
-    "375": {
+    "372": {
         "text": "เป็นแมวน้อยของฉันห้าสี่สามสอง Action",
         "start": 742.584,
         "duration": 3.18,
@@ -21845,7 +21823,7 @@
             "thai": "เป็นแมวน้อยของฉันห้าสี่สามสอง Action",
             "v": 2,
             "rtgs": "pen maeo noi khong chan ha si sam song Action",
-            "translation": "是我的小貓五四三二 Action",
+            "translation": "是我的小貓，五四三二，開始",
             "analysis": [
                 {
                     "word": "เป็น",
@@ -21940,7 +21918,7 @@
                 {
                     "word": "Action",
                     "type": "name",
-                    "meaning": "Action（英文）",
+                    "meaning": "開始（英文）",
                     "more": "",
                     "rtgs": "Action",
                     "parts": [],
@@ -21950,7 +21928,7 @@
             ]
         }
     },
-    "376": {
+    "373": {
         "text": "เอาเสียงแมวหน่อย",
         "start": 748.304,
         "duration": 1.26,
@@ -21959,12 +21937,12 @@
             "thai": "เอาเสียงแมวหน่อย",
             "v": 2,
             "rtgs": "ao siang maeo noi",
-            "translation": "拿點貓叫聲",
+            "translation": "來點貓叫聲",
             "analysis": [
                 {
                     "word": "เอา",
                     "type": "word",
-                    "meaning": "拿",
+                    "meaning": "拿、來",
                     "more": "",
                     "rtgs": "ao",
                     "parts": [],
@@ -22004,7 +21982,7 @@
             ]
         }
     },
-    "377": {
+    "374": {
         "text": "ขอกินข้าวหน่อยครับขอกินข้าวง่ำ",
         "start": 750.884,
         "duration": 2.0,
@@ -22013,7 +21991,7 @@
             "thai": "ขอกินข้าวหน่อยครับขอกินข้าวง่ำ",
             "v": 2,
             "rtgs": "kho kin khao noi khrab kho kin khao ngam",
-            "translation": "請吃飯一下，請吃飯（模仿聲）",
+            "translation": "請讓我吃飯一下，請讓我吃飯（模仿聲）",
             "analysis": [
                 {
                     "word": "ขอ",
@@ -22110,7 +22088,7 @@
             ]
         }
     },
-    "378": {
+    "375": {
         "text": "ทะเลาะ",
         "start": 756.284,
         "duration": 0.48,
@@ -22118,7 +22096,7 @@
         "explanation": {
             "thai": "ทะเลาะ",
             "v": 2,
-            "rtgs": "tha lo",
+            "rtgs": "thalo",
             "translation": "吵架",
             "analysis": [
                 {
@@ -22134,7 +22112,7 @@
             ]
         }
     },
-    "379": {
+    "376": {
         "text": "เอาเสียงแมวใหม่ห้ามพูด",
         "start": 758.624,
         "duration": 1.16,
@@ -22143,12 +22121,12 @@
             "thai": "เอาเสียงแมวใหม่ห้ามพูด",
             "v": 2,
             "rtgs": "ao siang maeo mai ham phut",
-            "translation": "拿新的貓叫聲，禁止說話",
+            "translation": "來新的貓叫聲，不准說話",
             "analysis": [
                 {
                     "word": "เอา",
                     "type": "word",
-                    "meaning": "拿",
+                    "meaning": "拿、來",
                     "more": "",
                     "rtgs": "ao",
                     "parts": [],
@@ -22208,7 +22186,7 @@
             ]
         }
     },
-    "380": {
+    "377": {
         "text": "ห้ามพูด",
         "start": 759.824,
         "duration": 0.06,
@@ -22242,7 +22220,7 @@
             ]
         }
     },
-    "381": {
+    "378": {
         "text": "ห้ามพูด",
         "start": 759.884,
         "duration": 1.06,
@@ -22276,7 +22254,7 @@
             ]
         }
     },
-    "382": {
+    "379": {
         "text": "ห้ามพูดสากลได้พูดภาษาแมว",
         "start": 761.764,
         "duration": 1.34,
@@ -22285,7 +22263,7 @@
             "thai": "ห้ามพูดสากลได้พูดภาษาแมว",
             "v": 2,
             "rtgs": "ham phut sakon dai phut phasa maeo",
-            "translation": "禁止說國際語，可以說貓語",
+            "translation": "禁止說國語，可以說貓語",
             "analysis": [
                 {
                     "word": "ห้าม",
@@ -22300,7 +22278,7 @@
                 {
                     "word": "พูด",
                     "type": "word",
-                    "meaning": "說話",
+                    "meaning": "說",
                     "more": "",
                     "rtgs": "phut",
                     "parts": [],
@@ -22310,7 +22288,7 @@
                 {
                     "word": "สากล",
                     "type": "word",
-                    "meaning": "國際的",
+                    "meaning": "國際的，這裡指國語",
                     "more": "",
                     "rtgs": "sakon",
                     "parts": [],
@@ -22320,7 +22298,7 @@
                 {
                     "word": "ได้",
                     "type": "word",
-                    "meaning": "能夠",
+                    "meaning": "能，可以",
                     "more": "",
                     "rtgs": "dai",
                     "parts": [],
@@ -22330,7 +22308,7 @@
                 {
                     "word": "พูด",
                     "type": "word",
-                    "meaning": "說話",
+                    "meaning": "說",
                     "more": "",
                     "rtgs": "phut",
                     "parts": [],
@@ -22360,7 +22338,7 @@
             ]
         }
     },
-    "383": {
+    "380": {
         "text": "ดูเจ้าโน่นค่ะนู่น",
         "start": 764.764,
         "duration": 2.56,
@@ -22369,7 +22347,7 @@
             "thai": "ดูเจ้าโน่นค่ะนู่น",
             "v": 2,
             "rtgs": "du chao non kha nun",
-            "translation": "看那邊喔，那邊",
+            "translation": "看那邊那個（女性語氣）",
             "analysis": [
                 {
                     "word": "ดู",
@@ -22404,7 +22382,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，女性用",
+                    "meaning": "女性語氣詞",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -22424,7 +22402,7 @@
             ]
         }
     },
-    "384": {
+    "381": {
         "text": "โอเคเดี๋ยวไปกินข้าวกันดีกว่า",
         "start": 769.804,
         "duration": 1.4,
@@ -22432,7 +22410,7 @@
         "explanation": {
             "thai": "โอเคเดี๋ยวไปกินข้าวกันดีกว่า",
             "v": 2,
-            "rtgs": "ok diao pai kin khao kan di kwa",
+            "rtgs": "ok deiw pai kin khao kan di kwa",
             "translation": "好喔，待會去吃飯吧",
             "analysis": [
                 {
@@ -22448,7 +22426,7 @@
                 {
                     "word": "เดี๋ยว",
                     "type": "word",
-                    "meaning": "待會",
+                    "meaning": "待會兒",
                     "more": "",
                     "rtgs": "diao",
                     "parts": [],
@@ -22499,7 +22477,7 @@
                 {
                     "word": "ดีกว่า",
                     "type": "word",
-                    "meaning": "比較好，建議",
+                    "meaning": "比較好，表示建議",
                     "more": "",
                     "rtgs": "dika",
                     "parts": [
@@ -22520,7 +22498,7 @@
             ]
         }
     },
-    "385": {
+    "382": {
         "text": "ถ้าเป็นแมวจริงคงเดินไปหากินเองแล้ว",
         "start": 773.744,
         "duration": 1.6,
@@ -22528,8 +22506,8 @@
         "explanation": {
             "thai": "ถ้าเป็นแมวจริงคงเดินไปหากินเองแล้ว",
             "v": 2,
-            "rtgs": "tha pen maeo jing khong dooen pai ha kin eng laeo",
-            "translation": "如果真的是貓，應該會自己走去找東西吃了",
+            "rtgs": "tha pen maeo cing khong doen pai ha kin eng laew",
+            "translation": "如果是真的貓，應該會自己走去找東西吃了",
             "analysis": [
                 {
                     "word": "ถ้า",
@@ -22584,7 +22562,7 @@
                 {
                     "word": "เดิน",
                     "type": "word",
-                    "meaning": "走路",
+                    "meaning": "走",
                     "more": "",
                     "rtgs": "dern",
                     "parts": [],
@@ -22635,7 +22613,7 @@
                 {
                     "word": "แล้ว",
                     "type": "word",
-                    "meaning": "了（完成）",
+                    "meaning": "了（表示完成）",
                     "more": "",
                     "rtgs": "laeo",
                     "parts": [],
@@ -22645,7 +22623,7 @@
             ]
         }
     },
-    "386": {
+    "383": {
         "text": "สมบูรณ์ค่ะ",
         "start": 776.444,
         "duration": 0.74,
@@ -22653,13 +22631,13 @@
         "explanation": {
             "thai": "สมบูรณ์ค่ะ",
             "v": 2,
-            "rtgs": "somboon kha",
-            "translation": "完整的（女性說）",
+            "rtgs": "sombun kha",
+            "translation": "完整（女性語氣）",
             "analysis": [
                 {
                     "word": "สมบูรณ์",
                     "type": "word",
-                    "meaning": "完整的",
+                    "meaning": "完整，完美",
                     "more": "",
                     "rtgs": "sombun",
                     "parts": [],
@@ -22669,7 +22647,7 @@
                 {
                     "word": "ค่ะ",
                     "type": "particle",
-                    "meaning": "語氣詞，女性用",
+                    "meaning": "女性語氣詞",
                     "more": "",
                     "rtgs": "kha",
                     "parts": [],
@@ -22679,7 +22657,7 @@
             ]
         }
     },
-    "387": {
+    "384": {
         "text": "เย่ Cat Talk",
         "start": 779.364,
         "duration": 1.02,
@@ -22688,7 +22666,7 @@
             "thai": "เย่ Cat Talk",
             "v": 2,
             "rtgs": "ye Cat Talk",
-            "translation": "耶，Cat Talk（品牌名）",
+            "translation": "耶，Cat Talk（節目名）",
             "analysis": [
                 {
                     "word": "เย่",
@@ -22703,7 +22681,7 @@
                 {
                     "word": "Cat Talk",
                     "type": "name",
-                    "meaning": "Cat Talk（品牌名）",
+                    "meaning": "Cat Talk（節目名）",
                     "more": "",
                     "rtgs": "Cat Talk",
                     "parts": [],
@@ -22713,7 +22691,7 @@
             ]
         }
     },
-    "388": {
+    "385": {
         "text": "Bye",
         "start": 782.584,
         "duration": 0.08,
@@ -22727,7 +22705,7 @@
                 {
                     "word": "Bye",
                     "type": "name",
-                    "meaning": "再見（英文）",
+                    "meaning": "再見（英語）",
                     "more": "",
                     "rtgs": "Bye",
                     "parts": [],
