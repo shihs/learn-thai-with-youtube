@@ -1,4 +1,4 @@
-# GPT 解析：把字幕分段送給 OpenAI，取得每一句的拼音、翻譯與單字解析
+# GPT 解析：把字幕分段送給 OpenAI，取得每一句的拼音、翻譯與單字拆解
 import json
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -7,7 +7,24 @@ from functools import lru_cache
 from dotenv import load_dotenv
 from openai import AuthenticationError, OpenAI, PermissionDeniedError, RateLimitError
 
+from .analysis_check import check_analysis
+from .segmenter import tokenize
+from .storage import ANALYSIS_VERSION
+
 load_dotenv()
+
+MODEL = "gpt-4.1-mini"
+SYSTEM_PROMPT = "你是泰語老師，要以台灣繁體中文的角度進行語言教學。"
+
+# 同時送給 GPT 的請求數上限
+MAX_WORKERS = 5
+
+# SEGMENT_HINT 沒設定時的值：on 會把機器斷詞的結果附給 GPT 當參考
+SEGMENT_HINT_DEFAULT = "on"
+
+
+def segment_hint_enabled():
+    return os.getenv("SEGMENT_HINT", SEGMENT_HINT_DEFAULT).strip().lower() != "off"
 
 
 # 分段工具：每 N 行字幕切一段，每行帶著自己的 id
@@ -23,6 +40,7 @@ def split_transcript(transcript_with_time, max_lines=10):
 # Structured outputs：OpenAI 保證回傳內容符合 schema，不需要再處理格式錯誤的 JSON。
 # 每一句對應一個必填的 key（item_1、item_2...），GPT 沒辦法少回任何一句；
 # 如果用陣列，GPT 有時只回前幾句就結束。
+# 單字這裡只放會隨句子改變的欄位；拼音、組成這些不變的資料在詞庫（dictionary.py）。
 EXPLANATION_ITEM_SCHEMA = {
     "type": "object",
     "properties": {
@@ -30,15 +48,20 @@ EXPLANATION_ITEM_SCHEMA = {
         "translation": {"type": "string", "description": "整句的繁體中文翻譯"},
         "analysis": {
             "type": "array",
+            "description": "照原句順序、涵蓋整句的單字清單",
             "items": {
                 "type": "object",
                 "properties": {
-                    "word": {"type": "string", "description": "泰文單字或片語"},
-                    "rtgs": {"type": "string", "description": "該單字的 RTGS 拼音"},
-                    "meaning": {"type": "string", "description": "該單字的繁體中文意思"},
-                    "more": {"type": "string", "description": "用法或文法的補充說明"},
+                    "word": {"type": "string", "description": "一個泰文詞條，和原句裡的寫法完全相同"},
+                    "type": {
+                        "type": "string",
+                        "enum": ["word", "particle", "classifier", "name", "expression"],
+                        "description": "這個字在這一句裡的類型",
+                    },
+                    "meaning": {"type": "string", "description": "這個字在這一句裡的繁體中文意思，要簡短"},
+                    "more": {"type": "string", "description": "這一句特有的用法或句型補充，沒有就給空字串"},
                 },
-                "required": ["word", "rtgs", "meaning", "more"],
+                "required": ["word", "type", "meaning", "more"],
                 "additionalProperties": False,
             },
         },
@@ -48,24 +71,24 @@ EXPLANATION_ITEM_SCHEMA = {
 }
 
 
-@lru_cache(maxsize=None)
-def explanation_schema(count):
+def keyed_schema(name, item_schema, count):
     keys = [f"item_{n}" for n in range(1, count + 1)]
     return {
-        "name": f"thai_explanations_{count}",
+        "name": f"{name}_{count}",
         "strict": True,
         "schema": {
             "type": "object",
-            "properties": {key: {"$ref": "#/$defs/explanation"} for key in keys},
+            "properties": {key: {"$ref": "#/$defs/item"} for key in keys},
             "required": keys,
             "additionalProperties": False,
-            "$defs": {"explanation": EXPLANATION_ITEM_SCHEMA},
+            "$defs": {"item": item_schema},
         },
     }
 
 
-# 同時送給 GPT 的段數上限
-MAX_WORKERS = 5
+@lru_cache(maxsize=None)
+def explanation_schema(count):
+    return keyed_schema("thai_explanations", EXPLANATION_ITEM_SCHEMA, count)
 
 
 def is_fatal_error(e):
@@ -78,73 +101,105 @@ def is_fatal_error(e):
     return False
 
 
-# 分析函式：送給 GPT 逐段分析，回傳 {id: 解析}
-def gpt_teacher(client, items):
-    # 送出時用 item_1、item_2... 當 key，回來後再對回各句的 id
-    keyed_items = {f"item_{n}": item for n, item in enumerate(items, start=1)}
-    thai_by_key = {key: item["thai"] for key, item in keyed_items.items()}
-
-    prompt = f"""
-        下面是一個 JSON 物件，每個 key（item_1、item_2...）對應一句泰文字幕。
-        幫我分析每一句，並解析和說明用法：整句的拼音（RTGS）、繁體中文翻譯、逐字的文法解析（附上單字的拼音），拼音的每個單字中間要空格。
-
-        規則：
-        - 每個 key 都要回傳一筆結果，放在相同的 key 底下。
-        - 逐句分析，不要合併或拆開句子，也不要省略任何一句。
-        - 如果泰文裡面有換行，rtgs 和 translation 也要在對應的位置換行。
-
-        這是要分析的泰文：
-        {json.dumps(thai_by_key, ensure_ascii=False)}
-        """
-
+def ask_gpt(client, prompt, schema):
+    """送一個請求，回傳解析好的 JSON。無法重試的錯誤往外丟，其他錯誤印出來並回傳空的結果"""
     try:
         response = client.chat.completions.create(
-            model="gpt-4.1-mini",
+            model=MODEL,
             messages=[
-                {"role": "system", "content": "你是泰語老師，要以台灣繁體中文的角度進行語言教學。"},
+                {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt},
             ],
             temperature=0,
-            response_format={"type": "json_schema", "json_schema": explanation_schema(len(items))},
+            response_format={"type": "json_schema", "json_schema": schema},
         )
-        results = json.loads(response.choices[0].message.content)
+        return json.loads(response.choices[0].message.content)
     except Exception as e:
         if is_fatal_error(e):
             raise
-        # 單一段失敗（網路、速率限制、回應被截斷）不影響其他段，缺的 id 會在 analyze_chunk 重試
-        print(f"⚠️ GPT 分析失敗：{e}")
+        # 單一請求失敗（網路、速率限制、回應被截斷）不影響其他請求
+        print(f"⚠️ GPT 請求失敗：{e}")
         return {}
 
-    return {
-        item["id"]: {"thai": item["thai"], **results[key]}
-        for key, item in keyed_items.items()
-        if key in results
-    }
+
+def build_payload(items, hint):
+    """送給 GPT 的內容：{item_n: {"thai": 原句, "tokens": 機器斷詞}}，hint 關掉時沒有 tokens"""
+    payload = {}
+    for n, item in enumerate(items, start=1):
+        entry = {"thai": item["thai"]}
+        if hint:
+            entry["tokens"] = tokenize(item["thai"])
+        payload[f"item_{n}"] = entry
+    return payload
 
 
-def analyze_chunk(client, chunk):
-    result = gpt_teacher(client, chunk)
+def build_prompt(payload, hint):
+    hint_rule = (
+        "\n- tokens 是機器斷詞的結果，只能當參考：人名常被切碎、慣用語常被拆散，要自己合併或修正。" if hint else ""
+    )
+    return f"""下面是一個 JSON 物件，每個 key（item_1、item_2...）對應一句泰文字幕（thai）。
+幫我分析每一句：整句的拼音（RTGS，單字之間空格）、繁體中文翻譯，以及把整句拆成單字的清單（analysis）。
+
+拆單字的規則：
+- 以字典詞條為單位：會是泰語字典裡一個詞條的東西就是一筆。
+- 照原句的順序列出每一個詞，不能漏，也不能改字；所有 word 接起來要等於原句。
+- 複合詞（例如 เครื่องเขียน）和固定說法、慣用語（例如 ไม่เป็นไร）整個一筆。
+- 語氣詞、量詞各自一筆。人名、品牌、外文整個一筆，不要拆。
+- 數字和時間照詞拆開（例如 สองทุ่มครึ่ง 拆成 สอง、ทุ่ม、ครึ่ง）。
+- 不可以把片語或子句當成一筆。
+- type：一般單字（包含複合詞、疊字）是 word，語氣詞是 particle，量詞是 classifier，人名品牌外文是 name，固定說法和慣用語是 expression。
+- meaning：這個字在這一句裡的意思，要簡短。
+- more：只有這一句有特別的用法或句型時才寫，否則給空字串。{hint_rule}
+
+其他規則：
+- 每個 key 都要回傳一筆結果，放在相同的 key 底下。
+- 逐句分析，不要合併或拆開句子，也不要省略任何一句。
+- 如果泰文裡面有換行，rtgs 和 translation 也要在對應的位置換行。
+
+這是要分析的泰文：
+{json.dumps(payload, ensure_ascii=False)}"""
+
+
+# 分析函式：送給 GPT 逐段分析，回傳 {id: 解析}
+def gpt_teacher(client, items, hint):
+    # 送出時用 item_1、item_2... 當 key，回來後再對回各句的 id
+    payload = build_payload(items, hint)
+    results = ask_gpt(client, build_prompt(payload, hint), explanation_schema(len(items)))
+
+    explanations = {}
+    for key, item in zip(payload, items):
+        if key not in results:
+            continue
+        # GPT 偶爾會回空白的單字，留著的話詞庫永遠查不到它
+        analysis = [word for word in results[key]["analysis"] if word["word"].strip()]
+        explanations[item["id"]] = {"thai": item["thai"], "v": ANALYSIS_VERSION, **results[key], "analysis": analysis}
+    return explanations
+
+
+def analyze_chunk(client, chunk, hint):
+    result = gpt_teacher(client, chunk, hint)
 
     # 沒有回傳的 id 只重試一次
     missing = [item for item in chunk if item["id"] not in result]
     if missing:
         print(f"⚠️ 有 {len(missing)} 句沒有解析，重試中...")
-        result.update(gpt_teacher(client, missing))
+        result.update(gpt_teacher(client, missing, hint))
 
     return result
 
 
 # 主流程：自動分段、並行送出並彙整，回傳 {id: 解析}
-# cached：之前已經分析過的 {id: 解析}，泰文內容沒變的句子不會重送
+# cached：之前已經分析過的 {id: 解析}，泰文內容沒變、版本也相同的句子不會重送
 # on_progress(目前的結果, 總句數)：每完成一段呼叫一次
-def analyze_long_text(transcript_with_time, max_lines=10, cached=None, on_progress=None):
+# stats：給一個 dict 的話，會填入第一輪沒通過檢查的句數與重送後仍沒通過的句數
+def analyze_long_text(transcript_with_time, max_lines=10, cached=None, on_progress=None, stats=None):
     lines = {line_id: snippet["text"].strip() for line_id, snippet in transcript_with_time.items()}
     total = sum(1 for text in lines.values() if text)
 
     all_results = {
         line_id: explanation
         for line_id, explanation in (cached or {}).items()
-        if lines.get(line_id) and explanation.get("thai") == lines[line_id]
+        if lines.get(line_id) and explanation.get("thai") == lines[line_id] and explanation.get("v") == ANALYSIS_VERSION
     }
     todo = {line_id: snippet for line_id, snippet in transcript_with_time.items() if line_id not in all_results}
     chunks = split_transcript(todo, max_lines=max_lines)
@@ -152,20 +207,50 @@ def analyze_long_text(transcript_with_time, max_lines=10, cached=None, on_progre
     if on_progress:
         on_progress(all_results, total)
 
-    if chunks:
-        # 速率限制交給 client 自動退避重試
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), max_retries=5)
-        executor = ThreadPoolExecutor(max_workers=MAX_WORKERS)
-        try:
-            futures = [executor.submit(analyze_chunk, client, chunk) for chunk in chunks]
+    hint = segment_hint_enabled()
+    client = None
+    executor = ThreadPoolExecutor(max_workers=MAX_WORKERS)
+    first_failed = still_failed = 0
+    try:
+        if chunks:
+            # 速率限制交給 client 自動退避重試
+            client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), max_retries=5)
+            futures = [executor.submit(analyze_chunk, client, chunk, hint) for chunk in chunks]
             for future in as_completed(futures):
                 all_results.update(future.result())
                 if on_progress:
                     on_progress(all_results, total)
-        finally:
-            # 遇到無法重試的錯誤時，還沒開始的段不要再送
-            executor.shutdown(wait=False, cancel_futures=True)
 
+        # 第二輪：沒通過檢查、也還沒重送過的句子，各自單獨重送一次
+        failed = [
+            {"id": line_id, "thai": explanation["thai"]}
+            for line_id, explanation in all_results.items()
+            if not explanation.get("resent") and check_analysis(explanation["thai"], explanation["analysis"])
+        ]
+        first_failed = len(failed)
+        if failed:
+            print(f"⚠️ 有 {first_failed} 句沒通過檢查，重送中...")
+            client = client or OpenAI(api_key=os.getenv("OPENAI_API_KEY"), max_retries=5)
+            futures = {executor.submit(gpt_teacher, client, [item], hint): item for item in failed}
+            for future in as_completed(futures):
+                line_id = futures[future]["id"]
+                retry = future.result().get(line_id)
+                problems = check_analysis(retry["thai"], retry["analysis"]) if retry else ["沒有回應"]
+                if problems:
+                    # 保留第一次的結果，並記下已經重送過，之後重跑不再花錢
+                    still_failed += 1
+                    all_results[line_id] = {**all_results[line_id], "resent": True}
+                    print(f"⚠️ 第 {line_id} 句重送後仍沒通過檢查：{'；'.join(problems)}")
+                else:
+                    all_results[line_id] = retry
+            if on_progress:
+                on_progress(all_results, total)
+    finally:
+        # 遇到無法重試的錯誤時，還沒開始的請求不要再送
+        executor.shutdown(wait=False, cancel_futures=True)
+
+    if stats is not None:
+        stats.update(first_failed=first_failed, still_failed=still_failed)
     if len(all_results) < total:
         print(f"⚠️ 共有 {total - len(all_results)} 句沒有解析")
     return all_results
