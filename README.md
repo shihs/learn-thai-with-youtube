@@ -11,6 +11,7 @@
 ## 功能
 
 - **同步字幕**：播放時顯示目前這句的泰文、拼音、翻譯和單字解析。
+- **單字卡**：整句拆成一個個字典詞條，標出語氣詞、量詞、專有名詞和固定說法，複合詞會列出組成；每張卡片可以另開 [Forvo](https://forvo.com/) 聽真人發音。
 - **逐字稿**：列出整部影片的每一句，點任一句跳到該時間；也可以用「上一句／重播／下一句」。
 - **AI 朗讀**：按「唸給我聽」，用 ElevenLabs 的語音把目前這句唸出來。
 - **影片庫**：列出所有已經有字幕的影片，可用標題搜尋，並標示解析是否完整。
@@ -30,6 +31,8 @@ ELEVENLABS_API_KEY=你的 ElevenLabs 金鑰
 - `ELEVENLABS_API_KEY`：兩個地方會用到。影片沒有手動上傳的泰文字幕時，用來把聲音轉成文字（金鑰需要 Speech to Text 權限）；按「唸給我聽」時，用來產生語音（金鑰需要 Text to Speech 權限）。
 
 朗讀用的聲音可以在 `.env` 加上 `ELEVENLABS_VOICE_ID=聲音 ID` 來更換。
+
+解析時預設會先用 [PyThaiNLP](https://pythainlp.org/) 做機器斷詞，把結果附給 GPT 當參考。想關掉可以在 `.env` 加上 `SEGMENT_HINT=off`（GPT 回來的結果仍然會用機器斷詞檢查）。
 
 只看已經抓好的影片不會用到任何金鑰。
 
@@ -95,7 +98,10 @@ npm run dev
 │   ├── jobs.py              抓取任務的流程與進度
 │   ├── youtube.py           向 YouTube 抓字幕、查影片標題
 │   ├── elevenlabs_api.py    ElevenLabs 語音轉文字與 SRT 解析
-│   ├── gpt_teacher.py       把字幕分段送給 OpenAI 產生解析
+│   ├── gpt_teacher.py       送給 OpenAI：逐句解析、替詞庫查沒看過的字
+│   ├── segmenter.py         用 PyThaiNLP 做機器斷詞
+│   ├── analysis_check.py    檢查單字有沒有涵蓋整句、有沒有拆開
+│   ├── dictionary.py        詞庫的讀寫與合併
 │   ├── tts.py               用 ElevenLabs 把一句字幕唸出來
 │   └── storage.py           所有資料檔的位置與讀寫
 ├── frontend/                前端（React + Vite + Tailwind）
@@ -104,7 +110,10 @@ npm run dev
 ├── data/                    所有資料（見下方）
 ├── Dockerfile               後端的映像檔
 ├── docker-compose.yml       一次啟動前後端
+├── scripts/                 對照實驗用的腳本
+├── tests/                   後端的測試（pytest）
 ├── requirements.txt         後端的 Python 套件
+├── requirements-dev.txt     開發用的套件（測試）
 └── .env                     API 金鑰（自己建立）
 ```
 
@@ -116,7 +125,8 @@ npm run dev
 |---|---|
 | `subtitles/{id}.json` | 最終給前端用的字幕，每一句含時間與解析 |
 | `transcripts/{id}.json` | 抓回來的原始字幕，不含解析 |
-| `explanations/{id}.json` | GPT 逐句解析的快取 |
+| `explanations/{id}.json` | GPT 逐句解析的快取（整句的拼音、翻譯、每個字在這句的意思） |
+| `dictionary.json` | 詞庫：每個單字的拼音、組成、常見意思與用法，所有影片共用 |
 | `elevenlabs/{id}.json` | ElevenLabs 的原始轉錄回應 |
 | `tts/{hash}.mp3` | 朗讀語音的快取，同一句只會產生一次 |
 | `video_titles.json` | 影片標題的快取 |
@@ -131,10 +141,23 @@ npm run dev
    - 本機已經存過這部影片的字幕就直接使用。
    - 否則向 YouTube 要手動上傳的泰文字幕。
    - 影片沒有手動泰文字幕時，改用 ElevenLabs 把聲音轉成文字。
-2. **產生解析**：字幕每 10 句切成一段，同時送 5 段給 OpenAI。每完成一段就存進快取。
-3. **合併存檔**：把解析貼回對應的句子，寫入 `data/subtitles/`。
+2. **逐句解析**：字幕每 10 句切成一段，同時送 5 段給 OpenAI，取得整句的拼音、翻譯，以及拆成單字後每個字在這句的意思。每完成一段就存進快取。
+3. **檢查**：用機器斷詞確認單字涵蓋整句，而且沒有把片語當成一個字。沒通過的句子會單獨重送一次。
+4. **查詞**：詞庫裡沒有的字每 40 個一批送給 OpenAI，取得拼音、組成、常見意思與用法，寫進詞庫。看過的字之後每部影片都直接沿用，所以影片越多，這一步越快。
+5. **合併存檔**：把逐句解析和詞庫合併，寫入 `data/subtitles/`。
 
 快取以「句子編號加上泰文內容」為準：內容沒變的句子不會重新送出，所以重跑只會處理缺少或改變的部分。
+
+解析的格式有版本號。格式更新後，舊影片在影片庫會顯示為解析未完成，對它按一次「抓取字幕」就會用新格式重跑；重跑之前舊的解析照常顯示。
+
+## 測試
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest
+```
+
+測試不會連到 OpenAI。
 
 ## 後端 API
 
@@ -155,3 +178,5 @@ npm run dev
 - **多行字幕的拼音換行不一定和原文對齊**，內容都在，只是不會剛好一行對一行。
 - **抓取進度只存在記憶體**：後端重啟後進行中的任務會消失，再按一次「抓取字幕」會從快取接續。
 - **想調整抓取速度**：改 `backend/gpt_teacher.py` 的 `MAX_WORKERS`（同時送出的段數）。
+- **單字卡和整句的拼音偶爾寫法不同**：單字卡的拼音來自詞庫，整句的拼音是 GPT 另外產生的。
+- **同形異音字共用一筆詞庫資料**：詞庫以泰文拼法區分單字，拼法相同但讀音不同的字不會分開。

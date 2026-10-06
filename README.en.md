@@ -13,6 +13,7 @@ The interface and the generated explanations are in Traditional Chinese: the app
 ## Features
 
 - **Synced subtitles**: the current line's Thai text, romanization, translation and word breakdown update as the video plays.
+- **Word cards**: each line is split into dictionary words. Particles, classifiers, proper nouns and fixed expressions are labeled, compound words list their parts, and every card links to [Forvo](https://forvo.com/) to hear native speakers.
 - **Transcript**: every line of the video in a list; click any line to jump to it, or use the previous / replay / next buttons.
 - **Read aloud**: press 「唸給我聽」 (read it to me) to hear the current line spoken by an ElevenLabs voice.
 - **Library**: all videos that already have subtitles, searchable by title, with a badge on videos whose explanations are incomplete.
@@ -32,6 +33,8 @@ ELEVENLABS_API_KEY=your ElevenLabs key
 - `ELEVENLABS_API_KEY`: used in two places. When a video has no manually uploaded Thai subtitles, it transcribes the audio (the key needs the Speech to Text permission). When you press 「唸給我聽」, it generates the speech (the key needs the Text to Speech permission).
 
 To change the voice used for reading aloud, add `ELEVENLABS_VOICE_ID=<voice id>` to `.env`.
+
+By default the backend tokenizes each line with [PyThaiNLP](https://pythainlp.org/) and passes the result to GPT as a hint. Add `SEGMENT_HINT=off` to `.env` to turn this off (GPT's output is still checked against the tokenizer).
 
 Watching videos that have already been processed needs neither key.
 
@@ -99,7 +102,10 @@ A video of about 500 lines takes roughly 5 minutes. If a run fails partway (for 
 │   ├── jobs.py              The fetch job pipeline and its progress
 │   ├── youtube.py           Fetches subtitles and video titles from YouTube
 │   ├── elevenlabs_api.py    ElevenLabs speech-to-text and SRT parsing
-│   ├── gpt_teacher.py       Sends subtitles to OpenAI in chunks for explanations
+│   ├── gpt_teacher.py       Calls OpenAI: per-line analysis and dictionary lookups
+│   ├── segmenter.py         Word tokenization with PyThaiNLP
+│   ├── analysis_check.py    Checks that the words cover the line and are split finely enough
+│   ├── dictionary.py        Reads, writes and merges the word dictionary
 │   ├── tts.py               Speaks one subtitle line with ElevenLabs
 │   └── storage.py           Where every data file lives, and reading/writing them
 ├── frontend/                Frontend (React + Vite + Tailwind)
@@ -108,7 +114,10 @@ A video of about 500 lines takes roughly 5 minutes. If a run fails partway (for 
 ├── data/                    All data (see below)
 ├── Dockerfile               Backend image
 ├── docker-compose.yml       Starts backend and frontend together
+├── scripts/                 Script for comparing segmentation variants
+├── tests/                   Backend tests (pytest)
 ├── requirements.txt         Backend Python packages
+├── requirements-dev.txt     Development packages (tests)
 └── .env                     API keys (create it yourself)
 ```
 
@@ -120,7 +129,8 @@ Each video's files are named after its YouTube video ID.
 |---|---|
 | `subtitles/{id}.json` | The finished subtitles the frontend uses: every line with timing and explanation |
 | `transcripts/{id}.json` | The raw fetched subtitles, without explanations |
-| `explanations/{id}.json` | Cache of GPT's per-line explanations |
+| `explanations/{id}.json` | Cache of GPT's per-line analysis (romanization, translation, and what each word means in that line) |
+| `dictionary.json` | Word dictionary shared by all videos: romanization, parts, common meanings and usage |
 | `elevenlabs/{id}.json` | The raw ElevenLabs transcription response |
 | `tts/{hash}.mp3` | Cache of read-aloud audio; each line is generated once |
 | `video_titles.json` | Cache of video titles |
@@ -132,13 +142,26 @@ This repo ships the finished subtitles for two short videos only (`subtitles/1Sk
 ## What happens when a video is fetched
 
 1. **Get the subtitles**
-   - If subtitles for this video are already stored locally, use them.
-   - Otherwise ask YouTube for manually uploaded Thai subtitles.
-   - If the video has none, transcribe the audio with ElevenLabs instead.
-2. **Generate explanations**: the subtitles are split into chunks of 10 lines, and 5 chunks are sent to OpenAI at a time. Each finished chunk is written to the cache.
-3. **Merge and save**: each explanation is attached to its line and the result is written to `data/subtitles/`.
+   - Subtitles already saved locally are used as they are.
+   - Otherwise, manually uploaded Thai subtitles are requested from YouTube.
+   - If the video has none, ElevenLabs transcribes the audio.
+2. **Analyze each line**: subtitles are cut into chunks of 10 lines and 5 chunks are sent to OpenAI at a time. Each line gets its romanization, translation and a list of words with their meaning in that line. Every finished chunk is saved to the cache.
+3. **Check**: the tokenizer verifies that the words cover the whole line and that no phrase was returned as a single word. Lines that fail are resent once, on their own.
+4. **Look up words**: words missing from the dictionary are sent to OpenAI 40 at a time to get their romanization, parts, common meanings and usage. Known words are reused for every later video, so this step gets faster as the library grows.
+5. **Merge and save**: the per-line analysis and the dictionary are merged and written to `data/subtitles/`.
 
-The cache is keyed on the line number plus the Thai text. Lines whose text has not changed are not sent again, so a re-run only handles what is missing or different.
+The cache is keyed on line number plus Thai text: unchanged lines are not sent again, so a rerun only handles what is missing or changed.
+
+The analysis format is versioned. After a format change, older videos show as incomplete in the library; pressing 「抓取字幕」 on one re-analyzes it in the new format, and the old analysis stays visible until then.
+
+## Tests
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest
+```
+
+The tests never call OpenAI.
 
 ## Backend API
 
@@ -159,3 +182,5 @@ With the backend running, <http://localhost:8000/docs> has interactive API docs.
 - **Line breaks in the romanization of multi-line subtitles do not always match the original.** Nothing is missing, but the lines may not pair up one to one.
 - **Job progress lives in memory only.** Restarting the backend drops running jobs; pressing 「抓取字幕」 again resumes from the cache.
 - **To change fetch speed**, edit `MAX_WORKERS` (chunks sent at once) in `backend/gpt_teacher.py`.
+- **Word cards and the full line can romanize a word differently.** Card romanization comes from the dictionary, while the line's romanization is generated separately by GPT.
+- **Homographs share one dictionary entry.** The dictionary is keyed on Thai spelling, so words spelled the same but pronounced differently are not kept apart.
