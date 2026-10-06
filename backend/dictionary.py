@@ -1,6 +1,8 @@
 # 詞庫：每個單字不隨句子改變的資料（拼音、組成、常見意思、用法），所有影片共用。
 # 一個字只問 GPT 一次，之後每部影片都直接沿用。
+import os
 import threading
+import time
 
 from .storage import dictionary_file, load_json_file, save_json_file
 
@@ -14,8 +16,16 @@ _lock = threading.RLock()
 def load_dictionary():
     """{泰文單字: {"rtgs", "parts", "senses", "usage"}}；檔案不存在或壞掉時是空的"""
     with _lock:
-        saved = load_json_file(dictionary_file())
-    return saved if isinstance(saved, dict) else {}
+        path = dictionary_file()
+        saved = load_json_file(path)
+        if isinstance(saved, dict):
+            return saved
+        if os.path.exists(path):
+            # 詞庫是花錢累積的，讀不出來時留著原檔讓人救，不要直接被新的蓋掉
+            backup = f"{path}.corrupt-{time.strftime('%Y%m%d-%H%M%S')}"
+            os.replace(path, backup)
+            print(f"⚠️ 詞庫檔讀不出來，已改名保留為 {backup}，這次從空的詞庫開始")
+        return {}
 
 
 def add_entries(entries):

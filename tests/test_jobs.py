@@ -124,3 +124,29 @@ def test_dictionary_stage_is_reported(video, monkeypatch):
     jobs.long_analyze_and_save(VIDEO_ID)
 
     assert stages[-1] == {"status": "running", "stage": "dictionary", "done": 0, "total": 4, "message": "建立詞庫中"}
+
+
+def test_fatal_error_during_lookup_keeps_paid_analysis_for_the_rerun(video, monkeypatch):
+    class OutOfQuota(Exception):
+        pass
+
+    def respond_until_lookup(payload):
+        if "word" in payload["item_1"]:
+            raise OutOfQuota("額度用完")
+        return respond(payload)
+
+    monkeypatch.setattr(gpt_teacher, "is_fatal_error", lambda e: isinstance(e, OutOfQuota))
+    install(monkeypatch, respond_until_lookup)
+    jobs.run_job(VIDEO_ID)
+
+    assert jobs.jobs[VIDEO_ID]["status"] == "error"
+    assert len(storage.load_gpt_cache(VIDEO_ID)) == 2
+
+    _, should_run = jobs.start_job(VIDEO_ID)
+    assert should_run
+    client = install(monkeypatch, respond)
+    jobs.run_job(VIDEO_ID)
+
+    assert all("word" in call["item_1"] for call in client.calls)  # 句子沒有重新付費
+    assert jobs.jobs[VIDEO_ID]["status"] == "done"
+    assert storage.is_subtitle_complete(VIDEO_ID)

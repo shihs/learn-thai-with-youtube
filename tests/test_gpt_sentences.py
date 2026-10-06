@@ -54,7 +54,8 @@ def no_client(monkeypatch):
 
 def test_hint_defaults_to_on(monkeypatch):
     monkeypatch.delenv("SEGMENT_HINT", raising=False)
-    assert gpt_teacher.segment_hint_enabled() is (gpt_teacher.SEGMENT_HINT_DEFAULT == "on")
+    # 對照實驗（103 句）：on 最後沒通過檢查 3 句、off 8 句，所以預設開啟
+    assert gpt_teacher.segment_hint_enabled() is True
 
 
 def test_hint_follows_environment(monkeypatch):
@@ -178,3 +179,39 @@ def test_progress_is_reported_with_results_and_total(use_client):
     )
     assert seen[0] == (0, 2)
     assert seen[-1] == (2, 2)
+
+
+def test_resend_without_a_response_is_tried_again_on_the_next_run(use_client):
+    attempts = []
+
+    def respond(payload):
+        attempts.append(len(payload))
+        if len(attempts) == 2:
+            raise RuntimeError("網路斷線")
+        return respond_with(BAD if len(attempts) == 1 else GOOD)(payload)
+
+    use_client(respond)
+    stats = {}
+    results = gpt_teacher.analyze_long_text(transcript("มาแล้ว"), stats=stats)
+    assert "resent" not in results[0]
+    assert stats == {"first_failed": 1, "still_failed": 1}
+
+    # 下次重跑會再重送一次，這次有回應就換成正確的拆法
+    results = gpt_teacher.analyze_long_text(transcript("มาแล้ว"), cached=results)
+    assert attempts == [1, 1, 1]
+    assert [item["word"] for item in results[0]["analysis"]] == ["มา", "แล้ว"]
+
+
+def test_symbol_only_line_is_analyzed_once_and_never_resent(use_client, monkeypatch):
+    client = use_client(lambda payload: {key: result([]) for key in payload})
+    stats = {}
+    results = gpt_teacher.analyze_long_text(transcript("♪♪"), stats=stats)
+    assert len(client.calls) == 1
+    assert results[0]["analysis"] == []
+    assert stats == {"first_failed": 0, "still_failed": 0}
+
+    def fail(**kwargs):
+        raise AssertionError("不應該呼叫 OpenAI")
+
+    monkeypatch.setattr(gpt_teacher, "OpenAI", fail)
+    assert gpt_teacher.analyze_long_text(transcript("♪♪"), cached=results) == results

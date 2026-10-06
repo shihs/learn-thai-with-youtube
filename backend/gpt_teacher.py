@@ -236,7 +236,12 @@ def analyze_long_text(transcript_with_time, max_lines=10, cached=None, on_progre
             for future in as_completed(futures):
                 line_id = futures[future]["id"]
                 retry = future.result().get(line_id)
-                problems = check_analysis(retry["thai"], retry["analysis"]) if retry else ["沒有回應"]
+                if retry is None:
+                    # 沒有回應（網路、回應被截斷）不算重送過，下次重跑會再試
+                    still_failed += 1
+                    print(f"⚠️ 第 {line_id} 句重送沒有回應")
+                    continue
+                problems = check_analysis(retry["thai"], retry["analysis"])
                 if problems:
                     # 保留第一次的結果，並記下已經重送過，之後重跑不再花錢
                     still_failed += 1

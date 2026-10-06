@@ -48,3 +48,20 @@ def test_list_counts_only_current_explanations(data_dir):
 
 def test_dictionary_file_is_inside_data_dir(data_dir):
     assert storage.dictionary_file() == f"{data_dir}/dictionary.json"
+
+
+def test_interrupted_write_keeps_the_previous_file(data_dir, monkeypatch):
+    path = storage.dictionary_file()
+    storage.save_json_file(path, {"มา": 1})
+
+    def broken_dump(content, f, **kwargs):
+        f.write('{"มา": 1, "แล้')  # 寫到一半就中斷
+        raise KeyboardInterrupt
+
+    monkeypatch.setattr(storage.json, "dump", broken_dump)
+    try:
+        storage.save_json_file(path, {"มา": 1, "แล้ว": 2})
+    except KeyboardInterrupt:
+        pass
+    monkeypatch.undo()
+    assert storage.load_json_file(path) == {"มา": 1}

@@ -60,8 +60,11 @@ def load_json_file(file_name):
 
 def save_json_file(file_name, json_content):
     os.makedirs(os.path.dirname(file_name), exist_ok=True)
-    with open(file_name, "w", encoding="utf-8") as f:
+    # 先寫到暫存檔再換上去：寫到一半被中斷時，原本的檔案不會壞掉
+    temp_name = f"{file_name}.tmp"
+    with open(temp_name, "w", encoding="utf-8") as f:
         json.dump(json_content, f, ensure_ascii=False, indent=4)
+    os.replace(temp_name, file_name)
 
 
 def is_subtitle_complete(video_id):

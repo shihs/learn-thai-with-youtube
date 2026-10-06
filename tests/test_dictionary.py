@@ -123,3 +123,14 @@ def test_merge_does_not_modify_its_input():
     original = explanation("มา", "มา")
     merge_explanation(original, {"มา": entry("ma")})
     assert "rtgs" not in original["analysis"][0]
+
+
+def test_corrupt_file_is_kept_as_a_backup_instead_of_overwritten(data_dir, capsys):
+    (data_dir / "dictionary.json").write_text('{"มา": {"rtgs": "ma"', encoding="utf-8")
+    add_entries({"แล้ว": entry("laeo")})
+
+    backups = list(data_dir.glob("dictionary.json.corrupt-*"))
+    assert len(backups) == 1
+    assert backups[0].read_text(encoding="utf-8") == '{"มา": {"rtgs": "ma"'
+    assert load_dictionary() == {"แล้ว": entry("laeo")}
+    assert "dictionary.json.corrupt-" in capsys.readouterr().out
