@@ -134,7 +134,7 @@ npm run dev
 
 `subtitles/` 是成品，其餘都是為了避免重複連線或重複付費而保留的中間結果。
 
-這個 repo 只附兩部短影片的成品（`subtitles/1Sk8kiYfZGg.json`、`subtitles/7tMkVWSWePg.json`）當範例，其餘資料不在版本控制裡，抓取影片時會自動產生。
+這個 repo 只附兩部影片的成品（`subtitles/1Sk8kiYfZGg.json`、`subtitles/h1r8CxHJnnc.json`）當範例，其餘資料不在版本控制裡，抓取影片時會自動產生。
 
 ## 抓取一部影片時發生什麼事
 

@@ -138,7 +138,7 @@ Each video's files are named after its YouTube video ID.
 
 `subtitles/` is the end product. Everything else is intermediate output kept to avoid repeating network calls or paying twice.
 
-This repo ships the finished subtitles for two short videos only (`subtitles/1Sk8kiYfZGg.json` and `subtitles/7tMkVWSWePg.json`) as samples. The rest of the data is not under version control and is generated when you fetch a video.
+This repo ships the finished subtitles for two videos only (`subtitles/1Sk8kiYfZGg.json` and `subtitles/h1r8CxHJnnc.json`) as samples. The rest of the data is not under version control and is generated when you fetch a video.
 
 ## What happens when a video is fetched
 
