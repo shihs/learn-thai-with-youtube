@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thai Subtitle Pipeline</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+Thai:wght@400;600&family=Noto+Serif+TC:wght@700&display=swap">
+<style>
+  /* Layout: one tall three-lane diagram (services | pipeline | files) as the centrepiece, reference sections stacked below in a single reading column. */
+  :root {
+    --bg: #f5f6f2;
+    --surface: #ffffff;
+    --ink: #152826;
+    --muted: #586a66;
+    --line: #84958f;
+    --rule: #d5dad3;
+    --step-bg: #dfeeea;
+    --step-line: #2c6e66;
+    --store-bg: #eceee6;
+    --paid: #c26a00;
+    --paid-ink: #8f4d00;
+    --font-body: "Noto Sans TC", "Noto Sans Thai", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    --font-display: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+    --font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #101817; --surface: #18221f; --ink: #e6eeeb; --muted: #9db0ab; --line: #6f837e; --rule: #2a3733;
+      --step-bg: #1c3531; --step-line: #5fb3a7; --store-bg: #232c26; --paid: #f0a030; --paid-ink: #f5b85a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #101817; --surface: #18221f; --ink: #e6eeeb; --muted: #9db0ab; --line: #6f837e; --rule: #2a3733;
+    --step-bg: #1c3531; --step-line: #5fb3a7; --store-bg: #232c26; --paid: #f0a030; --paid-ink: #f5b85a;
+    color-scheme: dark;
+  }
+
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.75; }
+  .page { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 72px; display: flex; flex-direction: column; gap: 44px; }
+  header { display: flex; flex-direction: column; gap: 10px; }
+  h1 { font-family: var(--font-display); font-size: 30px; line-height: 1.3; margin: 0; text-wrap: balance; }
+  h2 { font-family: var(--font-display); font-size: 20px; line-height: 1.4; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  .langs { font-size: 13px; color: var(--muted); }
+  a { color: var(--step-line); }
+  .lede { color: var(--muted); max-width: 40em; }
+  section { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+  .prose { max-width: 42em; }
+  code, .mono { font-family: var(--font-mono); font-size: 0.88em; }
+  .thai { font-family: "Noto Sans Thai", var(--font-body); }
+
+  figure { margin: 0; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; }
+  .scroll svg { display: block; width: 100%; min-width: 800px; height: auto; }
+  figcaption { color: var(--muted); font-size: 13.5px; max-width: 46em; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 13px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .key { width: 28px; height: 0; border-top: 2px solid var(--line); }
+  .key.paid { border-top-color: var(--paid); }
+  .key.skip { border-top-style: dashed; }
+  .swatch { width: 16px; height: 12px; border: 1.5px solid var(--line); }
+  .swatch.step { background: var(--step-bg); border-color: var(--step-line); border-radius: 3px; }
+  .swatch.store { background: var(--store-bg); }
+
+  /* diagram */
+  .t { font-size: 13.5px; font-weight: 700; fill: var(--ink); }
+  .s { font-size: 11.5px; fill: var(--muted); }
+  .e { font-size: 11.5px; fill: var(--ink); }
+  .ep { font-size: 11.5px; fill: var(--paid-ink); font-weight: 500; }
+  .lane { font-size: 12px; font-weight: 700; fill: var(--muted); letter-spacing: 0.08em; }
+  .m { font-family: var(--font-mono); font-size: 12px; font-weight: 500; fill: var(--ink); }
+  .step { fill: var(--step-bg); stroke: var(--step-line); stroke-width: 1.5; }
+  .svc { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+  .store { fill: var(--store-bg); stroke: var(--line); stroke-width: 1.5; }
+  .edge { fill: none; stroke: var(--line); stroke-width: 1.5; }
+  .edge.paid { stroke: var(--paid); stroke-width: 2; }
+  .edge.skip { stroke-dasharray: 5 4; }
+  .band { stroke: var(--rule); stroke-width: 1.5; stroke-dasharray: 2 5; }
+  .mk { fill: var(--line); }
+  .mkp { fill: var(--paid); }
+
+  ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; counter-reset: step; border-top: 1px solid var(--rule); }
+  ol.steps li { counter-increment: step; display: grid; grid-template-columns: 2.4em minmax(0, 1fr); gap: 4px 12px; padding-block: 14px; border-bottom: 1px solid var(--rule); }
+  ol.steps li::before { content: counter(step); font-family: var(--font-display); font-size: 20px; line-height: 1.3; color: var(--step-line); grid-row: span 3; }
+  ol.steps h3 { margin: 0; font-size: 15.5px; font-weight: 700; }
+  ol.steps p { max-width: 42em; }
+  .where { color: var(--muted); font-size: 13px; }
+
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--rule); }
+  th { font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; border-bottom-color: var(--line); }
+  td:first-child { font-weight: 500; white-space: nowrap; }
+  .paidtag { color: var(--paid-ink); font-weight: 500; }
+
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .pair > div { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .pair h3 { margin: 0; font-size: 15px; }
+  .pair ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 4px; }
+</style>
+
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="langs"><a href="workflow.html">繁體中文</a> | <strong>English</strong></p>
+    <h1>Thai Subtitle Pipeline</h1>
+    <p class="lede">What happens between pasting a YouTube video and seeing romanization, translation and word cards for every line: the steps, the services they call, and what each step saves under <code>data/</code>.</p>
+  </header>
+
+  <figure>
+    <div class="scroll">
+      <svg viewBox="0 0 1040 1072" role="img" aria-label="Subtitle pipeline: the backend first asks YouTube for uploaded Thai captions and only transcribes with ElevenLabs when there are none. The cleaned lines go to OpenAI for per-line analysis, a check, and dictionary lookups, then everything is merged into one subtitle file. The player reads that file and only asks ElevenLabs for speech when Read aloud is pressed. Every step saves its result under data, so paid services are not called twice.">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk" d="M0 0 L10 5 L0 10 z"/></marker>
+          <marker id="ahp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mkp" d="M0 0 L10 5 L0 10 z"/></marker>
+        </defs>
+
+        <text class="lane" x="140" y="26" text-anchor="middle">EXTERNAL SERVICES</text>
+        <text class="lane" x="520" y="26" text-anchor="middle">BACKEND STEPS</text>
+        <text class="lane" x="900" y="26" text-anchor="middle">FILES UNDER data/</text>
+        <text class="s" x="40" y="76">While fetching (background job)</text>
+
+        <!-- 0 paste URL -->
+        <rect class="step" x="380" y="44" width="280" height="56" rx="6"/>
+        <text class="t" x="520" y="68" text-anchor="middle">Paste a YouTube URL</text>
+        <text class="s" x="520" y="86" text-anchor="middle">Press Fetch subtitles; progress shows live</text>
+        <line class="edge" x1="520" y1="100" x2="520" y2="144" marker-end="url(#ah)"/>
+        <polyline class="edge skip" points="660,72 900,72 900,380" marker-end="url(#ah)"/>
+        <text class="e" x="780" y="64" text-anchor="middle">Already saved, Refetch off: reuse</text>
+
+        <!-- 1a YouTube captions -->
+        <rect class="svc" x="40" y="144" width="200" height="56" rx="12"/>
+        <text class="t" x="140" y="168" text-anchor="middle">YouTube</text>
+        <text class="s" x="140" y="186" text-anchor="middle">Captions, video titles · free</text>
+        <rect class="step" x="380" y="144" width="280" height="56" rx="6"/>
+        <text class="t" x="520" y="168" text-anchor="middle">Look for uploaded Thai captions</text>
+        <text class="s" x="520" y="186" text-anchor="middle">Auto-generated captions are not used</text>
+        <line class="edge" x1="380" y1="172" x2="240" y2="172" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text class="e" x="310" y="164" text-anchor="middle">look up</text>
+
+        <!-- 1b ElevenLabs transcription -->
+        <rect class="svc" x="40" y="254" width="200" height="64" rx="12"/>
+        <text class="t" x="140" y="282" text-anchor="middle">ElevenLabs Scribe v2</text>
+        <text class="s" x="140" y="301" text-anchor="middle">Speech to text · paid</text>
+        <polyline class="edge paid" points="420,200 420,286 240,286" marker-end="url(#ahp)"/>
+        <text class="ep" x="330" y="278" text-anchor="middle">No uploaded captions</text>
+        <line class="edge" x1="520" y1="200" x2="520" y2="372" marker-end="url(#ah)"/>
+        <text class="e" x="532" y="290">Captions found</text>
+        <polyline class="edge" points="140,318 140,408 380,408" marker-end="url(#ah)"/>
+        <text class="e" x="262" y="400" text-anchor="middle">SRT + speaker per character</text>
+        <text class="s" x="262" y="426" text-anchor="middle">Saved in elevenlabs/, billed once</text>
+
+        <!-- 1c clean-up -->
+        <rect class="step" x="380" y="372" width="280" height="72" rx="6"/>
+        <text class="t" x="520" y="396" text-anchor="middle">Normalize to one line per row</text>
+        <text class="s" x="520" y="414" text-anchor="middle">Strip spaces between Thai characters</text>
+        <text class="s" x="520" y="431" text-anchor="middle">Place zero-length lines by speaker</text>
+        <rect class="store" x="800" y="380" width="200" height="56"/>
+        <text class="m" x="900" y="404" text-anchor="middle">transcripts/{id}.json</text>
+        <text class="s" x="900" y="422" text-anchor="middle">Raw subtitles, no analysis</text>
+        <line class="edge" x1="660" y1="408" x2="800" y2="408" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="400" text-anchor="middle">writes</text>
+        <line class="edge" x1="520" y1="444" x2="520" y2="492" marker-end="url(#ah)"/>
+        <polyline class="edge skip" points="900,436 900,466 600,466 600,492" marker-end="url(#ah)"/>
+        <text class="e" x="760" y="460" text-anchor="middle">reads saved copy</text>
+
+        <!-- OpenAI -->
+        <rect class="svc" x="40" y="492" width="200" height="292" rx="12"/>
+        <text class="t" x="140" y="596" text-anchor="middle">OpenAI</text>
+        <text class="m" x="140" y="616" text-anchor="middle">gpt-4.1-mini</text>
+        <text class="s" x="140" y="686" text-anchor="middle">paid</text>
+
+        <!-- 2 GPT analysis -->
+        <rect class="step" x="380" y="492" width="280" height="72" rx="6"/>
+        <text class="t" x="520" y="516" text-anchor="middle">Analyze each line with GPT</text>
+        <text class="s" x="520" y="534" text-anchor="middle">10 lines per chunk, 5 chunks at a time</text>
+        <text class="s" x="520" y="551" text-anchor="middle">PyThaiNLP tokens attached as a hint</text>
+        <line class="edge paid" x1="380" y1="528" x2="240" y2="528" marker-start="url(#ahp)" marker-end="url(#ahp)"/>
+        <text class="ep" x="310" y="520" text-anchor="middle">translation, words</text>
+        <rect class="store" x="800" y="500" width="200" height="56"/>
+        <text class="m" x="900" y="524" text-anchor="middle">explanations/{id}.json</text>
+        <text class="s" x="900" y="542" text-anchor="middle">Per-line analysis cache</text>
+        <line class="edge" x1="660" y1="528" x2="800" y2="528" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="520" text-anchor="middle">skips unchanged</text>
+        <text class="s" x="730" y="546" text-anchor="middle">saved per chunk</text>
+        <line class="edge" x1="520" y1="564" x2="520" y2="602" marker-end="url(#ah)"/>
+
+        <!-- 3 check -->
+        <rect class="step" x="380" y="602" width="280" height="72" rx="6"/>
+        <text class="t" x="520" y="626" text-anchor="middle">Check the word breakdown</text>
+        <text class="s" x="520" y="644" text-anchor="middle">Words must join back into the line</text>
+        <text class="s" x="520" y="661" text-anchor="middle">A word may split into at most 4 tokens</text>
+        <line class="edge paid" x1="380" y1="638" x2="240" y2="638" marker-end="url(#ahp)"/>
+        <text class="ep" x="310" y="630" text-anchor="middle">failed: resend once</text>
+        <line class="edge" x1="520" y1="674" x2="520" y2="712" marker-end="url(#ah)"/>
+
+        <!-- 4 word lookup -->
+        <rect class="step" x="380" y="712" width="280" height="72" rx="6"/>
+        <text class="t" x="520" y="736" text-anchor="middle">Look up unknown words</text>
+        <text class="s" x="520" y="754" text-anchor="middle">40 words per request</text>
+        <text class="s" x="520" y="771" text-anchor="middle">Retry once if romanization is not RTGS</text>
+        <line class="edge paid" x1="380" y1="748" x2="240" y2="748" marker-start="url(#ahp)" marker-end="url(#ahp)"/>
+        <text class="ep" x="310" y="740" text-anchor="middle">meanings, usage</text>
+        <rect class="store" x="800" y="720" width="200" height="56"/>
+        <text class="m" x="900" y="744" text-anchor="middle">dictionary.json</text>
+        <text class="s" x="900" y="762" text-anchor="middle">Shared by all videos · 780 words</text>
+        <line class="edge" x1="660" y1="748" x2="800" y2="748" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="740" text-anchor="middle">check</text>
+        <text class="s" x="730" y="766" text-anchor="middle">add new words</text>
+        <line class="edge" x1="520" y1="784" x2="520" y2="822" marker-end="url(#ah)"/>
+
+        <!-- 5 merge -->
+        <rect class="step" x="380" y="822" width="280" height="56" rx="6"/>
+        <text class="t" x="520" y="846" text-anchor="middle">Merge analysis with dictionary</text>
+        <text class="s" x="520" y="864" text-anchor="middle">Lines missing entries marked partial</text>
+        <rect class="store" x="800" y="822" width="200" height="56"/>
+        <text class="m" x="900" y="846" text-anchor="middle">subtitles/{id}.json</text>
+        <text class="s" x="900" y="864" text-anchor="middle">Complete subtitles for the UI</text>
+        <line class="edge" x1="660" y1="850" x2="800" y2="850" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="842" text-anchor="middle">writes</text>
+
+        <!-- player -->
+        <line class="band" x1="40" y1="908" x2="1000" y2="908"/>
+        <text class="s" x="40" y="930">While playing</text>
+        <rect class="step" x="380" y="944" width="280" height="104" rx="6"/>
+        <text class="t" x="520" y="974" text-anchor="middle">Player</text>
+        <text class="s" x="520" y="994" text-anchor="middle">Romanization, translation and word cards</text>
+        <text class="s" x="520" y="1011" text-anchor="middle">Audio is generated only on Read aloud</text>
+        <polyline class="edge" points="900,878 900,966 660,966" marker-end="url(#ah)"/>
+        <text class="e" x="780" y="958" text-anchor="middle">reads subtitles</text>
+
+        <rect class="svc" x="40" y="942" width="200" height="40" rx="12"/>
+        <text class="t" x="140" y="967" text-anchor="middle">Forvo recordings</text>
+        <line class="edge" x1="380" y1="962" x2="240" y2="962" marker-end="url(#ah)"/>
+        <text class="e" x="310" y="954" text-anchor="middle">word card link</text>
+
+        <rect class="svc" x="40" y="992" width="200" height="56" rx="12"/>
+        <text class="t" x="140" y="1016" text-anchor="middle">ElevenLabs Eleven v3</text>
+        <text class="s" x="140" y="1034" text-anchor="middle">Text to speech · paid</text>
+        <line class="edge paid" x1="380" y1="1020" x2="240" y2="1020" marker-start="url(#ahp)" marker-end="url(#ahp)"/>
+        <text class="ep" x="310" y="1038" text-anchor="middle">only on cache miss</text>
+
+        <rect class="store" x="800" y="992" width="200" height="56"/>
+        <text class="m" x="900" y="1016" text-anchor="middle">tts/{hash}.mp3</text>
+        <text class="s" x="900" y="1034" text-anchor="middle">Each line generated once</text>
+        <line class="edge" x1="660" y1="1020" x2="800" y2="1020" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="1038" text-anchor="middle">cache first</text>
+      </svg>
+    </div>
+    <div class="legend">
+      <span><i class="swatch step"></i>A backend step</span>
+      <span><i class="swatch store"></i>A file under data/</span>
+      <span><i class="key paid"></i>Paid API call</span>
+      <span><i class="key skip"></i>Reuses saved files, skips earlier steps</span>
+    </div>
+    <figcaption>Every paid call has a saved file in front of it. The raw transcription, the per-line analysis, the dictionary and the audio are each stored, so rerunning a video only pays for what actually changed.</figcaption>
+  </figure>
+
+  <section>
+    <h2>What each step does</h2>
+    <ol class="steps">
+      <li>
+        <h3>Register the job</h3>
+        <p>No new job starts if the same video is already running, or if its analysis is complete and the 「重抓字幕」 (refetch) switch is off. Otherwise the job runs in the background and the frontend keeps asking for progress.</p>
+        <p class="where"><code>backend/jobs.py</code> · <code>start_job</code></p>
+      </li>
+      <li>
+        <h3>Get the subtitles</h3>
+        <p>YouTube is asked first for manually uploaded Thai captions. If there are none, the video URL goes to ElevenLabs Scribe v2 with diarization on and SRT as an extra output format. The whole raw response is saved.</p>
+        <p class="where"><code>backend/youtube.py</code> · <code>backend/elevenlabs_api.py</code></p>
+      </li>
+      <li>
+        <h3>Clean up the ElevenLabs output</h3>
+        <p>The SRT has a space between every Thai character. Those are removed, and spaces between English words are kept. At speaker changes some lines come back with the same start and end time, so they would never appear on screen. The speaker of each character decides which line they belong to (see the next section).</p>
+        <p class="where"><code>generate_transcript_json</code> · <code>merge_zero_length_segments</code></p>
+      </li>
+      <li>
+        <h3>Analyze each line with GPT</h3>
+        <p>Lines are cut into chunks of 10 and up to 5 chunks are sent to <code>gpt-4.1-mini</code> at a time. Each line comes back with its romanization, a Chinese translation, and the type and meaning of every word in that line. Lines whose Thai text and format version are unchanged come from the cache. Every finished chunk is saved, so a failed run resumes where it stopped.</p>
+        <p class="where"><code>backend/gpt_teacher.py</code> · <code>analyze_long_text</code></p>
+      </li>
+      <li>
+        <h3>Check, and resend what fails</h3>
+        <p>Two conditions. The words must join back into the original line. Any word that is not a name may tokenize into at most 4 PyThaiNLP tokens, otherwise a phrase was returned as one word. A failing line is resent once on its own. If it still fails, the first result is kept and the line is never paid for again.</p>
+        <p class="where"><code>backend/analysis_check.py</code> · <code>backend/segmenter.py</code></p>
+      </li>
+      <li>
+        <h3>Look up words, merge, save</h3>
+        <p>Words that appear in the analysis but not in the dictionary are looked up 40 at a time for romanization, parts, common meanings and usage. A romanization that is not in RTGS form is looked up once more, and any tone marks or hyphens still left are stripped. Finally each line is merged with the dictionary and written to the subtitle file the frontend reads.</p>
+        <p class="where"><code>backend/dictionary.py</code> · <code>backend/rtgs.py</code></p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>How zero-length lines are placed</h2>
+    <p class="prose">Of the 911 lines ElevenLabs returned, 13 have the same start and end time, and all of them sit at a speaker change. Comparing the speaker with the lines before and after separates three cases.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Same speaker as previous</th><th>Same speaker as next</th><th>What it is</th><th>What happens</th><th>From the data</th></tr></thead>
+        <tbody>
+          <tr><td>Yes</td><td>No</td><td>Tail cut off the previous line</td><td>Joined back to the previous line</td><td><span class="thai">อะไรอย่าง</span> + <span class="thai">งี้</span> → <span class="thai">อะไรอย่างงี้</span></td></tr>
+          <tr><td>No</td><td>Yes</td><td>Head cut off the next line</td><td>Joined to the start of the next line</td><td><span class="thai">ห้า</span> + <span class="thai">สี่</span> → <span class="thai">ห้าสี่</span></td></tr>
+          <tr><td>No</td><td>No</td><td>Interjection from someone else</td><td>Merged into the next line on its own row</td><td><span class="thai">อือ</span> (mm), <span class="thai">ใช่</span> (yes)</td></tr>
+          <tr><td>Yes</td><td>Yes</td><td>Cannot tell</td><td>Merged into the next line on its own row</td><td>Has not occurred yet</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prose">8 of the 13 are interjections and 5 are fragments. When a line is merged into the next one but the next one starts later, it is shown on its own until then, for at most 2 seconds.</p>
+  </section>
+
+  <section>
+    <h2>What costs money, and how repeat charges are avoided</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Service</th><th>When it is called</th><th>Saved in</th><th>When it is paid for again</th></tr></thead>
+        <tbody>
+          <tr><td><span class="paidtag">ElevenLabs Scribe v2</span></td><td>The video has no uploaded Thai captions</td><td><code>elevenlabs/{id}.json</code></td><td>Never. Refetching reads the saved response too</td></tr>
+          <tr><td><span class="paidtag">OpenAI line analysis</span></td><td>A line is not in the cache</td><td><code>explanations/{id}.json</code></td><td>The line's Thai text or number changed, or the format version went up</td></tr>
+          <tr><td><span class="paidtag">OpenAI word lookup</span></td><td>A word is not in the dictionary</td><td><code>dictionary.json</code></td><td>Never. Known words are shared by all videos</td></tr>
+          <tr><td><span class="paidtag">ElevenLabs Eleven v3</span></td><td>「唸給我聽」 (read aloud) is pressed</td><td><code>tts/{hash}.mp3</code></td><td>The voice or model changes. The file name is a hash of voice, model and text</td></tr>
+          <tr><td>YouTube</td><td>Captions and video titles</td><td><code>video_titles.json</code></td><td>Free</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>What the 「重抓字幕」 (refetch) switch changes</h2>
+    <div class="pair">
+      <div>
+        <h3>Off (default)</h3>
+        <ul>
+          <li>Reuses the subtitles saved in <code>transcripts/</code></li>
+          <li>Only analyzes lines that have no analysis yet</li>
+          <li>Returns "subtitles already exist" when the analysis is complete</li>
+          <li>Does not pick up changes to the clean-up rules</li>
+        </ul>
+      </div>
+      <div>
+        <h3>On</h3>
+        <ul>
+          <li>Asks YouTube for uploaded captions again</li>
+          <li>Reads the saved ElevenLabs response and cleans it up again</li>
+          <li>Sends lines whose number or text changed to GPT again</li>
+          <li>Leaves the old subtitle file untouched if it fails</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

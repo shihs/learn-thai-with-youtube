@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>泰文字幕處理流程</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+Thai:wght@400;600&family=Noto+Serif+TC:wght@700&display=swap">
+<style>
+  /* Layout: one tall three-lane diagram (services | pipeline | files) as the centrepiece, reference sections stacked below in a single reading column. */
+  :root {
+    --bg: #f5f6f2;
+    --surface: #ffffff;
+    --ink: #152826;
+    --muted: #586a66;
+    --line: #84958f;
+    --rule: #d5dad3;
+    --step-bg: #dfeeea;
+    --step-line: #2c6e66;
+    --store-bg: #eceee6;
+    --paid: #c26a00;
+    --paid-ink: #8f4d00;
+    --font-body: "Noto Sans TC", "Noto Sans Thai", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    --font-display: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+    --font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #101817; --surface: #18221f; --ink: #e6eeeb; --muted: #9db0ab; --line: #6f837e; --rule: #2a3733;
+      --step-bg: #1c3531; --step-line: #5fb3a7; --store-bg: #232c26; --paid: #f0a030; --paid-ink: #f5b85a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #101817; --surface: #18221f; --ink: #e6eeeb; --muted: #9db0ab; --line: #6f837e; --rule: #2a3733;
+    --step-bg: #1c3531; --step-line: #5fb3a7; --store-bg: #232c26; --paid: #f0a030; --paid-ink: #f5b85a;
+    color-scheme: dark;
+  }
+
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.75; }
+  .page { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 72px; display: flex; flex-direction: column; gap: 44px; }
+  header { display: flex; flex-direction: column; gap: 10px; }
+  h1 { font-family: var(--font-display); font-size: 30px; line-height: 1.3; margin: 0; text-wrap: balance; }
+  h2 { font-family: var(--font-display); font-size: 20px; line-height: 1.4; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  .langs { font-size: 13px; color: var(--muted); }
+  a { color: var(--step-line); }
+  .lede { color: var(--muted); max-width: 40em; }
+  section { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+  .prose { max-width: 42em; }
+  code, .mono { font-family: var(--font-mono); font-size: 0.88em; }
+  .thai { font-family: "Noto Sans Thai", var(--font-body); }
+
+  figure { margin: 0; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; }
+  .scroll svg { display: block; width: 100%; min-width: 800px; height: auto; }
+  figcaption { color: var(--muted); font-size: 13.5px; max-width: 46em; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 13px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .key { width: 28px; height: 0; border-top: 2px solid var(--line); }
+  .key.paid { border-top-color: var(--paid); }
+  .key.skip { border-top-style: dashed; }
+  .swatch { width: 16px; height: 12px; border: 1.5px solid var(--line); }
+  .swatch.step { background: var(--step-bg); border-color: var(--step-line); border-radius: 3px; }
+  .swatch.store { background: var(--store-bg); }
+
+  /* diagram */
+  .t { font-size: 13.5px; font-weight: 700; fill: var(--ink); }
+  .s { font-size: 11.5px; fill: var(--muted); }
+  .e { font-size: 11.5px; fill: var(--ink); }
+  .ep { font-size: 11.5px; fill: var(--paid-ink); font-weight: 500; }
+  .lane { font-size: 12px; font-weight: 700; fill: var(--muted); letter-spacing: 0.08em; }
+  .m { font-family: var(--font-mono); font-size: 12px; font-weight: 500; fill: var(--ink); }
+  .step { fill: var(--step-bg); stroke: var(--step-line); stroke-width: 1.5; }
+  .svc { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+  .store { fill: var(--store-bg); stroke: var(--line); stroke-width: 1.5; }
+  .edge { fill: none; stroke: var(--line); stroke-width: 1.5; }
+  .edge.paid { stroke: var(--paid); stroke-width: 2; }
+  .edge.skip { stroke-dasharray: 5 4; }
+  .band { stroke: var(--rule); stroke-width: 1.5; stroke-dasharray: 2 5; }
+  .mk { fill: var(--line); }
+  .mkp { fill: var(--paid); }
+
+  ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; counter-reset: step; border-top: 1px solid var(--rule); }
+  ol.steps li { counter-increment: step; display: grid; grid-template-columns: 2.4em minmax(0, 1fr); gap: 4px 12px; padding-block: 14px; border-bottom: 1px solid var(--rule); }
+  ol.steps li::before { content: counter(step); font-family: var(--font-display); font-size: 20px; line-height: 1.3; color: var(--step-line); grid-row: span 3; }
+  ol.steps h3 { margin: 0; font-size: 15.5px; font-weight: 700; }
+  ol.steps p { max-width: 42em; }
+  .where { color: var(--muted); font-size: 13px; }
+
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--rule); }
+  th { font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; border-bottom-color: var(--line); }
+  td:first-child { font-weight: 500; white-space: nowrap; }
+  .paidtag { color: var(--paid-ink); font-weight: 500; }
+
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .pair > div { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .pair h3 { margin: 0; font-size: 15px; }
+  .pair ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 4px; }
+</style>
+
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="langs"><strong>繁體中文</strong> | <a href="workflow.en.html">English</a></p>
+    <h1>泰文字幕處理流程</h1>
+    <p class="lede">從貼上一部 YouTube 影片，到播放時看到逐句的拼音、翻譯和單字卡，中間經過哪些步驟、會連到哪些服務、每一步把什麼存進 <code>data/</code>。</p>
+  </header>
+
+  <figure>
+    <div class="scroll">
+      <svg viewBox="0 0 1040 1072" role="img" aria-label="字幕處理流程：後端先向 YouTube 查手動泰文字幕，沒有才用 ElevenLabs 轉錄，整理後交給 OpenAI 逐句解析、檢查、查詞庫，合併存成字幕檔；播放頁讀這個檔案，按唸給我聽時才向 ElevenLabs 產生語音。每一步的結果都存在 data 資料夾，付費的服務不會重複呼叫。">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk" d="M0 0 L10 5 L0 10 z"/></marker>
+          <marker id="ahp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mkp" d="M0 0 L10 5 L0 10 z"/></marker>
+        </defs>
+
+        <text class="lane" x="140" y="26" text-anchor="middle">外部服務</text>
+        <text class="lane" x="520" y="26" text-anchor="middle">後端流程</text>
+        <text class="lane" x="900" y="26" text-anchor="middle">data/ 裡的檔案</text>
+        <text class="s" x="40" y="76">抓取字幕時（背景執行）</text>
+
+        <!-- 0 貼上網址 -->
+        <rect class="step" x="380" y="44" width="280" height="56" rx="6"/>
+        <text class="t" x="520" y="68" text-anchor="middle">貼上 YouTube 網址</text>
+        <text class="s" x="520" y="86" text-anchor="middle">按「抓取字幕」，畫面持續顯示進度</text>
+        <line class="edge" x1="520" y1="100" x2="520" y2="144" marker-end="url(#ah)"/>
+        <polyline class="edge skip" points="660,72 900,72 900,380" marker-end="url(#ah)"/>
+        <text class="e" x="780" y="64" text-anchor="middle">已有存檔、沒開「重抓」：直接用</text>
+
+        <!-- 1a 查 YouTube -->
+        <rect class="svc" x="40" y="144" width="200" height="56" rx="12"/>
+        <text class="t" x="140" y="168" text-anchor="middle">YouTube</text>
+        <text class="s" x="140" y="186" text-anchor="middle">字幕、影片標題 · 免費</text>
+        <rect class="step" x="380" y="144" width="280" height="56" rx="6"/>
+        <text class="t" x="520" y="168" text-anchor="middle">查手動上傳的泰文字幕</text>
+        <text class="s" x="520" y="186" text-anchor="middle">自動產生的字幕不採用</text>
+        <line class="edge" x1="380" y1="172" x2="240" y2="172" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text class="e" x="310" y="164" text-anchor="middle">查字幕</text>
+
+        <!-- 1b ElevenLabs 轉錄 -->
+        <rect class="svc" x="40" y="254" width="200" height="64" rx="12"/>
+        <text class="t" x="140" y="282" text-anchor="middle">ElevenLabs Scribe v2</text>
+        <text class="s" x="140" y="301" text-anchor="middle">語音轉文字 · 付費</text>
+        <polyline class="edge paid" points="420,200 420,286 240,286" marker-end="url(#ahp)"/>
+        <text class="ep" x="330" y="278" text-anchor="middle">沒有手動字幕</text>
+        <line class="edge" x1="520" y1="200" x2="520" y2="372" marker-end="url(#ah)"/>
+        <text class="e" x="532" y="290">有手動字幕</text>
+        <polyline class="edge" points="140,318 140,408 380,408" marker-end="url(#ah)"/>
+        <text class="e" x="262" y="400" text-anchor="middle">SRT + 每個字的講者</text>
+        <text class="s" x="262" y="426" text-anchor="middle">回應存在 elevenlabs/，不重複付費</text>
+
+        <!-- 1c 整理 -->
+        <rect class="step" x="380" y="372" width="280" height="72" rx="6"/>
+        <text class="t" x="520" y="396" text-anchor="middle">整理成一句一列</text>
+        <text class="s" x="520" y="414" text-anchor="middle">去掉泰文字元之間的空格</text>
+        <text class="s" x="520" y="431" text-anchor="middle">用講者合併零長度字幕</text>
+        <rect class="store" x="800" y="380" width="200" height="56"/>
+        <text class="m" x="900" y="404" text-anchor="middle">transcripts/{id}.json</text>
+        <text class="s" x="900" y="422" text-anchor="middle">原始字幕，不含解析</text>
+        <line class="edge" x1="660" y1="408" x2="800" y2="408" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="400" text-anchor="middle">寫入</text>
+        <line class="edge" x1="520" y1="444" x2="520" y2="492" marker-end="url(#ah)"/>
+        <polyline class="edge skip" points="900,436 900,466 600,466 600,492" marker-end="url(#ah)"/>
+        <text class="e" x="760" y="460" text-anchor="middle">讀取存檔</text>
+
+        <!-- OpenAI -->
+        <rect class="svc" x="40" y="492" width="200" height="292" rx="12"/>
+        <text class="t" x="140" y="596" text-anchor="middle">OpenAI</text>
+        <text class="m" x="140" y="616" text-anchor="middle">gpt-4.1-mini</text>
+        <text class="s" x="140" y="686" text-anchor="middle">付費</text>
+
+        <!-- 2 GPT 解析 -->
+        <rect class="step" x="380" y="492" width="280" height="72" rx="6"/>
+        <text class="t" x="520" y="516" text-anchor="middle">GPT 逐句解析</text>
+        <text class="s" x="520" y="534" text-anchor="middle">每 10 句一段，同時送 5 段</text>
+        <text class="s" x="520" y="551" text-anchor="middle">附上 PyThaiNLP 的斷詞當提示</text>
+        <line class="edge paid" x1="380" y1="528" x2="240" y2="528" marker-start="url(#ahp)" marker-end="url(#ahp)"/>
+        <text class="ep" x="310" y="520" text-anchor="middle">拼音、翻譯、拆字</text>
+        <rect class="store" x="800" y="500" width="200" height="56"/>
+        <text class="m" x="900" y="524" text-anchor="middle">explanations/{id}.json</text>
+        <text class="s" x="900" y="542" text-anchor="middle">逐句解析的快取</text>
+        <line class="edge" x1="660" y1="528" x2="800" y2="528" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="520" text-anchor="middle">沒變的句子不重送</text>
+        <text class="s" x="730" y="546" text-anchor="middle">每段完成就存</text>
+        <line class="edge" x1="520" y1="564" x2="520" y2="602" marker-end="url(#ah)"/>
+
+        <!-- 3 檢查 -->
+        <rect class="step" x="380" y="602" width="280" height="72" rx="6"/>
+        <text class="t" x="520" y="626" text-anchor="middle">檢查拆字結果</text>
+        <text class="s" x="520" y="644" text-anchor="middle">單字接起來要等於原句</text>
+        <text class="s" x="520" y="661" text-anchor="middle">一個單字斷詞後不超過 4 段</text>
+        <line class="edge paid" x1="380" y1="638" x2="240" y2="638" marker-end="url(#ahp)"/>
+        <text class="ep" x="310" y="630" text-anchor="middle">沒通過：單獨重送一次</text>
+        <line class="edge" x1="520" y1="674" x2="520" y2="712" marker-end="url(#ah)"/>
+
+        <!-- 4 查詞 -->
+        <rect class="step" x="380" y="712" width="280" height="72" rx="6"/>
+        <text class="t" x="520" y="736" text-anchor="middle">查詞庫沒有的字</text>
+        <text class="s" x="520" y="754" text-anchor="middle">每 40 個字一批</text>
+        <text class="s" x="520" y="771" text-anchor="middle">拼音不是 RTGS 格式就重查一次</text>
+        <line class="edge paid" x1="380" y1="748" x2="240" y2="748" marker-start="url(#ahp)" marker-end="url(#ahp)"/>
+        <text class="ep" x="310" y="740" text-anchor="middle">常見意思、用法</text>
+        <rect class="store" x="800" y="720" width="200" height="56"/>
+        <text class="m" x="900" y="744" text-anchor="middle">dictionary.json</text>
+        <text class="s" x="900" y="762" text-anchor="middle">所有影片共用 · 目前 780 字</text>
+        <line class="edge" x1="660" y1="748" x2="800" y2="748" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="740" text-anchor="middle">查有沒有</text>
+        <text class="s" x="730" y="766" text-anchor="middle">寫入新字</text>
+        <line class="edge" x1="520" y1="784" x2="520" y2="822" marker-end="url(#ah)"/>
+
+        <!-- 5 合併 -->
+        <rect class="step" x="380" y="822" width="280" height="56" rx="6"/>
+        <text class="t" x="520" y="846" text-anchor="middle">合併解析與詞庫</text>
+        <text class="s" x="520" y="864" text-anchor="middle">查不到詞庫的句子標成未完成</text>
+        <rect class="store" x="800" y="822" width="200" height="56"/>
+        <text class="m" x="900" y="846" text-anchor="middle">subtitles/{id}.json</text>
+        <text class="s" x="900" y="864" text-anchor="middle">給前端用的完整字幕</text>
+        <line class="edge" x1="660" y1="850" x2="800" y2="850" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="842" text-anchor="middle">寫入</text>
+
+        <!-- 播放 -->
+        <line class="band" x1="40" y1="908" x2="1000" y2="908"/>
+        <text class="s" x="40" y="930">播放時</text>
+        <rect class="step" x="380" y="944" width="280" height="104" rx="6"/>
+        <text class="t" x="520" y="974" text-anchor="middle">播放頁</text>
+        <text class="s" x="520" y="994" text-anchor="middle">同步顯示這一句的拼音、翻譯、單字卡</text>
+        <text class="s" x="520" y="1011" text-anchor="middle">按「唸給我聽」才產生語音</text>
+        <polyline class="edge" points="900,878 900,966 660,966" marker-end="url(#ah)"/>
+        <text class="e" x="780" y="958" text-anchor="middle">讀取字幕</text>
+
+        <rect class="svc" x="40" y="942" width="200" height="40" rx="12"/>
+        <text class="t" x="140" y="967" text-anchor="middle">Forvo 真人發音</text>
+        <line class="edge" x1="380" y1="962" x2="240" y2="962" marker-end="url(#ah)"/>
+        <text class="e" x="310" y="954" text-anchor="middle">單字卡另開連結</text>
+
+        <rect class="svc" x="40" y="992" width="200" height="56" rx="12"/>
+        <text class="t" x="140" y="1016" text-anchor="middle">ElevenLabs Eleven v3</text>
+        <text class="s" x="140" y="1034" text-anchor="middle">文字轉語音 · 付費</text>
+        <line class="edge paid" x1="380" y1="1020" x2="240" y2="1020" marker-start="url(#ahp)" marker-end="url(#ahp)"/>
+        <text class="ep" x="310" y="1038" text-anchor="middle">沒有快取才呼叫</text>
+
+        <rect class="store" x="800" y="992" width="200" height="56"/>
+        <text class="m" x="900" y="1016" text-anchor="middle">tts/{hash}.mp3</text>
+        <text class="s" x="900" y="1034" text-anchor="middle">同一句只產生一次</text>
+        <line class="edge" x1="660" y1="1020" x2="800" y2="1020" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text class="e" x="730" y="1038" text-anchor="middle">先找快取</text>
+      </svg>
+    </div>
+    <div class="legend">
+      <span><i class="swatch step"></i>後端的一個步驟</span>
+      <span><i class="swatch store"></i>存在 data/ 的檔案</span>
+      <span><i class="key paid"></i>會花錢的呼叫</span>
+      <span><i class="key skip"></i>沿用存檔、跳過前面的步驟</span>
+    </div>
+    <figcaption>每個付費的呼叫旁邊都有一個存檔擋著：轉錄的原始回應、逐句解析、詞庫、語音各存一份，所以同一部影片重跑時只會為真的變了的內容付費。</figcaption>
+  </figure>
+
+  <section>
+    <h2>每一步在做什麼</h2>
+    <ol class="steps">
+      <li>
+        <h3>登記任務</h3>
+        <p>同一部影片已經在跑，或解析已經完整而且沒開「重抓字幕」，就不會再開新任務。其他情況在背景開始執行，前端持續查詢進度。</p>
+        <p class="where"><code>backend/jobs.py</code> · <code>start_job</code></p>
+      </li>
+      <li>
+        <h3>取得字幕</h3>
+        <p>先問 YouTube 有沒有人手動上傳的泰文字幕。沒有的話把影片網址交給 ElevenLabs Scribe v2 轉錄，開啟講者辨識，要求回傳 SRT。原始回應整份存下來。</p>
+        <p class="where"><code>backend/youtube.py</code> · <code>backend/elevenlabs_api.py</code></p>
+      </li>
+      <li>
+        <h3>整理 ElevenLabs 的字幕</h3>
+        <p>SRT 會在每個泰文字元之間插空格，先去掉，英文單字之間的空格保留。換講者的地方會出現起訖時間相同的字幕，畫面上永遠顯示不到，所以用每個字的講者決定它該接到哪一句（見下一節）。</p>
+        <p class="where"><code>generate_transcript_json</code> · <code>merge_zero_length_segments</code></p>
+      </li>
+      <li>
+        <h3>GPT 逐句解析</h3>
+        <p>每 10 句切一段，最多同時送 5 段給 <code>gpt-4.1-mini</code>，拿回整句的拼音、中文翻譯，以及每個字在這句裡的類型和意思。泰文內容沒變、版本也相同的句子直接用快取。每完成一段就存檔，中途失敗再按一次會從中斷處繼續。</p>
+        <p class="where"><code>backend/gpt_teacher.py</code> · <code>analyze_long_text</code></p>
+      </li>
+      <li>
+        <h3>檢查，沒通過的重送</h3>
+        <p>兩個條件：拆出來的單字接起來要等於原句；人名以外的單字，用 PyThaiNLP 斷詞後不能超過 4 段，否則代表把片語當成一個字。沒通過的句子單獨重送一次，仍然不行就保留第一次的結果，之後不再為它付費。</p>
+        <p class="where"><code>backend/analysis_check.py</code> · <code>backend/segmenter.py</code></p>
+      </li>
+      <li>
+        <h3>查詞、合併、存檔</h3>
+        <p>解析裡出現、詞庫還沒有的字，每 40 個一批查拼音、組成、常見意思和用法。拼音不符合 RTGS 格式的重查一次，還帶著聲調符號或連字號的直接去掉。最後把每句的解析和詞庫合併，存成前端直接讀的字幕檔。</p>
+        <p class="where"><code>backend/dictionary.py</code> · <code>backend/rtgs.py</code></p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>零長度字幕怎麼合併</h2>
+    <p class="prose">ElevenLabs 回傳的 911 句字幕裡有 13 句起訖時間相同，全部出現在換講者的位置。比對它和前後句的講者，就能分出三種情況。</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>和前一句同講者</th><th>和下一句同講者</th><th>判定</th><th>處理</th><th>實際例子</th></tr></thead>
+        <tbody>
+          <tr><td>是</td><td>否</td><td>前一句被切下來的句尾</td><td>直接接回前一句</td><td><span class="thai">อะไรอย่าง</span> + <span class="thai">งี้</span> → <span class="thai">อะไรอย่างงี้</span></td></tr>
+          <tr><td>否</td><td>是</td><td>下一句被切下來的句首</td><td>直接接到下一句開頭</td><td><span class="thai">ห้า</span> + <span class="thai">สี่</span> → <span class="thai">ห้าสี่</span></td></tr>
+          <tr><td>否</td><td>否</td><td>另一個人的插話</td><td>併進下一句，換行分隔</td><td><span class="thai">อือ</span>（嗯）、<span class="thai">ใช่</span>（對）</td></tr>
+          <tr><td>是</td><td>是</td><td>分不出來</td><td>併進下一句，換行分隔</td><td>目前沒有出現過</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prose">13 句裡有 8 句是插話，5 句是被切開的碎片。併進下一句時，如果下一句比較晚才開始，這句會獨立顯示到下一句開始為止，最多 2 秒。</p>
+  </section>
+
+  <section>
+    <h2>什麼會花錢，怎麼避免重複付費</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>服務</th><th>什麼時候呼叫</th><th>存在哪裡</th><th>什麼情況會再付一次</th></tr></thead>
+        <tbody>
+          <tr><td><span class="paidtag">ElevenLabs Scribe v2</span></td><td>影片沒有手動泰文字幕時</td><td><code>elevenlabs/{id}.json</code></td><td>不會。打開「重抓字幕」也是讀存檔</td></tr>
+          <tr><td><span class="paidtag">OpenAI 逐句解析</span></td><td>快取裡沒有的句子</td><td><code>explanations/{id}.json</code></td><td>句子的泰文或行號變了，或解析格式升版</td></tr>
+          <tr><td><span class="paidtag">OpenAI 查詞</span></td><td>出現詞庫沒有的字</td><td><code>dictionary.json</code></td><td>不會。查過的字所有影片共用</td></tr>
+          <tr><td><span class="paidtag">ElevenLabs Eleven v3</span></td><td>按「唸給我聽」</td><td><code>tts/{hash}.mp3</code></td><td>換了聲音或模型。檔名是聲音、模型、文字的雜湊</td></tr>
+          <tr><td>YouTube</td><td>查字幕、查影片標題</td><td><code>video_titles.json</code></td><td>免費</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>「重抓字幕」開關的差別</h2>
+    <div class="pair">
+      <div>
+        <h3>關閉（預設）</h3>
+        <ul>
+          <li>沿用 <code>transcripts/</code> 裡存好的字幕</li>
+          <li>只補跑還沒有解析的句子</li>
+          <li>解析已經完整時直接回「字幕已存在」</li>
+          <li>不會套用字幕整理規則的修改</li>
+        </ul>
+      </div>
+      <div>
+        <h3>打開</h3>
+        <ul>
+          <li>重新向 YouTube 查手動字幕</li>
+          <li>ElevenLabs 的部分讀存檔，重新整理一次</li>
+          <li>行號或內容變了的句子重跑 GPT</li>
+          <li>失敗時舊的字幕檔不會被動到</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

@@ -142,6 +142,10 @@ This repo ships the finished subtitles for two videos only (`subtitles/1Sk8kiYfZ
 
 ## What happens when a video is fetched
 
+![Workflow diagram: which external services each backend step calls and which files under data/ it reads and writes](docs/screenshots/workflow.en.png)
+
+Orange lines are paid API calls; dashed lines reuse saved files and skip the earlier steps. A longer write-up (the source file for each step, the rules for zero-length lines, and every cache) is in [`docs/workflow.en.html`](docs/workflow.en.html); download it and open it in a browser.
+
 1. **Get the subtitles**
    - Subtitles already saved locally are used as they are.
    - Otherwise, manually uploaded Thai subtitles are requested from YouTube.
