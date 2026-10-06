@@ -5,3 +5,4 @@ python-dotenv==1.2.4
 youtube-transcript-api==1.0.3
 openai==1.76.0
 elevenlabs==2.71.0
+pythainlp==5.3.8

@@ -14,6 +14,8 @@ data/subtitles/*
 # Python
 __pycache__/
 *.pyc
+.venv/
+.pytest_cache/
 
 # Node（frontend/ 自己還有一份更完整的 .gitignore）
 node_modules/
