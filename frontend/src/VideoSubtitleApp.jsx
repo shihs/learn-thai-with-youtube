@@ -3,6 +3,7 @@ import {
   AlertCircle,
   ChevronLeft,
   ChevronRight,
+  Headphones,
   Info,
   Library,
   Loader2,
@@ -89,6 +90,18 @@ const thumbnailUrl = (id) => `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
 const iconButtonClass =
   "focus-ring inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-40 disabled:hover:bg-transparent dark:text-slate-300 dark:hover:bg-slate-800";
 
+// Forvo 的泰語搜尋頁：沒收錄的字會顯示「找不到」和相近的結果，不會是 404
+const forvoUrl = (word) => `https://forvo.com/search/${encodeURIComponent(word)}/th/`;
+const FORVO_LABEL = "在 Forvo 聽真人發音（另開分頁）";
+
+// 單字類型的標籤；一般單字（word）不顯示
+const WORD_TYPE_LABELS = {
+  particle: "語氣詞",
+  classifier: "量詞",
+  name: "專有名詞",
+  expression: "固定說法",
+};
+
 // 泰國國旗：紅、白、藍、白、紅，比例 1:1:2:1:1
 const THAI_FLAG = { red: "#A51931", white: "#F4F5F8", blue: "#2D2A4A" };
 
@@ -102,6 +115,65 @@ function ThaiFlag({ className }) {
       <rect y="6" width="36" height="24" fill={THAI_FLAG.white} />
       <rect y="12" width="36" height="12" fill={THAI_FLAG.blue} />
     </svg>
+  );
+}
+
+// 小元件：單字解析裡的一張卡片。
+// 舊版的解析沒有 type、parts、senses、usage，少了這些欄位時照常顯示其餘的部分
+function WordCard({ item }) {
+  const typeLabel = WORD_TYPE_LABELS[item.type];
+  return (
+    <li className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex min-w-0 flex-wrap items-baseline gap-x-2">
+          <span className="text-lg font-semibold text-slate-900 dark:text-white">{item.word}</span>
+          <span className="text-sm text-indigo-600 dark:text-indigo-300">{item.rtgs}</span>
+          {typeLabel && (
+            <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+              {typeLabel}
+            </span>
+          )}
+        </div>
+        {/* 人名、品牌這類專有名詞 Forvo 通常沒有收錄 */}
+        {item.type !== "name" && (
+          <a
+            href={forvoUrl(item.word)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={FORVO_LABEL}
+            title={FORVO_LABEL}
+            className={`${iconButtonClass} -my-1.5 -mr-1.5`}
+          >
+            <Headphones size={16} />
+          </a>
+        )}
+      </div>
+      <p className="text-sm text-slate-700 dark:text-slate-200">{item.meaning}</p>
+      {item.parts?.length > 0 && (
+        <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">
+          {item.parts.map((part, index) => (
+            <React.Fragment key={index}>
+              {index > 0 && " + "}
+              <a
+                href={forvoUrl(part.word)}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={FORVO_LABEL}
+                className="focus-ring rounded font-semibold underline decoration-dotted underline-offset-2 hover:text-indigo-600 dark:hover:text-indigo-300"
+              >
+                {part.word}
+              </a>{" "}
+              {part.rtgs} {part.meaning}
+            </React.Fragment>
+          ))}
+        </p>
+      )}
+      {item.more && <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{item.more}</p>}
+      {item.senses && item.senses !== item.meaning && (
+        <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">常見意思：{item.senses}</p>
+      )}
+      {item.usage && <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{item.usage}</p>}
+    </li>
   );
 }
 
@@ -172,14 +244,7 @@ function SubtitlePanel({ line, hasPrev, hasNext, onPrev, onNext, onReplay, speec
               </p>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {explanation.analysis.map((item, index) => (
-                  <li key={index} className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
-                    <div className="flex flex-wrap items-baseline gap-x-2">
-                      <span className="text-lg font-semibold text-slate-900 dark:text-white">{item.word}</span>
-                      <span className="text-sm text-indigo-600 dark:text-indigo-300">{item.rtgs}</span>
-                    </div>
-                    <p className="text-sm text-slate-700 dark:text-slate-200">{item.meaning}</p>
-                    {item.more && <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{item.more}</p>}
-                  </li>
+                  <WordCard key={index} item={item} />
                 ))}
               </ul>
             </div>
@@ -356,6 +421,7 @@ export default function VideoSubtitleApp() {
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [isDark, setIsDark] = useState(getInitialDarkMode);
   // 後端回報的抓取任務狀態：{ videoId, status, stage, done, total, message }
+  // stage 是 dictionary（建立詞庫）時 done / total 是字數，其餘是句數
   const [job, setJob] = useState(null);
   // 後端目前有字幕的影片：[{ id, title, lines, explained }]
   const [videos, setVideos] = useState([]);
@@ -769,7 +835,7 @@ export default function VideoSubtitleApp() {
               </span>
               {job.total > 0 && (
                 <span className="tabular-nums text-slate-500 dark:text-slate-400">
-                  {job.done} / {job.total} 句
+                  {job.done} / {job.total} {job.stage === "dictionary" ? "字" : "句"}
                 </span>
               )}
             </div>

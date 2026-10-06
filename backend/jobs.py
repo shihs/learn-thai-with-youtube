@@ -1,7 +1,8 @@
-# 抓取任務：抓字幕 → GPT 解析 → 合併存檔，以及任務進度的記錄
+# 抓取任務：抓字幕 → GPT 逐句解析 → 查詞庫沒有的字 → 合併存檔，以及任務進度的記錄
 import threading
 
-from .gpt_teacher import analyze_long_text, is_fatal_error
+from .dictionary import load_dictionary, merge_explanation, missing_words
+from .gpt_teacher import analyze_long_text, is_fatal_error, lookup_missing_words
 from .storage import (
     gpt_cache_file,
     is_subtitle_complete,
@@ -15,6 +16,7 @@ from .youtube import fetch_yt_video_transcript
 
 # 任務狀態只存在記憶體裡，後端重啟就會清空
 # {video_id: {"status": "running" | "done" | "error", "stage", "done", "total", "message"}}
+# stage 是 analyzing 時 done / total 是句數，dictionary 時是字數
 jobs = {}
 jobs_lock = threading.Lock()
 
@@ -67,19 +69,42 @@ def long_analyze_and_save(video_id, refetch_transcript=False):
 
     response = analyze_long_text(transcripts_with_time, cached=load_gpt_cache(video_id), on_progress=on_progress)
 
+    def on_dictionary_progress(done, total):
+        jobs[video_id] = {
+            "status": "running",
+            "stage": "dictionary",
+            "done": done,
+            "total": total,
+            "message": "建立詞庫中",
+        }
+
+    # 詞庫沒有的字集中查一次；查過的字之後每部影片都直接沿用
+    missing = missing_words(response, load_dictionary())
+    if missing:
+        on_dictionary_progress(0, len(missing))
+        lookup_missing_words(missing, on_progress=on_dictionary_progress)
+
     # 合併解釋：用 id 對齊，GPT 沒回傳的那幾行不影響其他行
+    dictionary = load_dictionary()
+    partial = 0
     for line_id, explanation in response.items():
-        transcripts_with_time[line_id]["explanation"] = explanation
+        merged = merge_explanation(explanation, dictionary)
+        partial += bool(merged.get("partial"))
+        transcripts_with_time[line_id]["explanation"] = merged
 
     save_json_file(subtitle_file(video_id), transcripts_with_time)
     print("字幕完成！")
 
-    total = jobs[video_id]["total"]
-    missing = total - len(response)
+    total = sum(1 for snippet in transcripts_with_time.values() if snippet["text"].strip())
+    notes = []
+    if total > len(response):
+        notes.append(f"有 {total - len(response)} 句沒有解析")
+    if partial:
+        notes.append(f"有 {partial} 句的單字還沒有詞庫資料")
     jobs[video_id] = {
         "status": "done",
         "stage": "done",
         "done": len(response),
         "total": total,
-        "message": f"有 {missing} 句沒有解析，再按一次「抓取字幕」可以補上" if missing else "",
+        "message": "、".join(notes) + "，再按一次「抓取字幕」可以補上" if notes else "",
     }

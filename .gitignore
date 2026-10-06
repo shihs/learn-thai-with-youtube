@@ -3,17 +3,19 @@
 .env.*
 
 # 抓回來的字幕、GPT 解析、ElevenLabs 轉錄結果。
-# 內容是別人影片的逐字稿與翻譯，不提交；只留兩部短影片的成品當範例，
+# 內容是別人影片的逐字稿與翻譯，不提交；只留兩部影片的成品當範例，
 # 讓人 clone 下來就能看到畫面。要換範例就改最後兩行的影片 ID。
 data/*
 !data/subtitles/
 data/subtitles/*
 !data/subtitles/1Sk8kiYfZGg.json
-!data/subtitles/7tMkVWSWePg.json
+!data/subtitles/h1r8CxHJnnc.json
 
 # Python
 __pycache__/
 *.pyc
+.venv/
+.pytest_cache/
 
 # Node（frontend/ 自己還有一份更完整的 .gitignore）
 node_modules/
