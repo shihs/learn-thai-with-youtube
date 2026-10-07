@@ -1,4 +1,4 @@
-from backend import storage
+from backend import elevenlabs_api, storage
 from backend.elevenlabs_api import (
     backfill_speakers,
     generate_transcript_json,
@@ -205,3 +205,34 @@ def test_backfill_is_a_no_op_when_run_again(data_dir):
     backfill_speakers(VIDEO_ID)
 
     assert backfill_speakers(VIDEO_ID) == 0
+
+
+def test_audio_event_tags_are_left_out_of_the_transcript(data_dir):
+    srt = (
+        "1\n00:00:00,000 --> 00:00:01,000\nก า [เสียงหัวเราะ]\n\n"
+        "2\n00:00:01,000 --> 00:00:02,000\n[เสียงหัวเราะ]\n\n"
+        "3\n00:00:02,000 --> 00:00:03,000\nข า\n"
+    )
+    laughter = {"text": "[เสียงหัวเราะ]", "type": "audio_event", "speaker_id": "speaker_0"}
+    storage.save_json_file(
+        storage.elevenlabs_file(VIDEO_ID),
+        {
+            "words": words(("กา", "speaker_0")) + [laughter, laughter] + words(("ขา", "speaker_1")),
+            "additional_formats": [{"content": srt}],
+        },
+    )
+
+    transcript, whole_script = generate_transcript_json(VIDEO_ID)
+
+    assert texts(transcript.values()) == ["กา", "ขา"]
+    assert [line["speakers"] for line in transcript.values()] == [["speaker_0"], ["speaker_1"]]
+    assert whole_script == "กา\nขา\n"
+
+
+def test_refetch_ignores_the_saved_response(data_dir, monkeypatch):
+    save_response("1\n00:00:00,000 --> 00:00:01,000\nก า\n", ("กา", "speaker_0"))
+    fresh = {"words": [], "additional_formats": [{"content": "1\n00:00:00,000 --> 00:00:01,000\nข า\n"}]}
+    monkeypatch.setattr(elevenlabs_api, "request_ele_api", lambda video_id: fresh)
+
+    assert texts(generate_transcript_json(VIDEO_ID)[0].values()) == ["กา"]
+    assert texts(generate_transcript_json(VIDEO_ID, refetch=True)[0].values()) == ["ขา"]

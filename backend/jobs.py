@@ -4,6 +4,7 @@ import threading
 from .dictionary import load_dictionary, merge_explanation, missing_words
 from .gpt_teacher import analyze_long_text, is_fatal_error, lookup_missing_words
 from .storage import (
+    delete_subtitle_files,
     gpt_cache_file,
     is_subtitle_complete,
     load_gpt_cache,
@@ -36,6 +37,18 @@ def start_job(video_id, refetch_transcript=False):
         return jobs[video_id], True
 
 
+def delete_video(video_id):
+    """
+    把影片從字幕清單拿掉。回傳 "deleted"、"running"（任務進行中不能刪）或 "not_found"。
+    ElevenLabs 的回應和 GPT 解析的快取會留著，之後再加回來不用重新付費。
+    """
+    with jobs_lock:
+        if jobs.get(video_id, {}).get("status") == "running":
+            return "running"
+        jobs.pop(video_id, None)
+        return "deleted" if delete_subtitle_files(video_id) else "not_found"
+
+
 def run_job(video_id, refetch_transcript=False):
     try:
         long_analyze_and_save(video_id, refetch_transcript)
@@ -53,7 +66,7 @@ def long_analyze_and_save(video_id, refetch_transcript=False):
     # refetch_transcript 時才重新取得（失敗的話舊檔案不會被動到）
     transcripts_with_time = None if refetch_transcript else load_saved_transcript(video_id)
     if transcripts_with_time is None:
-        transcripts_with_time, whole_script = fetch_yt_video_transcript(video_id)
+        transcripts_with_time, whole_script = fetch_yt_video_transcript(video_id, refetch=refetch_transcript)
         save_json_file(transcript_file(video_id), transcripts_with_time)
 
     def on_progress(results, total):
