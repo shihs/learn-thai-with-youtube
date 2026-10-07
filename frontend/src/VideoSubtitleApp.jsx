@@ -118,6 +118,17 @@ function ThaiFlag({ className }) {
   );
 }
 
+// 同一句裡重複出現的字只留第一張卡片；意思不一樣的（一字多義）才分開顯示
+function uniqueWords(analysis) {
+  const seen = new Set();
+  return analysis.filter((item) => {
+    const key = `${item.word}\n${item.meaning}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 // 小元件：單字解析裡的一張卡片。
 // 舊版的解析沒有 type、parts、senses、usage，少了這些欄位時照常顯示其餘的部分
 function WordCard({ item }) {
@@ -243,7 +254,7 @@ function SubtitlePanel({ line, hasPrev, hasNext, onPrev, onNext, onReplay, speec
                 單字解析
               </p>
               <ul className="grid gap-3 sm:grid-cols-2">
-                {explanation.analysis.map((item, index) => (
+                {uniqueWords(explanation.analysis).map((item, index) => (
                   <WordCard key={index} item={item} />
                 ))}
               </ul>
