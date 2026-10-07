@@ -1,5 +1,10 @@
 from backend import storage
-from backend.elevenlabs_api import generate_transcript_json, merge_zero_length_segments, segment_speakers
+from backend.elevenlabs_api import (
+    backfill_speakers,
+    generate_transcript_json,
+    merge_zero_length_segments,
+    segment_speakers,
+)
 
 VIDEO_ID = "aaaaaaaaaaa"
 
@@ -107,3 +112,96 @@ def test_english_fragment_is_joined_with_a_space():
     segments = [seg("thank", 0, 1), seg("you", 1, 0), seg("ครับ", 1, 1)]
     speakers = [("0", "0"), ("0", "0"), ("1", "1")]
     assert texts(merge_zero_length_segments(segments, speakers)) == ["thank you", "ครับ"]
+
+
+def spoken(text, start, duration, *speakers):
+    return {**seg(text, start, duration), "speakers": list(speakers)}
+
+
+def save_response(srt, *parts):
+    storage.save_json_file(
+        storage.elevenlabs_file(VIDEO_ID),
+        {"words": words(*parts), "additional_formats": [{"content": srt}]},
+    )
+
+
+INTERJECTION_SRT = (
+    "1\n00:00:00,000 --> 00:00:01,000\nห ลั บ\n\n"
+    "2\n00:00:01,000 --> 00:00:01,000\nใ ช่\n\n"
+    "3\n00:00:01,000 --> 00:00:02,000\nไ ด้\n"
+)
+
+
+def test_transcript_lines_carry_their_speaker(data_dir):
+    srt = "1\n00:00:00,000 --> 00:00:01,000\nก า\n\n2\n00:00:01,000 --> 00:00:02,000\nข า\n"
+    save_response(srt, ("กา", "speaker_1"), ("ขา", "speaker_0"))
+
+    transcript, _ = generate_transcript_json(VIDEO_ID)
+
+    assert [line["speakers"] for line in transcript.values()] == [["speaker_1"], ["speaker_0"]]
+
+
+def test_transcript_without_speaker_data_has_no_speakers(data_dir):
+    storage.save_json_file(
+        storage.elevenlabs_file(VIDEO_ID),
+        {"additional_formats": [{"content": "1\n00:00:00,000 --> 00:00:01,000\nก า\n"}]},
+    )
+
+    transcript, _ = generate_transcript_json(VIDEO_ID)
+
+    assert "speakers" not in transcript[0]
+
+
+def test_interjection_row_has_one_speaker_per_text_line(data_dir):
+    save_response(INTERJECTION_SRT, ("หลับ", "speaker_1"), ("ใช่", "speaker_0"), ("ได้", "speaker_1"))
+
+    transcript, _ = generate_transcript_json(VIDEO_ID)
+
+    assert texts(transcript.values()) == ["หลับ", "ใช่\nได้"]
+    assert transcript[1]["speakers"] == ["speaker_0", "speaker_1"]
+
+
+def test_joined_fragment_keeps_the_speaker_of_the_line_it_joins():
+    segments = [spoken("อย่าง", 0, 1, "1"), spoken("งี้", 1, 0, "1"), spoken("ใช่", 1, 1, "0")]
+    speakers = [("1", "1"), ("1", "1"), ("0", "0")]
+    assert merge_zero_length_segments(segments, speakers) == [spoken("อย่างงี้", 0, 1, "1"), spoken("ใช่", 1, 1, "0")]
+
+
+def test_zero_length_rows_stacked_before_a_later_line_keep_each_speaker():
+    segments = [spoken("กา", 0, 1, "0"), spoken("ขา", 1, 0, "1"), spoken("คา", 1, 0, "0"), spoken("งา", 1.5, 1, "1")]
+    speakers = [("0", "0"), ("1", "1"), ("0", "0"), ("1", "1")]
+    assert merge_zero_length_segments(segments, speakers)[1] == spoken("ขา\nคา", 1, 0.5, "1", "0")
+
+
+def test_backfill_adds_speakers_to_saved_transcript_and_subtitles(data_dir):
+    save_response(INTERJECTION_SRT, ("หลับ", "speaker_1"), ("ใช่", "speaker_0"), ("ได้", "speaker_1"))
+    saved = {"0": seg("หลับ", 0, 1), "1": seg("ใช่\nได้", 1, 1)}
+    storage.save_json_file(storage.transcript_file(VIDEO_ID), saved)
+    storage.save_json_file(storage.subtitle_file(VIDEO_ID), {"0": {**saved["0"], "explanation": {"v": 2}}, "1": saved["1"]})
+
+    assert backfill_speakers(VIDEO_ID) == 4
+
+    transcript = storage.load_json_file(storage.transcript_file(VIDEO_ID))
+    subtitles = storage.load_json_file(storage.subtitle_file(VIDEO_ID))
+    assert [line["speakers"] for line in transcript.values()] == [["speaker_1"], ["speaker_0", "speaker_1"]]
+    assert subtitles["0"] == {**saved["0"], "explanation": {"v": 2}, "speakers": ["speaker_1"]}
+
+
+def test_backfill_skips_lines_whose_text_no_longer_matches(data_dir):
+    save_response(INTERJECTION_SRT, ("หลับ", "speaker_1"), ("ใช่", "speaker_0"), ("ได้", "speaker_1"))
+    storage.save_json_file(storage.subtitle_file(VIDEO_ID), {"0": seg("หลับ", 0, 1), "1": seg("อื่น", 1, 1)})
+
+    assert backfill_speakers(VIDEO_ID) == 1
+
+    subtitles = storage.load_json_file(storage.subtitle_file(VIDEO_ID))
+    assert subtitles["0"]["speakers"] == ["speaker_1"]
+    assert "speakers" not in subtitles["1"]
+
+
+def test_backfill_is_a_no_op_when_run_again(data_dir):
+    save_response(INTERJECTION_SRT, ("หลับ", "speaker_1"), ("ใช่", "speaker_0"), ("ได้", "speaker_1"))
+    storage.save_json_file(storage.subtitle_file(VIDEO_ID), {"0": seg("หลับ", 0, 1)})
+
+    backfill_speakers(VIDEO_ID)
+
+    assert backfill_speakers(VIDEO_ID) == 0
