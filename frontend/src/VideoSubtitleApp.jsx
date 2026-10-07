@@ -188,8 +188,50 @@ function WordCard({ item }) {
   );
 }
 
+// 講者標籤的顏色，依講者第一次出現的順序輪流使用
+const SPEAKER_COLORS = [
+  "bg-sky-100 text-sky-800 dark:bg-sky-500/20 dark:text-sky-200",
+  "bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-200",
+  "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200",
+  "bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-200",
+  "bg-violet-100 text-violet-800 dark:bg-violet-500/20 dark:text-violet-200",
+  "bg-teal-100 text-teal-800 dark:bg-teal-500/20 dark:text-teal-200",
+];
+
+// 講者編號：{講者 id: 第幾位開口（從 0 開始）}。只有一位講者或沒有講者資料時是空的，不需要標示
+function numberSpeakers(subtitleData) {
+  const numbers = {};
+  for (const line of subtitleData) {
+    for (const speaker of line.speakers || []) {
+      if (speaker && !(speaker in numbers)) numbers[speaker] = Object.keys(numbers).length;
+    }
+  }
+  return Object.keys(numbers).length > 1 ? numbers : {};
+}
+
+// 小元件：一句字幕的文字，有講者時每一行前面標上是誰講的
+function SpokenText({ line, speakerNumbers }) {
+  return line.text.split("\n").map((text, index) => {
+    const number = speakerNumbers[line.speakers?.[index]];
+    return (
+      <span key={index} className="block">
+        {number !== undefined && (
+          <span
+            className={`mr-2 inline-block whitespace-nowrap rounded px-1.5 py-0.5 align-middle text-xs font-medium leading-none ${
+              SPEAKER_COLORS[number % SPEAKER_COLORS.length]
+            }`}
+          >
+            講者 {number + 1}
+          </span>
+        )}
+        {text}
+      </span>
+    );
+  });
+}
+
 // 小元件：目前這句字幕與它的解析
-function SubtitlePanel({ line, hasPrev, hasNext, onPrev, onNext, onReplay, speechState, onSpeak, speechRate, onCycleSpeechRate }) {
+function SubtitlePanel({ line, speakerNumbers, hasPrev, hasNext, onPrev, onNext, onReplay, speechState, onSpeak, speechRate, onCycleSpeechRate }) {
   if (!line) {
     return (
       <div className="card flex min-h-40 items-center justify-center p-6 text-sm text-slate-500 dark:text-slate-400">
@@ -202,7 +244,7 @@ function SubtitlePanel({ line, hasPrev, hasNext, onPrev, onNext, onReplay, speec
     <div className="card p-5 sm:p-6">
       <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
         <p className="min-w-0 flex-1 basis-64 whitespace-pre-line text-2xl font-semibold leading-relaxed text-slate-900 dark:text-white">
-          {line.text}
+          <SpokenText line={line} speakerNumbers={speakerNumbers} />
         </p>
         <button
           onClick={onSpeak}
@@ -271,7 +313,7 @@ function SubtitlePanel({ line, hasPrev, hasNext, onPrev, onNext, onReplay, speec
 }
 
 // 小元件：完整逐字稿，點任一句跳到該時間
-function TranscriptList({ subtitleData, currentIndex, onSeek }) {
+function TranscriptList({ subtitleData, speakerNumbers, currentIndex, onSeek }) {
   const listRef = useRef(null);
   const activeRef = useRef(null);
 
@@ -307,7 +349,7 @@ function TranscriptList({ subtitleData, currentIndex, onSeek }) {
                 isActive ? "text-indigo-900 dark:text-indigo-100" : "text-slate-800 dark:text-slate-200"
               }`}
             >
-              {line.text}
+              <SpokenText line={line} speakerNumbers={speakerNumbers} />
             </span>
             {line.explanation?.translation && (
               <span className="mt-0.5 block whitespace-pre-line text-slate-500 dark:text-slate-400">
@@ -451,6 +493,8 @@ export default function VideoSubtitleApp() {
 
   const currentLine = subtitleData[currentIndex] ?? null;
   const currentVideo = videos.find((video) => video.id === videoId);
+
+  const speakerNumbers = useMemo(() => numberSpeakers(subtitleData), [subtitleData]);
 
   const filteredVideos = useMemo(() => {
     const query = libraryQuery.trim().toLowerCase();
@@ -890,6 +934,7 @@ export default function VideoSubtitleApp() {
                 <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{currentVideo.title}</h2>
               )}
               <SubtitlePanel
+                speakerNumbers={speakerNumbers}
                 line={currentLine}
                 hasPrev={currentIndex > 0}
                 hasNext={currentIndex < subtitleData.length - 1}
@@ -924,7 +969,7 @@ export default function VideoSubtitleApp() {
 
               {sideTab === "transcript" ? (
                 <div className="min-h-0 flex-1">
-                  <TranscriptList subtitleData={subtitleData} currentIndex={currentIndex} onSeek={seekTo} />
+                  <TranscriptList subtitleData={subtitleData} speakerNumbers={speakerNumbers} currentIndex={currentIndex} onSeek={seekTo} />
                 </div>
               ) : (
                 <>

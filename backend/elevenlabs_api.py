@@ -4,7 +4,7 @@ import json
 import os
 import re
 
-from .storage import elevenlabs_file, load_json_file, save_json_file
+from .storage import elevenlabs_file, load_json_file, save_json_file, subtitle_file, transcript_file
 
 load_dotenv()
 
@@ -95,6 +95,14 @@ def join_text(first, second):
     return f"{first} {second}"
 
 
+def stacked(rows):
+    """同時開始的幾句疊成同一列：文字以換行分隔，有講者的話一行一位"""
+    fields = {"text": "\n".join(row["text"] for row in rows)}
+    if any("speakers" in row for row in rows):
+        fields["speakers"] = [speaker for row in rows for speaker in row.get("speakers", [None])]
+    return fields
+
+
 def merge_zero_length_segments(segments, speakers=None):
     """
     換講者的地方，ElevenLabs 會給出起訖時間相同的字幕，前端永遠顯示不到。
@@ -120,7 +128,7 @@ def merge_zero_length_segments(segments, speakers=None):
         duration = MAX_ZERO_LENGTH_DURATION
         if until is not None:
             duration = min(duration, round(until - pending[0]["start"], 3))
-        merged.append({**pending[0], "text": "\n".join(s["text"] for s in pending), "duration": duration})
+        merged.append({**pending[0], **stacked(pending), "duration": duration})
         pending.clear()
 
     for index, seg in enumerate(segments):
@@ -147,7 +155,7 @@ def merge_zero_length_segments(segments, speakers=None):
             continue
 
         if pending:
-            seg = {**seg, "text": "\n".join([s["text"] for s in pending] + [seg["text"]])}
+            seg = {**seg, **stacked(pending + [seg])}
             pending.clear()
         merged.append(seg)
 
@@ -188,6 +196,10 @@ def generate_transcript_json(video_id):
 
     # key 與 YouTube 字幕路徑一致：從 0 開始的整數
     speakers = segment_speakers(segments, thai_script.get("words") or [])
+    # 每句記下講者給前端標示（一句裡換人講時記開頭那位）；完全沒有講者資訊就不加這個欄位
+    if any(speakers):
+        for seg, speaker in zip(segments, speakers):
+            seg["speakers"] = [speaker[0] if speaker else None]
     transcript_with_time = dict(enumerate(merge_zero_length_segments(segments, speakers)))
 
     whole_script = ""
@@ -195,3 +207,33 @@ def generate_transcript_json(video_id):
         whole_script += snippet["text"] + "\n"
 
     return transcript_with_time, whole_script
+
+
+def backfill_speakers(video_id):
+    """
+    用已存的 ElevenLabs 回應，把講者補進之前存好的字幕（不會呼叫 API，也不動解析）。
+    回傳補上的句數；文字和重新產生的結果對不上的句子不動。
+    """
+    if load_json_file(elevenlabs_file(video_id)) is None:
+        return 0
+
+    transcript, _ = generate_transcript_json(video_id)
+    fresh = {str(line_id): line for line_id, line in transcript.items()}
+
+    updated = 0
+    for file_name in (transcript_file(video_id), subtitle_file(video_id)):
+        saved = load_json_file(file_name)
+        if not isinstance(saved, dict):
+            continue
+        changed = 0
+        for line_id, line in saved.items():
+            source = fresh.get(line_id, {})
+            if "speakers" not in source or source["text"] != line.get("text"):
+                continue
+            if line.get("speakers") != source["speakers"]:
+                line["speakers"] = source["speakers"]
+                changed += 1
+        if changed:
+            save_json_file(file_name, saved)
+            updated += changed
+    return updated
