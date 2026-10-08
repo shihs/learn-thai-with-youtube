@@ -31,7 +31,7 @@ def request_ele_api(video_id):
     transcription = elevenlabs.speech_to_text.convert(
         source_url=audio_url,
         model_id="scribe_v2", # Model to use
-        tag_audio_events=False, # Tag audio events like laughter, applause, etc.
+        tag_audio_events=True, # Tag audio events like laughter, applause, etc.
         language_code="tha", # Language of the audio file. If set to None, the model will detect the language automatically.
         diarize=True, # Whether to annotate who is speaking,
         timestamps_granularity=None, # The granularity of the timestamps in the transcription.
@@ -47,8 +47,9 @@ def request_ele_api(video_id):
     return thai_script
 
 
-def load_or_request_transcription(video_id):
-    thai_script = load_json_file(elevenlabs_file(video_id))
+def load_or_request_transcription(video_id, refetch=False):
+    """refetch：不用存過的回應，重新付費轉錄；成功後才會蓋掉舊的"""
+    thai_script = None if refetch else load_json_file(elevenlabs_file(video_id))
     if thai_script is not None:
         print(f"使用已存在的 ElevenLabs 轉錄結果：{elevenlabs_file(video_id)}")
         return thai_script
@@ -165,11 +166,15 @@ def merge_zero_length_segments(segments, speakers=None):
     return merged
 
 
-def generate_transcript_json(video_id):
+def generate_transcript_json(video_id, refetch=False):
 
-    thai_script = load_or_request_transcription(video_id)
+    thai_script = load_or_request_transcription(video_id, refetch)
 
     content = thai_script["additional_formats"][0]["content"]
+    words = thai_script.get("words") or []
+
+    # tag_audio_events 開啟時字幕裡會夾著 [เสียงหัวเราะ] 這類音效標記：不是台詞，不顯示也不送去解析
+    audio_events = {word["text"] for word in words if word.get("type") == "audio_event"}
 
     # 每個 SRT 區塊：序號 / 時間軸 / 一到多行文字，區塊之間以空行分隔
     segments = []
@@ -181,6 +186,9 @@ def generate_transcript_json(video_id):
 
         start_time, end_time = [t.strip() for t in lines[timing].split("-->")]
         text = THAI_SPACING.sub("", " ".join(lines[timing + 1 :]))
+        for event in audio_events:
+            text = text.replace(event, " ")
+        text = " ".join(text.split())
         if not text:
             continue
 
@@ -195,7 +203,7 @@ def generate_transcript_json(video_id):
         )
 
     # key 與 YouTube 字幕路徑一致：從 0 開始的整數
-    speakers = segment_speakers(segments, thai_script.get("words") or [])
+    speakers = segment_speakers(segments, words)
     # 每句記下講者給前端標示（一句裡換人講時記開頭那位）；完全沒有講者資訊就不加這個欄位
     if any(speakers):
         for seg, speaker in zip(segments, speakers):

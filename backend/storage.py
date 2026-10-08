@@ -90,6 +90,16 @@ def load_saved_transcript(video_id):
     return None
 
 
+def delete_subtitle_files(video_id):
+    """刪掉字幕與原始逐字稿（有字幕檔的影片才會出現在清單裡）；回傳有沒有刪到東西"""
+    deleted = False
+    for file_name in (subtitle_file(video_id), transcript_file(video_id)):
+        if os.path.exists(file_name):
+            os.remove(file_name)
+            deleted = True
+    return deleted
+
+
 def load_gpt_cache(video_id):
     cached = load_json_file(gpt_cache_file(video_id))
     # 舊版存的是陣列，沒有 id 無法沿用

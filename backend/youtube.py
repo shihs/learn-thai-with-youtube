@@ -16,7 +16,7 @@ def seconds_to_time(seconds):
     return str(timedelta(seconds=seconds))
 
 
-def fetch_yt_video_transcript(video_id, transcript_lang="th"):
+def fetch_yt_video_transcript(video_id, transcript_lang="th", refetch=False):
     ytt_api = YouTubeTranscriptApi()
 
     # 手動上傳字幕
@@ -30,7 +30,7 @@ def fetch_yt_video_transcript(video_id, transcript_lang="th"):
     # EleventLabs API：影片完全沒有字幕（TranscriptsDisabled）或沒有手動泰文字幕（NoTranscriptFound）
     except (TranscriptsDisabled, NoTranscriptFound):
         print(f"No manually created '{transcript_lang}' transcript is found, use ElevenLabs.")
-        transcript_with_time, whole_script = generate_transcript_json(video_id)
+        transcript_with_time, whole_script = generate_transcript_json(video_id, refetch=refetch)
 
         return transcript_with_time, whole_script
 

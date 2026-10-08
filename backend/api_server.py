@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
-from .jobs import jobs, run_job, start_job
+from .jobs import delete_video, jobs, run_job, start_job
 from .storage import VIDEO_ID_PATTERN, list_subtitle_videos, load_json_file, subtitle_file
 from .tts import synthesize
 from .youtube import get_video_titles
@@ -59,6 +59,17 @@ def list_videos():
     for video in videos:
         video["title"] = titles.get(video["id"])
     return videos
+
+
+@app.delete("/videos/{video_id}")
+def remove_video(video_id: VideoId):
+    """把影片從清單拿掉（轉錄與解析的快取會留著）"""
+    result = delete_video(video_id)
+    if result == "running":
+        raise HTTPException(status_code=409, detail="這部影片還在抓取或解析中，等它跑完再刪除")
+    if result == "not_found":
+        raise HTTPException(status_code=404, detail="Subtitles not found")
+    return {"status": "deleted"}
 
 
 @app.get("/subtitles/{video_id}")

@@ -1,3 +1,5 @@
+import os
+
 import pytest
 
 from backend import gpt_teacher, jobs, storage
@@ -150,3 +152,55 @@ def test_fatal_error_during_lookup_keeps_paid_analysis_for_the_rerun(video, monk
     assert all("word" in call["item_1"] for call in client.calls)  # 句子沒有重新付費
     assert jobs.jobs[VIDEO_ID]["status"] == "done"
     assert storage.is_subtitle_complete(VIDEO_ID)
+
+
+def test_refetch_asks_for_a_fresh_transcript(video, monkeypatch):
+    install(monkeypatch, respond)
+    calls = []
+
+    def fetch(video_id, refetch=False):
+        calls.append(refetch)
+        return {0: {"text": "มาแล้ว", "start": 0}}, "มาแล้ว\n"
+
+    monkeypatch.setattr(jobs, "fetch_yt_video_transcript", fetch)
+
+    jobs.long_analyze_and_save(VIDEO_ID, refetch_transcript=True)
+
+    assert calls == [True]
+    assert list(saved_subtitles()) == ["0"]
+
+
+def all_files():
+    return [
+        storage.subtitle_file(VIDEO_ID),
+        storage.transcript_file(VIDEO_ID),
+        storage.elevenlabs_file(VIDEO_ID),
+        storage.gpt_cache_file(VIDEO_ID),
+    ]
+
+
+def test_delete_removes_subtitles_but_keeps_what_was_paid_for(data_dir):
+    jobs.jobs.clear()
+    for file_name in all_files():
+        storage.save_json_file(file_name, {"0": {"text": "มา"}})
+    jobs.jobs[VIDEO_ID] = {"status": "done"}
+
+    assert jobs.delete_video(VIDEO_ID) == "deleted"
+
+    assert [os.path.exists(file_name) for file_name in all_files()] == [False, False, True, True]
+    assert storage.list_subtitle_videos() == []
+    assert VIDEO_ID not in jobs.jobs
+
+
+def test_delete_is_refused_while_the_job_is_running(video):
+    storage.save_json_file(storage.subtitle_file(VIDEO_ID), {"0": {"text": "มา"}})
+
+    assert jobs.delete_video(VIDEO_ID) == "running"
+
+    assert os.path.exists(storage.subtitle_file(VIDEO_ID))
+    assert os.path.exists(storage.transcript_file(VIDEO_ID))
+
+
+def test_delete_reports_a_video_that_is_not_there(data_dir):
+    jobs.jobs.clear()
+    assert jobs.delete_video(VIDEO_ID) == "not_found"

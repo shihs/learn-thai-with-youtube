@@ -15,6 +15,7 @@ import {
   Sparkles,
   Square,
   Sun,
+  Trash2,
   Volume2,
   X,
 } from "lucide-react";
@@ -374,57 +375,85 @@ function VideoMeta({ video }) {
   );
 }
 
-// 小元件：影片庫首頁用的大卡片
-function VideoCard({ video, onClick }) {
+// 小元件：把影片從清單拿掉的按鈕。疊在卡片或列的上面，因為按鈕裡不能再放按鈕
+function DeleteVideoButton({ video, onDelete, className }) {
   return (
     <button
-      onClick={onClick}
-      className="card focus-ring group overflow-hidden text-left transition-shadow hover:shadow-md"
+      onClick={() => onDelete(video)}
+      aria-label={`刪除「${video.title || video.id}」`}
+      title="從清單刪除"
+      className={`focus-ring absolute flex h-8 w-8 items-center justify-center rounded-full transition-colors ${className}`}
     >
-      <span className="relative block aspect-video overflow-hidden bg-slate-200 dark:bg-slate-800">
-        <img src={thumbnailUrl(video.id)} alt="" loading="lazy" className="h-full w-full object-cover" />
-        <span className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover:bg-black/30">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/95 text-indigo-600 opacity-0 transition-opacity group-hover:opacity-100">
-            <Play size={20} fill="currentColor" />
-          </span>
-        </span>
-      </span>
-      <span className="block p-3">
-        <span className="line-clamp-2 text-sm font-medium text-slate-900 dark:text-slate-100">
-          {video.title || video.id}
-        </span>
-        <span className="mt-2 block">
-          <VideoMeta video={video} />
-        </span>
-      </span>
+      <Trash2 size={16} />
     </button>
   );
 }
 
-// 小元件：側邊面板用的精簡列
-function VideoRow({ video, isActive, onClick }) {
+// 小元件：影片庫首頁用的大卡片
+function VideoCard({ video, onClick, onDelete }) {
   return (
-    <button
-      onClick={onClick}
-      className={`focus-ring flex w-full gap-3 rounded-lg p-2 text-left transition-colors ${
-        isActive ? "bg-indigo-50 dark:bg-indigo-500/15" : "hover:bg-slate-100 dark:hover:bg-slate-800"
-      }`}
-    >
-      <img
-        src={thumbnailUrl(video.id)}
-        alt=""
-        loading="lazy"
-        className="aspect-video w-24 shrink-0 rounded-md bg-slate-200 object-cover dark:bg-slate-800"
+    <div className="relative">
+      <button
+        onClick={onClick}
+        className="card focus-ring group block h-full w-full overflow-hidden text-left transition-shadow hover:shadow-md"
+      >
+        <span className="relative block aspect-video overflow-hidden bg-slate-200 dark:bg-slate-800">
+          <img src={thumbnailUrl(video.id)} alt="" loading="lazy" className="h-full w-full object-cover" />
+          <span className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover:bg-black/30">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/95 text-indigo-600 opacity-0 transition-opacity group-hover:opacity-100">
+              <Play size={20} fill="currentColor" />
+            </span>
+          </span>
+        </span>
+        <span className="block p-3">
+          <span className="line-clamp-2 text-sm font-medium text-slate-900 dark:text-slate-100">
+            {video.title || video.id}
+          </span>
+          <span className="mt-2 block">
+            <VideoMeta video={video} />
+          </span>
+        </span>
+      </button>
+      <DeleteVideoButton
+        video={video}
+        onDelete={onDelete}
+        className="right-2 top-2 bg-black/60 text-white hover:bg-red-600"
       />
-      <span className="min-w-0">
-        <span className="line-clamp-2 text-sm font-medium text-slate-900 dark:text-slate-100">
-          {video.title || video.id}
+    </div>
+  );
+}
+
+// 小元件：側邊面板用的精簡列
+function VideoRow({ video, isActive, onClick, onDelete }) {
+  return (
+    <div className="relative">
+      <button
+        onClick={onClick}
+        className={`focus-ring flex w-full gap-3 rounded-lg p-2 pr-10 text-left transition-colors ${
+          isActive ? "bg-indigo-50 dark:bg-indigo-500/15" : "hover:bg-slate-100 dark:hover:bg-slate-800"
+        }`}
+      >
+        <img
+          src={thumbnailUrl(video.id)}
+          alt=""
+          loading="lazy"
+          className="aspect-video w-24 shrink-0 rounded-md bg-slate-200 object-cover dark:bg-slate-800"
+        />
+        <span className="min-w-0">
+          <span className="line-clamp-2 text-sm font-medium text-slate-900 dark:text-slate-100">
+            {video.title || video.id}
+          </span>
+          <span className="mt-1 block">
+            <VideoMeta video={video} />
+          </span>
         </span>
-        <span className="mt-1 block">
-          <VideoMeta video={video} />
-        </span>
-      </span>
-    </button>
+      </button>
+      <DeleteVideoButton
+        video={video}
+        onDelete={onDelete}
+        className="right-1 top-1/2 -translate-y-1/2 text-slate-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-500/15 dark:hover:text-red-300"
+      />
+    </div>
   );
 }
 
@@ -773,6 +802,28 @@ export default function VideoSubtitleApp() {
     [loadSubtitles]
   );
 
+  // 把影片從清單拿掉；轉錄與解析的快取留在後端，之後再貼網址加回來不用重新付費
+  const deleteVideo = useCallback(
+    async (video) => {
+      const name = video.title || video.id;
+      if (!window.confirm(`確定要刪除「${name}」嗎？\n影片會從清單移除，之後可以再貼網址加回來。`)) return;
+      try {
+        const res = await fetch(`${API_URL}/videos/${video.id}`, { method: "DELETE" });
+        // 404 代表已經不在了，一樣重新整理清單就好
+        if (!res.ok && res.status !== 404) {
+          const body = await res.json().catch(() => ({}));
+          showError(body.detail || "刪除失敗");
+          return;
+        }
+        if (video.id === videoId) closeVideo();
+        refreshVideos();
+      } catch {
+        showError(`無法連線到後端（${API_URL}），請確認後端已啟動`);
+      }
+    },
+    [videoId, closeVideo, refreshVideos, showError]
+  );
+
   const jobPercent = job?.total > 0 ? Math.round((job.done / job.total) * 100) : 0;
 
   return (
@@ -983,6 +1034,7 @@ export default function VideoSubtitleApp() {
                         video={video}
                         isActive={video.id === videoId}
                         onClick={() => openVideo(video)}
+                        onDelete={deleteVideo}
                       />
                     ))}
                     {filteredVideos.length === 0 && (
@@ -1013,7 +1065,7 @@ export default function VideoSubtitleApp() {
             {filteredVideos.length > 0 ? (
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {filteredVideos.map((video) => (
-                  <VideoCard key={video.id} video={video} onClick={() => openVideo(video)} />
+                  <VideoCard key={video.id} video={video} onClick={() => openVideo(video)} onDelete={deleteVideo} />
                 ))}
               </div>
             ) : (
